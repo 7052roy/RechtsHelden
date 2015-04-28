@@ -18,6 +18,10 @@ class Main extends Sprite
 {
 	var inited:Bool;
 	var tilesheet:Tilesheet;
+	private var tileSize:Int = 32;
+	public var map:Array<Array<Int>>;
+	private var entitiesCanvas:Sprite;
+	private var terrainCanvas:Sprite;
 
 	/* ENTRY POINT */
 	
@@ -31,6 +35,27 @@ class Main extends Sprite
 	{
 		if (inited) return;
 		inited = true;
+		tiles();
+		drawMap();
+	}
+	
+	public function drawMap()
+	{
+		// Map data
+		map = new Array<Array<Int>>();
+		NormWorld.create(map);
+		// draws the terrain
+		drawTerrain();
+	}
+	
+	public function tiles()
+	{
+	
+		terrainCanvas = new Sprite();
+		addChild(terrainCanvas);
+		entitiesCanvas = new Sprite();
+		addChild(entitiesCanvas);
+		allTiles();
 	}
 		// (your code here)
 		
@@ -56,8 +81,19 @@ class Main extends Sprite
 			t = 0;
 			i++;
 		}
-		
+	}
 	
+	function drawTerrain()
+	{
+		var tileData:Array<Float> = [];
+		
+		// draws the Terrain
+		for (row in 0...map.length) {
+			for (cell in 0...map[row].length) {
+				tileData = tileData.concat([tileSize * cell, tileSize * row, map[row][cell]]);
+			}
+		}
+		tilesheet.drawTiles(terrainCanvas.graphics, tileData);
 	}
 		
 		// Stage:
