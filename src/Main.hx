@@ -18,7 +18,7 @@ class Main extends Sprite
 {
 	var inited:Bool;
 	var tilesheet:Tilesheet;
-	private var tileSize:Int = 32;
+	private var tileSize:Int = 16;
 	public var map:Array<Array<Int>>;
 	private var entitiesCanvas:Sprite;
 	private var terrainCanvas:Sprite;
@@ -72,11 +72,11 @@ class Main extends Sprite
 		{
 			while (t < 16)
 			{
-				tilesheet.addTileRect( new Rectangle (x, y, 32, 32));
-				x += 32;
+				tilesheet.addTileRect( new Rectangle (x, y, 16, 16));
+				x += 16;
 				t ++;
 			}
-			y += 32;
+			y += 16;
 			x = 0;
 			t = 0;
 			i++;
