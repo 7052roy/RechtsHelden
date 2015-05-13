@@ -1,27 +1,31 @@
 package ;
 
+import flash.display.BitmapData;
 import flash.display.Sprite;
 import flash.events.Event;
 import flash.Lib;
-import openfl.display.BitmapData;
 import openfl.Assets;
-import openfl.display.Bitmap;
 import openfl.display.Tilesheet;
+import openfl.events.KeyboardEvent;
 import openfl.geom.Rectangle;
+import openfl.geom.Point;
 
 /**
- * ...
- * @author Roy
+ * Tile based game.
+ * @author Kirill Poletaev
  */
 
 class Main extends Sprite 
 {
-	var inited:Bool;
-	var tilesheet:Tilesheet;
-	private var tileSize:Int = 16;
-	public var map:Array<Array<Int>>;
-	private var entitiesCanvas:Sprite;
+	private var inited:Bool;
 	private var terrainCanvas:Sprite;
+	private var entitiesCanvas:Sprite;
+	private var tilesheet:Tilesheet;
+	private var map:Array<Array<Int>>;
+	private var tileSize:Int;
+	private var entities:Array<TileEntity>;
+	private var character:PlayerCharacter;
+	private var keysHeld:Array<Bool>;
 
 	/* ENTRY POINT */
 	
@@ -35,73 +39,100 @@ class Main extends Sprite
 	{
 		if (inited) return;
 		inited = true;
-		tiles();
-		drawMap();
-	}
-	
-	public function drawMap()
-	{
-		// Map data
-		map = new Array<Array<Int>>();
-		NormWorld.create(map);
-		// draws the terrain
-		drawTerrain();
-	}
-	
-	public function tiles()
-	{
-	
+		
+		// Tilesheet initialization
+		var tilesBitmapData:BitmapData = Assets.getBitmapData("img/set.png");
 		terrainCanvas = new Sprite();
 		addChild(terrainCanvas);
 		entitiesCanvas = new Sprite();
 		addChild(entitiesCanvas);
-		allTiles();
-	}
-		// (your code here)
+		tilesheet = new Tilesheet(tilesBitmapData);
+		tilesheet.addTileRect(new Rectangle(0, 0, 32, 32));
+		tilesheet.addTileRect(new Rectangle(32, 0, 32, 32));
 		
-	private function allTiles()
-	{
-		var tilesBitmapData:BitmapData = Assets.getBitmapData("img/tileMap.png");
-		tilesheet = new Tilesheet(tilesBitmapData);/*create var*/
+		// Entities
+		entities = new Array<TileEntity>();
 		
-		var x = 0;
-		var y = 0;
-		var i = 0;
-		var t = 0;
-		while (i < 257)
-		{
-			while (t < 16)
-			{
-				tilesheet.addTileRect( new Rectangle (x, y, 16, 16));
-				x += 16;
-				t ++;
-			}
-			y += 16;
-			x = 0;
-			t = 0;
-			i++;
-		}
+		// Player character creation
+		character = new PlayerCharacter(tilesheet);
+		entities.push(character);
+		
+		// Map data
+		tileSize = 32;
+		map = new Array<Array<Int>>();
+		TileMap.create(map);
+		drawTerrain();
+		
+		// Game loop
+		stage.addEventListener(Event.ENTER_FRAME, everyFrame);
+		
+		// Keyboard
+		keysHeld = new Array<Bool>();
+		stage.addEventListener(KeyboardEvent.KEY_DOWN, keyDown);
+		stage.addEventListener(KeyboardEvent.KEY_UP, keyUp);
 	}
 	
-	function drawTerrain()
-	{
+	private function everyFrame(evt:Event):Void {
+		var move:Point = new Point();
+		
+		// Character walking
+		if (keysHeld[38]) {
+			character.face(Up);
+			character.animate();
+			move.y -= character.movementSpeed;
+		} else if (keysHeld[39]) {
+			character.face(Right);
+			character.animate();
+			move.x += character.movementSpeed;
+		} else if (keysHeld[40]) {
+			character.face(Down);
+			character.animate();
+			move.y += character.movementSpeed;
+		} else if (keysHeld[37]) {
+			character.face(Left);
+			character.animate();
+			move.x -= character.movementSpeed;
+		}else {
+			character.resetAnim();
+		}
+		
+		TileCollisionDetector.detect(map, character.position, move, tileSize);
+		
+		drawEntities();
+	}
+	
+	private function drawEntities():Void {
 		var tileData:Array<Float> = [];
 		
-		// draws the Terrain
+		// Entities
+		for (entity in entities) {
+			tileData = tileData.concat(entity.draw());
+		}
+		
+		entitiesCanvas.graphics.clear();
+		tilesheet.drawTiles(entitiesCanvas.graphics, tileData);
+	}
+	
+	private function drawTerrain():Void {
+		var tileData:Array<Float> = [];
+		
+		// Terrain
 		for (row in 0...map.length) {
 			for (cell in 0...map[row].length) {
 				tileData = tileData.concat([tileSize * cell, tileSize * row, map[row][cell]]);
 			}
 		}
+		
 		tilesheet.drawTiles(terrainCanvas.graphics, tileData);
 	}
-		
-		// Stage:
-		// stage.stageWidth x stage.stageHeight @ stage.dpiScale
-		
-		// Assets:
-		// nme.Assets.getBitmapData("img/assetname.jpg");
 	
+	private function keyDown(evt:KeyboardEvent):Void {
+		keysHeld[evt.keyCode] = true;
+	}
+	
+	private function keyUp(evt:KeyboardEvent):Void {
+		keysHeld[evt.keyCode] = false;
+	}
 
 	/* SETUP */
 
