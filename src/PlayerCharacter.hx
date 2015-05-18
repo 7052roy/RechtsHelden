@@ -35,14 +35,14 @@ class PlayerCharacter extends TileEntity
 		faceLeft = new Array<Int>();
 		
 		faceDown.push(tilesheet.addTileRect(new Rectangle(0, 32, 32, 32)));
-		faceDown.push(tilesheet.addTileRect(new Rectangle(32, 32, 32, 32)));
+		faceDown.push(tilesheet.addTileRect(new Rectangle(32, 32, 32,32)));
 		faceDown.push(tilesheet.addTileRect(new Rectangle(64, 32, 32, 32)));
 		
 		faceUp.push(tilesheet.addTileRect(new Rectangle(0, 64, 32, 32)));
 		faceUp.push(tilesheet.addTileRect(new Rectangle(32, 64, 32, 32)));
 		faceUp.push(tilesheet.addTileRect(new Rectangle(64, 64, 32, 32)));
 		
-		faceLeft.push(tilesheet.addTileRect(new Rectangle(0, 96, 32, 32)));
+		faceLeft.push(tilesheet.addTileRect(new Rectangle(0, 96, 32,32)));
 		faceLeft.push(tilesheet.addTileRect(new Rectangle(32, 96, 32, 32)));
 		faceLeft.push(tilesheet.addTileRect(new Rectangle(64, 96, 32, 32)));
 		
