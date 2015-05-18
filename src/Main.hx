@@ -46,9 +46,7 @@ class Main extends Sprite
 		addChild(terrainCanvas);
 		entitiesCanvas = new Sprite();
 		addChild(entitiesCanvas);
-		tilesheet = new Tilesheet(tilesBitmapData);
-		tilesheet.addTileRect(new Rectangle(0, 0, 32, 32));
-		tilesheet.addTileRect(new Rectangle(32, 0, 32, 32));
+		allTiles();
 		
 		// Entities
 		entities = new Array<TileEntity>();
@@ -70,6 +68,30 @@ class Main extends Sprite
 		keysHeld = new Array<Bool>();
 		stage.addEventListener(KeyboardEvent.KEY_DOWN, keyDown);
 		stage.addEventListener(KeyboardEvent.KEY_UP, keyUp);
+	}
+	
+	public function allTiles()
+	{
+		var tilesBitmapData:BitmapData = Assets.getBitmapData("img/set.png");
+		tilesheet = new Tilesheet(tilesBitmapData);
+		
+		var x = 0;
+		var y = 0;
+		var i = 0;
+		var t = 0;
+		while (i < 140)
+		{
+			while (t < 15)
+			{
+				tilesheet.addTileRect( new Rectangle( x, y, 32, 32 ) );
+				x += 32;
+				t ++;
+			}
+			y += 32;
+			x = 0;
+			t = 0;
+			i++;
+		}
 	}
 	
 	private function everyFrame(evt:Event):Void {

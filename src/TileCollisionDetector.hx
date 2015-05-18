@@ -111,8 +111,14 @@ class TileCollisionDetector
 		}
 	}
 	
-	private static function isBlock(coords:Point, map:Array<Array<Int>>):Bool {
-		return map[Math.round(coords.y)][Math.round(coords.x)] == 1;
+	private static function  isBlock(coords:Point, map:Array<Array<Int>>):Bool {
+		
+		switch (map[Math.round(coords.y)][Math.round(coords.x)])
+		{
+		case 1:
+			return map[Math.round(coords.y)][Math.round(coords.x)] == 1;
+		default:
+			return map[Math.round(coords.y)][Math.round(coords.x)] == 3;
+		}
 	}
-	
 }
