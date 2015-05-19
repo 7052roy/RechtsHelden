@@ -72,7 +72,7 @@ class Main extends Sprite
 	
 	public function allTiles()
 	{
-		var tilesBitmapData:BitmapData = Assets.getBitmapData("img/Test1.png");
+		var tilesBitmapData:BitmapData = Assets.getBitmapData("img/Tilesheet_Complete.png");
 		tilesheet = new Tilesheet(tilesBitmapData);
 		
 		var x = 0;
@@ -81,7 +81,7 @@ class Main extends Sprite
 		var t = 0;
 		while (i < 140)
 		{
-			while (t < 15)
+			while (t < 16)
 			{
 				tilesheet.addTileRect( new Rectangle( x, y, 64, 64 ) );
 				x += 64;
