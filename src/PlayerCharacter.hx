@@ -65,21 +65,21 @@ class PlayerCharacter extends TileEntity
 		faceRight = new Array<Int>();
 		faceLeft = new Array<Int>();
 		
-		faceDown.push(tilesheet.addTileRect(new Rectangle(0, 0, 32, 32)));
-		faceDown.push(tilesheet.addTileRect(new Rectangle(32, 32, 32,32)));
-		faceDown.push(tilesheet.addTileRect(new Rectangle(64, 32, 32, 32)));
+		faceDown.push(tilesheet.addTileRect(new Rectangle(0, 0, 64, 64)));
+		faceDown.push(tilesheet.addTileRect(new Rectangle(32, 32, 64,64)));
+		faceDown.push(tilesheet.addTileRect(new Rectangle(64, 32, 64, 64)));
 		
-		faceUp.push(tilesheet.addTileRect(new Rectangle(0, 0, 32, 32)));
-		faceUp.push(tilesheet.addTileRect(new Rectangle(32, 64, 32, 32)));
-		faceUp.push(tilesheet.addTileRect(new Rectangle(64, 64, 32, 32)));
+		faceUp.push(tilesheet.addTileRect(new Rectangle(0, 0, 64, 64)));
+		faceUp.push(tilesheet.addTileRect(new Rectangle(32, 64, 64, 64)));
+		faceUp.push(tilesheet.addTileRect(new Rectangle(64, 64, 64, 64)));
 		
-		faceLeft.push(tilesheet.addTileRect(new Rectangle(0, 0, 32,32)));
-		faceLeft.push(tilesheet.addTileRect(new Rectangle(32, 96, 32, 32)));
-		faceLeft.push(tilesheet.addTileRect(new Rectangle(64, 96, 32, 32)));
+		faceLeft.push(tilesheet.addTileRect(new Rectangle(0, 0, 64,64)));
+		faceLeft.push(tilesheet.addTileRect(new Rectangle(32, 96, 64, 64)));
+		faceLeft.push(tilesheet.addTileRect(new Rectangle(64, 96, 64, 64)));
 		
-		faceRight.push(tilesheet.addTileRect(new Rectangle(0, 0, 32, 32)));
-		faceRight.push(tilesheet.addTileRect(new Rectangle(32, 128, 32, 32)));
-		faceRight.push(tilesheet.addTileRect(new Rectangle(64, 128, 32, 32)));
+		faceRight.push(tilesheet.addTileRect(new Rectangle(0, 0, 64, 64)));
+		faceRight.push(tilesheet.addTileRect(new Rectangle(32, 128, 64, 64)));
+		faceRight.push(tilesheet.addTileRect(new Rectangle(64, 128, 64, 64)));
 	}
 	
 	function tech(tilesheet:Tilesheet)
