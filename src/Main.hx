@@ -114,10 +114,17 @@ class Main extends Sprite
 			character.face(Left);
 			character.animate();
 			move.x -= character.movementSpeed;
-		}else {
+		} else if (keysHeld[49]) {
+			character.currentCharacter = 1;
+		} else if (keysHeld[50]) {
+			character.currentCharacter = 2;
+		} else if (keysHeld[51]) {
+			character.currentCharacter = 3;
+		} else {
 			character.resetAnim();
 		}
 		
+		character.checkCharacter();
 		TileCollisionDetector.detect(map, character.position, move, tileSize);
 		
 		drawEntities();
