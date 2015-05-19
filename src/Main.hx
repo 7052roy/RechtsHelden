@@ -56,7 +56,7 @@ class Main extends Sprite
 		entities.push(character);
 		
 		// Map data
-		tileSize = 32;
+		tileSize = 64;
 		map = new Array<Array<Int>>();
 		TileMap.create(map);
 		drawTerrain();
@@ -72,7 +72,7 @@ class Main extends Sprite
 	
 	public function allTiles()
 	{
-		var tilesBitmapData:BitmapData = Assets.getBitmapData("img/set.png");
+		var tilesBitmapData:BitmapData = Assets.getBitmapData("img/Test1.png");
 		tilesheet = new Tilesheet(tilesBitmapData);
 		
 		var x = 0;
@@ -83,11 +83,11 @@ class Main extends Sprite
 		{
 			while (t < 15)
 			{
-				tilesheet.addTileRect( new Rectangle( x, y, 32, 32 ) );
-				x += 32;
+				tilesheet.addTileRect( new Rectangle( x, y, 64, 64 ) );
+				x += 64;
 				t ++;
 			}
-			y += 32;
+			y += 64;
 			x = 0;
 			t = 0;
 			i++;
