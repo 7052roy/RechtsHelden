@@ -58,7 +58,7 @@ class PlayerCharacter extends TileEntity
 		//trace(currentCharacter);
 	}
 	
-	function pat(tilesheet:Tilesheet)
+	function tec(tilesheet:Tilesheet)
 	{
 		faceDown = new Array<Int>();
 		faceUp = new Array<Int>();
@@ -86,7 +86,7 @@ class PlayerCharacter extends TileEntity
 		faceRight.push(tilesheet.addTileRect(new Rectangle(192, 256, 64, 64)));
 	}
 	
-	function tec(tilesheet:Tilesheet)
+	function pat(tilesheet:Tilesheet)
 	{
 		faceDown = new Array<Int>();
 		faceUp = new Array<Int>();
@@ -121,21 +121,25 @@ class PlayerCharacter extends TileEntity
 		faceRight = new Array<Int>();
 		faceLeft = new Array<Int>();
 		
-		faceDown.push(tilesheet.addTileRect(new Rectangle(64, 32, 64, 64)));
-		faceDown.push(tilesheet.addTileRect(new Rectangle(32, 32, 64,64)));
-		faceDown.push(tilesheet.addTileRect(new Rectangle(64, 32, 64, 64)));
+		faceDown.push(tilesheet.addTileRect(new Rectangle(320, 320, 64, 64)));
+		faceDown.push(tilesheet.addTileRect(new Rectangle(384, 320, 64,64)));
+		faceDown.push(tilesheet.addTileRect(new Rectangle(448, 320, 64, 64)));
+		faceDown.push(tilesheet.addTileRect(new Rectangle(512, 320, 64, 64)));
 		
-		faceUp.push(tilesheet.addTileRect(new Rectangle(0, 64, 64, 64)));
-		faceUp.push(tilesheet.addTileRect(new Rectangle(32, 64, 64, 64)));
-		faceUp.push(tilesheet.addTileRect(new Rectangle(64, 64, 64, 64)));
+		faceUp.push(tilesheet.addTileRect(new Rectangle(320, 384, 64, 64)));
+		faceUp.push(tilesheet.addTileRect(new Rectangle(384, 384, 64, 64)));
+		faceUp.push(tilesheet.addTileRect(new Rectangle(448, 384, 64, 64)));
+		faceUp.push(tilesheet.addTileRect(new Rectangle(512, 384, 64, 64)));
 		
-		faceLeft.push(tilesheet.addTileRect(new Rectangle(0, 96, 64,64)));
-		faceLeft.push(tilesheet.addTileRect(new Rectangle(32, 96, 64, 64)));
-		faceLeft.push(tilesheet.addTileRect(new Rectangle(64, 96, 64, 64)));
+		faceLeft.push(tilesheet.addTileRect(new Rectangle(320, 448, 64,64)));
+		faceLeft.push(tilesheet.addTileRect(new Rectangle(384, 448, 64, 64)));
+		faceLeft.push(tilesheet.addTileRect(new Rectangle(448, 448, 64, 64)));
+		faceLeft.push(tilesheet.addTileRect(new Rectangle(512, 448, 64, 64)));
 		
-		faceRight.push(tilesheet.addTileRect(new Rectangle(0, 128, 64, 64)));
-		faceRight.push(tilesheet.addTileRect(new Rectangle(32, 128, 64, 64)));
-		faceRight.push(tilesheet.addTileRect(new Rectangle(64, 128, 64, 64)));
+		faceRight.push(tilesheet.addTileRect(new Rectangle(320, 512, 64, 64)));
+		faceRight.push(tilesheet.addTileRect(new Rectangle(384, 512, 64, 64)));
+		faceRight.push(tilesheet.addTileRect(new Rectangle(448, 512, 64, 64)));
+		faceRight.push(tilesheet.addTileRect(new Rectangle(512, 512, 64, 64)));
 	}
 	
 	override public function draw():Array<Float> {
