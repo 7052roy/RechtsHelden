@@ -115,10 +115,66 @@ class TileCollisionDetector
 		
 		switch (map[Math.round(coords.y)][Math.round(coords.x)])
 		{
+		//tree collisons:
 		case 1:
 			return map[Math.round(coords.y)][Math.round(coords.x)] == 1;
+		//house collisions:
+		case 12:
+			return map[Math.round(coords.y)][Math.round(coords.x)] == 12;
+		case 13:
+			return map[Math.round(coords.y)][Math.round(coords.x)] == 13;
+		case 14:
+			return map[Math.round(coords.y)][Math.round(coords.x)] == 14;
+		case 15:
+			return map[Math.round(coords.y)][Math.round(coords.x)] == 15;
+		//School Collisions:
+		case 20:
+			return map[Math.round(coords.y)][Math.round(coords.x)] == 20;
+		case 21:
+			return map[Math.round(coords.y)][Math.round(coords.x)] == 21;
+		case 22:
+			return map[Math.round(coords.y)][Math.round(coords.x)] == 22;
+		case 23:
+			return map[Math.round(coords.y)][Math.round(coords.x)] == 23;
+		case 24:
+			return map[Math.round(coords.y)][Math.round(coords.x)] == 24;
+		case 25:
+			return map[Math.round(coords.y)][Math.round(coords.x)] == 25;
+		case 26:
+			return map[Math.round(coords.y)][Math.round(coords.x)] == 26;
+		case 27:
+			return map[Math.round(coords.y)][Math.round(coords.x)] == 27;
+		case 28:
+			return map[Math.round(coords.y)][Math.round(coords.x)] == 28;
+		case 29:
+			return map[Math.round(coords.y)][Math.round(coords.x)] == 29;
+		case 30:
+			return map[Math.round(coords.y)][Math.round(coords.x)] == 30;
+		case 31:
+			return map[Math.round(coords.y)][Math.round(coords.x)] == 31;
+		case 36:
+			return map[Math.round(coords.y)][Math.round(coords.x)] == 36;
+		//water collisions:
+		case 42:
+			return map[Math.round(coords.y)][Math.round(coords.x)] == 42;
+		case 43:
+			return map[Math.round(coords.y)][Math.round(coords.x)] == 43;
+		case 44:
+			return map[Math.round(coords.y)][Math.round(coords.x)] == 44;
+		case 45:
+			return map[Math.round(coords.y)][Math.round(coords.x)] == 45;
+		case 46:
+			return map[Math.round(coords.y)][Math.round(coords.x)] == 46;
+		case 47:
+			return map[Math.round(coords.y)][Math.round(coords.x)] == 47;
+		case 52:
+			return map[Math.round(coords.y)][Math.round(coords.x)] == 52;
+		case 53:
+			return map[Math.round(coords.y)][Math.round(coords.x)] == 53;
+		
+		//default collisions
 		default:
-			return map[Math.round(coords.y)][Math.round(coords.x)] == 3;
+			return map[Math.round(coords.y)][Math.round(coords.x)] == 1;
 		}
 	}
 }
