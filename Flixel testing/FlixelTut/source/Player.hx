@@ -14,6 +14,8 @@ class Player extends FlxSprite
 {
 
 	public var speed:Float = 200;
+	public var CharacterNumber = 1;
+	var test = 1;
 	
 	public function new(X:Float=0, Y:Float=0) 
 	{
@@ -25,11 +27,65 @@ class Player extends FlxSprite
 		animation.add("lr", [8, 9, 10, 11], 5, false);
 		animation.add("u", [4, 5, 7, 7], 5, false);
 		drag.x = drag.y = 1600;
-		width = 8;
-		height = 14;
-		offset.x = 4;
-		offset.y = 2;
-		
+		setSize(50, 50);
+		offset.set(15, 15);
+	}
+	
+	public function checkCharacter()
+	{
+		if (CharacterNumber == 1 && test != 1)
+		{
+			trace("test");
+			tec();
+		}else if (CharacterNumber ==  2 && test != 2)
+		{
+			pat();
+		}else if (CharacterNumber ==  3 && test != 3)
+		{
+			ion();
+		}
+	}
+	
+	function tec()
+	{
+		loadGraphic("assets/images/tec.png", true, 64, 64);
+		setFacingFlip(FlxObject.LEFT, false, false);
+		setFacingFlip(FlxObject.RIGHT, true, false);
+		animation.add("d", [0, 1, 2, 3], 5, false);
+		animation.add("lr", [8, 9, 10, 11], 5, false);
+		animation.add("u", [4, 5, 7, 7], 5, false);
+		drag.x = drag.y = 1600;
+		setSize(50, 50);
+		offset.set(0, 0);
+		test= 1;
+	}
+	
+	function pat()
+	{
+		loadGraphic("assets/images/pat.png", true, 64, 64);
+		setFacingFlip(FlxObject.RIGHT, false, false);
+		setFacingFlip(FlxObject.LEFT, true, false);
+		animation.add("d", [0, 1, 2, 3], 5, false);
+		animation.add("lr", [8, 9, 10, 11], 5, false);
+		animation.add("u", [4, 5, 7, 7], 5, false);
+		drag.x = drag.y = 1600;
+		setSize(50, 50);
+		offset.set(0, 0);
+		test= 2;
+	}
+	
+	function ion()
+	{
+		loadGraphic("assets/images/ion.png", true, 64, 64);
+		setFacingFlip(FlxObject.LEFT, false, false);
+		setFacingFlip(FlxObject.RIGHT, true, false);
+		animation.add("d", [0, 1, 2, 3], 5, false);
+		animation.add("lr", [8, 9, 10, 11], 5, false);
+		animation.add("u", [4, 5, 7, 7], 5, false);
+		drag.x = drag.y = 1600;
+		setSize(50, 50);
+		offset.set(0, 0);
+		test= 3;
 	}
 	
 	override public function draw():Void 
@@ -58,11 +114,31 @@ class Player extends FlxSprite
 		var _down:Bool = false;
 		var _left:Bool = false;
 		var _right:Bool = false;
+		var _tec:Bool = false;
+		var _pat:Bool = false;
+		var _ion:Bool = false;
 		
 		_up = FlxG.keys.anyPressed(["UP", "W"]);
 		_down = FlxG.keys.anyPressed(["DOWN", "S"]);
 		_left = FlxG.keys.anyPressed(["LEFT", "A"]);
 		_right = FlxG.keys.anyPressed(["RIGHT", "D"]);
+		_tec = FlxG.keys.anyPressed(["ONE", "1"]);
+		_pat = FlxG.keys.anyPressed(["TWO", "2"]);
+		_ion = FlxG.keys.anyPressed(["THREE", "3"]);
+		
+		if (_tec)
+		{
+			CharacterNumber = 1;
+		}
+		if (_pat)
+		{
+			CharacterNumber = 2;
+		}
+		if (_ion)
+		{
+			CharacterNumber = 3;
+		}
+		//trace(CharacterNumber);
 		
 		if (_up && _down)
 			_up = _down = false;
@@ -108,6 +184,7 @@ class Player extends FlxSprite
 	
 	override public function update():Void 
 	{
+		checkCharacter();
 		movement();
 		super.update();
 	}
