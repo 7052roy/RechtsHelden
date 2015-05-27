@@ -13,9 +13,10 @@ import flixel.FlxG;
 class Player extends FlxSprite
 {
 
-	public var speed:Float = 200;
+	public var speed:Float = 300.1;
 	public var CharacterNumber = 1;
 	var test = 1;
+	private var ability:Bool = false;
 	
 	public function new(X:Float=0, Y:Float=0) 
 	{
@@ -35,7 +36,6 @@ class Player extends FlxSprite
 	{
 		if (CharacterNumber == 1 && test != 1)
 		{
-			trace("test");
 			tec();
 		}else if (CharacterNumber ==  2 && test != 2)
 		{
@@ -103,6 +103,23 @@ class Player extends FlxSprite
 				case FlxObject.DOWN:
 					animation.play("d");
 			}
+			
+		}
+		else if (velocity.x == 0 || velocity.y == 0 && ability == true)
+	     
+		{
+			trace (ability);
+			switch(facing)
+			{
+				case FlxObject.LEFT, FlxObject.RIGHT:
+					animation.play("lr");
+					
+				case FlxObject.UP:
+					animation.play("u");
+					
+				case FlxObject.DOWN:
+					animation.play("d");
+			}
 		}
 			
 		super.draw();
@@ -118,6 +135,7 @@ class Player extends FlxSprite
 		var _pat:Bool = false;
 		var _ion:Bool = false;
 		
+		
 		_up = FlxG.keys.anyPressed(["UP", "W"]);
 		_down = FlxG.keys.anyPressed(["DOWN", "S"]);
 		_left = FlxG.keys.anyPressed(["LEFT", "A"]);
@@ -125,6 +143,8 @@ class Player extends FlxSprite
 		_tec = FlxG.keys.anyPressed(["ONE", "1"]);
 		_pat = FlxG.keys.anyPressed(["TWO", "2"]);
 		_ion = FlxG.keys.anyPressed(["THREE", "3"]);
+		ability = FlxG.keys.anyPressed(["FOUR", "4"]);
+
 		
 		if (_tec)
 		{
