@@ -38,6 +38,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
+		urls.push ("assets/data/level_1.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
 		urls.push ("assets/data/New Project.oep");
 		types.push (lime.Assets.AssetType.TEXT);
 		
@@ -162,7 +166,6 @@ class ApplicationMain {
 			file: "FlixelTut",
 			fps: Std.int (60),
 			fullscreen: false,
-			hardware: true,
 			height: Std.int (480),
 			orientation: "portrait",
 			packageName: "com.example.myapp",

@@ -47,6 +47,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/data/data-goes-here.txt", __ASSET__assets_data_data_goes_here_txt);
 		type.set ("assets/data/data-goes-here.txt", AssetType.TEXT);
+		className.set ("assets/data/level_1.oel", __ASSET__assets_data_level_1_oel);
+		type.set ("assets/data/level_1.oel", AssetType.TEXT);
 		className.set ("assets/data/New Project.oep", __ASSET__assets_data_new_project_oep);
 		type.set ("assets/data/New Project.oep", AssetType.TEXT);
 		className.set ("assets/data/reachtshelden.oep", __ASSET__assets_data_reachtshelden_oep);
@@ -81,6 +83,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		var id;
 		id = "assets/data/data-goes-here.txt";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/level_1.oel";
 		path.set (id, id);
 		
 		type.set (id, AssetType.TEXT);
@@ -169,6 +175,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
 		#end
 		
 		#if (windows || mac || linux)
@@ -177,6 +184,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/data/data-goes-here.txt", __ASSET__assets_data_data_goes_here_txt);
 		type.set ("assets/data/data-goes-here.txt", AssetType.TEXT);
+		
+		className.set ("assets/data/level_1.oel", __ASSET__assets_data_level_1_oel);
+		type.set ("assets/data/level_1.oel", AssetType.TEXT);
 		
 		className.set ("assets/data/New Project.oep", __ASSET__assets_data_new_project_oep);
 		type.set ("assets/data/New Project.oep", AssetType.TEXT);
@@ -821,6 +831,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 #if flash
 
 @:keep @:bind #if display private #end class __ASSET__assets_data_data_goes_here_txt extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_level_1_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_new_project_oep extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_reachtshelden_oep extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_room_001_oel extends flash.utils.ByteArray { }
@@ -856,6 +867,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
 #else
 
 
@@ -864,6 +876,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 @:file("assets/data/data-goes-here.txt") #if display private #end class __ASSET__assets_data_data_goes_here_txt extends lime.utils.ByteArray {}
+@:file("assets/data/level_1.oel") #if display private #end class __ASSET__assets_data_level_1_oel extends lime.utils.ByteArray {}
 @:file("assets/data/New Project.oep") #if display private #end class __ASSET__assets_data_new_project_oep extends lime.utils.ByteArray {}
 @:file("assets/data/reachtshelden.oep") #if display private #end class __ASSET__assets_data_reachtshelden_oep extends lime.utils.ByteArray {}
 @:file("assets/data/room-001.oel") #if display private #end class __ASSET__assets_data_room_001_oel extends lime.utils.ByteArray {}
