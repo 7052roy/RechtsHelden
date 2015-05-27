@@ -30,7 +30,7 @@ class Player extends FlxSprite
 		animation.add("u", [4, 5, 7, 7], 5, false);
 		drag.x = drag.y = 1600;
 		setSize(50, 50);
-		offset.set(15, 15);
+		offset.set(14, 7);
 	}
 	
 	public function checkCharacter()
@@ -57,7 +57,7 @@ class Player extends FlxSprite
 		animation.add("u", [4, 5, 7, 7], 5, false);
 		drag.x = drag.y = 1600;
 		setSize(50, 50);
-		offset.set(0, 0);
+		offset.set(14, 7);
 		test= 1;
 	}
 	
@@ -74,7 +74,7 @@ class Player extends FlxSprite
 		animation.add("ua", [4, 15, 16, 17,4], 5, false);
 		drag.x = drag.y = 1600;
 		setSize(50, 50); 
-		offset.set(0, 0);
+		offset.set(14, 7);
 		test= 2;
 	}
 	
@@ -91,7 +91,7 @@ class Player extends FlxSprite
 		animation.add("ua", [4, 15, 16, 17,4], 5, false);
 		drag.x = drag.y = 1600;
 		setSize(50, 50);
-		offset.set(0, 0);
+		offset.set(14, 7);
 		test= 3;
 	}
 	
