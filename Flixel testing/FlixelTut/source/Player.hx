@@ -86,6 +86,9 @@ class Player extends FlxSprite
 		animation.add("d", [0, 1, 2, 3], 5, false);
 		animation.add("lr", [8, 9, 10, 11], 5, false);
 		animation.add("u", [4, 5, 7, 7], 5, false);
+		animation.add("da", [0, 12, 13, 14,0], 5, false);
+		animation.add("lra", [8, 18, 19, 20,8], 5, false);
+		animation.add("ua", [4, 15, 16, 17,4], 5, false);
 		drag.x = drag.y = 1600;
 		setSize(50, 50);
 		offset.set(0, 0);
@@ -114,7 +117,6 @@ class Player extends FlxSprite
 		{
 			if (ability2 == true)
 			{
-				trace (ability2);
 				switch(facing)
 				{
 					case FlxObject.LEFT, FlxObject.RIGHT:
