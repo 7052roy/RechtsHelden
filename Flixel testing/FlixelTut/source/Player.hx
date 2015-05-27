@@ -158,7 +158,7 @@ class Player extends FlxSprite
 		_tec = FlxG.keys.anyPressed(["ONE", "1"]);
 		_pat = FlxG.keys.anyPressed(["TWO", "2"]);
 		_ion = FlxG.keys.anyPressed(["THREE", "3"]);
-		ability = FlxG.keys.anyPressed(["FOUR", "4"]);
+		ability = FlxG.keys.anyPressed(["SPACE", "SPACE"]);
 
 		if (ability)
 		{
