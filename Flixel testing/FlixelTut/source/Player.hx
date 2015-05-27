@@ -186,6 +186,14 @@ class Player extends FlxSprite
 			_up = _down = false;
 		if (_left && _right)
 			_left = _right = false;
+		if (_left && _up)
+			_left = false;
+		if (_left && _down)
+			_left = false;
+		if (_right && _up)
+			_right = false;
+		if (_right && _down)
+			_right = false;
 		
 		if ( _up || _down || _left || _right)
 		{
