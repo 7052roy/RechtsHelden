@@ -6,6 +6,7 @@ import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.FlxSprite;
 import flixel.FlxState;
+import flixel.group.FlxGroup;
 import flixel.group.FlxTypedGroup;
 import flixel.text.FlxText;
 import flixel.tile.FlxTilemap;
@@ -24,6 +25,7 @@ class PlayState extends FlxState
 	private var _player:Player;
 	private var _map:FlxOgmoLoader;
 	private var _mWalls:FlxTilemap;
+	//private var _grpCoins:FlxTypedGroup<Coin>;
 	private var _grpEnemies:FlxTypedGroup<Enemy>;
 	
 	/**
@@ -33,27 +35,24 @@ class PlayState extends FlxState
 	{
 		_map = new FlxOgmoLoader("assets/data/level_3.oel");
 		_mWalls = _map.loadTilemap("assets/images/Tilesheet_Complete.png", 64, 64, "tree");
-		_mWalls.setTileProperties(0, FlxObject.NONE);
-		_mWalls.setTileProperties(2, FlxObject.NONE);
+		_mWalls.setTileProperties(1, FlxObject.NONE);
 		_mWalls.setTileProperties(3, FlxObject.NONE);
-		_mWalls.setTileProperties(4, FlxObject.NONE);
-		_mWalls.setTileProperties(5, FlxObject.NONE);
-		_mWalls.setTileProperties(6, FlxObject.NONE);
-		_mWalls.setTileProperties(7, FlxObject.NONE);
-		_mWalls.setTileProperties(8, FlxObject.NONE);
-		_mWalls.setTileProperties(9, FlxObject.NONE);
-		_mWalls.setTileProperties(10, FlxObject.NONE);
-		_mWalls.setTileProperties(11, FlxObject.NONE);
+		_mWalls.setTileProperties(2, FlxObject.ANY);
 		add(_mWalls);
 		
-		_player = new Player();
-		_map.loadEntities(placeEntities, "entities");
-		add(_player);
-		FlxG.camera.follow(_player, FlxCamera.STYLE_TOPDOWN, 1);
+		//_grpCoins = new FlxTypedGroup<Coin>();
+		//add(_grpCoins);
 		
 		_grpEnemies = new FlxTypedGroup<Enemy>();
-		_map.loadEntities(placeEntities, "entities");
 		add(_grpEnemies);
+		
+		_player = new Player();
+		
+		_map.loadEntities(placeEntities, "entities");
+		
+		add(_player);
+		
+		FlxG.camera.follow(_player, FlxCamera.STYLE_TOPDOWN, null, 1);
 		
 		super.create();	
 		
@@ -66,9 +65,14 @@ class PlayState extends FlxState
 			_player.x = Std.parseInt(entityData.get("x"));
 			_player.y = Std.parseInt(entityData.get("y"));
 		}
+		/*else if (entityName == "coin")
+		{
+			_grpCoins.add(new Coin(Std.parseInt(entityData.get("x")) + 4, Std.parseInt(entityData.get("y")) + 4));
+			
+		}*/
 		else if (entityName == "enemy")
 		{
-			_grpEnemies.add(new Enemy(Std.parseInt(entityData.get("x")) + 4, Std.parseInt(entityData.get("y")), Std.parseInt(entityData.get("etype"))));
+			_grpEnemies.add(new Enemy(Std.parseInt(entityData.get("x"))+4, Std.parseInt(entityData.get("y")), Std.parseInt(entityData.get("etype"))));
 		}
 	}
 	
@@ -81,14 +85,42 @@ class PlayState extends FlxState
 	{
 		super.destroy();
 	}
-	
+
 	/**
 	 * Function that is called once every frame.
 	 */
 	override public function update():Void
 	{
+
 		super.update();
 		
 		FlxG.collide(_player, _mWalls);
+		//FlxG.overlap(_player, _grpCoins, playerTouchCoin);
+		FlxG.collide(_grpEnemies, _mWalls);
+		checkEnemyVision();
+		
+		
 	}	
+	
+	private function checkEnemyVision():Void
+	{
+		for (e in _grpEnemies.members)
+		{
+			if (_mWalls.ray(e.getMidpoint(), _player.getMidpoint()))
+			{
+				e.seesPlayer = true;
+				e.playerPos.copyFrom(_player.getMidpoint());
+			}
+			else
+				e.seesPlayer = false;
+		}
+	}
+	
+	/*private function playerTouchCoin(P:Player, C:Coin):Void
+	{
+		if (P.alive && P.exists && C.alive && C.exists)
+		{
+			C.kill();
+		}
+	}*/
 }
