@@ -21,22 +21,20 @@ class Enemy extends FlxSprite
 	var positionx = 0;
 	var positiony = 0;
 	var position:FlxPoint;
-	var timer:FlxTimer;
+	var movementAngle:Int = 0;
 	
 	public function new(X:Float=0, Y:Float=0, EType:Int) 
 	{
 		//timer = new FlxTimer(2, chase, 0);
 		
 		super(X, Y);
-		//position = new FlxPoint(positionx, positiony);
-		//FlxVelocity.moveTowardsPoint(this, position, Std.int(speed));
 		etype = EType;
-		loadGraphic("assets/images/enemy-" + Std.string(etype) + ".png", true, 64, 64);
+		loadGraphic("assets/images/enemy-" + FlxRandom.intRanged(0, 2) + ".png", true, 64, 64);
 		setFacingFlip(FlxObject.LEFT, false, false);
 		setFacingFlip(FlxObject.RIGHT, true, false);
 		animation.add("d", [0, 1, 0, 2], 6, false);
-		animation.add("lr", [3, 4, 3, 5], 6, false);
-		animation.add("u", [6, 7, 6, 8], 6, false);
+		animation.add("lr", [6, 7, 6, 8], 6, false);
+		animation.add("u", [3, 4, 3, 5], 6, false);
 		drag.x = drag.y = 10;
 		width = 8;
 		height = 14;
@@ -56,23 +54,20 @@ class Enemy extends FlxSprite
 	
 	public function idle():Void
 	{
+		
 		/*if (seesPlayer)
 		{
 			_brain.activeState = chase;
 		}*/
 		if (_idleTmr <= 0)
 		{
-			if (FlxRandom.chanceRoll(1))
+			FlxAngle.rotatePoint(speed * .5, 0, 0, 0, movementAngle, velocity);
+			movementAngle += 90;
+			if (movementAngle > 270)
 			{
-				_moveDir = -1;
-				velocity.x = velocity.y = 0;
+				movementAngle = 0;
 			}
-			else
-			{
-				moveDirection();
-				
-			}
-			_idleTmr = FlxRandom.intRanged(1, 4);			
+			_idleTmr = 4;
 		}
 		else
 			_idleTmr -= FlxG.elapsed;

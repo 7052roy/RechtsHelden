@@ -28,7 +28,6 @@ class PlayState extends FlxState
 	private var _mWalls:FlxTilemap;
 	//private var _grpCoins:FlxTypedGroup<Coin>;
 	private var _grpEnemies:FlxTypedGroup<Enemy>;
-	public var timer:FlxTimer;
 	
 	/**
 	 * Function that is called up when to state is created to set it up. 

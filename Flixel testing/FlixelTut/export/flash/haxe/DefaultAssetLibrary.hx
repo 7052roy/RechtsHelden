@@ -61,8 +61,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/enemy-0.png", AssetType.IMAGE);
 		className.set ("assets/images/enemy-1.png", __ASSET__assets_images_enemy_1_png);
 		type.set ("assets/images/enemy-1.png", AssetType.IMAGE);
-		className.set ("assets/images/enemy-3.png", __ASSET__assets_images_enemy_3_png);
-		type.set ("assets/images/enemy-3.png", AssetType.IMAGE);
+		className.set ("assets/images/enemy-2.png", __ASSET__assets_images_enemy_2_png);
+		type.set ("assets/images/enemy-2.png", AssetType.IMAGE);
 		className.set ("assets/images/images-go-here.txt", __ASSET__assets_images_images_go_here_txt);
 		type.set ("assets/images/images-go-here.txt", AssetType.TEXT);
 		className.set ("assets/images/ion.png", __ASSET__assets_images_ion_png);
@@ -122,7 +122,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
-		id = "assets/images/enemy-3.png";
+		id = "assets/images/enemy-2.png";
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
@@ -234,8 +234,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("assets/images/enemy-1.png", __ASSET__assets_images_enemy_1_png);
 		type.set ("assets/images/enemy-1.png", AssetType.IMAGE);
 		
-		className.set ("assets/images/enemy-3.png", __ASSET__assets_images_enemy_3_png);
-		type.set ("assets/images/enemy-3.png", AssetType.IMAGE);
+		className.set ("assets/images/enemy-2.png", __ASSET__assets_images_enemy_2_png);
+		type.set ("assets/images/enemy-2.png", AssetType.IMAGE);
 		
 		className.set ("assets/images/images-go-here.txt", __ASSET__assets_images_images_go_here_txt);
 		type.set ("assets/images/images-go-here.txt", AssetType.TEXT);
@@ -878,7 +878,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_data_room_001_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_images_enemy_0_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_enemy_1_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
-@:keep @:bind #if display private #end class __ASSET__assets_images_enemy_3_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_enemy_2_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_images_go_here_txt extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_images_ion_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_pat_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
@@ -931,7 +931,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:file("assets/data/room-001.oel") #if display private #end class __ASSET__assets_data_room_001_oel extends lime.utils.ByteArray {}
 @:image("assets/images/enemy-0.png") #if display private #end class __ASSET__assets_images_enemy_0_png extends lime.graphics.Image {}
 @:image("assets/images/enemy-1.png") #if display private #end class __ASSET__assets_images_enemy_1_png extends lime.graphics.Image {}
-@:image("assets/images/enemy-3.png") #if display private #end class __ASSET__assets_images_enemy_3_png extends lime.graphics.Image {}
+@:image("assets/images/enemy-2.png") #if display private #end class __ASSET__assets_images_enemy_2_png extends lime.graphics.Image {}
 @:file("assets/images/images-go-here.txt") #if display private #end class __ASSET__assets_images_images_go_here_txt extends lime.utils.ByteArray {}
 @:image("assets/images/ion.png") #if display private #end class __ASSET__assets_images_ion_png extends lime.graphics.Image {}
 @:image("assets/images/pat.png") #if display private #end class __ASSET__assets_images_pat_png extends lime.graphics.Image {}

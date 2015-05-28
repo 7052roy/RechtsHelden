@@ -66,7 +66,7 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
-		urls.push ("assets/images/enemy-3.png");
+		urls.push ("assets/images/enemy-2.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
