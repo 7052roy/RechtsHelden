@@ -50,10 +50,6 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
-		urls.push ("assets/data/New Project.oep");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
 		urls.push ("assets/data/reachtshelden.oep");
 		types.push (lime.Assets.AssetType.TEXT);
 		

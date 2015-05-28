@@ -53,8 +53,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/data/level_2.oel", AssetType.TEXT);
 		className.set ("assets/data/level_3.oel", __ASSET__assets_data_level_3_oel);
 		type.set ("assets/data/level_3.oel", AssetType.TEXT);
-		className.set ("assets/data/New Project.oep", __ASSET__assets_data_new_project_oep);
-		type.set ("assets/data/New Project.oep", AssetType.TEXT);
 		className.set ("assets/data/reachtshelden.oep", __ASSET__assets_data_reachtshelden_oep);
 		type.set ("assets/data/reachtshelden.oep", AssetType.TEXT);
 		className.set ("assets/data/room-001.oel", __ASSET__assets_data_room_001_oel);
@@ -105,10 +103,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		type.set (id, AssetType.TEXT);
 		id = "assets/data/level_3.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/data/New Project.oep";
 		path.set (id, id);
 		
 		type.set (id, AssetType.TEXT);
@@ -210,7 +204,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
-		
 		#end
 		
 		#if (windows || mac || linux)
@@ -228,9 +221,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/data/level_3.oel", __ASSET__assets_data_level_3_oel);
 		type.set ("assets/data/level_3.oel", AssetType.TEXT);
-		
-		className.set ("assets/data/New Project.oep", __ASSET__assets_data_new_project_oep);
-		type.set ("assets/data/New Project.oep", AssetType.TEXT);
 		
 		className.set ("assets/data/reachtshelden.oep", __ASSET__assets_data_reachtshelden_oep);
 		type.set ("assets/data/reachtshelden.oep", AssetType.TEXT);
@@ -884,7 +874,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_data_level_1_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_level_2_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_level_3_oel extends flash.utils.ByteArray { }
-@:keep @:bind #if display private #end class __ASSET__assets_data_new_project_oep extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_reachtshelden_oep extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_room_001_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_images_enemy_0_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
@@ -927,7 +916,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
-
 #else
 
 
@@ -939,7 +927,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:file("assets/data/level_1.oel") #if display private #end class __ASSET__assets_data_level_1_oel extends lime.utils.ByteArray {}
 @:file("assets/data/level_2.oel") #if display private #end class __ASSET__assets_data_level_2_oel extends lime.utils.ByteArray {}
 @:file("assets/data/level_3.oel") #if display private #end class __ASSET__assets_data_level_3_oel extends lime.utils.ByteArray {}
-@:file("assets/data/New Project.oep") #if display private #end class __ASSET__assets_data_new_project_oep extends lime.utils.ByteArray {}
 @:file("assets/data/reachtshelden.oep") #if display private #end class __ASSET__assets_data_reachtshelden_oep extends lime.utils.ByteArray {}
 @:file("assets/data/room-001.oel") #if display private #end class __ASSET__assets_data_room_001_oel extends lime.utils.ByteArray {}
 @:image("assets/images/enemy-0.png") #if display private #end class __ASSET__assets_images_enemy_0_png extends lime.graphics.Image {}

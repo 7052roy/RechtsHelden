@@ -15,6 +15,7 @@ import flixel.util.FlxAngle;
 import flixel.util.FlxDestroyUtil;
 import flixel.util.FlxMath;
 import flixel.util.FlxPoint;
+import flixel.util.FlxTimer;
 
 /**
  * A FlxState which can be used for the actual gameplay.
@@ -27,6 +28,7 @@ class PlayState extends FlxState
 	private var _mWalls:FlxTilemap;
 	//private var _grpCoins:FlxTypedGroup<Coin>;
 	private var _grpEnemies:FlxTypedGroup<Enemy>;
+	public var timer:FlxTimer;
 	
 	/**
 	 * Function that is called up when to state is created to set it up. 

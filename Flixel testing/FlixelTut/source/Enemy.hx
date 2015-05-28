@@ -6,6 +6,7 @@ import flixel.FlxSprite;
 import flixel.util.FlxAngle;
 import flixel.util.FlxPoint;
 import flixel.util.FlxRandom;
+import flixel.util.FlxTimer;
 import flixel.util.FlxVelocity;
 
 class Enemy extends FlxSprite
@@ -17,10 +18,18 @@ class Enemy extends FlxSprite
 	private var _moveDir:Float;
 	public var seesPlayer:Bool = false;
 	public var playerPos(default, null):FlxPoint;
+	var positionx = 0;
+	var positiony = 0;
+	var position:FlxPoint;
+	var timer:FlxTimer;
 	
 	public function new(X:Float=0, Y:Float=0, EType:Int) 
 	{
+		//timer = new FlxTimer(2, chase, 0);
+		
 		super(X, Y);
+		//position = new FlxPoint(positionx, positiony);
+		//FlxVelocity.moveTowardsPoint(this, position, Std.int(speed));
 		etype = EType;
 		loadGraphic("assets/images/enemy-" + Std.string(etype) + ".png", true, 64, 64);
 		setFacingFlip(FlxObject.LEFT, false, false);
@@ -36,6 +45,7 @@ class Enemy extends FlxSprite
 		_brain = new FSM(idle);
 		_idleTmr = 0;
 		playerPos = FlxPoint.get();
+
 	}
 	
 	override public function update():Void 
@@ -46,11 +56,11 @@ class Enemy extends FlxSprite
 	
 	public function idle():Void
 	{
-		if (seesPlayer)
+		/*if (seesPlayer)
 		{
 			_brain.activeState = chase;
-		}
-		else if (_idleTmr <= 0)
+		}*/
+		if (_idleTmr <= 0)
 		{
 			if (FlxRandom.chanceRoll(1))
 			{
@@ -59,8 +69,7 @@ class Enemy extends FlxSprite
 			}
 			else
 			{
-				_moveDir = FlxRandom.intRanged(0, 8) * 45;
-				FlxAngle.rotatePoint(speed * .5, 0, 0, 0, _moveDir, velocity);
+				moveDirection();
 				
 			}
 			_idleTmr = FlxRandom.intRanged(1, 4);			
@@ -70,16 +79,32 @@ class Enemy extends FlxSprite
 		
 	}
 	
-	public function chase():Void
+	function moveDirection()
 	{
-		if (!seesPlayer)
+		_moveDir = FlxRandom.intRanged(0, 8) * 45;
+		
+		if (_moveDir == 45 || _moveDir == 135 || _moveDir == 225 || _moveDir == 315)
+		{
+			moveDirection();
+		}else {
+			FlxAngle.rotatePoint(speed * .5, 0, 0, 0, _moveDir, velocity);
+		}
+		
+	}
+	
+	public function chase(timer:FlxTimer)
+	{
+		
+		/*if (!seesPlayer)
 		{
 			_brain.activeState = idle;
-		}
-		else
-		{
-			FlxVelocity.moveTowardsPoint(this, playerPos, Std.int(speed));
-		}
+		}*/
+		position = new FlxPoint(positionx, positiony);
+		FlxVelocity.moveTowardsPoint(this, position, Std.int(speed));
+		
+		positionx += 100;
+		
+		
 	}
 	
 	
