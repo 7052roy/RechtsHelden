@@ -42,6 +42,14 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
+		urls.push ("assets/data/level_2.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/data/level_3.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
 		urls.push ("assets/data/New Project.oep");
 		types.push (lime.Assets.AssetType.TEXT);
 		
@@ -52,6 +60,18 @@ class ApplicationMain {
 		
 		urls.push ("assets/data/room-001.oel");
 		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/images/enemy-0.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/enemy-1.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/enemy-3.png");
+		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
 		urls.push ("assets/images/images-go-here.txt");
@@ -166,7 +186,6 @@ class ApplicationMain {
 			file: "FlixelTut",
 			fps: Std.int (60),
 			fullscreen: false,
-			hardware: true,
 			height: Std.int (480),
 			orientation: "portrait",
 			packageName: "com.example.myapp",
