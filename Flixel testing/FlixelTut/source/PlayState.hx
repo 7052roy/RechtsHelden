@@ -8,10 +8,13 @@ import flixel.FlxSprite;
 import flixel.FlxState;
 import flixel.group.FlxGroup;
 import flixel.group.FlxTypedGroup;
+import flixel.system.FlxSound;
 import flixel.text.FlxText;
 import flixel.tile.FlxTilemap;
 import flixel.ui.FlxButton;
+import flixel.ui.FlxVirtualPad;
 import flixel.util.FlxAngle;
+import flixel.util.FlxColor;
 import flixel.util.FlxDestroyUtil;
 import flixel.util.FlxMath;
 import flixel.util.FlxPoint;
@@ -26,23 +29,32 @@ class PlayState extends FlxState
 	private var _player:Player;
 	private var _map:FlxOgmoLoader;
 	private var _mWalls:FlxTilemap;
-	//private var _grpCoins:FlxTypedGroup<Coin>;
+	private var _grpCoins:FlxTypedGroup<Coin>;
 	private var _grpEnemies:FlxTypedGroup<Enemy>;
+	var townMusic:FlxSound;
+	private var _hud:HUD;
+	private var _money:Int = 0;
+	private var _health:Int = 3;
+	private var _inCombat:Bool = false;
+	
+	#if mobile
+	public static var virtualPad:FlxVirtualPad;
+	#end
 	
 	/**
 	 * Function that is called up when to state is created to set it up. 
 	 */
 	override public function create():Void
 	{
-		_map = new FlxOgmoLoader("assets/data/level_3.oel");
+		_map = new FlxOgmoLoader("assets/data/level_4.oel");
 		_mWalls = _map.loadTilemap("assets/images/Tilesheet_Complete.png", 64, 64, "tree");
 		_mWalls.setTileProperties(1, FlxObject.NONE);
 		_mWalls.setTileProperties(3, FlxObject.NONE);
 		_mWalls.setTileProperties(2, FlxObject.ANY);
 		add(_mWalls);
 		
-		//_grpCoins = new FlxTypedGroup<Coin>();
-		//add(_grpCoins);
+		_grpCoins = new FlxTypedGroup<Coin>();
+		add(_grpCoins);
 		
 		_grpEnemies = new FlxTypedGroup<Enemy>();
 		add(_grpEnemies);
@@ -55,6 +67,18 @@ class PlayState extends FlxState
 		
 		FlxG.camera.follow(_player, FlxCamera.STYLE_TOPDOWN, null, 1);
 		
+		//_hud = new HUD();
+		//add(_hud);
+		townMusic = FlxG.sound.load("assets/music/townMusic.wav");
+		townMusic.play(true);
+		
+		FlxG.camera.fade(FlxColor.BLACK, 2, true);
+		
+		#if mobile
+		virtualPad = new FlxVirtualPad(FULL, NONE);		
+		add(virtualPad);
+		#end
+		
 		super.create();	
 		
 	}
@@ -66,11 +90,11 @@ class PlayState extends FlxState
 			_player.x = Std.parseInt(entityData.get("x"));
 			_player.y = Std.parseInt(entityData.get("y"));
 		}
-		/*else if (entityName == "coin")
+		else if (entityName == "coin")
 		{
 			_grpCoins.add(new Coin(Std.parseInt(entityData.get("x")) + 4, Std.parseInt(entityData.get("y")) + 4));
 			
-		}*/
+		}
 		else if (entityName == "enemy")
 		{
 			_grpEnemies.add(new Enemy(Std.parseInt(entityData.get("x"))+4, Std.parseInt(entityData.get("y")), Std.parseInt(entityData.get("etype"))));
@@ -96,7 +120,7 @@ class PlayState extends FlxState
 		super.update();
 		
 		FlxG.collide(_player, _mWalls);
-		//FlxG.overlap(_player, _grpCoins, playerTouchCoin);
+		FlxG.overlap(_player, _grpCoins, playerTouchCoin);
 		FlxG.collide(_grpEnemies, _mWalls);
 		checkEnemyVision();
 		
@@ -117,11 +141,13 @@ class PlayState extends FlxState
 		}
 	}
 	
-	/*private function playerTouchCoin(P:Player, C:Coin):Void
+	private function playerTouchCoin(P:Player, C:Coin):Void
 	{
 		if (P.alive && P.exists && C.alive && C.exists)
 		{
 			C.kill();
+			_money++;
+			//_hud.updateHUD(_health, _money);
 		}
-	}*/
+	}
 }
