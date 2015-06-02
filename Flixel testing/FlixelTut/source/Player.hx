@@ -34,6 +34,7 @@ class Player extends FlxSprite
 		drag.x = drag.y = 1600;
 		setSize(50, 50);
 		offset.set(14, 7);
+		//immovable = true;
 	}
 	
 	public function checkCharacter()

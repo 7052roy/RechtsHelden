@@ -48,9 +48,9 @@ class PlayState extends FlxState
 	{
 		_map = new FlxOgmoLoader("assets/data/level_4.oel");
 		_mWalls = _map.loadTilemap("assets/images/Tilesheet_Complete.png", 64, 64, "tree");
-		_mWalls.setTileProperties(1, FlxObject.NONE);
+		_mWalls.setTileProperties(1, FlxObject.ANY);
 		_mWalls.setTileProperties(3, FlxObject.NONE);
-		_mWalls.setTileProperties(2, FlxObject.ANY);
+		_mWalls.setTileProperties(2, FlxObject.NONE);
 		add(_mWalls);
 		
 		_grpCoins = new FlxTypedGroup<Coin>();
@@ -118,14 +118,29 @@ class PlayState extends FlxState
 	{
 
 		super.update();
-		
+		_player.speed = 300;
 		FlxG.collide(_player, _mWalls);
 		FlxG.overlap(_player, _grpCoins, playerTouchCoin);
 		FlxG.collide(_grpEnemies, _mWalls);
+		
+		//FlxG.overlap(_grpEnemies, _player, enemyPlayer); 
+		FlxG.overlap(_player, _grpEnemies, playerEnemy);
 		checkEnemyVision();
 		
 		
 	}	
+	
+	function playerEnemy(p:Player, e:Enemy)
+	{
+		p.speed = 0;
+		e.stopped1();
+	}
+	
+	function enemyPlayer(e:Enemy, p:Player)
+	{
+		e.speed = 0;
+		p.speed = 0;
+	}
 	
 	private function checkEnemyVision():Void
 	{

@@ -25,7 +25,6 @@ class Enemy extends FlxSprite
 	
 	public function new(X:Float=0, Y:Float=0, EType:Int) 
 	{
-		//timer = new FlxTimer(2, chase, 0);
 		
 		super(X, Y);
 		etype = EType;
@@ -35,43 +34,76 @@ class Enemy extends FlxSprite
 		animation.add("d", [0, 1, 0, 2], 6, false);
 		animation.add("lr", [6, 7, 6, 8], 6, false);
 		animation.add("u", [3, 4, 3, 5], 6, false);
-		drag.x = drag.y = 10;
-		width = 8;
-		height = 14;
+		drag.x = drag.y = 0;
+		width = 64;
+		height = 64;
 		offset.x = 4;
 		offset.y = 2;
 		_brain = new FSM(idle);
 		_idleTmr = 0;
 		playerPos = FlxPoint.get();
-
+		//immovable = true;
+	}
+	
+	public function setSpeed()
+	{
+		speed = 0;
 	}
 	
 	override public function update():Void 
 	{
+		
 		_brain.update();
 		super.update();
 	}
 	
+	public function stopped1()
+	{
+		_brain.activeState = stopped;
+	}
+	
+	public function stopped()
+	{
+		speed = 0;
+	}
+	
 	public function idle():Void
 	{
-		
-		/*if (seesPlayer)
-		{
-			_brain.activeState = chase;
-		}*/
+		speed = 200;
 		if (_idleTmr <= 0)
 		{
-			FlxAngle.rotatePoint(speed * .5, 0, 0, 0, movementAngle, velocity);
-			movementAngle += 90;
-			if (movementAngle > 270)
+			speed = 200.1;
+			var randomMovement = 0; //FlxRandom.intRanged(0, 2);
+			if (randomMovement == 0)
 			{
-				movementAngle = 0;
+				FlxAngle.rotatePoint(speed * .5, 0, 0, 0, movementAngle, velocity);
+				movementAngle += 90;
+				if (movementAngle > 270)
+				{
+					movementAngle = 0;
+				}
+			}else if (randomMovement == 1)
+			{
+				FlxAngle.rotatePoint(speed * .5, 0, 0, 0, movementAngle, velocity);
+				movementAngle += 180;
+				if (movementAngle > 270)
+				{
+					movementAngle = 0;
+				}
+			}else if (randomMovement == 2)
+			{
+				movementAngle = 90;
+				FlxAngle.rotatePoint(speed * .5, 0, 0, 0, movementAngle, velocity);
+				movementAngle += 180;
+				if (movementAngle > 270)
+				{
+					movementAngle = 90;
+				}
 			}
 			_idleTmr = 4;
 		}
 		else
 			_idleTmr -= FlxG.elapsed;
-		
 	}
 	
 	function moveDirection()
@@ -87,20 +119,20 @@ class Enemy extends FlxSprite
 		
 	}
 	
-	public function chase(timer:FlxTimer)
+	/*public function chase(timer:FlxTimer)
 	{
 		
-		/*if (!seesPlayer)
+		if (!seesPlayer)
 		{
 			_brain.activeState = idle;
-		}*/
+		}
 		position = new FlxPoint(positionx, positiony);
 		FlxVelocity.moveTowardsPoint(this, position, Std.int(speed));
 		
 		positionx += 100;
 		
 		
-	}
+	}*/
 	
 	
 	override public function draw():Void 
