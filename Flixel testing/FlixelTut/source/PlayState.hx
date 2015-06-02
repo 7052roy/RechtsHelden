@@ -126,7 +126,7 @@ class PlayState extends FlxState
 	{
 
 		super.update();
-		_player.speed = 300;
+		_player.speed = 300.1;
 		FlxG.collide(_player, _mWalls);
 		FlxG.overlap(_player, _grpCoins, playerTouchCoin);
 		FlxG.collide(_grpEnemies, _mWalls);
