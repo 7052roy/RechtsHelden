@@ -37,6 +37,7 @@ class PlayState extends FlxState
 	private var _health:Int = 3;
 	private var _inCombat:Bool = false;
 	private var _teacher:Teacher;
+	private var _kid:Kid;
 	
 	#if mobile
 	public static var virtualPad:FlxVirtualPad;
@@ -65,6 +66,9 @@ class PlayState extends FlxState
 		
 		_teacher = new Teacher();
 		add(_teacher);
+		
+		_kid = new Kid();
+		add(_kid);
 		
 		_map.loadEntities(placeEntities, "entities");
 		
@@ -110,7 +114,11 @@ class PlayState extends FlxState
 			_teacher.x = Std.parseInt(entityData.get("x"));
 			_teacher.y = Std.parseInt(entityData.get("y"));
 		}
-		
+		else if (entityName == "mission1_Kid")
+		{
+			_kid.x = Std.parseInt(entityData.get("x"));
+			_kid.y = Std.parseInt(entityData.get("y"));
+		}
 	}
 	
 	
@@ -142,9 +150,20 @@ class PlayState extends FlxState
 		
 	}	
 	
-	function loadMission1()
+	function loadMission1(p:Player, t:Teacher)
 	{
-		
+		_map = new FlxOgmoLoader("assets/data/Mission1_0.oel");
+		_mWalls = _map.loadTilemap("assets/images/Tilesheet_Complete.png", 64, 64, "tree");
+		_mWalls.setTileProperties(1, FlxObject.ANY);
+		_mWalls.setTileProperties(3, FlxObject.NONE);
+		_mWalls.setTileProperties(2, FlxObject.NONE);
+		add(_mWalls);
+		_player = new Player();
+		_kid = new Kid();
+		add(_kid);
+		add(_player);
+		_map.loadEntities(placeEntities, "entities");
+		trace(_map);
 	}
 	
 	function playerEnemy(p:Player, e:Enemy)
