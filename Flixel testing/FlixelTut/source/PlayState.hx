@@ -36,6 +36,7 @@ class PlayState extends FlxState
 	private var _money:Int = 0;
 	private var _health:Int = 3;
 	private var _inCombat:Bool = false;
+	private var _teacher:Teacher;
 	
 	#if mobile
 	public static var virtualPad:FlxVirtualPad;
@@ -62,7 +63,8 @@ class PlayState extends FlxState
 		_player = new Player();
 		
 		_map.loadEntities(placeEntities, "entities");
-		
+		_teacher = new Teacher();
+		add(_teacher);
 		add(_player);
 		
 		FlxG.camera.follow(_player, FlxCamera.STYLE_TOPDOWN, null, 1);
@@ -99,6 +101,12 @@ class PlayState extends FlxState
 		{
 			_grpEnemies.add(new Enemy(Std.parseInt(entityData.get("x"))+4, Std.parseInt(entityData.get("y")), Std.parseInt(entityData.get("etype"))));
 		}
+		else if (entityName == "mission1_Teacher")
+		{
+			_teacher.x = Std.parseInt(entityData.get("x"));
+			_teacher.y = Std.parseInt(entityData.get("y"));
+		}
+		
 	}
 	
 	
@@ -133,7 +141,7 @@ class PlayState extends FlxState
 	function playerEnemy(p:Player, e:Enemy)
 	{
 		p.speed = 0;
-		e.stopped1();
+		e.speed = 0;
 	}
 	
 	function enemyPlayer(e:Enemy, p:Player)

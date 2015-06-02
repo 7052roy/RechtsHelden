@@ -52,7 +52,7 @@ class Enemy extends FlxSprite
 	
 	override public function update():Void 
 	{
-		
+		//trace(speed);
 		_brain.update();
 		super.update();
 	}
@@ -69,7 +69,6 @@ class Enemy extends FlxSprite
 	
 	public function idle():Void
 	{
-		speed = 200;
 		if (_idleTmr <= 0)
 		{
 			speed = 200.1;
