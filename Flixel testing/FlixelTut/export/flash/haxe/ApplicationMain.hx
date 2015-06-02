@@ -202,7 +202,6 @@ class ApplicationMain {
 			file: "FlixelTut",
 			fps: Std.int (60),
 			fullscreen: false,
-			hardware: true,
 			height: Std.int (480),
 			orientation: "portrait",
 			packageName: "com.example.myapp",
