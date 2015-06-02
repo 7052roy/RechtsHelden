@@ -34,6 +34,14 @@ class ApplicationMain {
 		var types = [];
 		
 		
+		urls.push ("assets/data/basemap.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/data/basemap1.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
 		urls.push ("assets/data/data-goes-here.txt");
 		types.push (lime.Assets.AssetType.TEXT);
 		
@@ -51,6 +59,14 @@ class ApplicationMain {
 		
 		
 		urls.push ("assets/data/level_4.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/data/Mission1_0.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/data/Mission1_1.oel");
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
@@ -202,6 +218,7 @@ class ApplicationMain {
 			file: "FlixelTut",
 			fps: Std.int (60),
 			fullscreen: false,
+			hardware: true,
 			height: Std.int (480),
 			orientation: "portrait",
 			packageName: "com.example.myapp",

@@ -47,7 +47,7 @@ class PlayState extends FlxState
 	 */
 	override public function create():Void
 	{
-		_map = new FlxOgmoLoader("assets/data/level_4.oel");
+		_map = new FlxOgmoLoader("assets/data/basemap1.oel");
 		_mWalls = _map.loadTilemap("assets/images/Tilesheet_Complete.png", 64, 64, "tree");
 		_mWalls.setTileProperties(1, FlxObject.ANY);
 		_mWalls.setTileProperties(3, FlxObject.NONE);
@@ -61,11 +61,15 @@ class PlayState extends FlxState
 		add(_grpEnemies);
 		
 		_player = new Player();
+		add(_player);
 		
-		_map.loadEntities(placeEntities, "entities");
 		_teacher = new Teacher();
 		add(_teacher);
-		add(_player);
+		
+		_map.loadEntities(placeEntities, "entities");
+		
+		
+		
 		
 		FlxG.camera.follow(_player, FlxCamera.STYLE_TOPDOWN, null, 1);
 		
@@ -92,7 +96,7 @@ class PlayState extends FlxState
 			_player.x = Std.parseInt(entityData.get("x"));
 			_player.y = Std.parseInt(entityData.get("y"));
 		}
-		else if (entityName == "coin")
+		else if (entityName == "coin") 
 		{
 			_grpCoins.add(new Coin(Std.parseInt(entityData.get("x")) + 4, Std.parseInt(entityData.get("y")) + 4));
 			
@@ -126,28 +130,27 @@ class PlayState extends FlxState
 	{
 
 		super.update();
-		_player.speed = 300.1;
+		_player.speed = 300;
 		FlxG.collide(_player, _mWalls);
 		FlxG.overlap(_player, _grpCoins, playerTouchCoin);
 		FlxG.collide(_grpEnemies, _mWalls);
-		
-		//FlxG.overlap(_grpEnemies, _player, enemyPlayer); 
+		FlxG.overlap(_player, _teacher, loadMission1);
+		FlxG.collide(_teacher, _mWalls);
 		FlxG.overlap(_player, _grpEnemies, playerEnemy);
 		checkEnemyVision();
 		
 		
 	}	
 	
+	function loadMission1()
+	{
+		
+	}
+	
 	function playerEnemy(p:Player, e:Enemy)
 	{
 		p.speed = 0;
 		e.speed = 0;
-	}
-	
-	function enemyPlayer(e:Enemy, p:Player)
-	{
-		e.speed = 0;
-		p.speed = 0;
 	}
 	
 	private function checkEnemyVision():Void

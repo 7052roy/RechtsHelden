@@ -45,6 +45,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		#if flash
 		
+		className.set ("assets/data/basemap.oel", __ASSET__assets_data_basemap_oel);
+		type.set ("assets/data/basemap.oel", AssetType.TEXT);
+		className.set ("assets/data/basemap1.oel", __ASSET__assets_data_basemap1_oel);
+		type.set ("assets/data/basemap1.oel", AssetType.TEXT);
 		className.set ("assets/data/data-goes-here.txt", __ASSET__assets_data_data_goes_here_txt);
 		type.set ("assets/data/data-goes-here.txt", AssetType.TEXT);
 		className.set ("assets/data/level_1.oel", __ASSET__assets_data_level_1_oel);
@@ -55,6 +59,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/data/level_3.oel", AssetType.TEXT);
 		className.set ("assets/data/level_4.oel", __ASSET__assets_data_level_4_oel);
 		type.set ("assets/data/level_4.oel", AssetType.TEXT);
+		className.set ("assets/data/Mission1_0.oel", __ASSET__assets_data_mission1_0_oel);
+		type.set ("assets/data/Mission1_0.oel", AssetType.TEXT);
+		className.set ("assets/data/Mission1_1.oel", __ASSET__assets_data_mission1_1_oel);
+		type.set ("assets/data/Mission1_1.oel", AssetType.TEXT);
 		className.set ("assets/data/reachtshelden.oep", __ASSET__assets_data_reachtshelden_oep);
 		type.set ("assets/data/reachtshelden.oep", AssetType.TEXT);
 		className.set ("assets/data/room-001.oel", __ASSET__assets_data_room_001_oel);
@@ -100,6 +108,14 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#elseif html5
 		
 		var id;
+		id = "assets/data/basemap.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/basemap1.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
 		id = "assets/data/data-goes-here.txt";
 		path.set (id, id);
 		
@@ -117,6 +133,14 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		type.set (id, AssetType.TEXT);
 		id = "assets/data/level_4.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/Mission1_0.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/Mission1_1.oel";
 		path.set (id, id);
 		
 		type.set (id, AssetType.TEXT);
@@ -239,11 +263,21 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
+		
+		
 		#end
 		
 		#if (windows || mac || linux)
 		
 		var useManifest = false;
+		
+		className.set ("assets/data/basemap.oel", __ASSET__assets_data_basemap_oel);
+		type.set ("assets/data/basemap.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/basemap1.oel", __ASSET__assets_data_basemap1_oel);
+		type.set ("assets/data/basemap1.oel", AssetType.TEXT);
 		
 		className.set ("assets/data/data-goes-here.txt", __ASSET__assets_data_data_goes_here_txt);
 		type.set ("assets/data/data-goes-here.txt", AssetType.TEXT);
@@ -259,6 +293,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/data/level_4.oel", __ASSET__assets_data_level_4_oel);
 		type.set ("assets/data/level_4.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/Mission1_0.oel", __ASSET__assets_data_mission1_0_oel);
+		type.set ("assets/data/Mission1_0.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/Mission1_1.oel", __ASSET__assets_data_mission1_1_oel);
+		type.set ("assets/data/Mission1_1.oel", AssetType.TEXT);
 		
 		className.set ("assets/data/reachtshelden.oep", __ASSET__assets_data_reachtshelden_oep);
 		type.set ("assets/data/reachtshelden.oep", AssetType.TEXT);
@@ -920,11 +960,15 @@ class DefaultAssetLibrary extends AssetLibrary {
 #if !display
 #if flash
 
+@:keep @:bind #if display private #end class __ASSET__assets_data_basemap_oel extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_basemap1_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_data_goes_here_txt extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_level_1_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_level_2_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_level_3_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_level_4_oel extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_mission1_0_oel extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_mission1_1_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_reachtshelden_oep extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_room_001_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_images_coin_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
@@ -976,6 +1020,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
+
+
+
 #else
 
 
@@ -983,11 +1031,15 @@ class DefaultAssetLibrary extends AssetLibrary {
 #if (windows || mac || linux)
 
 
+@:file("assets/data/basemap.oel") #if display private #end class __ASSET__assets_data_basemap_oel extends lime.utils.ByteArray {}
+@:file("assets/data/basemap1.oel") #if display private #end class __ASSET__assets_data_basemap1_oel extends lime.utils.ByteArray {}
 @:file("assets/data/data-goes-here.txt") #if display private #end class __ASSET__assets_data_data_goes_here_txt extends lime.utils.ByteArray {}
 @:file("assets/data/level_1.oel") #if display private #end class __ASSET__assets_data_level_1_oel extends lime.utils.ByteArray {}
 @:file("assets/data/level_2.oel") #if display private #end class __ASSET__assets_data_level_2_oel extends lime.utils.ByteArray {}
 @:file("assets/data/level_3.oel") #if display private #end class __ASSET__assets_data_level_3_oel extends lime.utils.ByteArray {}
 @:file("assets/data/level_4.oel") #if display private #end class __ASSET__assets_data_level_4_oel extends lime.utils.ByteArray {}
+@:file("assets/data/Mission1_0.oel") #if display private #end class __ASSET__assets_data_mission1_0_oel extends lime.utils.ByteArray {}
+@:file("assets/data/Mission1_1.oel") #if display private #end class __ASSET__assets_data_mission1_1_oel extends lime.utils.ByteArray {}
 @:file("assets/data/reachtshelden.oep") #if display private #end class __ASSET__assets_data_reachtshelden_oep extends lime.utils.ByteArray {}
 @:file("assets/data/room-001.oel") #if display private #end class __ASSET__assets_data_room_001_oel extends lime.utils.ByteArray {}
 @:image("assets/images/coin.png") #if display private #end class __ASSET__assets_images_coin_png extends lime.graphics.Image {}
