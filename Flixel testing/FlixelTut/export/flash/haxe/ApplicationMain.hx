@@ -1,5 +1,7 @@
-import lime.Assets;
 #if !macro
+
+
+@:access(lime.Assets)
 
 
 class ApplicationMain {
@@ -8,13 +10,18 @@ class ApplicationMain {
 	public static var config:lime.app.Config;
 	public static var preloader:openfl.display.Preloader;
 	
-	private static var app:lime.app.Application;
-	
 	
 	public static function create ():Void {
 		
-		app = new openfl.display.Application ();
+		var app = new lime.app.Application ();
 		app.create (config);
+		openfl.Lib.application = app;
+		
+		#if !flash
+		var stage = new openfl.display.Stage (app.window.width, app.window.height, config.background);
+		stage.addChild (openfl.Lib.current);
+		app.addModule (stage);
+		#end
 		
 		var display = new flixel.system.FlxPreloader ();
 		
@@ -22,12 +29,12 @@ class ApplicationMain {
 		preloader.onComplete = init;
 		preloader.create (config);
 		
-		#if js
+		#if (js && html5)
 		var urls = [];
 		var types = [];
 		
 		
-		urls.push ("assets/data/basemap.oel");
+		urls.push ("assets/data/BaseMap.oel");
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
@@ -36,23 +43,23 @@ class ApplicationMain {
 		
 		
 		urls.push ("assets/data/data-goes-here.txt");
-		types.push (AssetType.TEXT);
+		types.push (lime.Assets.AssetType.TEXT);
 		
 		
 		urls.push ("assets/data/level_1.oel");
-		types.push (AssetType.TEXT);
+		types.push (lime.Assets.AssetType.TEXT);
 		
 		
 		urls.push ("assets/data/level_2.oel");
-		types.push (AssetType.TEXT);
+		types.push (lime.Assets.AssetType.TEXT);
 		
 		
 		urls.push ("assets/data/level_3.oel");
-		types.push (AssetType.TEXT);
+		types.push (lime.Assets.AssetType.TEXT);
 		
 		
 		urls.push ("assets/data/level_4.oel");
-		types.push (AssetType.TEXT);
+		types.push (lime.Assets.AssetType.TEXT);
 		
 		
 		urls.push ("assets/data/Mission1_0.oel");
@@ -64,92 +71,110 @@ class ApplicationMain {
 		
 		
 		urls.push ("assets/data/reachtshelden.oep");
-		types.push (AssetType.TEXT);
+		types.push (lime.Assets.AssetType.TEXT);
 		
 		
 		urls.push ("assets/data/room-001.oel");
-		types.push (AssetType.TEXT);
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/images/BigAssTiles.png");
+		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
 		urls.push ("assets/images/coin.png");
-		types.push (AssetType.IMAGE);
+		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
 		urls.push ("assets/images/enemy-0.png");
-		types.push (AssetType.IMAGE);
+		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
 		urls.push ("assets/images/enemy-1.png");
-		types.push (AssetType.IMAGE);
+		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
 		urls.push ("assets/images/enemy-2.png");
-		types.push (AssetType.IMAGE);
+		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
 		urls.push ("assets/images/health.png");
-		types.push (AssetType.IMAGE);
+		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
 		urls.push ("assets/images/images-go-here.txt");
-		types.push (AssetType.TEXT);
+		types.push (lime.Assets.AssetType.TEXT);
 		
 		
 		urls.push ("assets/images/ion.png");
-		types.push (AssetType.IMAGE);
+		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
 		urls.push ("assets/images/pat.png");
-		types.push (AssetType.IMAGE);
+		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
 		urls.push ("assets/images/player.png");
-		types.push (AssetType.IMAGE);
+		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
 		urls.push ("assets/images/pointer.png");
-		types.push (AssetType.IMAGE);
+		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
 		urls.push ("assets/images/tec.png");
-		types.push (AssetType.IMAGE);
+		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
 		urls.push ("assets/images/tiles.png");
-		types.push (AssetType.IMAGE);
+		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
 		urls.push ("assets/images/Tilesheet_Complete.png");
-		types.push (AssetType.IMAGE);
+		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
 		urls.push ("assets/music/music-goes-here.txt");
-		types.push (AssetType.TEXT);
+		types.push (lime.Assets.AssetType.TEXT);
 		
 		
 		urls.push ("assets/music/townMusic.wav");
-		types.push (AssetType.SOUND);
+		types.push (lime.Assets.AssetType.SOUND);
 		
 		
 		urls.push ("assets/sounds/sounds-go-here.txt");
-		types.push (AssetType.TEXT);
+		types.push (lime.Assets.AssetType.TEXT);
 		
 		
 		urls.push ("assets/sounds/beep.mp3");
-		types.push (AssetType.MUSIC);
+		types.push (lime.Assets.AssetType.MUSIC);
 		
 		
 		urls.push ("assets/sounds/flixel.mp3");
-		types.push (AssetType.MUSIC);
+		types.push (lime.Assets.AssetType.MUSIC);
 		
 		
+		
+		if (config.assetsPrefix != null) {
+			
+			for (i in 0...urls.length) {
+				
+				if (types[i] != lime.Assets.AssetType.FONT) {
+					
+					urls[i] = config.assetsPrefix + urls[i];
+					
+				}
+				
+			}
+			
+		}
 		
 		preloader.load (urls, types);
 		#end
 		
 		var result = app.exec ();
 		
-		#if sys
+		#if (sys && !nodejs && !emscripten)
 		Sys.exit (result);
 		#end
 		
@@ -192,22 +217,26 @@ class ApplicationMain {
 			antialiasing: Std.int (0),
 			background: Std.int (0),
 			borderless: false,
+			company: "HaxeFlixel",
 			depthBuffer: false,
+			file: "FlixelTut",
 			fps: Std.int (60),
 			fullscreen: false,
 			height: Std.int (480),
 			orientation: "portrait",
+			packageName: "com.example.myapp",
 			resizable: true,
-			stencilBuffer: false,
+			stencilBuffer: true,
 			title: "FlixelTut",
+			version: "0.0.1",
 			vsync: true,
 			width: Std.int (640),
 			
 		}
 		
-		#if js
-		#if munit
-		flash.Lib.embed (null, 640, 480, "000000");
+		#if (js && html5)
+		#if (munit || utest)
+		openfl.Lib.embed (null, 640, 480, "000000");
 		#end
 		#else
 		create ();
@@ -218,12 +247,10 @@ class ApplicationMain {
 	
 	public static function start ():Void {
 		
-		openfl.Lib.current.stage.align = openfl.display.StageAlign.TOP_LEFT;
-		openfl.Lib.current.stage.scaleMode = openfl.display.StageScaleMode.NO_SCALE;
-		
 		var hasMain = false;
+		var entryPoint = Type.resolveClass ("Main");
 		
-		for (methodName in Type.getClassFields (Main)) {
+		for (methodName in Type.getClassFields (entryPoint)) {
 			
 			if (methodName == "main") {
 				
@@ -234,9 +261,11 @@ class ApplicationMain {
 			
 		}
 		
+		lime.Assets.initialize ();
+		
 		if (hasMain) {
 			
-			Reflect.callMethod (Main, Reflect.field (Main, "main"), []);
+			Reflect.callMethod (entryPoint, Reflect.field (entryPoint, "main"), []);
 			
 		} else {
 			
