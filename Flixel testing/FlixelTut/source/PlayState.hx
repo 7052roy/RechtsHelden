@@ -48,7 +48,7 @@ class PlayState extends FlxState
 	 */
 	override public function create():Void
 	{
-		_map = new FlxOgmoLoader("assets/data/level_4.oel");
+		_map = new FlxOgmoLoader("assets/data/basemap1.oel");
 		_mWalls = _map.loadTilemap("assets/images/Tilesheet_Complete.png", 64, 64, "tree");
 		_mWalls.setTileProperties(1, FlxObject.ANY);
 		_mWalls.setTileProperties(3, FlxObject.NONE);
@@ -146,24 +146,27 @@ class PlayState extends FlxState
 		FlxG.collide(_teacher, _mWalls);
 		FlxG.collide(_player, _grpEnemies, playerEnemy);
 		checkEnemyVision();
-		
-		
 	}	
 	
 	function loadMission1(p:Player, t:Teacher)
 	{
-		_map = new FlxOgmoLoader("assets/data/mission1_0.oel");
+		remove(_mWalls, true);
+		remove(_player, true);
+		remove(_teacher, true);
+		remove(_player, true);
+		_map = new FlxOgmoLoader("assets/data/Mission1_0.oel");
 		_mWalls = _map.loadTilemap("assets/images/Tilesheet_Complete.png", 64, 64, "tree");
 		_mWalls.setTileProperties(1, FlxObject.ANY);
 		_mWalls.setTileProperties(3, FlxObject.NONE);
 		_mWalls.setTileProperties(2, FlxObject.NONE);
+		_mWalls.setTileProperties(10, FlxObject.NONE);
 		add(_mWalls);
 		_player = new Player();
 		_kid = new Kid();
 		add(_kid);
 		add(_player);
 		_map.loadEntities(placeEntities, "entities");
-		trace(_map);
+		FlxG.camera.follow(_player, FlxCamera.STYLE_TOPDOWN, null, 1);
 	}
 	
 	function playerEnemy(p:Player, e:Enemy)
