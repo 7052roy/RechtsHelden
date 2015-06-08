@@ -78,7 +78,15 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
+		urls.push ("assets/images/AngryDad.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/BigAssTiles.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/CharacterTilesheet768x768.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
@@ -98,6 +106,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/images/Furniture.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/health.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -110,6 +122,14 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/images/Mission1Girl.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Mission2Football.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/pat.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -119,6 +139,14 @@ class ApplicationMain {
 		
 		
 		urls.push ("assets/images/pointer.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/street.PNG");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/SWAG-Kid-Walk-Kopie.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
@@ -222,6 +250,7 @@ class ApplicationMain {
 			file: "FlixelTut",
 			fps: Std.int (60),
 			fullscreen: false,
+			hardware: true,
 			height: Std.int (480),
 			orientation: "portrait",
 			packageName: "com.example.myapp",

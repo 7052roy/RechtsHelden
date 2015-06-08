@@ -38,6 +38,7 @@ class PlayState extends FlxState
 	private var _inCombat:Bool = false;
 	private var _teacher:Teacher;
 	private var _kid:Kid;
+	var _interaction:Bool = false;
 	
 	#if mobile
 	public static var virtualPad:FlxVirtualPad;
@@ -48,7 +49,7 @@ class PlayState extends FlxState
 	 */
 	override public function create():Void
 	{
-		_map = new FlxOgmoLoader("assets/data/level_4.oel");
+		_map = new FlxOgmoLoader("assets/data/basemap1.oel");
 		_mWalls = _map.loadTilemap("assets/images/Tilesheet_Complete.png", 64, 64, "tree");
 		_mWalls.setTileProperties(1, FlxObject.ANY);
 		_mWalls.setTileProperties(3, FlxObject.NONE);
@@ -145,30 +146,43 @@ class PlayState extends FlxState
 		FlxG.overlap(_player, _teacher, loadMission1);
 		FlxG.collide(_teacher, _mWalls);
 		FlxG.collide(_player, _grpEnemies, playerEnemy);
+		FlxG.collide(_player, _kid, kidCollision);
+		FlxG.collide(_kid, _mWalls);
+		//trace(_kid.velocity);
 		checkEnemyVision();
-		
-		
 	}	
+	
+	function kidCollision(p:Player, k:Kid)
+	{
+		
+		_kid.kidMovement();
+	}
 	
 	function loadMission1(p:Player, t:Teacher)
 	{
-		remove(_mWalls, true);
-		remove(_player, true);
-		remove(_teacher, true);
-		remove(_player, true);
-		_map = new FlxOgmoLoader("assets/data/Mission1_0.oel");
-		_mWalls = _map.loadTilemap("assets/images/Tilesheet_Complete.png", 64, 64, "tree");
-		_mWalls.setTileProperties(1, FlxObject.ANY);
-		_mWalls.setTileProperties(3, FlxObject.NONE);
-		_mWalls.setTileProperties(2, FlxObject.NONE);
-		_mWalls.setTileProperties(10, FlxObject.NONE);
-		add(_mWalls);
-		_player = new Player();
-		_kid = new Kid();
-		add(_kid);
-		add(_player);
-		_map.loadEntities(placeEntities, "entities");
-		FlxG.camera.follow(_player, FlxCamera.STYLE_TOPDOWN, null, 1);
+		_interaction = FlxG.keys.anyPressed(["q", "Q"]);
+		trace(_interaction);
+		if (_interaction)
+		{
+			remove(_mWalls, true);
+			remove(_player, true);
+			remove(_teacher, true);
+			remove(_player, true);
+			_map = new FlxOgmoLoader("assets/data/Mission1_0.oel");
+			_mWalls = _map.loadTilemap("assets/images/Tilesheet_Complete.png", 64, 64, "tree");
+			_mWalls.setTileProperties(1, FlxObject.ANY);
+			_mWalls.setTileProperties(3, FlxObject.NONE);
+			_mWalls.setTileProperties(2, FlxObject.NONE);
+			_mWalls.setTileProperties(10, FlxObject.NONE);
+			add(_mWalls);
+			_player = new Player();
+			_kid = new Kid();
+			add(_kid);
+			add(_player);
+			_map.loadEntities(placeEntities, "entities");
+			FlxG.camera.follow(_player, FlxCamera.STYLE_TOPDOWN, null, 1);
+		}
+		
 	}
 	
 	function playerEnemy(p:Player, e:Enemy)

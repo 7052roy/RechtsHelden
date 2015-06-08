@@ -52,7 +52,6 @@ class Enemy extends FlxSprite
 	
 	override public function update():Void 
 	{
-		trace(speed);
 		_brain.update();
 		super.update();
 	}
