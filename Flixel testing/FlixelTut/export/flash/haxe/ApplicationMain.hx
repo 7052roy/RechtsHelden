@@ -34,7 +34,7 @@ class ApplicationMain {
 		var types = [];
 		
 		
-		urls.push ("assets/data/BaseMap.oel");
+		urls.push ("assets/data/basemap.oel");
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
@@ -83,6 +83,10 @@ class ApplicationMain {
 		
 		
 		urls.push ("assets/images/BigAssTiles.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/button.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
@@ -164,6 +168,10 @@ class ApplicationMain {
 		
 		urls.push ("assets/music/music-goes-here.txt");
 		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/music/select.wav");
+		types.push (lime.Assets.AssetType.SOUND);
 		
 		
 		urls.push ("assets/music/townMusic.wav");

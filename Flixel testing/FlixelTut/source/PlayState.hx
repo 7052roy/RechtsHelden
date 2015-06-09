@@ -37,7 +37,6 @@ class PlayState extends FlxState
 	private var _health:Int = 3;
 	private var _inCombat:Bool = false;
 	private var _teacher:Teacher;
-	private var _kid:Kid;
 	var _interaction:Bool = false;
 	
 	#if mobile
@@ -67,9 +66,6 @@ class PlayState extends FlxState
 		
 		_teacher = new Teacher();
 		add(_teacher);
-		
-		_kid = new Kid();
-		add(_kid);
 		
 		_map.loadEntities(placeEntities, "entities");
 		
@@ -115,11 +111,6 @@ class PlayState extends FlxState
 			_teacher.x = Std.parseInt(entityData.get("x"));
 			_teacher.y = Std.parseInt(entityData.get("y"));
 		}
-		else if (entityName == "mission1_Kid")
-		{
-			_kid.x = Std.parseInt(entityData.get("x"));
-			_kid.y = Std.parseInt(entityData.get("y"));
-		}
 	}
 	
 	
@@ -146,41 +137,15 @@ class PlayState extends FlxState
 		FlxG.overlap(_player, _teacher, loadMission1);
 		FlxG.collide(_teacher, _mWalls);
 		FlxG.collide(_player, _grpEnemies, playerEnemy);
-		FlxG.collide(_player, _kid, kidCollision);
-		FlxG.collide(_kid, _mWalls);
-		//trace(_kid.velocity);
-		checkEnemyVision();
 	}	
 	
-	function kidCollision(p:Player, k:Kid)
-	{
-		
-		_kid.kidMovement();
-	}
 	
 	function loadMission1(p:Player, t:Teacher)
 	{
 		_interaction = FlxG.keys.anyPressed(["q", "Q"]);
-		trace(_interaction);
 		if (_interaction)
 		{
-			remove(_mWalls, true);
-			remove(_player, true);
-			remove(_teacher, true);
-			remove(_player, true);
-			_map = new FlxOgmoLoader("assets/data/Mission1_0.oel");
-			_mWalls = _map.loadTilemap("assets/images/Tilesheet_Complete.png", 64, 64, "tree");
-			_mWalls.setTileProperties(1, FlxObject.ANY);
-			_mWalls.setTileProperties(3, FlxObject.NONE);
-			_mWalls.setTileProperties(2, FlxObject.NONE);
-			_mWalls.setTileProperties(10, FlxObject.NONE);
-			add(_mWalls);
-			_player = new Player();
-			_kid = new Kid();
-			add(_kid);
-			add(_player);
-			_map.loadEntities(placeEntities, "entities");
-			FlxG.camera.follow(_player, FlxCamera.STYLE_TOPDOWN, null, 1);
+			FlxG.switchState(new Mission1());
 		}
 		
 	}
@@ -193,19 +158,6 @@ class PlayState extends FlxState
 		e.velocity.y = 0;
 	}
 	
-	private function checkEnemyVision():Void
-	{
-		for (e in _grpEnemies.members)
-		{
-			if (_mWalls.ray(e.getMidpoint(), _player.getMidpoint()))
-			{
-				e.seesPlayer = true;
-				e.playerPos.copyFrom(_player.getMidpoint());
-			}
-			else
-				e.seesPlayer = false;
-		}
-	}
 	
 	private function playerTouchCoin(P:Player, C:Coin):Void
 	{
