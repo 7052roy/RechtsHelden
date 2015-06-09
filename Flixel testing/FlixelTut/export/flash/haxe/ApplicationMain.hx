@@ -134,6 +134,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/images/NPCCharacterTilesheet.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/pat.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -262,6 +266,7 @@ class ApplicationMain {
 			file: "FlixelTut",
 			fps: Std.int (60),
 			fullscreen: false,
+			hardware: true,
 			height: Std.int (480),
 			orientation: "portrait",
 			packageName: "com.example.myapp",

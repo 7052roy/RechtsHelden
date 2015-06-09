@@ -139,6 +139,7 @@ class Mission1 extends FlxState
 	
 	function finishMission(k:Kid, t:Teacher)
 	{
+		mission1Music.stop();
 		FlxG.switchState(new Mission1Finish());
 	}
 	

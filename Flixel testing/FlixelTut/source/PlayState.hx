@@ -128,7 +128,6 @@ class PlayState extends FlxState
 	 */
 	override public function update():Void
 	{
-
 		super.update();
 		_player.speed = 300;
 		FlxG.collide(_player, _mWalls);
@@ -142,6 +141,7 @@ class PlayState extends FlxState
 	
 	function loadMission1(p:Player, t:Teacher)
 	{
+		townMusic.stop();
 		_interaction = FlxG.keys.anyPressed(["q", "Q"]);
 		if (_interaction)
 		{
