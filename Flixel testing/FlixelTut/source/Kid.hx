@@ -17,24 +17,24 @@ class Kid extends Entities
 	{
 		if (velocity.x < 400 && velocity.x > 50 && velocity.y < 250 && velocity.y > -250)
 		{
-			velocity.x = 50;
+			velocity.x = 200;
 			velocity.y = 0;
 		}else if (velocity.y < 400 && velocity.y > 50 && velocity.x < 250 && velocity.x > -250)
 		{
 			velocity.x = 0;
-			velocity.y = 50;
+			velocity.y = 200;
 		}
 		
-		else if (velocity.x > -400 && velocity.x < -50 && velocity.y > 250 && velocity.y < -250)
+		else if (velocity.x > -400 && velocity.x < -50 && velocity.y > -250 && velocity.y < 250)
 		{
-			velocity.x = -50;
+			velocity.x = -200;
 			velocity.y = 0;
 		}
 		
-		else if (velocity.y > -400 && velocity.y < -50 && velocity.x > 250 && velocity.x < -250)
+		else if (velocity.y > -400 && velocity.y < -50 && velocity.x > -250 && velocity.x < 250)
 		{
 			velocity.x = 0;
-			velocity.y = -50;
+			velocity.y = -200;
 		}
 	}
 	
