@@ -45,8 +45,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		#if flash
 		
-		className.set ("assets/data/basemap.oel", __ASSET__assets_data_basemap_oel);
-		type.set ("assets/data/basemap.oel", AssetType.TEXT);
+		className.set ("assets/data/BaseMap.oel", __ASSET__assets_data_basemap_oel);
+		type.set ("assets/data/BaseMap.oel", AssetType.TEXT);
 		className.set ("assets/data/basemap1.oel", __ASSET__assets_data_basemap1_oel);
 		type.set ("assets/data/basemap1.oel", AssetType.TEXT);
 		className.set ("assets/data/data-goes-here.txt", __ASSET__assets_data_data_goes_here_txt);
@@ -77,6 +77,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/CharacterTilesheet768x768.png", AssetType.IMAGE);
 		className.set ("assets/images/coin.png", __ASSET__assets_images_coin_png);
 		type.set ("assets/images/coin.png", AssetType.IMAGE);
+		className.set ("assets/images/CollectingSpirit Kopie.png", __ASSET__assets_images_collectingspirit_kopie_png);
+		type.set ("assets/images/CollectingSpirit Kopie.png", AssetType.IMAGE);
 		className.set ("assets/images/enemy-0.png", __ASSET__assets_images_enemy_0_png);
 		type.set ("assets/images/enemy-0.png", AssetType.IMAGE);
 		className.set ("assets/images/enemy-1.png", __ASSET__assets_images_enemy_1_png);
@@ -95,6 +97,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/Mission1Girl.png", AssetType.IMAGE);
 		className.set ("assets/images/Mission2Football.png", __ASSET__assets_images_mission2football_png);
 		type.set ("assets/images/Mission2Football.png", AssetType.IMAGE);
+		className.set ("assets/images/Mission3Emokid.png", __ASSET__assets_images_mission3emokid_png);
+		type.set ("assets/images/Mission3Emokid.png", AssetType.IMAGE);
 		className.set ("assets/images/NPCCharacterTilesheet.png", __ASSET__assets_images_npccharactertilesheet_png);
 		type.set ("assets/images/NPCCharacterTilesheet.png", AssetType.IMAGE);
 		className.set ("assets/images/pat.png", __ASSET__assets_images_pat_png);
@@ -132,7 +136,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#elseif html5
 		
 		var id;
-		id = "assets/data/basemap.oel";
+		id = "assets/data/BaseMap.oel";
 		path.set (id, id);
 		
 		type.set (id, AssetType.TEXT);
@@ -196,6 +200,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/CollectingSpirit Kopie.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
 		id = "assets/images/enemy-0.png";
 		path.set (id, id);
 		
@@ -229,6 +237,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		type.set (id, AssetType.IMAGE);
 		id = "assets/images/Mission2Football.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Mission3Emokid.png";
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
@@ -351,14 +363,16 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
 		#end
 		
 		#if (windows || mac || linux)
 		
 		var useManifest = false;
 		
-		className.set ("assets/data/basemap.oel", __ASSET__assets_data_basemap_oel);
-		type.set ("assets/data/basemap.oel", AssetType.TEXT);
+		className.set ("assets/data/BaseMap.oel", __ASSET__assets_data_basemap_oel);
+		type.set ("assets/data/BaseMap.oel", AssetType.TEXT);
 		
 		className.set ("assets/data/basemap1.oel", __ASSET__assets_data_basemap1_oel);
 		type.set ("assets/data/basemap1.oel", AssetType.TEXT);
@@ -405,6 +419,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("assets/images/coin.png", __ASSET__assets_images_coin_png);
 		type.set ("assets/images/coin.png", AssetType.IMAGE);
 		
+		className.set ("assets/images/CollectingSpirit Kopie.png", __ASSET__assets_images_collectingspirit_kopie_png);
+		type.set ("assets/images/CollectingSpirit Kopie.png", AssetType.IMAGE);
+		
 		className.set ("assets/images/enemy-0.png", __ASSET__assets_images_enemy_0_png);
 		type.set ("assets/images/enemy-0.png", AssetType.IMAGE);
 		
@@ -431,6 +448,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/images/Mission2Football.png", __ASSET__assets_images_mission2football_png);
 		type.set ("assets/images/Mission2Football.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/Mission3Emokid.png", __ASSET__assets_images_mission3emokid_png);
+		type.set ("assets/images/Mission3Emokid.png", AssetType.IMAGE);
 		
 		className.set ("assets/images/NPCCharacterTilesheet.png", __ASSET__assets_images_npccharactertilesheet_png);
 		type.set ("assets/images/NPCCharacterTilesheet.png", AssetType.IMAGE);
@@ -1096,6 +1116,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_images_button_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_charactertilesheet768x768_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_coin_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_collectingspirit_kopie_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_enemy_0_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_enemy_1_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_enemy_2_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
@@ -1105,6 +1126,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_images_ion_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_mission1girl_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_mission2football_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_mission3emokid_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_npccharactertilesheet_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_pat_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_player_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
@@ -1168,6 +1190,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
+
 #else
 
 
@@ -1175,7 +1199,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 #if (windows || mac || linux)
 
 
-@:file("assets/data/basemap.oel") #if display private #end class __ASSET__assets_data_basemap_oel extends lime.utils.ByteArray {}
+@:file("assets/data/BaseMap.oel") #if display private #end class __ASSET__assets_data_basemap_oel extends lime.utils.ByteArray {}
 @:file("assets/data/basemap1.oel") #if display private #end class __ASSET__assets_data_basemap1_oel extends lime.utils.ByteArray {}
 @:file("assets/data/data-goes-here.txt") #if display private #end class __ASSET__assets_data_data_goes_here_txt extends lime.utils.ByteArray {}
 @:file("assets/data/level_1.oel") #if display private #end class __ASSET__assets_data_level_1_oel extends lime.utils.ByteArray {}
@@ -1191,6 +1215,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:image("assets/images/button.png") #if display private #end class __ASSET__assets_images_button_png extends lime.graphics.Image {}
 @:image("assets/images/CharacterTilesheet768x768.png") #if display private #end class __ASSET__assets_images_charactertilesheet768x768_png extends lime.graphics.Image {}
 @:image("assets/images/coin.png") #if display private #end class __ASSET__assets_images_coin_png extends lime.graphics.Image {}
+@:image("assets/images/CollectingSpirit Kopie.png") #if display private #end class __ASSET__assets_images_collectingspirit_kopie_png extends lime.graphics.Image {}
 @:image("assets/images/enemy-0.png") #if display private #end class __ASSET__assets_images_enemy_0_png extends lime.graphics.Image {}
 @:image("assets/images/enemy-1.png") #if display private #end class __ASSET__assets_images_enemy_1_png extends lime.graphics.Image {}
 @:image("assets/images/enemy-2.png") #if display private #end class __ASSET__assets_images_enemy_2_png extends lime.graphics.Image {}
@@ -1200,6 +1225,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:image("assets/images/ion.png") #if display private #end class __ASSET__assets_images_ion_png extends lime.graphics.Image {}
 @:image("assets/images/Mission1Girl.png") #if display private #end class __ASSET__assets_images_mission1girl_png extends lime.graphics.Image {}
 @:image("assets/images/Mission2Football.png") #if display private #end class __ASSET__assets_images_mission2football_png extends lime.graphics.Image {}
+@:image("assets/images/Mission3Emokid.png") #if display private #end class __ASSET__assets_images_mission3emokid_png extends lime.graphics.Image {}
 @:image("assets/images/NPCCharacterTilesheet.png") #if display private #end class __ASSET__assets_images_npccharactertilesheet_png extends lime.graphics.Image {}
 @:image("assets/images/pat.png") #if display private #end class __ASSET__assets_images_pat_png extends lime.graphics.Image {}
 @:image("assets/images/player.png") #if display private #end class __ASSET__assets_images_player_png extends lime.graphics.Image {}

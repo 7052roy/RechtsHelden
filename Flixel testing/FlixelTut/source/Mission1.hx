@@ -132,7 +132,10 @@ class Mission1 extends FlxState
 		super.update();
 		_player.speed = 300;
 		FlxG.collide(_player, _mWalls);
-		FlxG.collide(_player, _kid, kidCollision);
+		if (_player.CharacterNumber == 2 && _player.ability2 == true)
+		{
+			FlxG.collide(_player, _kid, kidCollision);
+		}
 		FlxG.collide(_kid, _mWalls);
 		FlxG.overlap(_kid, _teacher, finishMission);
 	}	
