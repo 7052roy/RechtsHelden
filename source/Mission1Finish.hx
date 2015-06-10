@@ -28,14 +28,9 @@ class Mission1Finish extends FlxState
 	private var _player:Player;
 	private var _map:FlxOgmoLoader;
 	private var _mWalls:FlxTilemap;
-	var mission1Music:FlxSound;
-	private var _kid:Kid;
+	var townMusic:FlxSound;
 	var _teacher:Teacher;
-	private var _btnReset:FlxButton;
-	
-	#if mobile
-	public static var virtualPad:FlxVirtualPad;
-	#end
+	var _enemy:Enemy;
 	
 	/**
 	 * Function that is called up when to state is created to set it up. 
@@ -53,17 +48,8 @@ class Mission1Finish extends FlxState
 		_player = new Player();
 		add(_player);
 		
-		_kid = new Kid();
-		add(_kid);
-		
 		_teacher = new Teacher();
 		add(_teacher);
-		
-		_btnReset = new FlxButton(0, 0, "Reset", clickReset);
-		_btnReset.x = (FlxG.width / 2) - _btnReset.width - 10;
-		_btnReset.y = FlxG.height - _btnReset.height - 10;
-		_btnReset.onUp.sound = FlxG.sound.load(AssetPaths.select__wav);
-		add(_btnReset);
 		
 		_map.loadEntities(placeEntities, "entities");
 		
@@ -74,23 +60,13 @@ class Mission1Finish extends FlxState
 		
 		//_hud = new HUD();
 		//add(_hud);
-		mission1Music = FlxG.sound.load("assets/music/townMusic.wav");
-		mission1Music.play(true);
+		townMusic = FlxG.sound.load("assets/music/townMusic.wav");
+		townMusic.play(true);
 		
 		FlxG.camera.fade(FlxColor.BLACK, 2, true);
 		
-		#if mobile
-		virtualPad = new FlxVirtualPad(FULL, NONE);	
-		add(virtualPad);
-		#end
-		
 		super.create();	
 		
-	}
-	
-	function clickReset()
-	{
-		FlxG.switchState(new Mission1());
 	}
 	
 	private function placeEntities(entityName:String, entityData:Xml):Void
@@ -99,11 +75,6 @@ class Mission1Finish extends FlxState
 		{
 			_player.x = Std.parseInt(entityData.get("x"));
 			_player.y = Std.parseInt(entityData.get("y"));
-		}
-		else if (entityName == "mission1_Kid")
-		{
-			_kid.x = Std.parseInt(entityData.get("x"));
-			_kid.y = Std.parseInt(entityData.get("y"));
 		}
 		else if (entityName == "mission1_Teacher")
 		{
@@ -131,22 +102,6 @@ class Mission1Finish extends FlxState
 		super.update();
 		_player.speed = 300;
 		FlxG.collide(_player, _mWalls);
-		if (_player.CharacterNumber == 2 && _player.ability2 == true)
-		{
-			FlxG.collide(_player, _kid, kidCollision);
-		}
-		FlxG.collide(_kid, _mWalls);
-		FlxG.overlap(_kid, _teacher, finishMission);
 	}	
 	
-	function finishMission(k:Kid, t:Teacher)
-	{
-		mission1Music.stop();
-		FlxG.switchState(new Mission1Finish());
-	}
-	
-	function kidCollision(p:Player, k:Kid)
-	{
-		_kid.kidMovement();
-	}
 }

@@ -23,15 +23,12 @@ import flixel.util.FlxTimer;
 /**
  * A FlxState which can be used for the actual gameplay.
  */
-class Mission1 extends FlxState
+class Mission2 extends FlxState
 {
-	
 	private var _player:Player;
 	private var _map:FlxOgmoLoader;
 	private var _mWalls:FlxTilemap;
 	var mission1Music:FlxSound;
-	private var _kid:Kid;
-	var _teacher:Teacher;
 	private var _btnReset:FlxButton;
 	
 	#if mobile
@@ -43,7 +40,7 @@ class Mission1 extends FlxState
 	 */
 	override public function create():Void
 	{
-		_map = new FlxOgmoLoader("assets/data/Mission1_0.oel");
+		_map = new FlxOgmoLoader("assets/data/Mission1_1.oel");
 		_mWalls = _map.loadTilemap("assets/images/Tilesheet_Complete.png", 64, 64, "tree");
 		_mWalls.setTileProperties(1, FlxObject.ANY);
 		_mWalls.setTileProperties(3, FlxObject.NONE);
@@ -53,9 +50,6 @@ class Mission1 extends FlxState
 		
 		_player = new Player();
 		add(_player);
-		
-		_kid = new Kid();
-		add(_kid);
 		
 		_teacher = new Teacher();
 		add(_teacher);
@@ -101,11 +95,6 @@ class Mission1 extends FlxState
 			_player.x = Std.parseInt(entityData.get("x"));
 			_player.y = Std.parseInt(entityData.get("y"));
 		}
-		else if (entityName == "mission1_Kid")
-		{
-			_kid.x = Std.parseInt(entityData.get("x"));
-			_kid.y = Std.parseInt(entityData.get("y"));
-		}
 		else if (entityName == "mission1_Teacher")
 		{
 			_teacher.x = Std.parseInt(entityData.get("x"));
@@ -131,7 +120,6 @@ class Mission1 extends FlxState
 
 		super.update();
 		_player.speed = 300;
-		_kid.walk();
 		FlxG.collide(_player, _mWalls);
 		if (_player.CharacterNumber == 2 && _player.ability2 == true)
 		{
