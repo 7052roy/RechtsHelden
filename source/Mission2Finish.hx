@@ -24,7 +24,7 @@ import lime.audio.AudioManager;
 /**
  * A FlxState which can be used for the actual gameplay.
  */
-class Mission2 extends FlxState
+class Mission2Finish extends FlxState
 {
 	private var _player:Player;
 	private var _map:FlxOgmoLoader;
@@ -57,8 +57,11 @@ class Mission2 extends FlxState
 		_kid = new Kid();
 		add(_kid);
 		
-		_angryDad = new AngryDad();
-		add(_angryDad);
+		_grpEnemies = new FlxTypedGroup<Enemy>();
+		add(_grpEnemies);
+		
+		_grpCoins = new FlxTypedGroup<Coin>();
+		add(_grpCoins);
 		
 		_btnReset = new FlxButton(0, 0, "Reset", clickReset);
 		_btnReset.x = (FlxG.width / 2) - _btnReset.width - 10;
@@ -101,15 +104,19 @@ class Mission2 extends FlxState
 			_player.x = Std.parseInt(entityData.get("x"));
 			_player.y = Std.parseInt(entityData.get("y"));
 		}
-		else if (entityName == "mission2_angryDad")
-		{
-			_angryDad.x = Std.parseInt(entityData.get("x"));
-			_angryDad.y = Std.parseInt(entityData.get("y"));
-		}
 		else if (entityName == "mission2_kid")
 		{
 			_kid.x = Std.parseInt(entityData.get("x"));
 			_kid.y = Std.parseInt(entityData.get("y"));
+		}
+		else if (entityName == "coin") 
+		{
+			_grpCoins.add(new Coin(Std.parseInt(entityData.get("x")) + 4, Std.parseInt(entityData.get("y")) + 4));
+			
+		}
+		else if (entityName == "enemy")
+		{
+			_grpEnemies.add(new Enemy(Std.parseInt(entityData.get("x"))+4, Std.parseInt(entityData.get("y")), Std.parseInt(entityData.get("etype"))));
 		}
 	}
 	

@@ -131,7 +131,7 @@ class Mission1 extends FlxState
 
 		super.update();
 		_player.speed = 300;
-		_kid.walk();
+		
 		FlxG.collide(_player, _mWalls);
 		if (_player.CharacterNumber == 2 && _player.ability2 == true)
 		{

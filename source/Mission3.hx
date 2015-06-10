@@ -24,7 +24,7 @@ import lime.audio.AudioManager;
 /**
  * A FlxState which can be used for the actual gameplay.
  */
-class Mission2 extends FlxState
+class Mission3 extends FlxState
 {
 	private var _player:Player;
 	private var _map:FlxOgmoLoader;
@@ -56,9 +56,6 @@ class Mission2 extends FlxState
 		
 		_kid = new Kid();
 		add(_kid);
-		
-		_angryDad = new AngryDad();
-		add(_angryDad);
 		
 		_btnReset = new FlxButton(0, 0, "Reset", clickReset);
 		_btnReset.x = (FlxG.width / 2) - _btnReset.width - 10;

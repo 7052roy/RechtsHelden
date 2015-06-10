@@ -5,7 +5,7 @@ import flixel.FlxSprite;
  * ...
  * @author roy leinenga
  */
-class AngyDad extends Entities 
+class AngryDad extends Entities 
 {
 
 	public function new() 

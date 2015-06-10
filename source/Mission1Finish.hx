@@ -31,6 +31,8 @@ class Mission1Finish extends FlxState
 	var townMusic:FlxSound;
 	var _teacher:Teacher;
 	var _enemy:Enemy;
+	private var _grpEnemies:FlxTypedGroup<Enemy>;
+	private var _grpCoins:FlxTypedGroup<Coin>;
 	
 	/**
 	 * Function that is called up when to state is created to set it up. 
@@ -50,6 +52,12 @@ class Mission1Finish extends FlxState
 		
 		_teacher = new Teacher();
 		add(_teacher);
+		
+		_grpEnemies = new FlxTypedGroup<Enemy>();
+		add(_grpEnemies);
+		
+		_grpCoins = new FlxTypedGroup<Coin>();
+		add(_grpCoins);
 		
 		_map.loadEntities(placeEntities, "entities");
 		
@@ -80,6 +88,15 @@ class Mission1Finish extends FlxState
 		{
 			_teacher.x = Std.parseInt(entityData.get("x"));
 			_teacher.y = Std.parseInt(entityData.get("y"));
+		}
+		else if (entityName == "coin") 
+		{
+			_grpCoins.add(new Coin(Std.parseInt(entityData.get("x")) + 4, Std.parseInt(entityData.get("y")) + 4));
+			
+		}
+		else if (entityName == "enemy")
+		{
+			_grpEnemies.add(new Enemy(Std.parseInt(entityData.get("x"))+4, Std.parseInt(entityData.get("y")), Std.parseInt(entityData.get("etype"))));
 		}
 	}
 	

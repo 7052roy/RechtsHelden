@@ -24,7 +24,7 @@ import lime.audio.AudioManager;
 /**
  * A FlxState which can be used for the actual gameplay.
  */
-class Mission2 extends FlxState
+class Mission3Finish extends FlxState
 {
 	private var _player:Player;
 	private var _map:FlxOgmoLoader;
