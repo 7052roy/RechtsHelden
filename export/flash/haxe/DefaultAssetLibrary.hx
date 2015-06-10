@@ -49,6 +49,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/data/BaseMap.oel", AssetType.TEXT);
 		className.set ("assets/data/basemap1.oel", __ASSET__assets_data_basemap1_oel);
 		type.set ("assets/data/basemap1.oel", AssetType.TEXT);
+		className.set ("assets/data/basemap2.oel", __ASSET__assets_data_basemap2_oel);
+		type.set ("assets/data/basemap2.oel", AssetType.TEXT);
 		className.set ("assets/data/data-goes-here.txt", __ASSET__assets_data_data_goes_here_txt);
 		type.set ("assets/data/data-goes-here.txt", AssetType.TEXT);
 		className.set ("assets/data/level_1.oel", __ASSET__assets_data_level_1_oel);
@@ -119,6 +121,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/tiles.png", AssetType.IMAGE);
 		className.set ("assets/images/Tilesheet_Complete.png", __ASSET__assets_images_tilesheet_complete_png);
 		type.set ("assets/images/Tilesheet_Complete.png", AssetType.IMAGE);
+		className.set ("assets/images/Tilesheet_Complete.psd", __ASSET__assets_images_tilesheet_complete_psd);
+		type.set ("assets/images/Tilesheet_Complete.psd", AssetType.BINARY);
 		className.set ("assets/music/music-goes-here.txt", __ASSET__assets_music_music_goes_here_txt);
 		type.set ("assets/music/music-goes-here.txt", AssetType.TEXT);
 		className.set ("assets/music/select.wav", __ASSET__assets_music_select_wav);
@@ -141,6 +145,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		type.set (id, AssetType.TEXT);
 		id = "assets/data/basemap1.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/basemap2.oel";
 		path.set (id, id);
 		
 		type.set (id, AssetType.TEXT);
@@ -284,6 +292,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Tilesheet_Complete.psd";
+		path.set (id, id);
+		
+		type.set (id, AssetType.BINARY);
 		id = "assets/music/music-goes-here.txt";
 		path.set (id, id);
 		
@@ -365,6 +377,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
 		#end
 		
 		#if (windows || mac || linux)
@@ -376,6 +390,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/data/basemap1.oel", __ASSET__assets_data_basemap1_oel);
 		type.set ("assets/data/basemap1.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/basemap2.oel", __ASSET__assets_data_basemap2_oel);
+		type.set ("assets/data/basemap2.oel", AssetType.TEXT);
 		
 		className.set ("assets/data/data-goes-here.txt", __ASSET__assets_data_data_goes_here_txt);
 		type.set ("assets/data/data-goes-here.txt", AssetType.TEXT);
@@ -481,6 +498,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/images/Tilesheet_Complete.png", __ASSET__assets_images_tilesheet_complete_png);
 		type.set ("assets/images/Tilesheet_Complete.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/Tilesheet_Complete.psd", __ASSET__assets_images_tilesheet_complete_psd);
+		type.set ("assets/images/Tilesheet_Complete.psd", AssetType.BINARY);
 		
 		className.set ("assets/music/music-goes-here.txt", __ASSET__assets_music_music_goes_here_txt);
 		type.set ("assets/music/music-goes-here.txt", AssetType.TEXT);
@@ -1102,6 +1122,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 @:keep @:bind #if display private #end class __ASSET__assets_data_basemap_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_basemap1_oel extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_basemap2_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_data_goes_here_txt extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_level_1_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_level_2_oel extends flash.utils.ByteArray { }
@@ -1137,6 +1158,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_images_tec_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_tiles_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_tilesheet_complete_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_tilesheet_complete_psd extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_music_music_goes_here_txt extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_music_select_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_music_townmusic_wav extends flash.media.Sound { }
@@ -1192,6 +1214,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
+
 #else
 
 
@@ -1201,6 +1225,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 @:file("assets/data/BaseMap.oel") #if display private #end class __ASSET__assets_data_basemap_oel extends lime.utils.ByteArray {}
 @:file("assets/data/basemap1.oel") #if display private #end class __ASSET__assets_data_basemap1_oel extends lime.utils.ByteArray {}
+@:file("assets/data/basemap2.oel") #if display private #end class __ASSET__assets_data_basemap2_oel extends lime.utils.ByteArray {}
 @:file("assets/data/data-goes-here.txt") #if display private #end class __ASSET__assets_data_data_goes_here_txt extends lime.utils.ByteArray {}
 @:file("assets/data/level_1.oel") #if display private #end class __ASSET__assets_data_level_1_oel extends lime.utils.ByteArray {}
 @:file("assets/data/level_2.oel") #if display private #end class __ASSET__assets_data_level_2_oel extends lime.utils.ByteArray {}
@@ -1236,6 +1261,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:image("assets/images/tec.png") #if display private #end class __ASSET__assets_images_tec_png extends lime.graphics.Image {}
 @:image("assets/images/tiles.png") #if display private #end class __ASSET__assets_images_tiles_png extends lime.graphics.Image {}
 @:image("assets/images/Tilesheet_Complete.png") #if display private #end class __ASSET__assets_images_tilesheet_complete_png extends lime.graphics.Image {}
+@:file("assets/images/Tilesheet_Complete.psd") #if display private #end class __ASSET__assets_images_tilesheet_complete_psd extends lime.utils.ByteArray {}
 @:file("assets/music/music-goes-here.txt") #if display private #end class __ASSET__assets_music_music_goes_here_txt extends lime.utils.ByteArray {}
 @:file("assets/music/select.wav") #if display private #end class __ASSET__assets_music_select_wav extends lime.utils.ByteArray {}
 @:file("assets/music/townMusic.wav") #if display private #end class __ASSET__assets_music_townmusic_wav extends lime.utils.ByteArray {}

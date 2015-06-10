@@ -48,11 +48,21 @@ class PlayState extends FlxState
 	 */
 	override public function create():Void
 	{
-		_map = new FlxOgmoLoader("assets/data/basemap1.oel");
+		_map = new FlxOgmoLoader("assets/data/basemap2.oel");
 		_mWalls = _map.loadTilemap("assets/images/Tilesheet_Complete.png", 64, 64, "tree");
 		_mWalls.setTileProperties(1, FlxObject.ANY);
 		_mWalls.setTileProperties(3, FlxObject.NONE);
 		_mWalls.setTileProperties(2, FlxObject.NONE);
+		_mWalls.setTileProperties(10, FlxObject.NONE);
+		_mWalls.setTileProperties(16, FlxObject.NONE);
+		_mWalls.setTileProperties(17, FlxObject.NONE);
+		_mWalls.setTileProperties(18, FlxObject.NONE);
+		_mWalls.setTileProperties(19, FlxObject.NONE);
+		_mWalls.setTileProperties(20, FlxObject.NONE);
+		_mWalls.setTileProperties(21, FlxObject.NONE);
+		_mWalls.setTileProperties(22, FlxObject.NONE);
+		_mWalls.setTileProperties(33, FlxObject.NONE);
+		_mWalls.setTileProperties(34, FlxObject.NONE);
 		add(_mWalls);
 		
 		_grpCoins = new FlxTypedGroup<Coin>();

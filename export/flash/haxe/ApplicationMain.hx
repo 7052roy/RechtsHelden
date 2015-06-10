@@ -42,6 +42,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
+		urls.push ("assets/data/basemap2.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
 		urls.push ("assets/data/data-goes-here.txt");
 		types.push (lime.Assets.AssetType.TEXT);
 		
@@ -180,6 +184,10 @@ class ApplicationMain {
 		
 		urls.push ("assets/images/Tilesheet_Complete.png");
 		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Tilesheet_Complete.psd");
+		types.push (lime.Assets.AssetType.BINARY);
 		
 		
 		urls.push ("assets/music/music-goes-here.txt");
