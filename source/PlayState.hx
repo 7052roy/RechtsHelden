@@ -37,7 +37,9 @@ class PlayState extends FlxState
 	private var _health:Int = 3;
 	private var _inCombat:Bool = false;
 	private var _teacher:Teacher;
+	var mission1Talk:FlxSound;
 	var _interaction:Bool = false;
+	public var talk:Int = 0;
 	
 	#if mobile
 	public static var virtualPad:FlxVirtualPad;
@@ -86,9 +88,9 @@ class PlayState extends FlxState
 		
 		//_hud = new HUD();
 		//add(_hud);
-		townMusic = FlxG.sound.load("assets/music/townMusic.wav");
-		townMusic.play(true);
-		
+		//townMusic = FlxG.sound.load("assets/music/townMusic.wav");
+		//townMusic.play(true);
+		FlxG.sound.playMusic(AssetPaths.townMusic__wav, 1, true);
 		FlxG.camera.fade(FlxColor.BLACK, 2, true);
 		
 		#if mobile
@@ -139,7 +141,7 @@ class PlayState extends FlxState
 	override public function update():Void
 	{
 		super.update();
-		_player.speed = 300;
+		//_player.speed = 300;
 		FlxG.collide(_player, _mWalls);
 		FlxG.overlap(_player, _grpCoins, playerTouchCoin);
 		FlxG.collide(_grpEnemies, _mWalls);
@@ -155,10 +157,22 @@ class PlayState extends FlxState
 		_interaction = FlxG.keys.anyPressed(["q", "Q"]);
 		if (_interaction)
 		{
-			townMusic.stop();
-			FlxG.switchState(new Mission1());
+			trace(_player.x, _player.y);
+			talk = 1;
+			FlxG.sound.destroy(true);
+			_player.speed = 0;
+			//mission1Talk = FlxG.sound.load();
+			//mission1Talk.play();
+			FlxG.sound.play("assets/sounds/Missie1/Gesprek1.mp3", 1, false, true, mission1Load);
+			trace("test");
+			
 		}
 		
+	}
+	
+	function mission1Load()
+	{
+		FlxG.switchState(new Mission1());
 	}
 	
 	function playerEnemy(p:Player, e:Enemy)
