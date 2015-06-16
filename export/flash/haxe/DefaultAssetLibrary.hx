@@ -75,6 +75,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/AngryDad.png", AssetType.IMAGE);
 		className.set ("assets/images/BaldMission1.png", __ASSET__assets_images_baldmission1_png);
 		type.set ("assets/images/BaldMission1.png", AssetType.IMAGE);
+		className.set ("assets/images/bigass HOUSE.png", __ASSET__assets_images_bigass_house_png);
+		type.set ("assets/images/bigass HOUSE.png", AssetType.IMAGE);
 		className.set ("assets/images/button.png", __ASSET__assets_images_button_png);
 		type.set ("assets/images/button.png", AssetType.IMAGE);
 		className.set ("assets/images/CharacterTilesheet768x768.png", __ASSET__assets_images_charactertilesheet768x768_png);
@@ -89,22 +91,36 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/enemy-1.png", AssetType.IMAGE);
 		className.set ("assets/images/enemy-2.png", __ASSET__assets_images_enemy_2_png);
 		type.set ("assets/images/enemy-2.png", AssetType.IMAGE);
+		className.set ("assets/images/floor.png", __ASSET__assets_images_floor_png);
+		type.set ("assets/images/floor.png", AssetType.IMAGE);
 		className.set ("assets/images/Furniture.png", __ASSET__assets_images_furniture_png);
 		type.set ("assets/images/Furniture.png", AssetType.IMAGE);
 		className.set ("assets/images/girlMission1.png", __ASSET__assets_images_girlmission1_png);
 		type.set ("assets/images/girlMission1.png", AssetType.IMAGE);
 		className.set ("assets/images/health.png", __ASSET__assets_images_health_png);
 		type.set ("assets/images/health.png", AssetType.IMAGE);
+		className.set ("assets/images/HOUSE.psd", __ASSET__assets_images_house_psd);
+		type.set ("assets/images/HOUSE.psd", AssetType.BINARY);
 		className.set ("assets/images/images-go-here.txt", __ASSET__assets_images_images_go_here_txt);
 		type.set ("assets/images/images-go-here.txt", AssetType.TEXT);
 		className.set ("assets/images/ion.png", __ASSET__assets_images_ion_png);
 		type.set ("assets/images/ion.png", AssetType.IMAGE);
+		className.set ("assets/images/KRJW-Tutorial.png", __ASSET__assets_images_krjw_tutorial_png);
+		type.set ("assets/images/KRJW-Tutorial.png", AssetType.IMAGE);
+		className.set ("assets/images/KRJW-Tutorial.psd", __ASSET__assets_images_krjw_tutorial_psd);
+		type.set ("assets/images/KRJW-Tutorial.psd", AssetType.BINARY);
 		className.set ("assets/images/Mission1Girl.png", __ASSET__assets_images_mission1girl_png);
 		type.set ("assets/images/Mission1Girl.png", AssetType.IMAGE);
 		className.set ("assets/images/Mission2Football.png", __ASSET__assets_images_mission2football_png);
 		type.set ("assets/images/Mission2Football.png", AssetType.IMAGE);
+		className.set ("assets/images/Mission3 Dodgeball.png", __ASSET__assets_images_mission3_dodgeball_png);
+		type.set ("assets/images/Mission3 Dodgeball.png", AssetType.IMAGE);
+		className.set ("assets/images/Mission3 Dodgeball.psd", __ASSET__assets_images_mission3_dodgeball_psd);
+		type.set ("assets/images/Mission3 Dodgeball.psd", AssetType.BINARY);
 		className.set ("assets/images/Mission3Emokid.png", __ASSET__assets_images_mission3emokid_png);
 		type.set ("assets/images/Mission3Emokid.png", AssetType.IMAGE);
+		className.set ("assets/images/NEWTilesheet_Complete.png", __ASSET__assets_images_newtilesheet_complete_png);
+		type.set ("assets/images/NEWTilesheet_Complete.png", AssetType.IMAGE);
 		className.set ("assets/images/NPCCharacterTilesheet.png", __ASSET__assets_images_npccharactertilesheet_png);
 		type.set ("assets/images/NPCCharacterTilesheet.png", AssetType.IMAGE);
 		className.set ("assets/images/pat.png", __ASSET__assets_images_pat_png);
@@ -115,6 +131,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/pointer.png", AssetType.IMAGE);
 		className.set ("assets/images/SChool modified.png", __ASSET__assets_images_school_modified_png);
 		type.set ("assets/images/SChool modified.png", AssetType.IMAGE);
+		className.set ("assets/images/Speechbubble.psd", __ASSET__assets_images_speechbubble_psd);
+		type.set ("assets/images/Speechbubble.psd", AssetType.BINARY);
 		className.set ("assets/images/street.PNG", __ASSET__assets_images_street_png);
 		type.set ("assets/images/street.PNG", AssetType.IMAGE);
 		className.set ("assets/images/SWAG-Kid-Walk-Kopie.png", __ASSET__assets_images_swag_kid_walk_kopie_png);
@@ -127,6 +145,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/Tilesheet_Complete.png", AssetType.IMAGE);
 		className.set ("assets/images/Tilesheet_Complete.psd", __ASSET__assets_images_tilesheet_complete_psd);
 		type.set ("assets/images/Tilesheet_Complete.psd", AssetType.BINARY);
+		className.set ("assets/images/Wall.psd", __ASSET__assets_images_wall_psd);
+		type.set ("assets/images/Wall.psd", AssetType.BINARY);
+		className.set ("assets/images/WallKJRW.png", __ASSET__assets_images_wallkjrw_png);
+		type.set ("assets/images/WallKJRW.png", AssetType.IMAGE);
 		className.set ("assets/music/music-goes-here.txt", __ASSET__assets_music_music_goes_here_txt);
 		type.set ("assets/music/music-goes-here.txt", AssetType.TEXT);
 		className.set ("assets/music/select.wav", __ASSET__assets_music_select_wav);
@@ -342,6 +364,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/bigass HOUSE.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
 		id = "assets/images/button.png";
 		path.set (id, id);
 		
@@ -370,6 +396,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/floor.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
 		id = "assets/images/Furniture.png";
 		path.set (id, id);
 		
@@ -382,6 +412,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/HOUSE.psd";
+		path.set (id, id);
+		
+		type.set (id, AssetType.BINARY);
 		id = "assets/images/images-go-here.txt";
 		path.set (id, id);
 		
@@ -390,6 +424,14 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/KRJW-Tutorial.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/KRJW-Tutorial.psd";
+		path.set (id, id);
+		
+		type.set (id, AssetType.BINARY);
 		id = "assets/images/Mission1Girl.png";
 		path.set (id, id);
 		
@@ -398,7 +440,19 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Mission3 Dodgeball.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Mission3 Dodgeball.psd";
+		path.set (id, id);
+		
+		type.set (id, AssetType.BINARY);
 		id = "assets/images/Mission3Emokid.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/NEWTilesheet_Complete.png";
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
@@ -422,6 +476,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Speechbubble.psd";
+		path.set (id, id);
+		
+		type.set (id, AssetType.BINARY);
 		id = "assets/images/street.PNG";
 		path.set (id, id);
 		
@@ -446,6 +504,14 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.BINARY);
+		id = "assets/images/Wall.psd";
+		path.set (id, id);
+		
+		type.set (id, AssetType.BINARY);
+		id = "assets/images/WallKJRW.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
 		id = "assets/music/music-goes-here.txt";
 		path.set (id, id);
 		
@@ -876,6 +942,17 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		#end
 		
 		#if (windows || mac || linux)
@@ -927,6 +1004,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("assets/images/BaldMission1.png", __ASSET__assets_images_baldmission1_png);
 		type.set ("assets/images/BaldMission1.png", AssetType.IMAGE);
 		
+		className.set ("assets/images/bigass HOUSE.png", __ASSET__assets_images_bigass_house_png);
+		type.set ("assets/images/bigass HOUSE.png", AssetType.IMAGE);
+		
 		className.set ("assets/images/button.png", __ASSET__assets_images_button_png);
 		type.set ("assets/images/button.png", AssetType.IMAGE);
 		
@@ -948,6 +1028,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("assets/images/enemy-2.png", __ASSET__assets_images_enemy_2_png);
 		type.set ("assets/images/enemy-2.png", AssetType.IMAGE);
 		
+		className.set ("assets/images/floor.png", __ASSET__assets_images_floor_png);
+		type.set ("assets/images/floor.png", AssetType.IMAGE);
+		
 		className.set ("assets/images/Furniture.png", __ASSET__assets_images_furniture_png);
 		type.set ("assets/images/Furniture.png", AssetType.IMAGE);
 		
@@ -957,11 +1040,20 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("assets/images/health.png", __ASSET__assets_images_health_png);
 		type.set ("assets/images/health.png", AssetType.IMAGE);
 		
+		className.set ("assets/images/HOUSE.psd", __ASSET__assets_images_house_psd);
+		type.set ("assets/images/HOUSE.psd", AssetType.BINARY);
+		
 		className.set ("assets/images/images-go-here.txt", __ASSET__assets_images_images_go_here_txt);
 		type.set ("assets/images/images-go-here.txt", AssetType.TEXT);
 		
 		className.set ("assets/images/ion.png", __ASSET__assets_images_ion_png);
 		type.set ("assets/images/ion.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/KRJW-Tutorial.png", __ASSET__assets_images_krjw_tutorial_png);
+		type.set ("assets/images/KRJW-Tutorial.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/KRJW-Tutorial.psd", __ASSET__assets_images_krjw_tutorial_psd);
+		type.set ("assets/images/KRJW-Tutorial.psd", AssetType.BINARY);
 		
 		className.set ("assets/images/Mission1Girl.png", __ASSET__assets_images_mission1girl_png);
 		type.set ("assets/images/Mission1Girl.png", AssetType.IMAGE);
@@ -969,8 +1061,17 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("assets/images/Mission2Football.png", __ASSET__assets_images_mission2football_png);
 		type.set ("assets/images/Mission2Football.png", AssetType.IMAGE);
 		
+		className.set ("assets/images/Mission3 Dodgeball.png", __ASSET__assets_images_mission3_dodgeball_png);
+		type.set ("assets/images/Mission3 Dodgeball.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/Mission3 Dodgeball.psd", __ASSET__assets_images_mission3_dodgeball_psd);
+		type.set ("assets/images/Mission3 Dodgeball.psd", AssetType.BINARY);
+		
 		className.set ("assets/images/Mission3Emokid.png", __ASSET__assets_images_mission3emokid_png);
 		type.set ("assets/images/Mission3Emokid.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/NEWTilesheet_Complete.png", __ASSET__assets_images_newtilesheet_complete_png);
+		type.set ("assets/images/NEWTilesheet_Complete.png", AssetType.IMAGE);
 		
 		className.set ("assets/images/NPCCharacterTilesheet.png", __ASSET__assets_images_npccharactertilesheet_png);
 		type.set ("assets/images/NPCCharacterTilesheet.png", AssetType.IMAGE);
@@ -986,6 +1087,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/images/SChool modified.png", __ASSET__assets_images_school_modified_png);
 		type.set ("assets/images/SChool modified.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/Speechbubble.psd", __ASSET__assets_images_speechbubble_psd);
+		type.set ("assets/images/Speechbubble.psd", AssetType.BINARY);
 		
 		className.set ("assets/images/street.PNG", __ASSET__assets_images_street_png);
 		type.set ("assets/images/street.PNG", AssetType.IMAGE);
@@ -1004,6 +1108,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/images/Tilesheet_Complete.psd", __ASSET__assets_images_tilesheet_complete_psd);
 		type.set ("assets/images/Tilesheet_Complete.psd", AssetType.BINARY);
+		
+		className.set ("assets/images/Wall.psd", __ASSET__assets_images_wall_psd);
+		type.set ("assets/images/Wall.psd", AssetType.BINARY);
+		
+		className.set ("assets/images/WallKJRW.png", __ASSET__assets_images_wallkjrw_png);
+		type.set ("assets/images/WallKJRW.png", AssetType.IMAGE);
 		
 		className.set ("assets/music/music-goes-here.txt", __ASSET__assets_music_music_goes_here_txt);
 		type.set ("assets/music/music-goes-here.txt", AssetType.TEXT);
@@ -1845,6 +1955,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_data_room_001_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_images_angrydad_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_baldmission1_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_bigass_house_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_button_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_charactertilesheet768x768_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_coin_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
@@ -1852,25 +1963,35 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_images_enemy_0_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_enemy_1_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_enemy_2_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_floor_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_furniture_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_girlmission1_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_health_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_house_psd extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_images_images_go_here_txt extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_images_ion_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_krjw_tutorial_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_krjw_tutorial_psd extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_images_mission1girl_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_mission2football_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_mission3_dodgeball_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_mission3_dodgeball_psd extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_images_mission3emokid_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_newtilesheet_complete_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_npccharactertilesheet_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_pat_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_player_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_pointer_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_school_modified_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_speechbubble_psd extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_images_street_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_swag_kid_walk_kopie_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_tec_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_tiles_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_tilesheet_complete_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_tilesheet_complete_psd extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_images_wall_psd extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_images_wallkjrw_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_music_music_goes_here_txt extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_music_select_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_music_townmusic_wav extends flash.media.Sound { }
@@ -2068,6 +2189,17 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 #else
 
 
@@ -2090,6 +2222,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:file("assets/data/room-001.oel") #if display private #end class __ASSET__assets_data_room_001_oel extends lime.utils.ByteArray {}
 @:image("assets/images/AngryDad.png") #if display private #end class __ASSET__assets_images_angrydad_png extends lime.graphics.Image {}
 @:image("assets/images/BaldMission1.png") #if display private #end class __ASSET__assets_images_baldmission1_png extends lime.graphics.Image {}
+@:image("assets/images/bigass HOUSE.png") #if display private #end class __ASSET__assets_images_bigass_house_png extends lime.graphics.Image {}
 @:image("assets/images/button.png") #if display private #end class __ASSET__assets_images_button_png extends lime.graphics.Image {}
 @:image("assets/images/CharacterTilesheet768x768.png") #if display private #end class __ASSET__assets_images_charactertilesheet768x768_png extends lime.graphics.Image {}
 @:image("assets/images/coin.png") #if display private #end class __ASSET__assets_images_coin_png extends lime.graphics.Image {}
@@ -2097,25 +2230,35 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:image("assets/images/enemy-0.png") #if display private #end class __ASSET__assets_images_enemy_0_png extends lime.graphics.Image {}
 @:image("assets/images/enemy-1.png") #if display private #end class __ASSET__assets_images_enemy_1_png extends lime.graphics.Image {}
 @:image("assets/images/enemy-2.png") #if display private #end class __ASSET__assets_images_enemy_2_png extends lime.graphics.Image {}
+@:image("assets/images/floor.png") #if display private #end class __ASSET__assets_images_floor_png extends lime.graphics.Image {}
 @:image("assets/images/Furniture.png") #if display private #end class __ASSET__assets_images_furniture_png extends lime.graphics.Image {}
 @:image("assets/images/girlMission1.png") #if display private #end class __ASSET__assets_images_girlmission1_png extends lime.graphics.Image {}
 @:image("assets/images/health.png") #if display private #end class __ASSET__assets_images_health_png extends lime.graphics.Image {}
+@:file("assets/images/HOUSE.psd") #if display private #end class __ASSET__assets_images_house_psd extends lime.utils.ByteArray {}
 @:file("assets/images/images-go-here.txt") #if display private #end class __ASSET__assets_images_images_go_here_txt extends lime.utils.ByteArray {}
 @:image("assets/images/ion.png") #if display private #end class __ASSET__assets_images_ion_png extends lime.graphics.Image {}
+@:image("assets/images/KRJW-Tutorial.png") #if display private #end class __ASSET__assets_images_krjw_tutorial_png extends lime.graphics.Image {}
+@:file("assets/images/KRJW-Tutorial.psd") #if display private #end class __ASSET__assets_images_krjw_tutorial_psd extends lime.utils.ByteArray {}
 @:image("assets/images/Mission1Girl.png") #if display private #end class __ASSET__assets_images_mission1girl_png extends lime.graphics.Image {}
 @:image("assets/images/Mission2Football.png") #if display private #end class __ASSET__assets_images_mission2football_png extends lime.graphics.Image {}
+@:image("assets/images/Mission3 Dodgeball.png") #if display private #end class __ASSET__assets_images_mission3_dodgeball_png extends lime.graphics.Image {}
+@:file("assets/images/Mission3 Dodgeball.psd") #if display private #end class __ASSET__assets_images_mission3_dodgeball_psd extends lime.utils.ByteArray {}
 @:image("assets/images/Mission3Emokid.png") #if display private #end class __ASSET__assets_images_mission3emokid_png extends lime.graphics.Image {}
+@:image("assets/images/NEWTilesheet_Complete.png") #if display private #end class __ASSET__assets_images_newtilesheet_complete_png extends lime.graphics.Image {}
 @:image("assets/images/NPCCharacterTilesheet.png") #if display private #end class __ASSET__assets_images_npccharactertilesheet_png extends lime.graphics.Image {}
 @:image("assets/images/pat.png") #if display private #end class __ASSET__assets_images_pat_png extends lime.graphics.Image {}
 @:image("assets/images/player.png") #if display private #end class __ASSET__assets_images_player_png extends lime.graphics.Image {}
 @:image("assets/images/pointer.png") #if display private #end class __ASSET__assets_images_pointer_png extends lime.graphics.Image {}
 @:image("assets/images/SChool modified.png") #if display private #end class __ASSET__assets_images_school_modified_png extends lime.graphics.Image {}
+@:file("assets/images/Speechbubble.psd") #if display private #end class __ASSET__assets_images_speechbubble_psd extends lime.utils.ByteArray {}
 @:image("assets/images/street.PNG") #if display private #end class __ASSET__assets_images_street_png extends lime.graphics.Image {}
 @:image("assets/images/SWAG-Kid-Walk-Kopie.png") #if display private #end class __ASSET__assets_images_swag_kid_walk_kopie_png extends lime.graphics.Image {}
 @:image("assets/images/tec.png") #if display private #end class __ASSET__assets_images_tec_png extends lime.graphics.Image {}
 @:image("assets/images/tiles.png") #if display private #end class __ASSET__assets_images_tiles_png extends lime.graphics.Image {}
 @:image("assets/images/Tilesheet_Complete.png") #if display private #end class __ASSET__assets_images_tilesheet_complete_png extends lime.graphics.Image {}
 @:file("assets/images/Tilesheet_Complete.psd") #if display private #end class __ASSET__assets_images_tilesheet_complete_psd extends lime.utils.ByteArray {}
+@:file("assets/images/Wall.psd") #if display private #end class __ASSET__assets_images_wall_psd extends lime.utils.ByteArray {}
+@:image("assets/images/WallKJRW.png") #if display private #end class __ASSET__assets_images_wallkjrw_png extends lime.graphics.Image {}
 @:file("assets/music/music-goes-here.txt") #if display private #end class __ASSET__assets_music_music_goes_here_txt extends lime.utils.ByteArray {}
 @:file("assets/music/select.wav") #if display private #end class __ASSET__assets_music_select_wav extends lime.utils.ByteArray {}
 @:file("assets/music/townMusic.wav") #if display private #end class __ASSET__assets_music_townmusic_wav extends lime.utils.ByteArray {}

@@ -94,6 +94,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/images/bigass HOUSE.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/button.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -122,6 +126,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/images/floor.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/Furniture.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -134,12 +142,24 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/images/HOUSE.psd");
+		types.push (lime.Assets.AssetType.BINARY);
+		
+		
 		urls.push ("assets/images/images-go-here.txt");
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
 		urls.push ("assets/images/ion.png");
 		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/KRJW-Tutorial.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/KRJW-Tutorial.psd");
+		types.push (lime.Assets.AssetType.BINARY);
 		
 		
 		urls.push ("assets/images/Mission1Girl.png");
@@ -150,7 +170,19 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/images/Mission3 Dodgeball.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Mission3 Dodgeball.psd");
+		types.push (lime.Assets.AssetType.BINARY);
+		
+		
 		urls.push ("assets/images/Mission3Emokid.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/NEWTilesheet_Complete.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
@@ -172,6 +204,10 @@ class ApplicationMain {
 		
 		urls.push ("assets/images/SChool modified.png");
 		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Speechbubble.psd");
+		types.push (lime.Assets.AssetType.BINARY);
 		
 		
 		urls.push ("assets/images/street.PNG");
@@ -196,6 +232,14 @@ class ApplicationMain {
 		
 		urls.push ("assets/images/Tilesheet_Complete.psd");
 		types.push (lime.Assets.AssetType.BINARY);
+		
+		
+		urls.push ("assets/images/Wall.psd");
+		types.push (lime.Assets.AssetType.BINARY);
+		
+		
+		urls.push ("assets/images/WallKJRW.png");
+		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
 		urls.push ("assets/music/music-goes-here.txt");
@@ -566,7 +610,6 @@ class ApplicationMain {
 			file: "RechtsHelden",
 			fps: Std.int (60),
 			fullscreen: false,
-			hardware: true,
 			height: Std.int (480),
 			orientation: "portrait",
 			packageName: "com.example.myapp",
