@@ -51,7 +51,7 @@ class Mission1Find extends FlxState
 	 */
 	override public function create():Void
 	{
-		_map = new FlxOgmoLoader("assets/data/basemap2.oel");
+		_map = new FlxOgmoLoader("assets/data/Mission1.oel");
 		_mWalls = _map.loadTilemap("assets/images/Tilesheet_Complete.png", 64, 64, "tree");
 		_mWalls.setTileProperties(1, FlxObject.ANY);
 		_mWalls.setTileProperties(3, FlxObject.NONE);
@@ -159,7 +159,7 @@ class Mission1Find extends FlxState
 		_interaction = FlxG.keys.anyPressed(["q", "Q"]);
 		if (_interaction)
 		{
-			FlxG.sound.play("assets/sounds/Missie1/Gesprek1.mp3", 1, false, true, mission1Load);
+			FlxG.sound.play("assets/sounds/Missie1/Kind3/Prof1-2.mp3", 1, false, true);
 		}
 	}
 	
@@ -168,7 +168,7 @@ class Mission1Find extends FlxState
 		_interaction = FlxG.keys.anyPressed(["q", "Q"]);
 		if (_interaction)
 		{
-			FlxG.sound.play("assets/sounds/Missie1/Gesprek1.mp3", 1, false, true, mission1Load);
+			FlxG.sound.play("assets/sounds/Missie1/Kind2/Prof1-1.mp3", 1, false, true);
 		}
 	}
 	
@@ -178,9 +178,7 @@ class Mission1Find extends FlxState
 		_interaction = FlxG.keys.anyPressed(["q", "Q"]);
 		if (_interaction)
 		{
-			//FlxG.sound.destroy(true);
-			//p.speed = 0;
-			FlxG.sound.play("assets/sounds/Missie1/Gesprek1.mp3", 1, false, true, mission1Load);
+			FlxG.sound.play("assets/sounds/Missie1/Kind1/Prof1-4.mp3", 1, false, true, mission1Load);
 		}
 		
 	}
