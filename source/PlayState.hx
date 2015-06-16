@@ -54,7 +54,6 @@ class PlayState extends FlxState
 		_mWalls = _map.loadTilemap("assets/images/Tilesheet_Complete.png", 64, 64, "tree");
 		_mWalls.setTileProperties(1, FlxObject.ANY);
 		_mWalls.setTileProperties(3, FlxObject.NONE);
-		_mWalls.setTileProperties(2, FlxObject.NONE);
 		_mWalls.setTileProperties(10, FlxObject.NONE);
 		_mWalls.setTileProperties(16, FlxObject.NONE);
 		_mWalls.setTileProperties(17, FlxObject.NONE);
