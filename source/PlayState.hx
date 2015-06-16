@@ -141,7 +141,7 @@ class PlayState extends FlxState
 	override public function update():Void
 	{
 		super.update();
-		_player.speed = 300;
+		_player.speed = 600;
 		FlxG.collide(_player, _mWalls);
 		FlxG.overlap(_player, _grpCoins, playerTouchCoin);
 		FlxG.collide(_grpEnemies, _mWalls);
@@ -161,7 +161,7 @@ class PlayState extends FlxState
 			talk = 1;
 			FlxG.sound.destroy(true);
 			p.speed = 0;
-			FlxG.sound.play("assets/sounds/Missie1/Gesprek1.mp3", 1, false, true, mission1Load);
+			FlxG.sound.play("assets/sounds/Missie1/Kind1/Prof1-4.mp3", 1, false, true, mission1Load);
 			trace("test");
 			p.y -= 192;
 			

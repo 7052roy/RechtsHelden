@@ -159,7 +159,8 @@ class Mission1Find extends FlxState
 		_interaction = FlxG.keys.anyPressed(["q", "Q"]);
 		if (_interaction)
 		{
-			FlxG.sound.play("assets/sounds/Missie1/Kind3/Prof1-2.mp3", 1, false, true);
+			FlxG.sound.destroy(true);
+			FlxG.sound.play("assets/sounds/Missie1/Kind3/Prof1-2.mp3", 1, false, true, musicPlay);
 		}
 	}
 	
@@ -168,16 +169,23 @@ class Mission1Find extends FlxState
 		_interaction = FlxG.keys.anyPressed(["q", "Q"]);
 		if (_interaction)
 		{
-			FlxG.sound.play("assets/sounds/Missie1/Kind2/Prof1-1.mp3", 1, false, true);
+			FlxG.sound.destroy(true);
+			FlxG.sound.play("assets/sounds/Missie1/Kind2/Prof1-1.mp3", 1, false, true, musicPlay);
 		}
+	}
+	
+	function musicPlay()
+	{
+		FlxG.sound.playMusic(AssetPaths.townMusic__wav, 1, true);
 	}
 	
 	function loadMission1(p:Player, k:Kid)
 	{
-		
 		_interaction = FlxG.keys.anyPressed(["q", "Q"]);
+		
 		if (_interaction)
 		{
+			FlxG.sound.destroy(true);
 			FlxG.sound.play("assets/sounds/Missie1/Kind1/Prof1-4.mp3", 1, false, true, mission1Load);
 		}
 		
@@ -194,16 +202,5 @@ class Mission1Find extends FlxState
 		e.speed = 0;
 		e.velocity.x = 0;
 		e.velocity.y = 0;
-	}
-	
-	
-	private function playerTouchCoin(P:Player, C:Coin):Void
-	{
-		if (P.alive && P.exists && C.alive && C.exists)
-		{
-			C.kill();
-			_money++;
-			//_hud.updateHUD(_health, _money);
-		}
 	}
 }
