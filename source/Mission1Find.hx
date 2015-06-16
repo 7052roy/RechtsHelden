@@ -23,16 +23,14 @@ import flixel.util.FlxTimer;
 /**
  * A FlxState which can be used for the actual gameplay.
  */
-class PlayState extends FlxState
+class Mission1Find extends FlxState
 {
 	
 	private var _player:Player;
 	private var _map:FlxOgmoLoader;
 	private var _mWalls:FlxTilemap;
-	private var _grpCoins:FlxTypedGroup<Coin>;
 	private var _grpEnemies:FlxTypedGroup<Enemy>;
 	var townMusic:FlxSound;
-	private var _hud:HUD;
 	private var _money:Int = 0;
 	private var _health:Int = 3;
 	private var _inCombat:Bool = false;
@@ -40,6 +38,9 @@ class PlayState extends FlxState
 	var mission1Talk:FlxSound;
 	var _interaction:Bool = false;
 	public var talk:Int = 0;
+	var _kid:Kid;
+	var _adult1:Adult1;
+	var _adult2:Adult2;
 	
 	#if mobile
 	public static var virtualPad:FlxVirtualPad;
@@ -67,17 +68,19 @@ class PlayState extends FlxState
 		_mWalls.setTileProperties(34, FlxObject.NONE);
 		add(_mWalls);
 		
-		_grpCoins = new FlxTypedGroup<Coin>();
-		add(_grpCoins);
 		
-		_grpEnemies = new FlxTypedGroup<Enemy>();
-		add(_grpEnemies);
 		
 		_player = new Player();
 		add(_player);
 		
-		_teacher = new Teacher();
-		add(_teacher);
+		_adult1 = new Adult1();
+		add(_adult1);
+		
+		_adult2 = new Adult2();
+		add(_adult2);
+		
+		_kid = new Kid();
+		add(_kid);
 		
 		_map.loadEntities(placeEntities, "entities");
 		
@@ -109,19 +112,20 @@ class PlayState extends FlxState
 			_player.x = Std.parseInt(entityData.get("x"));
 			_player.y = Std.parseInt(entityData.get("y"));
 		}
-		else if (entityName == "coin") 
+		else if (entityName == "mission1_Kid")
 		{
-			_grpCoins.add(new Coin(Std.parseInt(entityData.get("x")) + 4, Std.parseInt(entityData.get("y")) + 4));
-			
+			_kid.x = Std.parseInt(entityData.get("x"));
+			_kid.y = Std.parseInt(entityData.get("y"));
 		}
-		else if (entityName == "enemy")
+		else if (entityName == "mission1_Adult1")
 		{
-			_grpEnemies.add(new Enemy(Std.parseInt(entityData.get("x"))+4, Std.parseInt(entityData.get("y")), Std.parseInt(entityData.get("etype"))));
+			_adult1.x = Std.parseInt(entityData.get("x"));
+			_adult1.y = Std.parseInt(entityData.get("y"));
 		}
-		else if (entityName == "mission1_Teacher")
+		else if (entityName == "mission1_Adult2")
 		{
-			_teacher.x = Std.parseInt(entityData.get("x"));
-			_teacher.y = Std.parseInt(entityData.get("y"));
+			_adult2.x = Std.parseInt(entityData.get("x"));
+			_adult2.y = Std.parseInt(entityData.get("y"));
 		}
 		trace("finished");
 	}
@@ -144,35 +148,46 @@ class PlayState extends FlxState
 		super.update();
 		_player.speed = 300;
 		FlxG.collide(_player, _mWalls);
-		FlxG.overlap(_player, _grpCoins, playerTouchCoin);
-		FlxG.collide(_grpEnemies, _mWalls);
-		FlxG.overlap(_player, _teacher, loadMission1);
-		FlxG.collide(_teacher, _mWalls);
 		FlxG.collide(_player, _grpEnemies, playerEnemy);
+		FlxG.overlap(_player, _kid, loadMission1);
+		FlxG.overlap(_player, _adult1, adult1Talk);
+		FlxG.overlap(_player, _adult2, adult2Talk);
 	}	
 	
+	function adult1Talk(p:Player, a:Adult1)
+	{
+		_interaction = FlxG.keys.anyPressed(["q", "Q"]);
+		if (_interaction)
+		{
+			FlxG.sound.play("assets/sounds/Missie1/Gesprek1.mp3", 1, false, true, mission1Load);
+		}
+	}
 	
-	function loadMission1(p:Player, t:Teacher)
+	function adult2Talk(p:Player, a:Adult2)
+	{
+		_interaction = FlxG.keys.anyPressed(["q", "Q"]);
+		if (_interaction)
+		{
+			FlxG.sound.play("assets/sounds/Missie1/Gesprek1.mp3", 1, false, true, mission1Load);
+		}
+	}
+	
+	function loadMission1(p:Player, k:Kid)
 	{
 		
 		_interaction = FlxG.keys.anyPressed(["q", "Q"]);
 		if (_interaction)
 		{
-			trace(_player.x, _player.y);
-			talk = 1;
-			FlxG.sound.destroy(true);
-			p.speed = 0;
+			//FlxG.sound.destroy(true);
+			//p.speed = 0;
 			FlxG.sound.play("assets/sounds/Missie1/Gesprek1.mp3", 1, false, true, mission1Load);
-			trace("test");
-			p.y -= 192;
-			
 		}
 		
 	}
 	
 	function mission1Load()
 	{
-		FlxG.switchState(new Mission1Find());
+		FlxG.switchState(new Mission1());
 	}
 	
 	function playerEnemy(p:Player, e:Enemy)
