@@ -135,7 +135,7 @@ class Mission1 extends FlxState
 		FlxG.collide(_player, _mWalls);
 		if (_player.CharacterNumber == 2 && _player.ability2 == true)
 		{
-			if (_player.x < _kid.x && _player.x > _kid.x -128)
+			/*if (_player.x < _kid.x && _player.x > _kid.x -128)
 			{
 				_kid.velocity.x = 100;
 			}
@@ -151,7 +151,23 @@ class Mission1 extends FlxState
 			{
 				_kid.velocity.x = -100;
 			}
-			FlxG.collide(_player, _kid, kidCollision);
+			FlxG.collide(_player, _kid, kidCollision);*/
+			if (_player.facing == FlxObject.RIGHT)
+			{
+				_kid.velocity.x = 100;
+			}
+			else if (_player.facing == FlxObject.LEFT) 
+			{
+				_kid.velocity.x = -100;
+			}
+			else if (_player.facing == FlxObject.DOWN) 
+			{
+				_kid.velocity.y = 100;
+			}
+			else if (_player.facing == FlxObject.UP) 
+			{
+				_kid.velocity.y = -100;
+			}
 		}
 		FlxG.collide(_kid, _mWalls);
 		FlxG.overlap(_kid, _teacher, finishMission);
