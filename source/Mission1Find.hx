@@ -146,7 +146,7 @@ class Mission1Find extends FlxState
 	override public function update():Void
 	{
 		super.update();
-		_player.speed = 300;
+		_player.speed = 600;
 		FlxG.collide(_player, _mWalls);
 		FlxG.collide(_player, _grpEnemies, playerEnemy);
 		FlxG.overlap(_player, _kid, loadMission1);

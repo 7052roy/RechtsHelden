@@ -135,6 +135,22 @@ class Mission1 extends FlxState
 		FlxG.collide(_player, _mWalls);
 		if (_player.CharacterNumber == 2 && _player.ability2 == true)
 		{
+			if (_player.x < _kid.x && _player.x > _kid.x -128)
+			{
+				_kid.velocity.x = 100;
+			}
+			else if (_player.x > _kid.x && _player.x < _kid.x +128)
+			{
+				_kid.velocity.x = -100;
+			}
+			else if (_player.y < _kid.y && _player.y > _kid.y -128)
+			{
+				_kid.velocity.y = 100;
+			}
+			else if (_player.y > _kid.y && _player.y < _kid.y +128) 
+			{
+				_kid.velocity.x = -100;
+			}
 			FlxG.collide(_player, _kid, kidCollision);
 		}
 		FlxG.collide(_kid, _mWalls);
