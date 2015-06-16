@@ -61,6 +61,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/data/level_3.oel", AssetType.TEXT);
 		className.set ("assets/data/level_4.oel", __ASSET__assets_data_level_4_oel);
 		type.set ("assets/data/level_4.oel", AssetType.TEXT);
+		className.set ("assets/data/Mission1.oel", __ASSET__assets_data_mission1_oel);
+		type.set ("assets/data/Mission1.oel", AssetType.TEXT);
 		className.set ("assets/data/Mission1_0.oel", __ASSET__assets_data_mission1_0_oel);
 		type.set ("assets/data/Mission1_0.oel", AssetType.TEXT);
 		className.set ("assets/data/Mission1_1.oel", __ASSET__assets_data_mission1_1_oel);
@@ -309,6 +311,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		type.set (id, AssetType.TEXT);
 		id = "assets/data/level_4.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/Mission1.oel";
 		path.set (id, id);
 		
 		type.set (id, AssetType.TEXT);
@@ -869,6 +875,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
 		#end
 		
 		#if (windows || mac || linux)
@@ -898,6 +905,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/data/level_4.oel", __ASSET__assets_data_level_4_oel);
 		type.set ("assets/data/level_4.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/Mission1.oel", __ASSET__assets_data_mission1_oel);
+		type.set ("assets/data/Mission1.oel", AssetType.TEXT);
 		
 		className.set ("assets/data/Mission1_0.oel", __ASSET__assets_data_mission1_0_oel);
 		type.set ("assets/data/Mission1_0.oel", AssetType.TEXT);
@@ -1828,6 +1838,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_data_level_2_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_level_3_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_level_4_oel extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_mission1_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_mission1_0_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_mission1_1_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_reachtshelden_oep extends flash.utils.ByteArray { }
@@ -2056,6 +2067,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
 #else
 
 
@@ -2071,6 +2083,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:file("assets/data/level_2.oel") #if display private #end class __ASSET__assets_data_level_2_oel extends lime.utils.ByteArray {}
 @:file("assets/data/level_3.oel") #if display private #end class __ASSET__assets_data_level_3_oel extends lime.utils.ByteArray {}
 @:file("assets/data/level_4.oel") #if display private #end class __ASSET__assets_data_level_4_oel extends lime.utils.ByteArray {}
+@:file("assets/data/Mission1.oel") #if display private #end class __ASSET__assets_data_mission1_oel extends lime.utils.ByteArray {}
 @:file("assets/data/Mission1_0.oel") #if display private #end class __ASSET__assets_data_mission1_0_oel extends lime.utils.ByteArray {}
 @:file("assets/data/Mission1_1.oel") #if display private #end class __ASSET__assets_data_mission1_1_oel extends lime.utils.ByteArray {}
 @:file("assets/data/reachtshelden.oep") #if display private #end class __ASSET__assets_data_reachtshelden_oep extends lime.utils.ByteArray {}

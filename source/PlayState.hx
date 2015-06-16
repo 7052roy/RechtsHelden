@@ -54,7 +54,6 @@ class PlayState extends FlxState
 		_mWalls = _map.loadTilemap("assets/images/Tilesheet_Complete.png", 64, 64, "tree");
 		_mWalls.setTileProperties(1, FlxObject.ANY);
 		_mWalls.setTileProperties(3, FlxObject.NONE);
-		_mWalls.setTileProperties(2, FlxObject.NONE);
 		_mWalls.setTileProperties(10, FlxObject.NONE);
 		_mWalls.setTileProperties(16, FlxObject.NONE);
 		_mWalls.setTileProperties(17, FlxObject.NONE);
@@ -141,7 +140,7 @@ class PlayState extends FlxState
 	override public function update():Void
 	{
 		super.update();
-		//_player.speed = 300;
+		_player.speed = 300;
 		FlxG.collide(_player, _mWalls);
 		FlxG.overlap(_player, _grpCoins, playerTouchCoin);
 		FlxG.collide(_grpEnemies, _mWalls);
