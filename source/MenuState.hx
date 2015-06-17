@@ -19,8 +19,10 @@ class MenuState extends FlxState
 	private var _txtTitle:FlxText;
 	private var _btnOptions:FlxButton;
 	private var _btnPlay:FlxButton;
+	var menuBackground:FlxSprite;
 	#if desktop
 	private var _btnExit:FlxButton;
+	
 	#end
 	
 	/**
@@ -36,6 +38,14 @@ class MenuState extends FlxState
 			//FlxG.sound.playMusic(AssetPaths.HaxeFlixel_Tutorial_Game__ogg, 1, true);
 			#end
 		}
+		
+		menuBackground = new FlxSprite();
+		menuBackground.loadGraphic("assets/images/Starting Screen.jpg");
+		menuBackground.x = 200;
+		menuBackground.y = 230;
+		menuBackground.scale.x = 2;
+		menuBackground.scale.y = 2;
+		add(menuBackground);
 		
 		_txtTitle = new FlxText(0, 20, 0, "RechtsHelden\nKJRW", 22);
 		_txtTitle.alignment = "center";
@@ -75,7 +85,7 @@ class MenuState extends FlxState
 	private function clickPlay():Void
 	{
 		FlxG.camera.fade(FlxColor.BLACK,.33, false, function() {
-			FlxG.switchState(new Mission1Find());
+			FlxG.switchState(new Mission2());
 		});
 	}
 	

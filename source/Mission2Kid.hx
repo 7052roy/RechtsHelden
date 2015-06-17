@@ -9,7 +9,7 @@ import flixel.util.FlxRandom;
 import flixel.util.FlxTimer;
 import flixel.util.FlxVelocity;
 
-class AngryDad extends FlxSprite
+class Mission2Kid extends FlxSprite
 {
 	public var speed:Float = 200.1;
 	public var etype(default, null):Int;

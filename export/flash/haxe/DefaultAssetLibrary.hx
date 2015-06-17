@@ -217,6 +217,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/SChool modified.png", AssetType.IMAGE);
 		className.set ("assets/images/Speechbubble.psd", __ASSET__assets_images_speechbubble_psd);
 		type.set ("assets/images/Speechbubble.psd", AssetType.BINARY);
+		className.set ("assets/images/Starting Screen.jpg", __ASSET__assets_images_starting_screen_jpg);
+		type.set ("assets/images/Starting Screen.jpg", AssetType.IMAGE);
 		className.set ("assets/images/street.PNG", __ASSET__assets_images_street_png);
 		type.set ("assets/images/street.PNG", AssetType.IMAGE);
 		className.set ("assets/images/SWAG-Kid-Walk-Kopie.png", __ASSET__assets_images_swag_kid_walk_kopie_png);
@@ -738,6 +740,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.BINARY);
+		id = "assets/images/Starting Screen.jpg";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
 		id = "assets/images/street.PNG";
 		path.set (id, id);
 		
@@ -1268,6 +1274,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
 		#end
 		
 		#if (windows || mac || linux)
@@ -1531,6 +1538,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/images/Speechbubble.psd", __ASSET__assets_images_speechbubble_psd);
 		type.set ("assets/images/Speechbubble.psd", AssetType.BINARY);
+		
+		className.set ("assets/images/Starting Screen.jpg", __ASSET__assets_images_starting_screen_jpg);
+		type.set ("assets/images/Starting Screen.jpg", AssetType.IMAGE);
 		
 		className.set ("assets/images/street.PNG", __ASSET__assets_images_street_png);
 		type.set ("assets/images/street.PNG", AssetType.IMAGE);
@@ -2476,6 +2486,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_images_principle_psd extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_images_school_modified_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_speechbubble_psd extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_images_starting_screen_jpg extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_street_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_swag_kid_walk_kopie_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_swagkid_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
@@ -2565,6 +2576,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 #elseif html5
+
 
 
 
@@ -2833,6 +2845,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:file("assets/images/Principle.psd") #if display private #end class __ASSET__assets_images_principle_psd extends lime.utils.ByteArray {}
 @:image("assets/images/SChool modified.png") #if display private #end class __ASSET__assets_images_school_modified_png extends lime.graphics.Image {}
 @:file("assets/images/Speechbubble.psd") #if display private #end class __ASSET__assets_images_speechbubble_psd extends lime.utils.ByteArray {}
+@:image("assets/images/Starting Screen.jpg") #if display private #end class __ASSET__assets_images_starting_screen_jpg extends lime.graphics.Image {}
 @:image("assets/images/street.PNG") #if display private #end class __ASSET__assets_images_street_png extends lime.graphics.Image {}
 @:image("assets/images/SWAG-Kid-Walk-Kopie.png") #if display private #end class __ASSET__assets_images_swag_kid_walk_kopie_png extends lime.graphics.Image {}
 @:image("assets/images/Swagkid.png") #if display private #end class __ASSET__assets_images_swagkid_png extends lime.graphics.Image {}

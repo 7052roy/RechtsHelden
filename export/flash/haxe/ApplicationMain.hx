@@ -378,6 +378,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.BINARY);
 		
 		
+		urls.push ("assets/images/Starting Screen.jpg");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/street.PNG");
 		types.push (lime.Assets.AssetType.IMAGE);
 		

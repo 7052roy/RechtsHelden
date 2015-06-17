@@ -31,9 +31,8 @@ class Mission2 extends FlxState
 	private var _mWalls:FlxTilemap;
 	var mission1Music:FlxSound;
 	private var _btnReset:FlxButton;
-	var _kid:Kid;
-	var _angryDad:AngryDad;
-	
+	private var _angryDad:FlxTypedGroup<AngryDad>;
+	private var _kid:FlxTypedGroup<Mission2Kid>;
 	#if mobile
 	public static var virtualPad:FlxVirtualPad;
 	#end
@@ -54,10 +53,10 @@ class Mission2 extends FlxState
 		_player = new Player();
 		add(_player);
 		
-		_kid = new Kid();
+		_kid = new FlxTypedGroup<Mission2Kid>();
 		add(_kid);
 		
-		_angryDad = new AngryDad();
+		_angryDad = new FlxTypedGroup<AngryDad>();
 		add(_angryDad);
 		
 		_btnReset = new FlxButton(0, 0, "Reset", clickReset);
@@ -103,13 +102,11 @@ class Mission2 extends FlxState
 		}
 		else if (entityName == "mission2_angryDad")
 		{
-			_angryDad.x = Std.parseInt(entityData.get("x"));
-			_angryDad.y = Std.parseInt(entityData.get("y"));
+			_angryDad.add(new AngryDad(Std.parseInt(entityData.get("x"))+4, Std.parseInt(entityData.get("y")), Std.parseInt(entityData.get("etype"))));
 		}
 		else if (entityName == "mission2_kid")
 		{
-			_kid.x = Std.parseInt(entityData.get("x"));
-			_kid.y = Std.parseInt(entityData.get("y"));
+			_kid.add(new Mission2Kid(Std.parseInt(entityData.get("x"))+4, Std.parseInt(entityData.get("y")), Std.parseInt(entityData.get("etype"))));
 		}
 	}
 	
@@ -137,7 +134,6 @@ class Mission2 extends FlxState
 			FlxG.collide(_player, _kid, kidCollision);
 		}
 		FlxG.collide(_kid, _mWalls);
-		FlxG.overlap(_kid, _teacher, finishMission);
 	}	
 	
 	function finishMission(k:Kid, t:Teacher)
@@ -148,6 +144,6 @@ class Mission2 extends FlxState
 	
 	function kidCollision(p:Player, k:Kid)
 	{
-		_kid.kidMovement();
+		
 	}
 }
