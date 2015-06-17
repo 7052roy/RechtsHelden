@@ -86,11 +86,31 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
-		urls.push ("assets/images/AngryDad.png");
+		urls.push ("assets/images/AngryDadMission2.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/images/AsianDad.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/AsianDad.psd");
+		types.push (lime.Assets.AssetType.BINARY);
+		
+		
+		urls.push ("assets/images/Bald-Mission1.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Bald-Mission1.psd");
+		types.push (lime.Assets.AssetType.BINARY);
+		
+		
 		urls.push ("assets/images/BaldMission1.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/BeachBall-Mission3.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
@@ -114,6 +134,26 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/images/DodgeBall-Mission-3.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Emo-Kid-Mission2 (1).png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Emo-Kid-Mission3).png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/EmoKidMission2.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/emokidMission3.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/enemy-0.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -130,7 +170,15 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/images/Football-Mission-3.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/Furniture.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Girl-Mission1.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
@@ -151,6 +199,14 @@ class ApplicationMain {
 		
 		
 		urls.push ("assets/images/ion.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Judge-Mission-3.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Judge.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
@@ -218,8 +274,40 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.BINARY);
 		
 		
-		urls.push ("assets/images/Mission3Emokid.png");
+		urls.push ("assets/images/Mission3-Mother.png");
 		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Mission3Kid1.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Mission3Kid2.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Mission3Kid3.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Mission3Kid4.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Mission3Kid5.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Mission3Kid6.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Mom.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Mother-Mission-3.psd");
+		types.push (lime.Assets.AssetType.BINARY);
 		
 		
 		urls.push ("assets/images/NEWTilesheet_Complete.png");
@@ -242,6 +330,14 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/images/Principle.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Principle.psd");
+		types.push (lime.Assets.AssetType.BINARY);
+		
+		
 		urls.push ("assets/images/SChool modified.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -255,6 +351,18 @@ class ApplicationMain {
 		
 		
 		urls.push ("assets/images/SWAG-Kid-Walk-Kopie.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Swagkid.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/SwagKidMission1.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Teacher.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
