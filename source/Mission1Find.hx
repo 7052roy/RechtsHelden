@@ -151,7 +151,7 @@ class Mission1Find extends FlxState
 		_player.speed = 600;
 		FlxG.collide(_player, _mWalls);
 		FlxG.collide(_player, _grpEnemies, playerEnemy);
-		FlxG.overlap(_player, _kid, loadMission1);
+		FlxG.overlap(_player, _kid, kidTalk);
 		FlxG.overlap(_player, _adult1, adult1Talk1);
 		FlxG.overlap(_player, _adult2, adult2Talk);
 	}	
@@ -291,16 +291,87 @@ class Mission1Find extends FlxState
 		FlxG.sound.playMusic(AssetPaths.townMusic__wav, 1, true);
 	}
 	
-	function loadMission1(p:Player, k:Kid)
+	function kidTalk(p:Player, k:Kid)
 	{
 		_interaction = FlxG.keys.anyPressed(["space", "space"]);
 		
 		if (_interaction && _player.CharacterNumber == 3)
 		{
+			if(talkAdult2 != null)
+			{
+				talkAdult2.destroy();
+			}
 			FlxG.sound.destroy(true);
-			FlxG.sound.play("assets/sounds/Missie1/Kind1/Prof1-4.mp3", 1, false, true, mission1Load);
+			talkAdult2 = new FlxSprite();
+			talkAdult2.loadGraphic("assets/images/kind3.1.png");
+			talkAdult2.x = (FlxG.width / 2);
+			talkAdult2.y = FlxG.height - talkAdult2.height - 10;
+			add(talkAdult2);
+			FlxG.sound.play("assets/sounds/Missie1/Kind3/Prof1-2.mp3", 1, false, true, kidTalk1);
 		}
 		
+	}
+	
+	function kidTalk1()
+	{
+		talkAdult2.destroy();
+		talkAdult2 = new FlxSprite();
+		talkAdult2.loadGraphic("assets/images/kind3.2.png");
+		talkAdult2.x = (FlxG.width / 2);
+		talkAdult2.y = FlxG.height - talkAdult2.height - 10;
+		add(talkAdult2);
+		FlxG.sound.play("assets/sounds/Missie1/Kind3/Prof1-2.mp3", 1, false, true, kidTalk2);
+	}
+	function kidTalk2()
+	{
+		talkAdult2.destroy();
+		talkAdult2 = new FlxSprite();
+		talkAdult2.loadGraphic("assets/images/kind3.3.png");
+		talkAdult2.x = (FlxG.width / 2);
+		talkAdult2.y = FlxG.height - talkAdult2.height - 10;
+		add(talkAdult2);
+		FlxG.sound.play("assets/sounds/Missie1/Kind3/Prof2-2.mp3", 1, false, true, kidTalk3);
+	}
+	function kidTalk3()
+	{
+		talkAdult2.destroy();
+		talkAdult2 = new FlxSprite();
+		talkAdult2.loadGraphic("assets/images/kind3.4.png");
+		talkAdult2.x = (FlxG.width / 2);
+		talkAdult2.y = FlxG.height - talkAdult2.height - 10;
+		add(talkAdult2);
+		FlxG.sound.play("assets/sounds/Missie1/Kind3/Prof2-2.mp3", 1, false, true, kidTalk4);
+	}
+	function kidTalk4()
+	{
+		talkAdult2.destroy();
+		talkAdult2 = new FlxSprite();
+		talkAdult2.loadGraphic("assets/images/kind3.5.png");
+		talkAdult2.x = (FlxG.width / 2);
+		talkAdult2.y = FlxG.height - talkAdult2.height - 10;
+		add(talkAdult2);
+		FlxG.sound.play("assets/sounds/Missie1/Kind3/Prof3-2.mp3", 1, false, true, kidTalk5);
+	}
+	
+	function kidTalk5()
+	{
+		talkAdult2.destroy();
+		talkAdult2 = new FlxSprite();
+		talkAdult2.loadGraphic("assets/images/kind3.6.png");
+		talkAdult2.x = (FlxG.width / 2);
+		talkAdult2.y = FlxG.height - talkAdult2.height - 10;
+		add(talkAdult2);
+		FlxG.sound.play("assets/sounds/Missie1/Kind3/Prof3-2.mp3", 1, false, true, kidTalk6);
+	}
+	function kidTalk6()
+	{
+		talkAdult2.destroy();
+		talkAdult2 = new FlxSprite();
+		talkAdult2.loadGraphic("assets/images/kind3.7.png");
+		talkAdult2.x = (FlxG.width / 2);
+		talkAdult2.y = FlxG.height - talkAdult2.height - 10;
+		add(talkAdult2);
+		FlxG.sound.play("assets/sounds/Missie1/Kind3/Prof4-2.mp3", 1, false, true, mission1Load);
 	}
 	
 	function mission1Load()
