@@ -90,6 +90,14 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/images/AsianDad.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/AsianDad.psd");
+		types.push (lime.Assets.AssetType.BINARY);
+		
+		
 		urls.push ("assets/images/BaldMission1.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -111,6 +119,22 @@ class ApplicationMain {
 		
 		
 		urls.push ("assets/images/CollectingSpirit Kopie.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Emo-Kid-Mission2 (1).png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Emo-Kid-Mission3).png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/EmoKidMission2.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/emokidMission3.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
@@ -154,6 +178,14 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/images/Judge.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Knightmare.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/KRJW-Tutorial.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -178,7 +210,7 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.BINARY);
 		
 		
-		urls.push ("assets/images/Mission3Emokid.png");
+		urls.push ("assets/images/Mom.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
@@ -202,6 +234,14 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/images/Principle.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Principle.psd");
+		types.push (lime.Assets.AssetType.BINARY);
+		
+		
 		urls.push ("assets/images/SChool modified.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -215,6 +255,10 @@ class ApplicationMain {
 		
 		
 		urls.push ("assets/images/SWAG-Kid-Walk-Kopie.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Swagkid.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		

@@ -171,7 +171,7 @@ class Mission1 extends FlxState
 		}
 		
 		FlxG.collide(_player, _kid);
-		FlxG.collide(_kid, _mWalls, kidSpeed);
+		FlxG.collide(_kid, _mWalls ); //kidSpeed);
 		FlxG.overlap(_kid, _teacher, finishMission);
 	}	
 	

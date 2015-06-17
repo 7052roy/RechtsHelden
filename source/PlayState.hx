@@ -186,4 +186,15 @@ class PlayState extends FlxState
 			//_hud.updateHUD(_health, _money);
 		}
 	}
+	
+	private function checkEnemyVision(e:Enemy):Void
+{
+    if (_mWalls.ray(e.getMidpoint(), _player.getMidpoint()))
+    {
+        e.seesPlayer = true;
+        e.playerPos.copyFrom(_player.getMidpoint());
+    }
+    else
+        e.seesPlayer = false;
+}
 }
