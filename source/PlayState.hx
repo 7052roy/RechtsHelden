@@ -80,16 +80,11 @@ class PlayState extends FlxState
 		
 		_map.loadEntities(placeEntities, "entities");
 		
-		
-		
-		
 		FlxG.camera.follow(_player, FlxCamera.STYLE_TOPDOWN, null, 1);
 		
 		//_hud = new HUD();
 		//add(_hud);
-		//townMusic = FlxG.sound.load("assets/music/townMusic.wav");
-		//townMusic.play(true);
-		FlxG.sound.playMusic(AssetPaths.townMusic__wav, 1, true);
+		//FlxG.sound.playMusic(AssetPaths.townMusic__wav, 1, true);
 		FlxG.camera.fade(FlxColor.BLACK, 2, true);
 		
 		#if mobile
@@ -122,7 +117,6 @@ class PlayState extends FlxState
 			_teacher.x = Std.parseInt(entityData.get("x"));
 			_teacher.y = Std.parseInt(entityData.get("y"));
 		}
-		trace("finished");
 	}
 	
 	
