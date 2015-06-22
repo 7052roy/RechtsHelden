@@ -478,6 +478,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/images/Missie3/Thumbs2.db");
+		types.push (lime.Assets.AssetType.BINARY);
+		
+		
 		urls.push ("assets/images/Mission1Girl.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -624,6 +628,10 @@ class ApplicationMain {
 		
 		urls.push ("assets/images/tec.png");
 		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Thumbs3.db");
+		types.push (lime.Assets.AssetType.BINARY);
 		
 		
 		urls.push ("assets/images/tiles.png");
@@ -1110,7 +1118,6 @@ class ApplicationMain {
 			file: "RechtsHelden",
 			fps: Std.int (60),
 			fullscreen: false,
-			hardware: true,
 			height: Std.int (480),
 			orientation: "portrait",
 			packageName: "com.example.myapp",
