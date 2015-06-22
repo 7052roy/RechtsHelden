@@ -79,19 +79,6 @@ class PlayState extends FlxState
 		_mWalls.setTileProperties(24, FlxObject.NONE);
 		add(_mWalls);
 		
-		/*_mWalls.setTileProperties(3, FlxObject.NONE);
-		_mWalls.setTileProperties(10, FlxObject.NONE);
-		_mWalls.setTileProperties(16, FlxObject.NONE);
-		_mWalls.setTileProperties(17, FlxObject.NONE);
-		_mWalls.setTileProperties(18, FlxObject.NONE);
-		_mWalls.setTileProperties(19, FlxObject.NONE);
-		_mWalls.setTileProperties(20, FlxObject.NONE);
-		_mWalls.setTileProperties(21, FlxObject.NONE);
-		_mWalls.setTileProperties(22, FlxObject.NONE);
-		_mWalls.setTileProperties(33, FlxObject.NONE);
-		_mWalls.setTileProperties(34, FlxObject.NONE);
-		add(_mWalls);*/
-		
 		_grpCoins = new FlxTypedGroup<Coin>();
 		add(_grpCoins);
 		
@@ -174,8 +161,8 @@ class PlayState extends FlxState
 	function loadMission1(p:Player, t:Teacher)
 	{
 		
-		_interaction = FlxG.keys.anyPressed(["q", "Q"]);
-		if (_interaction)
+		_interaction = FlxG.keys.anyPressed(["space", "space"]);
+		if (_interaction && _player.CharacterNumber == 3)
 		{
 			p.y -= 192;
 			if (talkAdult2 != null)
@@ -197,6 +184,7 @@ class PlayState extends FlxState
 	
 	function teacherText()
 	{
+		talkAdult2.destroy();
 		talkAdult2 = new FlxSprite();
 		talkAdult2.loadGraphic("assets/images/Missie1/intromissie1/prof1.png");
 		talkAdult2.x = _player.x - 300;
@@ -207,6 +195,7 @@ class PlayState extends FlxState
 	
 	function teacherText1()
 	{
+		talkAdult2.destroy();
 		talkAdult2 = new FlxSprite();
 		talkAdult2.loadGraphic("assets/images/Missie1/intromissie1/prof2.png");
 		talkAdult2.x = _player.x - 300;
@@ -217,6 +206,7 @@ class PlayState extends FlxState
 	
 	function teacherText2()
 	{
+		talkAdult2.destroy();
 		talkAdult2 = new FlxSprite();
 		talkAdult2.loadGraphic("assets/images/Missie1/intromissie1/prof3.png");
 		talkAdult2.x = _player.x - 300;
@@ -227,6 +217,7 @@ class PlayState extends FlxState
 	
 	function teacherText3()
 	{
+		talkAdult2.destroy();
 		talkAdult2 = new FlxSprite();
 		talkAdult2.loadGraphic("assets/images/Missie1/intromissie1/prof4.png");
 		talkAdult2.x = _player.x - 300;
@@ -237,12 +228,13 @@ class PlayState extends FlxState
 	
 	function teacherText4()
 	{
+		talkAdult2.destroy();
 		talkAdult2 = new FlxSprite();
 		talkAdult2.loadGraphic("assets/images/Missie1/intromissie1/prof5.png");
 		talkAdult2.x = _player.x - 300;
 		talkAdult2.y = _player.y - 100;
 		add(talkAdult2);
-		FlxG.sound.play("assets/sounds/Missie1/Teacher/Teacher1-3.mp3", 1, false, true, teacherText5);
+		FlxG.sound.play("assets/sounds/Missie1/Teacher/Teacher1-4.mp3", 1, false, true, teacherText5);
 	}
 	
 	function teacherText5()

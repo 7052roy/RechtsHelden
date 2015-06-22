@@ -17,6 +17,7 @@ class Player extends FlxSprite
 	public var CharacterNumber = 1;
 	var test = 1;
 	public var ability2:Bool = false;
+	public var level:Int;
 	
 	
 	public function new(X:Float=0, Y:Float=0) 

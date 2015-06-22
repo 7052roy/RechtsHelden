@@ -194,6 +194,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/images/feggit.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/floor.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -322,6 +326,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/images/Knightmare Fight/Text1.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/Knightmare.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -339,6 +347,10 @@ class ApplicationMain {
 		
 		
 		urls.push ("assets/images/KnightmareShield4.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/KnightmareText.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
@@ -419,6 +431,26 @@ class ApplicationMain {
 		
 		
 		urls.push ("assets/images/Missie2/emo1.9.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Missie3/Feggit1.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Missie3/Feggit2.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Missie3/Feggit3.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Missie3/Feggit4.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Missie3/Feggit5.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
@@ -538,6 +570,14 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/images/NEW_Tilesheet_Complete.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/NEW_Tilesheet_Complete.psd");
+		types.push (lime.Assets.AssetType.BINARY);
+		
+		
 		urls.push ("assets/images/NPCCharacterTilesheet.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -562,7 +602,15 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.BINARY);
 		
 		
+		urls.push ("assets/images/resetbutton.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/SChool modified.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Speechbubble.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
@@ -587,6 +635,10 @@ class ApplicationMain {
 		
 		
 		urls.push ("assets/images/Story/4.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Story/Introscreen.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
