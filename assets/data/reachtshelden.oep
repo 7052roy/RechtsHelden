@@ -16,11 +16,7 @@
     <Width>640</Width>
     <Height>480</Height>
   </LevelMaximumSize>
-<<<<<<< HEAD
-  <Filename>C:\Users\roy\Documents\GitHub\RechtsHelden\assets\data\reachtshelden.oep</Filename>
-=======
   <Filename>C:\Users\Luuk\GitHub\Rechtshelden\assets\data\reachtshelden.oep</Filename>
->>>>>>> origin/master
   <AngleMode>Radians</AngleMode>
   <CameraEnabled>false</CameraEnabled>
   <CameraSize>
