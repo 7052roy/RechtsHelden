@@ -42,9 +42,9 @@ class Mission2 extends FlxState
 	 */
 	override public function create():Void
 	{
-		_map = new FlxOgmoLoader("assets/data/Final Maps/worldmap1.oel");
+		_map = new FlxOgmoLoader("assets/data/kid_dad-testing.oel");
 		_mWalls = _map.loadTilemap("assets/images/Tilesheet_Complete.png", 64, 64, "tree");
-		_mWalls.setTileProperties(1, FlxObject.ANY);
+		_mWalls.setTileProperties(1, FlxObject.NONE);
 		_mWalls.setTileProperties(3, FlxObject.NONE);
 		_mWalls.setTileProperties(2, FlxObject.NONE);
 		_mWalls.setTileProperties(10, FlxObject.NONE);
@@ -95,7 +95,7 @@ class Mission2 extends FlxState
 		{
 			_angryDad.add(new AngryDad(Std.parseInt(entityData.get("x"))+4, Std.parseInt(entityData.get("y")), Std.parseInt(entityData.get("etype"))));
 		}
-		else if (entityName == "mission2_kid")
+		else if (entityName == "Mission2_Kid")
 		{
 			_kid.add(new Mission2Kid(Std.parseInt(entityData.get("x"))+4, Std.parseInt(entityData.get("y")), Std.parseInt(entityData.get("etype"))));
 		}

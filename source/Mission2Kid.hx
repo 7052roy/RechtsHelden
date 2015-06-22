@@ -28,7 +28,7 @@ class Mission2Kid extends FlxSprite
 		
 		super(X, Y);
 		etype = EType;
-		loadGraphic("assets/images/AngryDadMission2.png", true, 64, 64);
+		loadGraphic("assets/images/Emo-Kid-Mission2 (1).png", true, 64, 64);
 		setFacingFlip(FlxObject.LEFT, false, false);
 		setFacingFlip(FlxObject.RIGHT, true, false);
 		animation.add("d", [0, 1, 0, 2], 6, false);
