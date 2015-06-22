@@ -57,6 +57,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/data/basemap2.oel", AssetType.TEXT);
 		path.set ("assets/data/data-goes-here.txt", "assets/data/data-goes-here.txt");
 		type.set ("assets/data/data-goes-here.txt", AssetType.TEXT);
+		path.set ("assets/data/Final Maps/worldmap1.oel", "assets/data/Final Maps/worldmap1.oel");
+		type.set ("assets/data/Final Maps/worldmap1.oel", AssetType.TEXT);
+		path.set ("assets/data/Final Maps/worldmap2.oel", "assets/data/Final Maps/worldmap2.oel");
+		type.set ("assets/data/Final Maps/worldmap2.oel", AssetType.TEXT);
+		path.set ("assets/data/kid_dad-testing.oel", "assets/data/kid_dad-testing.oel");
+		type.set ("assets/data/kid_dad-testing.oel", AssetType.TEXT);
 		path.set ("assets/data/level_1.oel", "assets/data/level_1.oel");
 		type.set ("assets/data/level_1.oel", AssetType.TEXT);
 		path.set ("assets/data/level_2.oel", "assets/data/level_2.oel");
@@ -65,6 +71,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/data/level_3.oel", AssetType.TEXT);
 		path.set ("assets/data/level_4.oel", "assets/data/level_4.oel");
 		type.set ("assets/data/level_4.oel", AssetType.TEXT);
+		path.set ("assets/data/Mission1.oel", "assets/data/Mission1.oel");
+		type.set ("assets/data/Mission1.oel", AssetType.TEXT);
 		path.set ("assets/data/Mission1_0.oel", "assets/data/Mission1_0.oel");
 		type.set ("assets/data/Mission1_0.oel", AssetType.TEXT);
 		path.set ("assets/data/Mission1_1.oel", "assets/data/Mission1_1.oel");
@@ -73,10 +81,38 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/data/reachtshelden.oep", AssetType.TEXT);
 		path.set ("assets/data/room-001.oel", "assets/data/room-001.oel");
 		type.set ("assets/data/room-001.oel", AssetType.TEXT);
-		path.set ("assets/images/AngryDad.png", "assets/images/AngryDad.png");
-		type.set ("assets/images/AngryDad.png", AssetType.IMAGE);
+		path.set ("assets/data/testingmap.oel", "assets/data/testingmap.oel");
+		type.set ("assets/data/testingmap.oel", AssetType.TEXT);
+		path.set ("assets/female/kind2-1.mp3", "assets/female/kind2-1.mp3");
+		type.set ("assets/female/kind2-1.mp3", AssetType.MUSIC);
+		path.set ("assets/female/kind2-2.mp3", "assets/female/kind2-2.mp3");
+		type.set ("assets/female/kind2-2.mp3", AssetType.MUSIC);
+		path.set ("assets/female/moeder1.mp3", "assets/female/moeder1.mp3");
+		type.set ("assets/female/moeder1.mp3", AssetType.MUSIC);
+		path.set ("assets/female/moeder2.mp3", "assets/female/moeder2.mp3");
+		type.set ("assets/female/moeder2.mp3", AssetType.MUSIC);
+		path.set ("assets/images/1StartingScreeeeeeen.png", "assets/images/1StartingScreeeeeeen.png");
+		type.set ("assets/images/1StartingScreeeeeeen.png", AssetType.IMAGE);
+		path.set ("assets/images/AngryDadMission2.png", "assets/images/AngryDadMission2.png");
+		type.set ("assets/images/AngryDadMission2.png", AssetType.IMAGE);
+		path.set ("assets/images/AsianDad.png", "assets/images/AsianDad.png");
+		type.set ("assets/images/AsianDad.png", AssetType.IMAGE);
+		path.set ("assets/images/AsianDad.psd", "assets/images/AsianDad.psd");
+		type.set ("assets/images/AsianDad.psd", AssetType.BINARY);
+		path.set ("assets/images/Attack128x64.png", "assets/images/Attack128x64.png");
+		type.set ("assets/images/Attack128x64.png", AssetType.IMAGE);
+		path.set ("assets/images/Bald-Mission1.png", "assets/images/Bald-Mission1.png");
+		type.set ("assets/images/Bald-Mission1.png", AssetType.IMAGE);
+		path.set ("assets/images/Bald-Mission1.psd", "assets/images/Bald-Mission1.psd");
+		type.set ("assets/images/Bald-Mission1.psd", AssetType.BINARY);
 		path.set ("assets/images/BaldMission1.png", "assets/images/BaldMission1.png");
 		type.set ("assets/images/BaldMission1.png", AssetType.IMAGE);
+		path.set ("assets/images/Banner.psd", "assets/images/Banner.psd");
+		type.set ("assets/images/Banner.psd", AssetType.BINARY);
+		path.set ("assets/images/BeachBall-Mission3.png", "assets/images/BeachBall-Mission3.png");
+		type.set ("assets/images/BeachBall-Mission3.png", AssetType.IMAGE);
+		path.set ("assets/images/bigass HOUSE.png", "assets/images/bigass HOUSE.png");
+		type.set ("assets/images/bigass HOUSE.png", AssetType.IMAGE);
 		path.set ("assets/images/button.png", "assets/images/button.png");
 		type.set ("assets/images/button.png", AssetType.IMAGE);
 		path.set ("assets/images/CharacterTilesheet768x768.png", "assets/images/CharacterTilesheet768x768.png");
@@ -85,28 +121,214 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/coin.png", AssetType.IMAGE);
 		path.set ("assets/images/CollectingSpirit Kopie.png", "assets/images/CollectingSpirit Kopie.png");
 		type.set ("assets/images/CollectingSpirit Kopie.png", AssetType.IMAGE);
+		path.set ("assets/images/DodgeBall-Mission-3.png", "assets/images/DodgeBall-Mission-3.png");
+		type.set ("assets/images/DodgeBall-Mission-3.png", AssetType.IMAGE);
+		path.set ("assets/images/Emo-Kid-Mission2 (1).png", "assets/images/Emo-Kid-Mission2 (1).png");
+		type.set ("assets/images/Emo-Kid-Mission2 (1).png", AssetType.IMAGE);
+		path.set ("assets/images/Emo-Kid-Mission3).png", "assets/images/Emo-Kid-Mission3).png");
+		type.set ("assets/images/Emo-Kid-Mission3).png", AssetType.IMAGE);
+		path.set ("assets/images/EmoKidMission2.png", "assets/images/EmoKidMission2.png");
+		type.set ("assets/images/EmoKidMission2.png", AssetType.IMAGE);
+		path.set ("assets/images/emokidMission3.png", "assets/images/emokidMission3.png");
+		type.set ("assets/images/emokidMission3.png", AssetType.IMAGE);
 		path.set ("assets/images/enemy-0.png", "assets/images/enemy-0.png");
 		type.set ("assets/images/enemy-0.png", AssetType.IMAGE);
 		path.set ("assets/images/enemy-1.png", "assets/images/enemy-1.png");
 		type.set ("assets/images/enemy-1.png", AssetType.IMAGE);
 		path.set ("assets/images/enemy-2.png", "assets/images/enemy-2.png");
 		type.set ("assets/images/enemy-2.png", AssetType.IMAGE);
+		path.set ("assets/images/feggit.png", "assets/images/feggit.png");
+		type.set ("assets/images/feggit.png", AssetType.IMAGE);
+		path.set ("assets/images/floor.png", "assets/images/floor.png");
+		type.set ("assets/images/floor.png", AssetType.IMAGE);
+		path.set ("assets/images/Football-Mission-3.png", "assets/images/Football-Mission-3.png");
+		type.set ("assets/images/Football-Mission-3.png", AssetType.IMAGE);
 		path.set ("assets/images/Furniture.png", "assets/images/Furniture.png");
 		type.set ("assets/images/Furniture.png", AssetType.IMAGE);
+		path.set ("assets/images/Girl-Mission1.png", "assets/images/Girl-Mission1.png");
+		type.set ("assets/images/Girl-Mission1.png", AssetType.IMAGE);
 		path.set ("assets/images/girlMission1.png", "assets/images/girlMission1.png");
 		type.set ("assets/images/girlMission1.png", AssetType.IMAGE);
+		path.set ("assets/images/HATSNewRoadTiles.png", "assets/images/HATSNewRoadTiles.png");
+		type.set ("assets/images/HATSNewRoadTiles.png", AssetType.IMAGE);
+		path.set ("assets/images/HATSNewRoadTiles.psd", "assets/images/HATSNewRoadTiles.psd");
+		type.set ("assets/images/HATSNewRoadTiles.psd", AssetType.BINARY);
 		path.set ("assets/images/health.png", "assets/images/health.png");
 		type.set ("assets/images/health.png", AssetType.IMAGE);
+		path.set ("assets/images/HOLE.png", "assets/images/HOLE.png");
+		type.set ("assets/images/HOLE.png", AssetType.IMAGE);
+		path.set ("assets/images/HOUSE.psd", "assets/images/HOUSE.psd");
+		type.set ("assets/images/HOUSE.psd", AssetType.BINARY);
 		path.set ("assets/images/images-go-here.txt", "assets/images/images-go-here.txt");
 		type.set ("assets/images/images-go-here.txt", AssetType.TEXT);
 		path.set ("assets/images/ion.png", "assets/images/ion.png");
 		type.set ("assets/images/ion.png", AssetType.IMAGE);
+		path.set ("assets/images/Judge-Mission-3.png", "assets/images/Judge-Mission-3.png");
+		type.set ("assets/images/Judge-Mission-3.png", AssetType.IMAGE);
+		path.set ("assets/images/Judge.png", "assets/images/Judge.png");
+		type.set ("assets/images/Judge.png", AssetType.IMAGE);
+		path.set ("assets/images/kind1.1.png", "assets/images/kind1.1.png");
+		type.set ("assets/images/kind1.1.png", AssetType.IMAGE);
+		path.set ("assets/images/kind1.2.png", "assets/images/kind1.2.png");
+		type.set ("assets/images/kind1.2.png", AssetType.IMAGE);
+		path.set ("assets/images/kind1.3.png", "assets/images/kind1.3.png");
+		type.set ("assets/images/kind1.3.png", AssetType.IMAGE);
+		path.set ("assets/images/kind1.4.png", "assets/images/kind1.4.png");
+		type.set ("assets/images/kind1.4.png", AssetType.IMAGE);
+		path.set ("assets/images/kind1.5.png", "assets/images/kind1.5.png");
+		type.set ("assets/images/kind1.5.png", AssetType.IMAGE);
+		path.set ("assets/images/kind2.1.png", "assets/images/kind2.1.png");
+		type.set ("assets/images/kind2.1.png", AssetType.IMAGE);
+		path.set ("assets/images/kind2.2.png", "assets/images/kind2.2.png");
+		type.set ("assets/images/kind2.2.png", AssetType.IMAGE);
+		path.set ("assets/images/kind2.3.png", "assets/images/kind2.3.png");
+		type.set ("assets/images/kind2.3.png", AssetType.IMAGE);
+		path.set ("assets/images/kind2.4.png", "assets/images/kind2.4.png");
+		type.set ("assets/images/kind2.4.png", AssetType.IMAGE);
+		path.set ("assets/images/kind2.5.png", "assets/images/kind2.5.png");
+		type.set ("assets/images/kind2.5.png", AssetType.IMAGE);
+		path.set ("assets/images/kind3.1.png", "assets/images/kind3.1.png");
+		type.set ("assets/images/kind3.1.png", AssetType.IMAGE);
+		path.set ("assets/images/kind3.2.png", "assets/images/kind3.2.png");
+		type.set ("assets/images/kind3.2.png", AssetType.IMAGE);
+		path.set ("assets/images/kind3.3.png", "assets/images/kind3.3.png");
+		type.set ("assets/images/kind3.3.png", AssetType.IMAGE);
+		path.set ("assets/images/kind3.4.png", "assets/images/kind3.4.png");
+		type.set ("assets/images/kind3.4.png", AssetType.IMAGE);
+		path.set ("assets/images/kind3.5.png", "assets/images/kind3.5.png");
+		type.set ("assets/images/kind3.5.png", AssetType.IMAGE);
+		path.set ("assets/images/kind3.6.png", "assets/images/kind3.6.png");
+		type.set ("assets/images/kind3.6.png", AssetType.IMAGE);
+		path.set ("assets/images/kind3.7.png", "assets/images/kind3.7.png");
+		type.set ("assets/images/kind3.7.png", AssetType.IMAGE);
+		path.set ("assets/images/KJRW-Tutotial-3.png", "assets/images/KJRW-Tutotial-3.png");
+		type.set ("assets/images/KJRW-Tutotial-3.png", AssetType.IMAGE);
+		path.set ("assets/images/Knightmare Fight/Text1.png", "assets/images/Knightmare Fight/Text1.png");
+		type.set ("assets/images/Knightmare Fight/Text1.png", AssetType.IMAGE);
+		path.set ("assets/images/Knightmare.png", "assets/images/Knightmare.png");
+		type.set ("assets/images/Knightmare.png", AssetType.IMAGE);
+		path.set ("assets/images/KnightmareAttackTilesheet.png", "assets/images/KnightmareAttackTilesheet.png");
+		type.set ("assets/images/KnightmareAttackTilesheet.png", AssetType.IMAGE);
+		path.set ("assets/images/KnightmareCompleteTilesheet.png", "assets/images/KnightmareCompleteTilesheet.png");
+		type.set ("assets/images/KnightmareCompleteTilesheet.png", AssetType.IMAGE);
+		path.set ("assets/images/KnightmareDash.png", "assets/images/KnightmareDash.png");
+		type.set ("assets/images/KnightmareDash.png", AssetType.IMAGE);
+		path.set ("assets/images/KnightmareShield4.png", "assets/images/KnightmareShield4.png");
+		type.set ("assets/images/KnightmareShield4.png", AssetType.IMAGE);
+		path.set ("assets/images/KnightmareText.png", "assets/images/KnightmareText.png");
+		type.set ("assets/images/KnightmareText.png", AssetType.IMAGE);
+		path.set ("assets/images/KRJW-Tutorial.png", "assets/images/KRJW-Tutorial.png");
+		type.set ("assets/images/KRJW-Tutorial.png", AssetType.IMAGE);
+		path.set ("assets/images/KRJW-Tutorial.psd", "assets/images/KRJW-Tutorial.psd");
+		type.set ("assets/images/KRJW-Tutorial.psd", AssetType.BINARY);
+		path.set ("assets/images/Missie1/intromissie1/prof0.png", "assets/images/Missie1/intromissie1/prof0.png");
+		type.set ("assets/images/Missie1/intromissie1/prof0.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie1/intromissie1/prof1.png", "assets/images/Missie1/intromissie1/prof1.png");
+		type.set ("assets/images/Missie1/intromissie1/prof1.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie1/intromissie1/prof2.png", "assets/images/Missie1/intromissie1/prof2.png");
+		type.set ("assets/images/Missie1/intromissie1/prof2.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie1/intromissie1/prof3.png", "assets/images/Missie1/intromissie1/prof3.png");
+		type.set ("assets/images/Missie1/intromissie1/prof3.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie1/intromissie1/prof4.png", "assets/images/Missie1/intromissie1/prof4.png");
+		type.set ("assets/images/Missie1/intromissie1/prof4.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie1/intromissie1/prof5.png", "assets/images/Missie1/intromissie1/prof5.png");
+		type.set ("assets/images/Missie1/intromissie1/prof5.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie1/intromissie1/prof6.png", "assets/images/Missie1/intromissie1/prof6.png");
+		type.set ("assets/images/Missie1/intromissie1/prof6.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie2/emo1.1.png", "assets/images/Missie2/emo1.1.png");
+		type.set ("assets/images/Missie2/emo1.1.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie2/emo1.10.png", "assets/images/Missie2/emo1.10.png");
+		type.set ("assets/images/Missie2/emo1.10.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie2/emo1.11.png", "assets/images/Missie2/emo1.11.png");
+		type.set ("assets/images/Missie2/emo1.11.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie2/emo1.2.png", "assets/images/Missie2/emo1.2.png");
+		type.set ("assets/images/Missie2/emo1.2.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie2/emo1.3.png", "assets/images/Missie2/emo1.3.png");
+		type.set ("assets/images/Missie2/emo1.3.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie2/emo1.4.png", "assets/images/Missie2/emo1.4.png");
+		type.set ("assets/images/Missie2/emo1.4.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie2/emo1.5.png", "assets/images/Missie2/emo1.5.png");
+		type.set ("assets/images/Missie2/emo1.5.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie2/emo1.6.png", "assets/images/Missie2/emo1.6.png");
+		type.set ("assets/images/Missie2/emo1.6.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie2/emo1.7.png", "assets/images/Missie2/emo1.7.png");
+		type.set ("assets/images/Missie2/emo1.7.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie2/emo1.8.png", "assets/images/Missie2/emo1.8.png");
+		type.set ("assets/images/Missie2/emo1.8.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie2/emo1.9.png", "assets/images/Missie2/emo1.9.png");
+		type.set ("assets/images/Missie2/emo1.9.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie3/Feggit1.png", "assets/images/Missie3/Feggit1.png");
+		type.set ("assets/images/Missie3/Feggit1.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie3/Feggit2.png", "assets/images/Missie3/Feggit2.png");
+		type.set ("assets/images/Missie3/Feggit2.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie3/Feggit3.png", "assets/images/Missie3/Feggit3.png");
+		type.set ("assets/images/Missie3/Feggit3.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie3/Feggit4.png", "assets/images/Missie3/Feggit4.png");
+		type.set ("assets/images/Missie3/Feggit4.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie3/Feggit5.png", "assets/images/Missie3/Feggit5.png");
+		type.set ("assets/images/Missie3/Feggit5.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie3/Judge1.png", "assets/images/Missie3/Judge1.png");
+		type.set ("assets/images/Missie3/Judge1.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie3/Judge2.png", "assets/images/Missie3/Judge2.png");
+		type.set ("assets/images/Missie3/Judge2.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie3/Mom1.png", "assets/images/Missie3/Mom1.png");
+		type.set ("assets/images/Missie3/Mom1.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie3/Mom2.png", "assets/images/Missie3/Mom2.png");
+		type.set ("assets/images/Missie3/Mom2.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie3/Mom3.png", "assets/images/Missie3/Mom3.png");
+		type.set ("assets/images/Missie3/Mom3.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie3/Pro1.png", "assets/images/Missie3/Pro1.png");
+		type.set ("assets/images/Missie3/Pro1.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie3/Pro2.png", "assets/images/Missie3/Pro2.png");
+		type.set ("assets/images/Missie3/Pro2.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie3/Pro3.png", "assets/images/Missie3/Pro3.png");
+		type.set ("assets/images/Missie3/Pro3.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie3/Pro4.png", "assets/images/Missie3/Pro4.png");
+		type.set ("assets/images/Missie3/Pro4.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie3/Pro5.png", "assets/images/Missie3/Pro5.png");
+		type.set ("assets/images/Missie3/Pro5.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie3/Pro6.png", "assets/images/Missie3/Pro6.png");
+		type.set ("assets/images/Missie3/Pro6.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie3/Pro7.png", "assets/images/Missie3/Pro7.png");
+		type.set ("assets/images/Missie3/Pro7.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie3/Pro8.png", "assets/images/Missie3/Pro8.png");
+		type.set ("assets/images/Missie3/Pro8.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie3/Prof9.png", "assets/images/Missie3/Prof9.png");
+		type.set ("assets/images/Missie3/Prof9.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie3/Thumbs2.db", "assets/images/Missie3/Thumbs2.db");
+		type.set ("assets/images/Missie3/Thumbs2.db", AssetType.BINARY);
 		path.set ("assets/images/Mission1Girl.png", "assets/images/Mission1Girl.png");
 		type.set ("assets/images/Mission1Girl.png", AssetType.IMAGE);
 		path.set ("assets/images/Mission2Football.png", "assets/images/Mission2Football.png");
 		type.set ("assets/images/Mission2Football.png", AssetType.IMAGE);
-		path.set ("assets/images/Mission3Emokid.png", "assets/images/Mission3Emokid.png");
-		type.set ("assets/images/Mission3Emokid.png", AssetType.IMAGE);
+		path.set ("assets/images/Mission3 Dodgeball.png", "assets/images/Mission3 Dodgeball.png");
+		type.set ("assets/images/Mission3 Dodgeball.png", AssetType.IMAGE);
+		path.set ("assets/images/Mission3 Dodgeball.psd", "assets/images/Mission3 Dodgeball.psd");
+		type.set ("assets/images/Mission3 Dodgeball.psd", AssetType.BINARY);
+		path.set ("assets/images/Mission3-Mother.png", "assets/images/Mission3-Mother.png");
+		type.set ("assets/images/Mission3-Mother.png", AssetType.IMAGE);
+		path.set ("assets/images/Mission3Kid1.png", "assets/images/Mission3Kid1.png");
+		type.set ("assets/images/Mission3Kid1.png", AssetType.IMAGE);
+		path.set ("assets/images/Mission3Kid2.png", "assets/images/Mission3Kid2.png");
+		type.set ("assets/images/Mission3Kid2.png", AssetType.IMAGE);
+		path.set ("assets/images/Mission3Kid3.png", "assets/images/Mission3Kid3.png");
+		type.set ("assets/images/Mission3Kid3.png", AssetType.IMAGE);
+		path.set ("assets/images/Mission3Kid4.png", "assets/images/Mission3Kid4.png");
+		type.set ("assets/images/Mission3Kid4.png", AssetType.IMAGE);
+		path.set ("assets/images/Mission3Kid5.png", "assets/images/Mission3Kid5.png");
+		type.set ("assets/images/Mission3Kid5.png", AssetType.IMAGE);
+		path.set ("assets/images/Mission3Kid6.png", "assets/images/Mission3Kid6.png");
+		type.set ("assets/images/Mission3Kid6.png", AssetType.IMAGE);
+		path.set ("assets/images/Mom.png", "assets/images/Mom.png");
+		type.set ("assets/images/Mom.png", AssetType.IMAGE);
+		path.set ("assets/images/Mother-Mission-3.psd", "assets/images/Mother-Mission-3.psd");
+		type.set ("assets/images/Mother-Mission-3.psd", AssetType.BINARY);
+		path.set ("assets/images/NEWTilesheet_Complete.png", "assets/images/NEWTilesheet_Complete.png");
+		type.set ("assets/images/NEWTilesheet_Complete.png", AssetType.IMAGE);
+		path.set ("assets/images/NEW_Tilesheet_Complete.png", "assets/images/NEW_Tilesheet_Complete.png");
+		type.set ("assets/images/NEW_Tilesheet_Complete.png", AssetType.IMAGE);
+		path.set ("assets/images/NEW_Tilesheet_Complete.psd", "assets/images/NEW_Tilesheet_Complete.psd");
+		type.set ("assets/images/NEW_Tilesheet_Complete.psd", AssetType.BINARY);
 		path.set ("assets/images/NPCCharacterTilesheet.png", "assets/images/NPCCharacterTilesheet.png");
 		type.set ("assets/images/NPCCharacterTilesheet.png", AssetType.IMAGE);
 		path.set ("assets/images/pat.png", "assets/images/pat.png");
@@ -115,26 +337,70 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/player.png", AssetType.IMAGE);
 		path.set ("assets/images/pointer.png", "assets/images/pointer.png");
 		type.set ("assets/images/pointer.png", AssetType.IMAGE);
+		path.set ("assets/images/Principle.png", "assets/images/Principle.png");
+		type.set ("assets/images/Principle.png", AssetType.IMAGE);
+		path.set ("assets/images/Principle.psd", "assets/images/Principle.psd");
+		type.set ("assets/images/Principle.psd", AssetType.BINARY);
+		path.set ("assets/images/resetbutton.png", "assets/images/resetbutton.png");
+		type.set ("assets/images/resetbutton.png", AssetType.IMAGE);
 		path.set ("assets/images/SChool modified.png", "assets/images/SChool modified.png");
 		type.set ("assets/images/SChool modified.png", AssetType.IMAGE);
+		path.set ("assets/images/Speechbubble.png", "assets/images/Speechbubble.png");
+		type.set ("assets/images/Speechbubble.png", AssetType.IMAGE);
+		path.set ("assets/images/Speechbubble.psd", "assets/images/Speechbubble.psd");
+		type.set ("assets/images/Speechbubble.psd", AssetType.BINARY);
+		path.set ("assets/images/Starting Screen.jpg", "assets/images/Starting Screen.jpg");
+		type.set ("assets/images/Starting Screen.jpg", AssetType.IMAGE);
+		path.set ("assets/images/Story/1.png", "assets/images/Story/1.png");
+		type.set ("assets/images/Story/1.png", AssetType.IMAGE);
+		path.set ("assets/images/Story/2.png", "assets/images/Story/2.png");
+		type.set ("assets/images/Story/2.png", AssetType.IMAGE);
+		path.set ("assets/images/Story/3.png", "assets/images/Story/3.png");
+		type.set ("assets/images/Story/3.png", AssetType.IMAGE);
+		path.set ("assets/images/Story/4.png", "assets/images/Story/4.png");
+		type.set ("assets/images/Story/4.png", AssetType.IMAGE);
+		path.set ("assets/images/Story/Introscreen.png", "assets/images/Story/Introscreen.png");
+		type.set ("assets/images/Story/Introscreen.png", AssetType.IMAGE);
+		path.set ("assets/images/Story/Pat.png", "assets/images/Story/Pat.png");
+		type.set ("assets/images/Story/Pat.png", AssetType.IMAGE);
+		path.set ("assets/images/Story/Prof.png", "assets/images/Story/Prof.png");
+		type.set ("assets/images/Story/Prof.png", AssetType.IMAGE);
+		path.set ("assets/images/Story/Tec.png", "assets/images/Story/Tec.png");
+		type.set ("assets/images/Story/Tec.png", AssetType.IMAGE);
 		path.set ("assets/images/street.PNG", "assets/images/street.PNG");
 		type.set ("assets/images/street.PNG", AssetType.IMAGE);
 		path.set ("assets/images/SWAG-Kid-Walk-Kopie.png", "assets/images/SWAG-Kid-Walk-Kopie.png");
 		type.set ("assets/images/SWAG-Kid-Walk-Kopie.png", AssetType.IMAGE);
+		path.set ("assets/images/Swagkid.png", "assets/images/Swagkid.png");
+		type.set ("assets/images/Swagkid.png", AssetType.IMAGE);
+		path.set ("assets/images/SwagKidMission1.png", "assets/images/SwagKidMission1.png");
+		type.set ("assets/images/SwagKidMission1.png", AssetType.IMAGE);
+		path.set ("assets/images/Teacher.png", "assets/images/Teacher.png");
+		type.set ("assets/images/Teacher.png", AssetType.IMAGE);
+		path.set ("assets/images/teacher1.png", "assets/images/teacher1.png");
+		type.set ("assets/images/teacher1.png", AssetType.IMAGE);
 		path.set ("assets/images/tec.png", "assets/images/tec.png");
 		type.set ("assets/images/tec.png", AssetType.IMAGE);
+		path.set ("assets/images/Thumbs3.db", "assets/images/Thumbs3.db");
+		type.set ("assets/images/Thumbs3.db", AssetType.BINARY);
 		path.set ("assets/images/tiles.png", "assets/images/tiles.png");
 		type.set ("assets/images/tiles.png", AssetType.IMAGE);
 		path.set ("assets/images/Tilesheet_Complete.png", "assets/images/Tilesheet_Complete.png");
 		type.set ("assets/images/Tilesheet_Complete.png", AssetType.IMAGE);
 		path.set ("assets/images/Tilesheet_Complete.psd", "assets/images/Tilesheet_Complete.psd");
 		type.set ("assets/images/Tilesheet_Complete.psd", AssetType.BINARY);
+		path.set ("assets/images/Wall.psd", "assets/images/Wall.psd");
+		type.set ("assets/images/Wall.psd", AssetType.BINARY);
+		path.set ("assets/images/WallKJRW.png", "assets/images/WallKJRW.png");
+		type.set ("assets/images/WallKJRW.png", AssetType.IMAGE);
 		path.set ("assets/music/music-goes-here.txt", "assets/music/music-goes-here.txt");
 		type.set ("assets/music/music-goes-here.txt", AssetType.TEXT);
 		path.set ("assets/music/select.wav", "assets/music/select.wav");
 		type.set ("assets/music/select.wav", AssetType.SOUND);
 		path.set ("assets/music/townMusic.wav", "assets/music/townMusic.wav");
 		type.set ("assets/music/townMusic.wav", AssetType.SOUND);
+		path.set ("assets/sounds/Abilities/dooropening.mp3", "assets/sounds/Abilities/dooropening.mp3");
+		type.set ("assets/sounds/Abilities/dooropening.mp3", AssetType.MUSIC);
 		path.set ("assets/sounds/Abilities/Heal.mp3", "assets/sounds/Abilities/Heal.mp3");
 		type.set ("assets/sounds/Abilities/Heal.mp3", AssetType.MUSIC);
 		path.set ("assets/sounds/Abilities/Heal1.mp3", "assets/sounds/Abilities/Heal1.mp3");
@@ -177,6 +443,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/sounds/Abilities/Source/Push1.wav", AssetType.SOUND);
 		path.set ("assets/sounds/Abilities/Source/Shield1.wav", "assets/sounds/Abilities/Source/Shield1.wav");
 		type.set ("assets/sounds/Abilities/Source/Shield1.wav", AssetType.SOUND);
+		path.set ("assets/sounds/Abilities/switch.mp3", "assets/sounds/Abilities/switch.mp3");
+		type.set ("assets/sounds/Abilities/switch.mp3", AssetType.MUSIC);
 		path.set ("assets/sounds/Game/JUDGE-O-METERCOIN.mp3", "assets/sounds/Game/JUDGE-O-METERCOIN.mp3");
 		type.set ("assets/sounds/Game/JUDGE-O-METERCOIN.mp3", AssetType.MUSIC);
 		path.set ("assets/sounds/Game/select-1.wav", "assets/sounds/Game/select-1.wav");
@@ -199,8 +467,26 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/sounds/IntroMissie/7IntroOutro.mp3", AssetType.MUSIC);
 		path.set ("assets/sounds/IntroVoice.mp3", "assets/sounds/IntroVoice.mp3");
 		type.set ("assets/sounds/IntroVoice.mp3", AssetType.MUSIC);
-		path.set ("assets/sounds/Missie1/Gesprek1.mp3", "assets/sounds/Missie1/Gesprek1.mp3");
-		type.set ("assets/sounds/Missie1/Gesprek1.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Knightmare/Knightmare1.mp3", "assets/sounds/Knightmare/Knightmare1.mp3");
+		type.set ("assets/sounds/Knightmare/Knightmare1.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Knightmare/Knightmare2.mp3", "assets/sounds/Knightmare/Knightmare2.mp3");
+		type.set ("assets/sounds/Knightmare/Knightmare2.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Knightmare/Knightmare3.mp3", "assets/sounds/Knightmare/Knightmare3.mp3");
+		type.set ("assets/sounds/Knightmare/Knightmare3.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Knightmare/Knightmare4.mp3", "assets/sounds/Knightmare/Knightmare4.mp3");
+		type.set ("assets/sounds/Knightmare/Knightmare4.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Knightmare/Knightmare5.mp3", "assets/sounds/Knightmare/Knightmare5.mp3");
+		type.set ("assets/sounds/Knightmare/Knightmare5.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Knightmare/Knightmare6.mp3", "assets/sounds/Knightmare/Knightmare6.mp3");
+		type.set ("assets/sounds/Knightmare/Knightmare6.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Knightmare/Knightmare7.mp3", "assets/sounds/Knightmare/Knightmare7.mp3");
+		type.set ("assets/sounds/Knightmare/Knightmare7.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Knightmare/Knightmare8.mp3", "assets/sounds/Knightmare/Knightmare8.mp3");
+		type.set ("assets/sounds/Knightmare/Knightmare8.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie1/Kind1/Kind1-1.mp3", "assets/sounds/Missie1/Kind1/Kind1-1.mp3");
+		type.set ("assets/sounds/Missie1/Kind1/Kind1-1.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie1/Kind1/Kind1-2.mp3", "assets/sounds/Missie1/Kind1/Kind1-2.mp3");
+		type.set ("assets/sounds/Missie1/Kind1/Kind1-2.mp3", AssetType.MUSIC);
 		path.set ("assets/sounds/Missie1/Kind1/Prof1-4.mp3", "assets/sounds/Missie1/Kind1/Prof1-4.mp3");
 		type.set ("assets/sounds/Missie1/Kind1/Prof1-4.mp3", AssetType.MUSIC);
 		path.set ("assets/sounds/Missie1/Kind1/Prof2-4.mp3", "assets/sounds/Missie1/Kind1/Prof2-4.mp3");
@@ -213,6 +499,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/sounds/Missie1/Kind2/Prof2-1.mp3", AssetType.MUSIC);
 		path.set ("assets/sounds/Missie1/Kind2/Prof3-1.mp3", "assets/sounds/Missie1/Kind2/Prof3-1.mp3");
 		type.set ("assets/sounds/Missie1/Kind2/Prof3-1.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie1/Kind3/Kind3-1.mp3", "assets/sounds/Missie1/Kind3/Kind3-1.mp3");
+		type.set ("assets/sounds/Missie1/Kind3/Kind3-1.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie1/Kind3/Kind3-2.mp3", "assets/sounds/Missie1/Kind3/Kind3-2.mp3");
+		type.set ("assets/sounds/Missie1/Kind3/Kind3-2.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie1/Kind3/Kind3-3.mp3", "assets/sounds/Missie1/Kind3/Kind3-3.mp3");
+		type.set ("assets/sounds/Missie1/Kind3/Kind3-3.mp3", AssetType.MUSIC);
 		path.set ("assets/sounds/Missie1/Kind3/Prof1-2.mp3", "assets/sounds/Missie1/Kind3/Prof1-2.mp3");
 		type.set ("assets/sounds/Missie1/Kind3/Prof1-2.mp3", AssetType.MUSIC);
 		path.set ("assets/sounds/Missie1/Kind3/Prof2-2.mp3", "assets/sounds/Missie1/Kind3/Prof2-2.mp3");
@@ -223,22 +515,34 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/sounds/Missie1/Kind3/Prof4-2.mp3", AssetType.MUSIC);
 		path.set ("assets/sounds/Missie1/Prof4-3.mp3", "assets/sounds/Missie1/Prof4-3.mp3");
 		type.set ("assets/sounds/Missie1/Prof4-3.mp3", AssetType.MUSIC);
-		path.set ("assets/sounds/Missie1/Test/Prof1-3.mp3", "assets/sounds/Missie1/Test/Prof1-3.mp3");
-		type.set ("assets/sounds/Missie1/Test/Prof1-3.mp3", AssetType.MUSIC);
-		path.set ("assets/sounds/Missie1/Test/Prof2-3.mp3", "assets/sounds/Missie1/Test/Prof2-3.mp3");
-		type.set ("assets/sounds/Missie1/Test/Prof2-3.mp3", AssetType.MUSIC);
-		path.set ("assets/sounds/Missie1/Test/Prof3-3.mp3", "assets/sounds/Missie1/Test/Prof3-3.mp3");
-		type.set ("assets/sounds/Missie1/Test/Prof3-3.mp3", AssetType.MUSIC);
-		path.set ("assets/sounds/Missie1/Test/Teacher1.mp3", "assets/sounds/Missie1/Test/Teacher1.mp3");
-		type.set ("assets/sounds/Missie1/Test/Teacher1.mp3", AssetType.MUSIC);
-		path.set ("assets/sounds/Missie1/Test/Teacher2.mp3", "assets/sounds/Missie1/Test/Teacher2.mp3");
-		type.set ("assets/sounds/Missie1/Test/Teacher2.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie1/Teacher/Prof1-3.mp3", "assets/sounds/Missie1/Teacher/Prof1-3.mp3");
+		type.set ("assets/sounds/Missie1/Teacher/Prof1-3.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie1/Teacher/Prof2-3.mp3", "assets/sounds/Missie1/Teacher/Prof2-3.mp3");
+		type.set ("assets/sounds/Missie1/Teacher/Prof2-3.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie1/Teacher/Prof3-3.mp3", "assets/sounds/Missie1/Teacher/Prof3-3.mp3");
+		type.set ("assets/sounds/Missie1/Teacher/Prof3-3.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie1/Teacher/Teacher1-1.mp3", "assets/sounds/Missie1/Teacher/Teacher1-1.mp3");
+		type.set ("assets/sounds/Missie1/Teacher/Teacher1-1.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie1/Teacher/Teacher1-2.mp3", "assets/sounds/Missie1/Teacher/Teacher1-2.mp3");
+		type.set ("assets/sounds/Missie1/Teacher/Teacher1-2.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie1/Teacher/Teacher1-3.mp3", "assets/sounds/Missie1/Teacher/Teacher1-3.mp3");
+		type.set ("assets/sounds/Missie1/Teacher/Teacher1-3.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie1/Teacher/Teacher1-4.mp3", "assets/sounds/Missie1/Teacher/Teacher1-4.mp3");
+		type.set ("assets/sounds/Missie1/Teacher/Teacher1-4.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie1/Teacher/Teacher1.mp3", "assets/sounds/Missie1/Teacher/Teacher1.mp3");
+		type.set ("assets/sounds/Missie1/Teacher/Teacher1.mp3", AssetType.MUSIC);
 		path.set ("assets/sounds/Missie2/Dad1.mp3", "assets/sounds/Missie2/Dad1.mp3");
 		type.set ("assets/sounds/Missie2/Dad1.mp3", AssetType.MUSIC);
 		path.set ("assets/sounds/Missie2/Dad2.mp3", "assets/sounds/Missie2/Dad2.mp3");
 		type.set ("assets/sounds/Missie2/Dad2.mp3", AssetType.MUSIC);
 		path.set ("assets/sounds/Missie2/Dad3.mp3", "assets/sounds/Missie2/Dad3.mp3");
 		type.set ("assets/sounds/Missie2/Dad3.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie2/Kid1.mp3", "assets/sounds/Missie2/Kid1.mp3");
+		type.set ("assets/sounds/Missie2/Kid1.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie2/Kid2.mp3", "assets/sounds/Missie2/Kid2.mp3");
+		type.set ("assets/sounds/Missie2/Kid2.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie2/Kid3.mp3", "assets/sounds/Missie2/Kid3.mp3");
+		type.set ("assets/sounds/Missie2/Kid3.mp3", AssetType.MUSIC);
 		path.set ("assets/sounds/Missie2/Prof1.mp3", "assets/sounds/Missie2/Prof1.mp3");
 		type.set ("assets/sounds/Missie2/Prof1.mp3", AssetType.MUSIC);
 		path.set ("assets/sounds/Missie2/Prof2.mp3", "assets/sounds/Missie2/Prof2.mp3");
@@ -249,6 +553,30 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/sounds/Missie2/Prof4.mp3", AssetType.MUSIC);
 		path.set ("assets/sounds/Missie2/Prof5.mp3", "assets/sounds/Missie2/Prof5.mp3");
 		type.set ("assets/sounds/Missie2/Prof5.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie3/Missie3-1.mp3", "assets/sounds/Missie3/Missie3-1.mp3");
+		type.set ("assets/sounds/Missie3/Missie3-1.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie3/Missie3-10.mp3", "assets/sounds/Missie3/Missie3-10.mp3");
+		type.set ("assets/sounds/Missie3/Missie3-10.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie3/Missie3-12.mp3", "assets/sounds/Missie3/Missie3-12.mp3");
+		type.set ("assets/sounds/Missie3/Missie3-12.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie3/Missie3-14.mp3", "assets/sounds/Missie3/Missie3-14.mp3");
+		type.set ("assets/sounds/Missie3/Missie3-14.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie3/Missie3-15.mp3", "assets/sounds/Missie3/Missie3-15.mp3");
+		type.set ("assets/sounds/Missie3/Missie3-15.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie3/Missie3-2.mp3", "assets/sounds/Missie3/Missie3-2.mp3");
+		type.set ("assets/sounds/Missie3/Missie3-2.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie3/Missie3-3.mp3", "assets/sounds/Missie3/Missie3-3.mp3");
+		type.set ("assets/sounds/Missie3/Missie3-3.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie3/Missie3-4.mp3", "assets/sounds/Missie3/Missie3-4.mp3");
+		type.set ("assets/sounds/Missie3/Missie3-4.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie3/Missie3-5.mp3", "assets/sounds/Missie3/Missie3-5.mp3");
+		type.set ("assets/sounds/Missie3/Missie3-5.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie3/Missie3-6.mp3", "assets/sounds/Missie3/Missie3-6.mp3");
+		type.set ("assets/sounds/Missie3/Missie3-6.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie3/Missie3-7.mp3", "assets/sounds/Missie3/Missie3-7.mp3");
+		type.set ("assets/sounds/Missie3/Missie3-7.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie3/Missie3-8.mp3", "assets/sounds/Missie3/Missie3-8.mp3");
+		type.set ("assets/sounds/Missie3/Missie3-8.mp3", AssetType.MUSIC);
 		path.set ("assets/sounds/Music/Chase.mp3", "assets/sounds/Music/Chase.mp3");
 		type.set ("assets/sounds/Music/Chase.mp3", AssetType.MUSIC);
 		path.set ("assets/sounds/Music/Haahn's Dutch.wav", "assets/sounds/Music/Haahn's Dutch.wav");
@@ -296,6 +624,15 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/data/data-goes-here.txt";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
+		id = "assets/data/Final Maps/worldmap1.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/Final Maps/worldmap2.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/kid_dad-testing.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
 		id = "assets/data/level_1.oel";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
@@ -306,6 +643,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
 		id = "assets/data/level_4.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/Mission1.oel";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
 		id = "assets/data/Mission1_0.oel";
@@ -320,10 +660,52 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/data/room-001.oel";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
-		id = "assets/images/AngryDad.png";
+		id = "assets/data/testingmap.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/female/kind2-1.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/female/kind2-2.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/female/moeder1.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/female/moeder2.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/images/1StartingScreeeeeeen.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/AngryDadMission2.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/AsianDad.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/AsianDad.psd";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "assets/images/Attack128x64.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Bald-Mission1.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Bald-Mission1.psd";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
 		id = "assets/images/BaldMission1.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Banner.psd";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "assets/images/BeachBall-Mission3.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/bigass HOUSE.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "assets/images/button.png";
@@ -338,6 +720,21 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/images/CollectingSpirit Kopie.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/DodgeBall-Mission-3.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Emo-Kid-Mission2 (1).png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Emo-Kid-Mission3).png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/EmoKidMission2.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/emokidMission3.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
 		id = "assets/images/enemy-0.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
@@ -347,30 +744,294 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/images/enemy-2.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/feggit.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/floor.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Football-Mission-3.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
 		id = "assets/images/Furniture.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Girl-Mission1.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "assets/images/girlMission1.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/HATSNewRoadTiles.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/HATSNewRoadTiles.psd";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
 		id = "assets/images/health.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/HOLE.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/HOUSE.psd";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
 		id = "assets/images/images-go-here.txt";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
 		id = "assets/images/ion.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Judge-Mission-3.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Judge.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/kind1.1.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/kind1.2.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/kind1.3.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/kind1.4.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/kind1.5.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/kind2.1.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/kind2.2.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/kind2.3.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/kind2.4.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/kind2.5.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/kind3.1.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/kind3.2.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/kind3.3.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/kind3.4.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/kind3.5.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/kind3.6.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/kind3.7.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/KJRW-Tutotial-3.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Knightmare Fight/Text1.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Knightmare.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/KnightmareAttackTilesheet.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/KnightmareCompleteTilesheet.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/KnightmareDash.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/KnightmareShield4.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/KnightmareText.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/KRJW-Tutorial.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/KRJW-Tutorial.psd";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "assets/images/Missie1/intromissie1/prof0.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie1/intromissie1/prof1.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie1/intromissie1/prof2.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie1/intromissie1/prof3.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie1/intromissie1/prof4.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie1/intromissie1/prof5.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie1/intromissie1/prof6.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie2/emo1.1.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie2/emo1.10.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie2/emo1.11.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie2/emo1.2.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie2/emo1.3.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie2/emo1.4.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie2/emo1.5.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie2/emo1.6.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie2/emo1.7.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie2/emo1.8.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie2/emo1.9.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie3/Feggit1.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie3/Feggit2.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie3/Feggit3.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie3/Feggit4.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie3/Feggit5.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie3/Judge1.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie3/Judge2.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie3/Mom1.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie3/Mom2.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie3/Mom3.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie3/Pro1.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie3/Pro2.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie3/Pro3.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie3/Pro4.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie3/Pro5.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie3/Pro6.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie3/Pro7.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie3/Pro8.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie3/Prof9.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie3/Thumbs2.db";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
 		id = "assets/images/Mission1Girl.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "assets/images/Mission2Football.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
-		id = "assets/images/Mission3Emokid.png";
+		id = "assets/images/Mission3 Dodgeball.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Mission3 Dodgeball.psd";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "assets/images/Mission3-Mother.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Mission3Kid1.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Mission3Kid2.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Mission3Kid3.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Mission3Kid4.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Mission3Kid5.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Mission3Kid6.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Mom.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Mother-Mission-3.psd";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "assets/images/NEWTilesheet_Complete.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/NEW_Tilesheet_Complete.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/NEW_Tilesheet_Complete.psd";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
 		id = "assets/images/NPCCharacterTilesheet.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
@@ -383,7 +1044,49 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/images/pointer.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Principle.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Principle.psd";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "assets/images/resetbutton.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
 		id = "assets/images/SChool modified.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Speechbubble.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Speechbubble.psd";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "assets/images/Starting Screen.jpg";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Story/1.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Story/2.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Story/3.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Story/4.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Story/Introscreen.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Story/Pat.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Story/Prof.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Story/Tec.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "assets/images/street.PNG";
@@ -392,9 +1095,24 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/images/SWAG-Kid-Walk-Kopie.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Swagkid.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/SwagKidMission1.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Teacher.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/teacher1.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
 		id = "assets/images/tec.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Thumbs3.db";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
 		id = "assets/images/tiles.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
@@ -404,6 +1122,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/images/Tilesheet_Complete.psd";
 		path.set (id, id);
 		type.set (id, AssetType.BINARY);
+		id = "assets/images/Wall.psd";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "assets/images/WallKJRW.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
 		id = "assets/music/music-goes-here.txt";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
@@ -413,6 +1137,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/music/townMusic.wav";
 		path.set (id, id);
 		type.set (id, AssetType.SOUND);
+		id = "assets/sounds/Abilities/dooropening.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
 		id = "assets/sounds/Abilities/Heal.mp3";
 		path.set (id, id);
 		type.set (id, AssetType.MUSIC);
@@ -476,6 +1203,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/sounds/Abilities/Source/Shield1.wav";
 		path.set (id, id);
 		type.set (id, AssetType.SOUND);
+		id = "assets/sounds/Abilities/switch.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
 		id = "assets/sounds/Game/JUDGE-O-METERCOIN.mp3";
 		path.set (id, id);
 		type.set (id, AssetType.MUSIC);
@@ -509,7 +1239,34 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/sounds/IntroVoice.mp3";
 		path.set (id, id);
 		type.set (id, AssetType.MUSIC);
-		id = "assets/sounds/Missie1/Gesprek1.mp3";
+		id = "assets/sounds/Knightmare/Knightmare1.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Knightmare/Knightmare2.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Knightmare/Knightmare3.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Knightmare/Knightmare4.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Knightmare/Knightmare5.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Knightmare/Knightmare6.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Knightmare/Knightmare7.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Knightmare/Knightmare8.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie1/Kind1/Kind1-1.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie1/Kind1/Kind1-2.mp3";
 		path.set (id, id);
 		type.set (id, AssetType.MUSIC);
 		id = "assets/sounds/Missie1/Kind1/Prof1-4.mp3";
@@ -530,6 +1287,15 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/sounds/Missie1/Kind2/Prof3-1.mp3";
 		path.set (id, id);
 		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie1/Kind3/Kind3-1.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie1/Kind3/Kind3-2.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie1/Kind3/Kind3-3.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
 		id = "assets/sounds/Missie1/Kind3/Prof1-2.mp3";
 		path.set (id, id);
 		type.set (id, AssetType.MUSIC);
@@ -545,19 +1311,28 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/sounds/Missie1/Prof4-3.mp3";
 		path.set (id, id);
 		type.set (id, AssetType.MUSIC);
-		id = "assets/sounds/Missie1/Test/Prof1-3.mp3";
+		id = "assets/sounds/Missie1/Teacher/Prof1-3.mp3";
 		path.set (id, id);
 		type.set (id, AssetType.MUSIC);
-		id = "assets/sounds/Missie1/Test/Prof2-3.mp3";
+		id = "assets/sounds/Missie1/Teacher/Prof2-3.mp3";
 		path.set (id, id);
 		type.set (id, AssetType.MUSIC);
-		id = "assets/sounds/Missie1/Test/Prof3-3.mp3";
+		id = "assets/sounds/Missie1/Teacher/Prof3-3.mp3";
 		path.set (id, id);
 		type.set (id, AssetType.MUSIC);
-		id = "assets/sounds/Missie1/Test/Teacher1.mp3";
+		id = "assets/sounds/Missie1/Teacher/Teacher1-1.mp3";
 		path.set (id, id);
 		type.set (id, AssetType.MUSIC);
-		id = "assets/sounds/Missie1/Test/Teacher2.mp3";
+		id = "assets/sounds/Missie1/Teacher/Teacher1-2.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie1/Teacher/Teacher1-3.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie1/Teacher/Teacher1-4.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie1/Teacher/Teacher1.mp3";
 		path.set (id, id);
 		type.set (id, AssetType.MUSIC);
 		id = "assets/sounds/Missie2/Dad1.mp3";
@@ -567,6 +1342,15 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		type.set (id, AssetType.MUSIC);
 		id = "assets/sounds/Missie2/Dad3.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie2/Kid1.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie2/Kid2.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie2/Kid3.mp3";
 		path.set (id, id);
 		type.set (id, AssetType.MUSIC);
 		id = "assets/sounds/Missie2/Prof1.mp3";
@@ -582,6 +1366,42 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		type.set (id, AssetType.MUSIC);
 		id = "assets/sounds/Missie2/Prof5.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie3/Missie3-1.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie3/Missie3-10.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie3/Missie3-12.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie3/Missie3-14.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie3/Missie3-15.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie3/Missie3-2.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie3/Missie3-3.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie3/Missie3-4.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie3/Missie3-5.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie3/Missie3-6.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie3/Missie3-7.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie3/Missie3-8.mp3";
 		path.set (id, id);
 		type.set (id, AssetType.MUSIC);
 		id = "assets/sounds/Music/Chase.mp3";
@@ -751,9 +1571,337 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		#if (windows || mac || linux)
 		
 		var useManifest = false;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
@@ -1603,7 +2751,335 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #elseif html5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1800,6 +3276,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/data/basemap2.oel", AssetType.TEXT);
 		path.set ("assets/data/data-goes-here.txt", "assets/data/data-goes-here.txt");
 		type.set ("assets/data/data-goes-here.txt", AssetType.TEXT);
+		path.set ("assets/data/Final Maps/worldmap1.oel", "assets/data/Final Maps/worldmap1.oel");
+		type.set ("assets/data/Final Maps/worldmap1.oel", AssetType.TEXT);
+		path.set ("assets/data/Final Maps/worldmap2.oel", "assets/data/Final Maps/worldmap2.oel");
+		type.set ("assets/data/Final Maps/worldmap2.oel", AssetType.TEXT);
+		path.set ("assets/data/kid_dad-testing.oel", "assets/data/kid_dad-testing.oel");
+		type.set ("assets/data/kid_dad-testing.oel", AssetType.TEXT);
 		path.set ("assets/data/level_1.oel", "assets/data/level_1.oel");
 		type.set ("assets/data/level_1.oel", AssetType.TEXT);
 		path.set ("assets/data/level_2.oel", "assets/data/level_2.oel");
@@ -1808,6 +3290,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/data/level_3.oel", AssetType.TEXT);
 		path.set ("assets/data/level_4.oel", "assets/data/level_4.oel");
 		type.set ("assets/data/level_4.oel", AssetType.TEXT);
+		path.set ("assets/data/Mission1.oel", "assets/data/Mission1.oel");
+		type.set ("assets/data/Mission1.oel", AssetType.TEXT);
 		path.set ("assets/data/Mission1_0.oel", "assets/data/Mission1_0.oel");
 		type.set ("assets/data/Mission1_0.oel", AssetType.TEXT);
 		path.set ("assets/data/Mission1_1.oel", "assets/data/Mission1_1.oel");
@@ -1816,10 +3300,38 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/data/reachtshelden.oep", AssetType.TEXT);
 		path.set ("assets/data/room-001.oel", "assets/data/room-001.oel");
 		type.set ("assets/data/room-001.oel", AssetType.TEXT);
-		path.set ("assets/images/AngryDad.png", "assets/images/AngryDad.png");
-		type.set ("assets/images/AngryDad.png", AssetType.IMAGE);
+		path.set ("assets/data/testingmap.oel", "assets/data/testingmap.oel");
+		type.set ("assets/data/testingmap.oel", AssetType.TEXT);
+		path.set ("assets/female/kind2-1.mp3", "assets/female/kind2-1.mp3");
+		type.set ("assets/female/kind2-1.mp3", AssetType.MUSIC);
+		path.set ("assets/female/kind2-2.mp3", "assets/female/kind2-2.mp3");
+		type.set ("assets/female/kind2-2.mp3", AssetType.MUSIC);
+		path.set ("assets/female/moeder1.mp3", "assets/female/moeder1.mp3");
+		type.set ("assets/female/moeder1.mp3", AssetType.MUSIC);
+		path.set ("assets/female/moeder2.mp3", "assets/female/moeder2.mp3");
+		type.set ("assets/female/moeder2.mp3", AssetType.MUSIC);
+		path.set ("assets/images/1StartingScreeeeeeen.png", "assets/images/1StartingScreeeeeeen.png");
+		type.set ("assets/images/1StartingScreeeeeeen.png", AssetType.IMAGE);
+		path.set ("assets/images/AngryDadMission2.png", "assets/images/AngryDadMission2.png");
+		type.set ("assets/images/AngryDadMission2.png", AssetType.IMAGE);
+		path.set ("assets/images/AsianDad.png", "assets/images/AsianDad.png");
+		type.set ("assets/images/AsianDad.png", AssetType.IMAGE);
+		path.set ("assets/images/AsianDad.psd", "assets/images/AsianDad.psd");
+		type.set ("assets/images/AsianDad.psd", AssetType.BINARY);
+		path.set ("assets/images/Attack128x64.png", "assets/images/Attack128x64.png");
+		type.set ("assets/images/Attack128x64.png", AssetType.IMAGE);
+		path.set ("assets/images/Bald-Mission1.png", "assets/images/Bald-Mission1.png");
+		type.set ("assets/images/Bald-Mission1.png", AssetType.IMAGE);
+		path.set ("assets/images/Bald-Mission1.psd", "assets/images/Bald-Mission1.psd");
+		type.set ("assets/images/Bald-Mission1.psd", AssetType.BINARY);
 		path.set ("assets/images/BaldMission1.png", "assets/images/BaldMission1.png");
 		type.set ("assets/images/BaldMission1.png", AssetType.IMAGE);
+		path.set ("assets/images/Banner.psd", "assets/images/Banner.psd");
+		type.set ("assets/images/Banner.psd", AssetType.BINARY);
+		path.set ("assets/images/BeachBall-Mission3.png", "assets/images/BeachBall-Mission3.png");
+		type.set ("assets/images/BeachBall-Mission3.png", AssetType.IMAGE);
+		path.set ("assets/images/bigass HOUSE.png", "assets/images/bigass HOUSE.png");
+		type.set ("assets/images/bigass HOUSE.png", AssetType.IMAGE);
 		path.set ("assets/images/button.png", "assets/images/button.png");
 		type.set ("assets/images/button.png", AssetType.IMAGE);
 		path.set ("assets/images/CharacterTilesheet768x768.png", "assets/images/CharacterTilesheet768x768.png");
@@ -1828,28 +3340,214 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/coin.png", AssetType.IMAGE);
 		path.set ("assets/images/CollectingSpirit Kopie.png", "assets/images/CollectingSpirit Kopie.png");
 		type.set ("assets/images/CollectingSpirit Kopie.png", AssetType.IMAGE);
+		path.set ("assets/images/DodgeBall-Mission-3.png", "assets/images/DodgeBall-Mission-3.png");
+		type.set ("assets/images/DodgeBall-Mission-3.png", AssetType.IMAGE);
+		path.set ("assets/images/Emo-Kid-Mission2 (1).png", "assets/images/Emo-Kid-Mission2 (1).png");
+		type.set ("assets/images/Emo-Kid-Mission2 (1).png", AssetType.IMAGE);
+		path.set ("assets/images/Emo-Kid-Mission3).png", "assets/images/Emo-Kid-Mission3).png");
+		type.set ("assets/images/Emo-Kid-Mission3).png", AssetType.IMAGE);
+		path.set ("assets/images/EmoKidMission2.png", "assets/images/EmoKidMission2.png");
+		type.set ("assets/images/EmoKidMission2.png", AssetType.IMAGE);
+		path.set ("assets/images/emokidMission3.png", "assets/images/emokidMission3.png");
+		type.set ("assets/images/emokidMission3.png", AssetType.IMAGE);
 		path.set ("assets/images/enemy-0.png", "assets/images/enemy-0.png");
 		type.set ("assets/images/enemy-0.png", AssetType.IMAGE);
 		path.set ("assets/images/enemy-1.png", "assets/images/enemy-1.png");
 		type.set ("assets/images/enemy-1.png", AssetType.IMAGE);
 		path.set ("assets/images/enemy-2.png", "assets/images/enemy-2.png");
 		type.set ("assets/images/enemy-2.png", AssetType.IMAGE);
+		path.set ("assets/images/feggit.png", "assets/images/feggit.png");
+		type.set ("assets/images/feggit.png", AssetType.IMAGE);
+		path.set ("assets/images/floor.png", "assets/images/floor.png");
+		type.set ("assets/images/floor.png", AssetType.IMAGE);
+		path.set ("assets/images/Football-Mission-3.png", "assets/images/Football-Mission-3.png");
+		type.set ("assets/images/Football-Mission-3.png", AssetType.IMAGE);
 		path.set ("assets/images/Furniture.png", "assets/images/Furniture.png");
 		type.set ("assets/images/Furniture.png", AssetType.IMAGE);
+		path.set ("assets/images/Girl-Mission1.png", "assets/images/Girl-Mission1.png");
+		type.set ("assets/images/Girl-Mission1.png", AssetType.IMAGE);
 		path.set ("assets/images/girlMission1.png", "assets/images/girlMission1.png");
 		type.set ("assets/images/girlMission1.png", AssetType.IMAGE);
+		path.set ("assets/images/HATSNewRoadTiles.png", "assets/images/HATSNewRoadTiles.png");
+		type.set ("assets/images/HATSNewRoadTiles.png", AssetType.IMAGE);
+		path.set ("assets/images/HATSNewRoadTiles.psd", "assets/images/HATSNewRoadTiles.psd");
+		type.set ("assets/images/HATSNewRoadTiles.psd", AssetType.BINARY);
 		path.set ("assets/images/health.png", "assets/images/health.png");
 		type.set ("assets/images/health.png", AssetType.IMAGE);
+		path.set ("assets/images/HOLE.png", "assets/images/HOLE.png");
+		type.set ("assets/images/HOLE.png", AssetType.IMAGE);
+		path.set ("assets/images/HOUSE.psd", "assets/images/HOUSE.psd");
+		type.set ("assets/images/HOUSE.psd", AssetType.BINARY);
 		path.set ("assets/images/images-go-here.txt", "assets/images/images-go-here.txt");
 		type.set ("assets/images/images-go-here.txt", AssetType.TEXT);
 		path.set ("assets/images/ion.png", "assets/images/ion.png");
 		type.set ("assets/images/ion.png", AssetType.IMAGE);
+		path.set ("assets/images/Judge-Mission-3.png", "assets/images/Judge-Mission-3.png");
+		type.set ("assets/images/Judge-Mission-3.png", AssetType.IMAGE);
+		path.set ("assets/images/Judge.png", "assets/images/Judge.png");
+		type.set ("assets/images/Judge.png", AssetType.IMAGE);
+		path.set ("assets/images/kind1.1.png", "assets/images/kind1.1.png");
+		type.set ("assets/images/kind1.1.png", AssetType.IMAGE);
+		path.set ("assets/images/kind1.2.png", "assets/images/kind1.2.png");
+		type.set ("assets/images/kind1.2.png", AssetType.IMAGE);
+		path.set ("assets/images/kind1.3.png", "assets/images/kind1.3.png");
+		type.set ("assets/images/kind1.3.png", AssetType.IMAGE);
+		path.set ("assets/images/kind1.4.png", "assets/images/kind1.4.png");
+		type.set ("assets/images/kind1.4.png", AssetType.IMAGE);
+		path.set ("assets/images/kind1.5.png", "assets/images/kind1.5.png");
+		type.set ("assets/images/kind1.5.png", AssetType.IMAGE);
+		path.set ("assets/images/kind2.1.png", "assets/images/kind2.1.png");
+		type.set ("assets/images/kind2.1.png", AssetType.IMAGE);
+		path.set ("assets/images/kind2.2.png", "assets/images/kind2.2.png");
+		type.set ("assets/images/kind2.2.png", AssetType.IMAGE);
+		path.set ("assets/images/kind2.3.png", "assets/images/kind2.3.png");
+		type.set ("assets/images/kind2.3.png", AssetType.IMAGE);
+		path.set ("assets/images/kind2.4.png", "assets/images/kind2.4.png");
+		type.set ("assets/images/kind2.4.png", AssetType.IMAGE);
+		path.set ("assets/images/kind2.5.png", "assets/images/kind2.5.png");
+		type.set ("assets/images/kind2.5.png", AssetType.IMAGE);
+		path.set ("assets/images/kind3.1.png", "assets/images/kind3.1.png");
+		type.set ("assets/images/kind3.1.png", AssetType.IMAGE);
+		path.set ("assets/images/kind3.2.png", "assets/images/kind3.2.png");
+		type.set ("assets/images/kind3.2.png", AssetType.IMAGE);
+		path.set ("assets/images/kind3.3.png", "assets/images/kind3.3.png");
+		type.set ("assets/images/kind3.3.png", AssetType.IMAGE);
+		path.set ("assets/images/kind3.4.png", "assets/images/kind3.4.png");
+		type.set ("assets/images/kind3.4.png", AssetType.IMAGE);
+		path.set ("assets/images/kind3.5.png", "assets/images/kind3.5.png");
+		type.set ("assets/images/kind3.5.png", AssetType.IMAGE);
+		path.set ("assets/images/kind3.6.png", "assets/images/kind3.6.png");
+		type.set ("assets/images/kind3.6.png", AssetType.IMAGE);
+		path.set ("assets/images/kind3.7.png", "assets/images/kind3.7.png");
+		type.set ("assets/images/kind3.7.png", AssetType.IMAGE);
+		path.set ("assets/images/KJRW-Tutotial-3.png", "assets/images/KJRW-Tutotial-3.png");
+		type.set ("assets/images/KJRW-Tutotial-3.png", AssetType.IMAGE);
+		path.set ("assets/images/Knightmare Fight/Text1.png", "assets/images/Knightmare Fight/Text1.png");
+		type.set ("assets/images/Knightmare Fight/Text1.png", AssetType.IMAGE);
+		path.set ("assets/images/Knightmare.png", "assets/images/Knightmare.png");
+		type.set ("assets/images/Knightmare.png", AssetType.IMAGE);
+		path.set ("assets/images/KnightmareAttackTilesheet.png", "assets/images/KnightmareAttackTilesheet.png");
+		type.set ("assets/images/KnightmareAttackTilesheet.png", AssetType.IMAGE);
+		path.set ("assets/images/KnightmareCompleteTilesheet.png", "assets/images/KnightmareCompleteTilesheet.png");
+		type.set ("assets/images/KnightmareCompleteTilesheet.png", AssetType.IMAGE);
+		path.set ("assets/images/KnightmareDash.png", "assets/images/KnightmareDash.png");
+		type.set ("assets/images/KnightmareDash.png", AssetType.IMAGE);
+		path.set ("assets/images/KnightmareShield4.png", "assets/images/KnightmareShield4.png");
+		type.set ("assets/images/KnightmareShield4.png", AssetType.IMAGE);
+		path.set ("assets/images/KnightmareText.png", "assets/images/KnightmareText.png");
+		type.set ("assets/images/KnightmareText.png", AssetType.IMAGE);
+		path.set ("assets/images/KRJW-Tutorial.png", "assets/images/KRJW-Tutorial.png");
+		type.set ("assets/images/KRJW-Tutorial.png", AssetType.IMAGE);
+		path.set ("assets/images/KRJW-Tutorial.psd", "assets/images/KRJW-Tutorial.psd");
+		type.set ("assets/images/KRJW-Tutorial.psd", AssetType.BINARY);
+		path.set ("assets/images/Missie1/intromissie1/prof0.png", "assets/images/Missie1/intromissie1/prof0.png");
+		type.set ("assets/images/Missie1/intromissie1/prof0.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie1/intromissie1/prof1.png", "assets/images/Missie1/intromissie1/prof1.png");
+		type.set ("assets/images/Missie1/intromissie1/prof1.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie1/intromissie1/prof2.png", "assets/images/Missie1/intromissie1/prof2.png");
+		type.set ("assets/images/Missie1/intromissie1/prof2.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie1/intromissie1/prof3.png", "assets/images/Missie1/intromissie1/prof3.png");
+		type.set ("assets/images/Missie1/intromissie1/prof3.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie1/intromissie1/prof4.png", "assets/images/Missie1/intromissie1/prof4.png");
+		type.set ("assets/images/Missie1/intromissie1/prof4.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie1/intromissie1/prof5.png", "assets/images/Missie1/intromissie1/prof5.png");
+		type.set ("assets/images/Missie1/intromissie1/prof5.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie1/intromissie1/prof6.png", "assets/images/Missie1/intromissie1/prof6.png");
+		type.set ("assets/images/Missie1/intromissie1/prof6.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie2/emo1.1.png", "assets/images/Missie2/emo1.1.png");
+		type.set ("assets/images/Missie2/emo1.1.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie2/emo1.10.png", "assets/images/Missie2/emo1.10.png");
+		type.set ("assets/images/Missie2/emo1.10.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie2/emo1.11.png", "assets/images/Missie2/emo1.11.png");
+		type.set ("assets/images/Missie2/emo1.11.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie2/emo1.2.png", "assets/images/Missie2/emo1.2.png");
+		type.set ("assets/images/Missie2/emo1.2.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie2/emo1.3.png", "assets/images/Missie2/emo1.3.png");
+		type.set ("assets/images/Missie2/emo1.3.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie2/emo1.4.png", "assets/images/Missie2/emo1.4.png");
+		type.set ("assets/images/Missie2/emo1.4.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie2/emo1.5.png", "assets/images/Missie2/emo1.5.png");
+		type.set ("assets/images/Missie2/emo1.5.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie2/emo1.6.png", "assets/images/Missie2/emo1.6.png");
+		type.set ("assets/images/Missie2/emo1.6.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie2/emo1.7.png", "assets/images/Missie2/emo1.7.png");
+		type.set ("assets/images/Missie2/emo1.7.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie2/emo1.8.png", "assets/images/Missie2/emo1.8.png");
+		type.set ("assets/images/Missie2/emo1.8.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie2/emo1.9.png", "assets/images/Missie2/emo1.9.png");
+		type.set ("assets/images/Missie2/emo1.9.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie3/Feggit1.png", "assets/images/Missie3/Feggit1.png");
+		type.set ("assets/images/Missie3/Feggit1.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie3/Feggit2.png", "assets/images/Missie3/Feggit2.png");
+		type.set ("assets/images/Missie3/Feggit2.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie3/Feggit3.png", "assets/images/Missie3/Feggit3.png");
+		type.set ("assets/images/Missie3/Feggit3.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie3/Feggit4.png", "assets/images/Missie3/Feggit4.png");
+		type.set ("assets/images/Missie3/Feggit4.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie3/Feggit5.png", "assets/images/Missie3/Feggit5.png");
+		type.set ("assets/images/Missie3/Feggit5.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie3/Judge1.png", "assets/images/Missie3/Judge1.png");
+		type.set ("assets/images/Missie3/Judge1.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie3/Judge2.png", "assets/images/Missie3/Judge2.png");
+		type.set ("assets/images/Missie3/Judge2.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie3/Mom1.png", "assets/images/Missie3/Mom1.png");
+		type.set ("assets/images/Missie3/Mom1.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie3/Mom2.png", "assets/images/Missie3/Mom2.png");
+		type.set ("assets/images/Missie3/Mom2.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie3/Mom3.png", "assets/images/Missie3/Mom3.png");
+		type.set ("assets/images/Missie3/Mom3.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie3/Pro1.png", "assets/images/Missie3/Pro1.png");
+		type.set ("assets/images/Missie3/Pro1.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie3/Pro2.png", "assets/images/Missie3/Pro2.png");
+		type.set ("assets/images/Missie3/Pro2.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie3/Pro3.png", "assets/images/Missie3/Pro3.png");
+		type.set ("assets/images/Missie3/Pro3.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie3/Pro4.png", "assets/images/Missie3/Pro4.png");
+		type.set ("assets/images/Missie3/Pro4.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie3/Pro5.png", "assets/images/Missie3/Pro5.png");
+		type.set ("assets/images/Missie3/Pro5.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie3/Pro6.png", "assets/images/Missie3/Pro6.png");
+		type.set ("assets/images/Missie3/Pro6.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie3/Pro7.png", "assets/images/Missie3/Pro7.png");
+		type.set ("assets/images/Missie3/Pro7.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie3/Pro8.png", "assets/images/Missie3/Pro8.png");
+		type.set ("assets/images/Missie3/Pro8.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie3/Prof9.png", "assets/images/Missie3/Prof9.png");
+		type.set ("assets/images/Missie3/Prof9.png", AssetType.IMAGE);
+		path.set ("assets/images/Missie3/Thumbs2.db", "assets/images/Missie3/Thumbs2.db");
+		type.set ("assets/images/Missie3/Thumbs2.db", AssetType.BINARY);
 		path.set ("assets/images/Mission1Girl.png", "assets/images/Mission1Girl.png");
 		type.set ("assets/images/Mission1Girl.png", AssetType.IMAGE);
 		path.set ("assets/images/Mission2Football.png", "assets/images/Mission2Football.png");
 		type.set ("assets/images/Mission2Football.png", AssetType.IMAGE);
-		path.set ("assets/images/Mission3Emokid.png", "assets/images/Mission3Emokid.png");
-		type.set ("assets/images/Mission3Emokid.png", AssetType.IMAGE);
+		path.set ("assets/images/Mission3 Dodgeball.png", "assets/images/Mission3 Dodgeball.png");
+		type.set ("assets/images/Mission3 Dodgeball.png", AssetType.IMAGE);
+		path.set ("assets/images/Mission3 Dodgeball.psd", "assets/images/Mission3 Dodgeball.psd");
+		type.set ("assets/images/Mission3 Dodgeball.psd", AssetType.BINARY);
+		path.set ("assets/images/Mission3-Mother.png", "assets/images/Mission3-Mother.png");
+		type.set ("assets/images/Mission3-Mother.png", AssetType.IMAGE);
+		path.set ("assets/images/Mission3Kid1.png", "assets/images/Mission3Kid1.png");
+		type.set ("assets/images/Mission3Kid1.png", AssetType.IMAGE);
+		path.set ("assets/images/Mission3Kid2.png", "assets/images/Mission3Kid2.png");
+		type.set ("assets/images/Mission3Kid2.png", AssetType.IMAGE);
+		path.set ("assets/images/Mission3Kid3.png", "assets/images/Mission3Kid3.png");
+		type.set ("assets/images/Mission3Kid3.png", AssetType.IMAGE);
+		path.set ("assets/images/Mission3Kid4.png", "assets/images/Mission3Kid4.png");
+		type.set ("assets/images/Mission3Kid4.png", AssetType.IMAGE);
+		path.set ("assets/images/Mission3Kid5.png", "assets/images/Mission3Kid5.png");
+		type.set ("assets/images/Mission3Kid5.png", AssetType.IMAGE);
+		path.set ("assets/images/Mission3Kid6.png", "assets/images/Mission3Kid6.png");
+		type.set ("assets/images/Mission3Kid6.png", AssetType.IMAGE);
+		path.set ("assets/images/Mom.png", "assets/images/Mom.png");
+		type.set ("assets/images/Mom.png", AssetType.IMAGE);
+		path.set ("assets/images/Mother-Mission-3.psd", "assets/images/Mother-Mission-3.psd");
+		type.set ("assets/images/Mother-Mission-3.psd", AssetType.BINARY);
+		path.set ("assets/images/NEWTilesheet_Complete.png", "assets/images/NEWTilesheet_Complete.png");
+		type.set ("assets/images/NEWTilesheet_Complete.png", AssetType.IMAGE);
+		path.set ("assets/images/NEW_Tilesheet_Complete.png", "assets/images/NEW_Tilesheet_Complete.png");
+		type.set ("assets/images/NEW_Tilesheet_Complete.png", AssetType.IMAGE);
+		path.set ("assets/images/NEW_Tilesheet_Complete.psd", "assets/images/NEW_Tilesheet_Complete.psd");
+		type.set ("assets/images/NEW_Tilesheet_Complete.psd", AssetType.BINARY);
 		path.set ("assets/images/NPCCharacterTilesheet.png", "assets/images/NPCCharacterTilesheet.png");
 		type.set ("assets/images/NPCCharacterTilesheet.png", AssetType.IMAGE);
 		path.set ("assets/images/pat.png", "assets/images/pat.png");
@@ -1858,26 +3556,70 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/player.png", AssetType.IMAGE);
 		path.set ("assets/images/pointer.png", "assets/images/pointer.png");
 		type.set ("assets/images/pointer.png", AssetType.IMAGE);
+		path.set ("assets/images/Principle.png", "assets/images/Principle.png");
+		type.set ("assets/images/Principle.png", AssetType.IMAGE);
+		path.set ("assets/images/Principle.psd", "assets/images/Principle.psd");
+		type.set ("assets/images/Principle.psd", AssetType.BINARY);
+		path.set ("assets/images/resetbutton.png", "assets/images/resetbutton.png");
+		type.set ("assets/images/resetbutton.png", AssetType.IMAGE);
 		path.set ("assets/images/SChool modified.png", "assets/images/SChool modified.png");
 		type.set ("assets/images/SChool modified.png", AssetType.IMAGE);
+		path.set ("assets/images/Speechbubble.png", "assets/images/Speechbubble.png");
+		type.set ("assets/images/Speechbubble.png", AssetType.IMAGE);
+		path.set ("assets/images/Speechbubble.psd", "assets/images/Speechbubble.psd");
+		type.set ("assets/images/Speechbubble.psd", AssetType.BINARY);
+		path.set ("assets/images/Starting Screen.jpg", "assets/images/Starting Screen.jpg");
+		type.set ("assets/images/Starting Screen.jpg", AssetType.IMAGE);
+		path.set ("assets/images/Story/1.png", "assets/images/Story/1.png");
+		type.set ("assets/images/Story/1.png", AssetType.IMAGE);
+		path.set ("assets/images/Story/2.png", "assets/images/Story/2.png");
+		type.set ("assets/images/Story/2.png", AssetType.IMAGE);
+		path.set ("assets/images/Story/3.png", "assets/images/Story/3.png");
+		type.set ("assets/images/Story/3.png", AssetType.IMAGE);
+		path.set ("assets/images/Story/4.png", "assets/images/Story/4.png");
+		type.set ("assets/images/Story/4.png", AssetType.IMAGE);
+		path.set ("assets/images/Story/Introscreen.png", "assets/images/Story/Introscreen.png");
+		type.set ("assets/images/Story/Introscreen.png", AssetType.IMAGE);
+		path.set ("assets/images/Story/Pat.png", "assets/images/Story/Pat.png");
+		type.set ("assets/images/Story/Pat.png", AssetType.IMAGE);
+		path.set ("assets/images/Story/Prof.png", "assets/images/Story/Prof.png");
+		type.set ("assets/images/Story/Prof.png", AssetType.IMAGE);
+		path.set ("assets/images/Story/Tec.png", "assets/images/Story/Tec.png");
+		type.set ("assets/images/Story/Tec.png", AssetType.IMAGE);
 		path.set ("assets/images/street.PNG", "assets/images/street.PNG");
 		type.set ("assets/images/street.PNG", AssetType.IMAGE);
 		path.set ("assets/images/SWAG-Kid-Walk-Kopie.png", "assets/images/SWAG-Kid-Walk-Kopie.png");
 		type.set ("assets/images/SWAG-Kid-Walk-Kopie.png", AssetType.IMAGE);
+		path.set ("assets/images/Swagkid.png", "assets/images/Swagkid.png");
+		type.set ("assets/images/Swagkid.png", AssetType.IMAGE);
+		path.set ("assets/images/SwagKidMission1.png", "assets/images/SwagKidMission1.png");
+		type.set ("assets/images/SwagKidMission1.png", AssetType.IMAGE);
+		path.set ("assets/images/Teacher.png", "assets/images/Teacher.png");
+		type.set ("assets/images/Teacher.png", AssetType.IMAGE);
+		path.set ("assets/images/teacher1.png", "assets/images/teacher1.png");
+		type.set ("assets/images/teacher1.png", AssetType.IMAGE);
 		path.set ("assets/images/tec.png", "assets/images/tec.png");
 		type.set ("assets/images/tec.png", AssetType.IMAGE);
+		path.set ("assets/images/Thumbs3.db", "assets/images/Thumbs3.db");
+		type.set ("assets/images/Thumbs3.db", AssetType.BINARY);
 		path.set ("assets/images/tiles.png", "assets/images/tiles.png");
 		type.set ("assets/images/tiles.png", AssetType.IMAGE);
 		path.set ("assets/images/Tilesheet_Complete.png", "assets/images/Tilesheet_Complete.png");
 		type.set ("assets/images/Tilesheet_Complete.png", AssetType.IMAGE);
 		path.set ("assets/images/Tilesheet_Complete.psd", "assets/images/Tilesheet_Complete.psd");
 		type.set ("assets/images/Tilesheet_Complete.psd", AssetType.BINARY);
+		path.set ("assets/images/Wall.psd", "assets/images/Wall.psd");
+		type.set ("assets/images/Wall.psd", AssetType.BINARY);
+		path.set ("assets/images/WallKJRW.png", "assets/images/WallKJRW.png");
+		type.set ("assets/images/WallKJRW.png", AssetType.IMAGE);
 		path.set ("assets/music/music-goes-here.txt", "assets/music/music-goes-here.txt");
 		type.set ("assets/music/music-goes-here.txt", AssetType.TEXT);
 		path.set ("assets/music/select.wav", "assets/music/select.wav");
 		type.set ("assets/music/select.wav", AssetType.SOUND);
 		path.set ("assets/music/townMusic.wav", "assets/music/townMusic.wav");
 		type.set ("assets/music/townMusic.wav", AssetType.SOUND);
+		path.set ("assets/sounds/Abilities/dooropening.mp3", "assets/sounds/Abilities/dooropening.mp3");
+		type.set ("assets/sounds/Abilities/dooropening.mp3", AssetType.MUSIC);
 		path.set ("assets/sounds/Abilities/Heal.mp3", "assets/sounds/Abilities/Heal.mp3");
 		type.set ("assets/sounds/Abilities/Heal.mp3", AssetType.MUSIC);
 		path.set ("assets/sounds/Abilities/Heal1.mp3", "assets/sounds/Abilities/Heal1.mp3");
@@ -1920,6 +3662,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/sounds/Abilities/Source/Push1.wav", AssetType.SOUND);
 		path.set ("assets/sounds/Abilities/Source/Shield1.wav", "assets/sounds/Abilities/Source/Shield1.wav");
 		type.set ("assets/sounds/Abilities/Source/Shield1.wav", AssetType.SOUND);
+		path.set ("assets/sounds/Abilities/switch.mp3", "assets/sounds/Abilities/switch.mp3");
+		type.set ("assets/sounds/Abilities/switch.mp3", AssetType.MUSIC);
 		path.set ("assets/sounds/Game/JUDGE-O-METERCOIN.mp3", "assets/sounds/Game/JUDGE-O-METERCOIN.mp3");
 		type.set ("assets/sounds/Game/JUDGE-O-METERCOIN.mp3", AssetType.MUSIC);
 		path.set ("assets/sounds/Game/select-1.wav", "assets/sounds/Game/select-1.wav");
@@ -1942,8 +3686,26 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/sounds/IntroMissie/7IntroOutro.mp3", AssetType.MUSIC);
 		path.set ("assets/sounds/IntroVoice.mp3", "assets/sounds/IntroVoice.mp3");
 		type.set ("assets/sounds/IntroVoice.mp3", AssetType.MUSIC);
-		path.set ("assets/sounds/Missie1/Gesprek1.mp3", "assets/sounds/Missie1/Gesprek1.mp3");
-		type.set ("assets/sounds/Missie1/Gesprek1.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Knightmare/Knightmare1.mp3", "assets/sounds/Knightmare/Knightmare1.mp3");
+		type.set ("assets/sounds/Knightmare/Knightmare1.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Knightmare/Knightmare2.mp3", "assets/sounds/Knightmare/Knightmare2.mp3");
+		type.set ("assets/sounds/Knightmare/Knightmare2.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Knightmare/Knightmare3.mp3", "assets/sounds/Knightmare/Knightmare3.mp3");
+		type.set ("assets/sounds/Knightmare/Knightmare3.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Knightmare/Knightmare4.mp3", "assets/sounds/Knightmare/Knightmare4.mp3");
+		type.set ("assets/sounds/Knightmare/Knightmare4.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Knightmare/Knightmare5.mp3", "assets/sounds/Knightmare/Knightmare5.mp3");
+		type.set ("assets/sounds/Knightmare/Knightmare5.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Knightmare/Knightmare6.mp3", "assets/sounds/Knightmare/Knightmare6.mp3");
+		type.set ("assets/sounds/Knightmare/Knightmare6.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Knightmare/Knightmare7.mp3", "assets/sounds/Knightmare/Knightmare7.mp3");
+		type.set ("assets/sounds/Knightmare/Knightmare7.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Knightmare/Knightmare8.mp3", "assets/sounds/Knightmare/Knightmare8.mp3");
+		type.set ("assets/sounds/Knightmare/Knightmare8.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie1/Kind1/Kind1-1.mp3", "assets/sounds/Missie1/Kind1/Kind1-1.mp3");
+		type.set ("assets/sounds/Missie1/Kind1/Kind1-1.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie1/Kind1/Kind1-2.mp3", "assets/sounds/Missie1/Kind1/Kind1-2.mp3");
+		type.set ("assets/sounds/Missie1/Kind1/Kind1-2.mp3", AssetType.MUSIC);
 		path.set ("assets/sounds/Missie1/Kind1/Prof1-4.mp3", "assets/sounds/Missie1/Kind1/Prof1-4.mp3");
 		type.set ("assets/sounds/Missie1/Kind1/Prof1-4.mp3", AssetType.MUSIC);
 		path.set ("assets/sounds/Missie1/Kind1/Prof2-4.mp3", "assets/sounds/Missie1/Kind1/Prof2-4.mp3");
@@ -1956,6 +3718,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/sounds/Missie1/Kind2/Prof2-1.mp3", AssetType.MUSIC);
 		path.set ("assets/sounds/Missie1/Kind2/Prof3-1.mp3", "assets/sounds/Missie1/Kind2/Prof3-1.mp3");
 		type.set ("assets/sounds/Missie1/Kind2/Prof3-1.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie1/Kind3/Kind3-1.mp3", "assets/sounds/Missie1/Kind3/Kind3-1.mp3");
+		type.set ("assets/sounds/Missie1/Kind3/Kind3-1.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie1/Kind3/Kind3-2.mp3", "assets/sounds/Missie1/Kind3/Kind3-2.mp3");
+		type.set ("assets/sounds/Missie1/Kind3/Kind3-2.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie1/Kind3/Kind3-3.mp3", "assets/sounds/Missie1/Kind3/Kind3-3.mp3");
+		type.set ("assets/sounds/Missie1/Kind3/Kind3-3.mp3", AssetType.MUSIC);
 		path.set ("assets/sounds/Missie1/Kind3/Prof1-2.mp3", "assets/sounds/Missie1/Kind3/Prof1-2.mp3");
 		type.set ("assets/sounds/Missie1/Kind3/Prof1-2.mp3", AssetType.MUSIC);
 		path.set ("assets/sounds/Missie1/Kind3/Prof2-2.mp3", "assets/sounds/Missie1/Kind3/Prof2-2.mp3");
@@ -1966,22 +3734,34 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/sounds/Missie1/Kind3/Prof4-2.mp3", AssetType.MUSIC);
 		path.set ("assets/sounds/Missie1/Prof4-3.mp3", "assets/sounds/Missie1/Prof4-3.mp3");
 		type.set ("assets/sounds/Missie1/Prof4-3.mp3", AssetType.MUSIC);
-		path.set ("assets/sounds/Missie1/Test/Prof1-3.mp3", "assets/sounds/Missie1/Test/Prof1-3.mp3");
-		type.set ("assets/sounds/Missie1/Test/Prof1-3.mp3", AssetType.MUSIC);
-		path.set ("assets/sounds/Missie1/Test/Prof2-3.mp3", "assets/sounds/Missie1/Test/Prof2-3.mp3");
-		type.set ("assets/sounds/Missie1/Test/Prof2-3.mp3", AssetType.MUSIC);
-		path.set ("assets/sounds/Missie1/Test/Prof3-3.mp3", "assets/sounds/Missie1/Test/Prof3-3.mp3");
-		type.set ("assets/sounds/Missie1/Test/Prof3-3.mp3", AssetType.MUSIC);
-		path.set ("assets/sounds/Missie1/Test/Teacher1.mp3", "assets/sounds/Missie1/Test/Teacher1.mp3");
-		type.set ("assets/sounds/Missie1/Test/Teacher1.mp3", AssetType.MUSIC);
-		path.set ("assets/sounds/Missie1/Test/Teacher2.mp3", "assets/sounds/Missie1/Test/Teacher2.mp3");
-		type.set ("assets/sounds/Missie1/Test/Teacher2.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie1/Teacher/Prof1-3.mp3", "assets/sounds/Missie1/Teacher/Prof1-3.mp3");
+		type.set ("assets/sounds/Missie1/Teacher/Prof1-3.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie1/Teacher/Prof2-3.mp3", "assets/sounds/Missie1/Teacher/Prof2-3.mp3");
+		type.set ("assets/sounds/Missie1/Teacher/Prof2-3.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie1/Teacher/Prof3-3.mp3", "assets/sounds/Missie1/Teacher/Prof3-3.mp3");
+		type.set ("assets/sounds/Missie1/Teacher/Prof3-3.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie1/Teacher/Teacher1-1.mp3", "assets/sounds/Missie1/Teacher/Teacher1-1.mp3");
+		type.set ("assets/sounds/Missie1/Teacher/Teacher1-1.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie1/Teacher/Teacher1-2.mp3", "assets/sounds/Missie1/Teacher/Teacher1-2.mp3");
+		type.set ("assets/sounds/Missie1/Teacher/Teacher1-2.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie1/Teacher/Teacher1-3.mp3", "assets/sounds/Missie1/Teacher/Teacher1-3.mp3");
+		type.set ("assets/sounds/Missie1/Teacher/Teacher1-3.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie1/Teacher/Teacher1-4.mp3", "assets/sounds/Missie1/Teacher/Teacher1-4.mp3");
+		type.set ("assets/sounds/Missie1/Teacher/Teacher1-4.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie1/Teacher/Teacher1.mp3", "assets/sounds/Missie1/Teacher/Teacher1.mp3");
+		type.set ("assets/sounds/Missie1/Teacher/Teacher1.mp3", AssetType.MUSIC);
 		path.set ("assets/sounds/Missie2/Dad1.mp3", "assets/sounds/Missie2/Dad1.mp3");
 		type.set ("assets/sounds/Missie2/Dad1.mp3", AssetType.MUSIC);
 		path.set ("assets/sounds/Missie2/Dad2.mp3", "assets/sounds/Missie2/Dad2.mp3");
 		type.set ("assets/sounds/Missie2/Dad2.mp3", AssetType.MUSIC);
 		path.set ("assets/sounds/Missie2/Dad3.mp3", "assets/sounds/Missie2/Dad3.mp3");
 		type.set ("assets/sounds/Missie2/Dad3.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie2/Kid1.mp3", "assets/sounds/Missie2/Kid1.mp3");
+		type.set ("assets/sounds/Missie2/Kid1.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie2/Kid2.mp3", "assets/sounds/Missie2/Kid2.mp3");
+		type.set ("assets/sounds/Missie2/Kid2.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie2/Kid3.mp3", "assets/sounds/Missie2/Kid3.mp3");
+		type.set ("assets/sounds/Missie2/Kid3.mp3", AssetType.MUSIC);
 		path.set ("assets/sounds/Missie2/Prof1.mp3", "assets/sounds/Missie2/Prof1.mp3");
 		type.set ("assets/sounds/Missie2/Prof1.mp3", AssetType.MUSIC);
 		path.set ("assets/sounds/Missie2/Prof2.mp3", "assets/sounds/Missie2/Prof2.mp3");
@@ -1992,6 +3772,30 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/sounds/Missie2/Prof4.mp3", AssetType.MUSIC);
 		path.set ("assets/sounds/Missie2/Prof5.mp3", "assets/sounds/Missie2/Prof5.mp3");
 		type.set ("assets/sounds/Missie2/Prof5.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie3/Missie3-1.mp3", "assets/sounds/Missie3/Missie3-1.mp3");
+		type.set ("assets/sounds/Missie3/Missie3-1.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie3/Missie3-10.mp3", "assets/sounds/Missie3/Missie3-10.mp3");
+		type.set ("assets/sounds/Missie3/Missie3-10.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie3/Missie3-12.mp3", "assets/sounds/Missie3/Missie3-12.mp3");
+		type.set ("assets/sounds/Missie3/Missie3-12.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie3/Missie3-14.mp3", "assets/sounds/Missie3/Missie3-14.mp3");
+		type.set ("assets/sounds/Missie3/Missie3-14.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie3/Missie3-15.mp3", "assets/sounds/Missie3/Missie3-15.mp3");
+		type.set ("assets/sounds/Missie3/Missie3-15.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie3/Missie3-2.mp3", "assets/sounds/Missie3/Missie3-2.mp3");
+		type.set ("assets/sounds/Missie3/Missie3-2.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie3/Missie3-3.mp3", "assets/sounds/Missie3/Missie3-3.mp3");
+		type.set ("assets/sounds/Missie3/Missie3-3.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie3/Missie3-4.mp3", "assets/sounds/Missie3/Missie3-4.mp3");
+		type.set ("assets/sounds/Missie3/Missie3-4.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie3/Missie3-5.mp3", "assets/sounds/Missie3/Missie3-5.mp3");
+		type.set ("assets/sounds/Missie3/Missie3-5.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie3/Missie3-6.mp3", "assets/sounds/Missie3/Missie3-6.mp3");
+		type.set ("assets/sounds/Missie3/Missie3-6.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie3/Missie3-7.mp3", "assets/sounds/Missie3/Missie3-7.mp3");
+		type.set ("assets/sounds/Missie3/Missie3-7.mp3", AssetType.MUSIC);
+		path.set ("assets/sounds/Missie3/Missie3-8.mp3", "assets/sounds/Missie3/Missie3-8.mp3");
+		type.set ("assets/sounds/Missie3/Missie3-8.mp3", AssetType.MUSIC);
 		path.set ("assets/sounds/Music/Chase.mp3", "assets/sounds/Music/Chase.mp3");
 		type.set ("assets/sounds/Music/Chase.mp3", AssetType.MUSIC);
 		path.set ("assets/sounds/Music/Haahn's Dutch.wav", "assets/sounds/Music/Haahn's Dutch.wav");
@@ -2039,6 +3843,15 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/data/data-goes-here.txt";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
+		id = "assets/data/Final Maps/worldmap1.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/Final Maps/worldmap2.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/kid_dad-testing.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
 		id = "assets/data/level_1.oel";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
@@ -2049,6 +3862,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
 		id = "assets/data/level_4.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/Mission1.oel";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
 		id = "assets/data/Mission1_0.oel";
@@ -2063,10 +3879,52 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/data/room-001.oel";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
-		id = "assets/images/AngryDad.png";
+		id = "assets/data/testingmap.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/female/kind2-1.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/female/kind2-2.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/female/moeder1.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/female/moeder2.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/images/1StartingScreeeeeeen.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/AngryDadMission2.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/AsianDad.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/AsianDad.psd";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "assets/images/Attack128x64.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Bald-Mission1.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Bald-Mission1.psd";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
 		id = "assets/images/BaldMission1.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Banner.psd";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "assets/images/BeachBall-Mission3.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/bigass HOUSE.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "assets/images/button.png";
@@ -2081,6 +3939,21 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/images/CollectingSpirit Kopie.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/DodgeBall-Mission-3.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Emo-Kid-Mission2 (1).png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Emo-Kid-Mission3).png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/EmoKidMission2.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/emokidMission3.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
 		id = "assets/images/enemy-0.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
@@ -2090,30 +3963,294 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/images/enemy-2.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/feggit.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/floor.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Football-Mission-3.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
 		id = "assets/images/Furniture.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Girl-Mission1.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "assets/images/girlMission1.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/HATSNewRoadTiles.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/HATSNewRoadTiles.psd";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
 		id = "assets/images/health.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/HOLE.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/HOUSE.psd";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
 		id = "assets/images/images-go-here.txt";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
 		id = "assets/images/ion.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Judge-Mission-3.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Judge.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/kind1.1.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/kind1.2.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/kind1.3.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/kind1.4.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/kind1.5.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/kind2.1.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/kind2.2.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/kind2.3.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/kind2.4.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/kind2.5.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/kind3.1.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/kind3.2.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/kind3.3.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/kind3.4.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/kind3.5.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/kind3.6.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/kind3.7.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/KJRW-Tutotial-3.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Knightmare Fight/Text1.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Knightmare.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/KnightmareAttackTilesheet.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/KnightmareCompleteTilesheet.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/KnightmareDash.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/KnightmareShield4.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/KnightmareText.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/KRJW-Tutorial.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/KRJW-Tutorial.psd";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "assets/images/Missie1/intromissie1/prof0.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie1/intromissie1/prof1.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie1/intromissie1/prof2.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie1/intromissie1/prof3.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie1/intromissie1/prof4.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie1/intromissie1/prof5.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie1/intromissie1/prof6.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie2/emo1.1.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie2/emo1.10.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie2/emo1.11.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie2/emo1.2.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie2/emo1.3.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie2/emo1.4.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie2/emo1.5.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie2/emo1.6.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie2/emo1.7.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie2/emo1.8.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie2/emo1.9.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie3/Feggit1.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie3/Feggit2.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie3/Feggit3.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie3/Feggit4.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie3/Feggit5.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie3/Judge1.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie3/Judge2.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie3/Mom1.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie3/Mom2.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie3/Mom3.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie3/Pro1.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie3/Pro2.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie3/Pro3.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie3/Pro4.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie3/Pro5.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie3/Pro6.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie3/Pro7.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie3/Pro8.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie3/Prof9.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Missie3/Thumbs2.db";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
 		id = "assets/images/Mission1Girl.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "assets/images/Mission2Football.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
-		id = "assets/images/Mission3Emokid.png";
+		id = "assets/images/Mission3 Dodgeball.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Mission3 Dodgeball.psd";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "assets/images/Mission3-Mother.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Mission3Kid1.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Mission3Kid2.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Mission3Kid3.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Mission3Kid4.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Mission3Kid5.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Mission3Kid6.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Mom.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Mother-Mission-3.psd";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "assets/images/NEWTilesheet_Complete.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/NEW_Tilesheet_Complete.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/NEW_Tilesheet_Complete.psd";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
 		id = "assets/images/NPCCharacterTilesheet.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
@@ -2126,7 +4263,49 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/images/pointer.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Principle.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Principle.psd";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "assets/images/resetbutton.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
 		id = "assets/images/SChool modified.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Speechbubble.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Speechbubble.psd";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "assets/images/Starting Screen.jpg";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Story/1.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Story/2.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Story/3.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Story/4.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Story/Introscreen.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Story/Pat.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Story/Prof.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Story/Tec.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "assets/images/street.PNG";
@@ -2135,9 +4314,24 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/images/SWAG-Kid-Walk-Kopie.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Swagkid.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/SwagKidMission1.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Teacher.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/teacher1.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
 		id = "assets/images/tec.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Thumbs3.db";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
 		id = "assets/images/tiles.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
@@ -2147,6 +4341,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/images/Tilesheet_Complete.psd";
 		path.set (id, id);
 		type.set (id, AssetType.BINARY);
+		id = "assets/images/Wall.psd";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "assets/images/WallKJRW.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
 		id = "assets/music/music-goes-here.txt";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
@@ -2156,6 +4356,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/music/townMusic.wav";
 		path.set (id, id);
 		type.set (id, AssetType.SOUND);
+		id = "assets/sounds/Abilities/dooropening.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
 		id = "assets/sounds/Abilities/Heal.mp3";
 		path.set (id, id);
 		type.set (id, AssetType.MUSIC);
@@ -2219,6 +4422,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/sounds/Abilities/Source/Shield1.wav";
 		path.set (id, id);
 		type.set (id, AssetType.SOUND);
+		id = "assets/sounds/Abilities/switch.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
 		id = "assets/sounds/Game/JUDGE-O-METERCOIN.mp3";
 		path.set (id, id);
 		type.set (id, AssetType.MUSIC);
@@ -2252,7 +4458,34 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/sounds/IntroVoice.mp3";
 		path.set (id, id);
 		type.set (id, AssetType.MUSIC);
-		id = "assets/sounds/Missie1/Gesprek1.mp3";
+		id = "assets/sounds/Knightmare/Knightmare1.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Knightmare/Knightmare2.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Knightmare/Knightmare3.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Knightmare/Knightmare4.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Knightmare/Knightmare5.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Knightmare/Knightmare6.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Knightmare/Knightmare7.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Knightmare/Knightmare8.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie1/Kind1/Kind1-1.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie1/Kind1/Kind1-2.mp3";
 		path.set (id, id);
 		type.set (id, AssetType.MUSIC);
 		id = "assets/sounds/Missie1/Kind1/Prof1-4.mp3";
@@ -2273,6 +4506,15 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/sounds/Missie1/Kind2/Prof3-1.mp3";
 		path.set (id, id);
 		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie1/Kind3/Kind3-1.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie1/Kind3/Kind3-2.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie1/Kind3/Kind3-3.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
 		id = "assets/sounds/Missie1/Kind3/Prof1-2.mp3";
 		path.set (id, id);
 		type.set (id, AssetType.MUSIC);
@@ -2288,19 +4530,28 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/sounds/Missie1/Prof4-3.mp3";
 		path.set (id, id);
 		type.set (id, AssetType.MUSIC);
-		id = "assets/sounds/Missie1/Test/Prof1-3.mp3";
+		id = "assets/sounds/Missie1/Teacher/Prof1-3.mp3";
 		path.set (id, id);
 		type.set (id, AssetType.MUSIC);
-		id = "assets/sounds/Missie1/Test/Prof2-3.mp3";
+		id = "assets/sounds/Missie1/Teacher/Prof2-3.mp3";
 		path.set (id, id);
 		type.set (id, AssetType.MUSIC);
-		id = "assets/sounds/Missie1/Test/Prof3-3.mp3";
+		id = "assets/sounds/Missie1/Teacher/Prof3-3.mp3";
 		path.set (id, id);
 		type.set (id, AssetType.MUSIC);
-		id = "assets/sounds/Missie1/Test/Teacher1.mp3";
+		id = "assets/sounds/Missie1/Teacher/Teacher1-1.mp3";
 		path.set (id, id);
 		type.set (id, AssetType.MUSIC);
-		id = "assets/sounds/Missie1/Test/Teacher2.mp3";
+		id = "assets/sounds/Missie1/Teacher/Teacher1-2.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie1/Teacher/Teacher1-3.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie1/Teacher/Teacher1-4.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie1/Teacher/Teacher1.mp3";
 		path.set (id, id);
 		type.set (id, AssetType.MUSIC);
 		id = "assets/sounds/Missie2/Dad1.mp3";
@@ -2310,6 +4561,15 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		type.set (id, AssetType.MUSIC);
 		id = "assets/sounds/Missie2/Dad3.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie2/Kid1.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie2/Kid2.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie2/Kid3.mp3";
 		path.set (id, id);
 		type.set (id, AssetType.MUSIC);
 		id = "assets/sounds/Missie2/Prof1.mp3";
@@ -2325,6 +4585,42 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		type.set (id, AssetType.MUSIC);
 		id = "assets/sounds/Missie2/Prof5.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie3/Missie3-1.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie3/Missie3-10.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie3/Missie3-12.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie3/Missie3-14.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie3/Missie3-15.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie3/Missie3-2.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie3/Missie3-3.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie3/Missie3-4.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie3/Missie3-5.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie3/Missie3-6.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie3/Missie3-7.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Missie3/Missie3-8.mp3";
 		path.set (id, id);
 		type.set (id, AssetType.MUSIC);
 		id = "assets/sounds/Music/Chase.mp3";
@@ -2501,11 +4797,339 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		#end
 		
 		#if (windows || mac || linux)
 		
 		var useManifest = false;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
@@ -3339,7 +5963,335 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #elseif html5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

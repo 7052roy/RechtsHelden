@@ -1,0 +1,24 @@
+-Bugs
++Wishlist (less important)
+
+General
++Collision makes me sad
++Music doesn't loop, that might be for the better :')
+
+
+Mission 1
+
+-Talking with the teacher puts you on top of the school
+
+-You can get stuck in NPC by talking to them
+
+-All characters can push even without skills
+
+-Kids top is not collidable
+
+-Pressing space again will restart the conversation (this is funny however lel)
+
+-After this the game gets stuck-ish?
+
++Allow the player to read (slighty longer delay, skip to the next text by mashing space etc.)
++Placement of interaction characters (I believe this was noted)
