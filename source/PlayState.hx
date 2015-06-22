@@ -73,6 +73,8 @@ class PlayState extends FlxState
 		_mWalls.setTileProperties(18, FlxObject.ANY);
 		_mWalls.setTileProperties(19, FlxObject.ANY);
 		_mWalls.setTileProperties(20, FlxObject.ANY);
+		_mWalls.setTileProperties(21, FlxObject.ANY);
+		_mWalls.setTileProperties(22, FlxObject.ANY);
 		add(_mWalls);
 		
 		/*_mWalls.setTileProperties(3, FlxObject.NONE);
