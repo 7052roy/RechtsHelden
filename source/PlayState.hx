@@ -51,30 +51,32 @@ class PlayState extends FlxState
 	 */
 	override public function create():Void
 	{
-		_map = new FlxOgmoLoader("assets/data/basemap2.oel");
+		_map = new FlxOgmoLoader("assets/data/Final Maps/worldmap1.oel");
 		_mWalls = _map.loadTilemap("assets/images/Tilesheet_Complete.png", 64, 64, "tree");
-		_mWalls.setTileProperties(1, FlxObject.ANY);
-		_mWalls.setTileProperties(2, FlxObject.ANY);
-		_mWalls.setTileProperties(3, FlxObject.ANY);
-		_mWalls.setTileProperties(4, FlxObject.ANY);
-		_mWalls.setTileProperties(5, FlxObject.ANY);
-		_mWalls.setTileProperties(6, FlxObject.ANY);
-		_mWalls.setTileProperties(7, FlxObject.ANY);
-		_mWalls.setTileProperties(8, FlxObject.ANY);
-		_mWalls.setTileProperties(9, FlxObject.ANY);
-		_mWalls.setTileProperties(10, FlxObject.ANY);
-		_mWalls.setTileProperties(11, FlxObject.ANY);
-		_mWalls.setTileProperties(12, FlxObject.ANY);
-		_mWalls.setTileProperties(13, FlxObject.ANY);
-		_mWalls.setTileProperties(14, FlxObject.ANY);
-		_mWalls.setTileProperties(15, FlxObject.ANY);
-		_mWalls.setTileProperties(16, FlxObject.ANY);
-		_mWalls.setTileProperties(17, FlxObject.ANY);
-		_mWalls.setTileProperties(18, FlxObject.ANY);
-		_mWalls.setTileProperties(19, FlxObject.ANY);
-		_mWalls.setTileProperties(20, FlxObject.ANY);
-		_mWalls.setTileProperties(21, FlxObject.ANY);
-		_mWalls.setTileProperties(22, FlxObject.ANY);
+		_mWalls.setTileProperties(1, FlxObject.NONE);
+		_mWalls.setTileProperties(2, FlxObject.NONE);
+		_mWalls.setTileProperties(3, FlxObject.NONE);
+		_mWalls.setTileProperties(4, FlxObject.NONE);
+		_mWalls.setTileProperties(5, FlxObject.NONE);
+		_mWalls.setTileProperties(6, FlxObject.NONE);
+		_mWalls.setTileProperties(7, FlxObject.NONE);
+		_mWalls.setTileProperties(8, FlxObject.NONE);
+		_mWalls.setTileProperties(9, FlxObject.NONE);
+		_mWalls.setTileProperties(10, FlxObject.NONE);
+		_mWalls.setTileProperties(11, FlxObject.NONE);
+		_mWalls.setTileProperties(12, FlxObject.NONE);
+		_mWalls.setTileProperties(13, FlxObject.NONE);
+		_mWalls.setTileProperties(14, FlxObject.NONE);
+		_mWalls.setTileProperties(15, FlxObject.NONE);
+		_mWalls.setTileProperties(16, FlxObject.NONE);
+		_mWalls.setTileProperties(17, FlxObject.NONE);
+		_mWalls.setTileProperties(18, FlxObject.NONE);
+		_mWalls.setTileProperties(19, FlxObject.NONE);
+		_mWalls.setTileProperties(20, FlxObject.NONE);
+		_mWalls.setTileProperties(21, FlxObject.NONE);
+		_mWalls.setTileProperties(22, FlxObject.NONE);
+		_mWalls.setTileProperties(23, FlxObject.NONE);
+		_mWalls.setTileProperties(24, FlxObject.NONE);
 		add(_mWalls);
 		
 		/*_mWalls.setTileProperties(3, FlxObject.NONE);
