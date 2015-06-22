@@ -152,12 +152,13 @@ class PlayState extends FlxState
 		_interaction = FlxG.keys.anyPressed(["q", "Q"]);
 		if (_interaction)
 		{
+			p.y -= 192;
 			if (talkAdult2 != null)
 			{
 				talkAdult2.destroy();
 			}
 			talkAdult2 = new FlxSprite();
-			talkAdult2.loadGraphic("assets/images/Missie1/intromissie1/prof2.png");
+			talkAdult2.loadGraphic("assets/images/Missie1/intromissie1/prof0.png");
 			talkAdult2.x = _player.x - 300;
 			talkAdult2.y = _player.y - 100;
 			add(talkAdult2);
@@ -165,8 +166,6 @@ class PlayState extends FlxState
 			FlxG.sound.destroy(true);
 			p.speed = 0;
 			FlxG.sound.play("assets/sounds/Missie1/Teacher/Teacher1.mp3", 1, false, true, teacherText);
-			p.y -= 192;
-			
 		}
 		
 	}
@@ -183,16 +182,45 @@ class PlayState extends FlxState
 	
 	function teacherText1()
 	{
-		talkAdult2.destroy();
+		talkAdult2 = new FlxSprite();
+		talkAdult2.loadGraphic("assets/images/Missie1/intromissie1/prof2.png");
+		talkAdult2.x = _player.x - 300;
+		talkAdult2.y = _player.y - 100;
+		add(talkAdult2);
+		FlxG.sound.play("assets/sounds/Missie1/Teacher/Teacher1-1.mp3", 1, false, true, teacherText2);
+	}
+	
+	function teacherText2()
+	{
 		talkAdult2 = new FlxSprite();
 		talkAdult2.loadGraphic("assets/images/Missie1/intromissie1/prof3.png");
 		talkAdult2.x = _player.x - 300;
 		talkAdult2.y = _player.y - 100;
 		add(talkAdult2);
-		FlxG.sound.play("assets/sounds/Missie1/Teacher/Teacher2.mp3", 1, false, true, teacherText2);
+		FlxG.sound.play("assets/sounds/Missie1/Teacher/Teacher1-2.mp3", 1, false, true, teacherText3);
 	}
 	
-	function teacherText2()
+	function teacherText3()
+	{
+		talkAdult2 = new FlxSprite();
+		talkAdult2.loadGraphic("assets/images/Missie1/intromissie1/prof4.png");
+		talkAdult2.x = _player.x - 300;
+		talkAdult2.y = _player.y - 100;
+		add(talkAdult2);
+		FlxG.sound.play("assets/sounds/Missie1/Teacher/Teacher1-3.mp3", 1, false, true, teacherText4);
+	}
+	
+	function teacherText4()
+	{
+		talkAdult2 = new FlxSprite();
+		talkAdult2.loadGraphic("assets/images/Missie1/intromissie1/prof5.png");
+		talkAdult2.x = _player.x - 300;
+		talkAdult2.y = _player.y - 100;
+		add(talkAdult2);
+		FlxG.sound.play("assets/sounds/Missie1/Teacher/Teacher1-3.mp3", 1, false, true, teacherText5);
+	}
+	
+	function teacherText5()
 	{
 		talkAdult2.destroy();
 		talkAdult2 = new FlxSprite();
@@ -202,6 +230,7 @@ class PlayState extends FlxState
 		add(talkAdult2);
 		FlxG.sound.play("assets/sounds/Missie1/Teacher/Prof2-3.mp3", 1, false, true, mission1Load);
 	}
+	
 	
 	function mission1Load()
 	{
