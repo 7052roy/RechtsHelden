@@ -42,7 +42,7 @@ class Mission2 extends FlxState
 	 */
 	override public function create():Void
 	{
-		_map = new FlxOgmoLoader("assets/data/Mission1_1.oel");
+		_map = new FlxOgmoLoader("assets/data/Final Maps/worldmap1.oel");
 		_mWalls = _map.loadTilemap("assets/images/Tilesheet_Complete.png", 64, 64, "tree");
 		_mWalls.setTileProperties(1, FlxObject.ANY);
 		_mWalls.setTileProperties(3, FlxObject.NONE);
@@ -59,16 +59,7 @@ class Mission2 extends FlxState
 		_angryDad = new FlxTypedGroup<AngryDad>();
 		add(_angryDad);
 		
-		_btnReset = new FlxButton(0, 0, "Reset", clickReset);
-		_btnReset.x = (FlxG.width / 2) - _btnReset.width - 10;
-		_btnReset.y = FlxG.height - _btnReset.height - 10;
-		_btnReset.onUp.sound = FlxG.sound.load(AssetPaths.select__wav);
-		add(_btnReset);
-		
 		_map.loadEntities(placeEntities, "entities");
-		
-		
-		
 		
 		FlxG.camera.follow(_player, FlxCamera.STYLE_TOPDOWN, null, 1);
 		
