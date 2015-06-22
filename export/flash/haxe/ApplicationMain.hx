@@ -86,6 +86,22 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
+		urls.push ("assets/images/1.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/2.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/3.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/4.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/AngryDadMission2.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -98,6 +114,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.BINARY);
 		
 		
+		urls.push ("assets/images/Attack128x64.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/Bald-Mission1.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -108,6 +128,10 @@ class ApplicationMain {
 		
 		urls.push ("assets/images/BaldMission1.png");
 		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Banner.psd");
+		types.push (lime.Assets.AssetType.BINARY);
 		
 		
 		urls.push ("assets/images/BeachBall-Mission3.png");
@@ -184,6 +208,14 @@ class ApplicationMain {
 		
 		urls.push ("assets/images/girlMission1.png");
 		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/HATSNewRoadTiles.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/HATSNewRoadTiles.psd");
+		types.push (lime.Assets.AssetType.BINARY);
 		
 		
 		urls.push ("assets/images/health.png");
@@ -278,7 +310,27 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/images/KJRW-Tutotial-3.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/Knightmare.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/KnightmareAttackTilesheet.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/KnightmareCompleteTilesheet.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/KnightmareDash.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/KnightmareShield4.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
@@ -368,6 +420,10 @@ class ApplicationMain {
 		
 		urls.push ("assets/images/Principle.psd");
 		types.push (lime.Assets.AssetType.BINARY);
+		
+		
+		urls.push ("assets/images/prof1.png");
+		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
 		urls.push ("assets/images/SChool modified.png");
