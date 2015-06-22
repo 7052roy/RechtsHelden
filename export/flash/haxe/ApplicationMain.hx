@@ -342,6 +342,74 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.BINARY);
 		
 		
+		urls.push ("assets/images/Missie1/intromissie1/prof1.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Missie1/intromissie1/prof2.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Missie1/intromissie1/prof3.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Missie1/intromissie1/prof4.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Missie1/intromissie1/prof5.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Missie1/intromissie1/prof6.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Missie2/emo1.1.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Missie2/emo1.10.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Missie2/emo1.11.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Missie2/emo1.2.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Missie2/emo1.3.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Missie2/emo1.4.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Missie2/emo1.5.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Missie2/emo1.6.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Missie2/emo1.7.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Missie2/emo1.8.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Missie2/emo1.9.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/Mission1Girl.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -422,10 +490,6 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.BINARY);
 		
 		
-		urls.push ("assets/images/prof1.png");
-		types.push (lime.Assets.AssetType.IMAGE);
-		
-		
 		urls.push ("assets/images/SChool modified.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -455,6 +519,10 @@ class ApplicationMain {
 		
 		
 		urls.push ("assets/images/Teacher.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/teacher1.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
@@ -492,6 +560,10 @@ class ApplicationMain {
 		
 		urls.push ("assets/music/townMusic.wav");
 		types.push (lime.Assets.AssetType.SOUND);
+		
+		
+		urls.push ("assets/sounds/Abilities/dooropening.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
 		
 		
 		urls.push ("assets/sounds/Abilities/Heal.mp3");
@@ -578,6 +650,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.SOUND);
 		
 		
+		urls.push ("assets/sounds/Abilities/switch.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
 		urls.push ("assets/sounds/Game/JUDGE-O-METERCOIN.mp3");
 		types.push (lime.Assets.AssetType.MUSIC);
 		
@@ -626,6 +702,14 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.MUSIC);
 		
 		
+		urls.push ("assets/sounds/Missie1/Kind1/Kind1-1.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
+		urls.push ("assets/sounds/Missie1/Kind1/Kind1-2.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
 		urls.push ("assets/sounds/Missie1/Kind1/Prof1-4.mp3");
 		types.push (lime.Assets.AssetType.MUSIC);
 		
@@ -670,23 +754,23 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.MUSIC);
 		
 		
-		urls.push ("assets/sounds/Missie1/Test/Prof1-3.mp3");
+		urls.push ("assets/sounds/Missie1/Teacher/Prof1-3.mp3");
 		types.push (lime.Assets.AssetType.MUSIC);
 		
 		
-		urls.push ("assets/sounds/Missie1/Test/Prof2-3.mp3");
+		urls.push ("assets/sounds/Missie1/Teacher/Prof2-3.mp3");
 		types.push (lime.Assets.AssetType.MUSIC);
 		
 		
-		urls.push ("assets/sounds/Missie1/Test/Prof3-3.mp3");
+		urls.push ("assets/sounds/Missie1/Teacher/Prof3-3.mp3");
 		types.push (lime.Assets.AssetType.MUSIC);
 		
 		
-		urls.push ("assets/sounds/Missie1/Test/Teacher1.mp3");
+		urls.push ("assets/sounds/Missie1/Teacher/Teacher1.mp3");
 		types.push (lime.Assets.AssetType.MUSIC);
 		
 		
-		urls.push ("assets/sounds/Missie1/Test/Teacher2.mp3");
+		urls.push ("assets/sounds/Missie1/Teacher/Teacher2.mp3");
 		types.push (lime.Assets.AssetType.MUSIC);
 		
 		

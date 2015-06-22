@@ -156,10 +156,15 @@ class PlayState extends FlxState
 			{
 				talkAdult2.destroy();
 			}
+			talkAdult2 = new FlxSprite();
+			talkAdult2.loadGraphic("assets/images/Missie1/intromissie1/prof2.png");
+			talkAdult2.x = _player.x - 300;
+			talkAdult2.y = _player.y - 100;
+			add(talkAdult2);
 			talk = 1;
 			FlxG.sound.destroy(true);
 			p.speed = 0;
-			FlxG.sound.play("assets/sounds/Missie1/Test/Teacher1.mp3", 1, false, true, teacherText);
+			FlxG.sound.play("assets/sounds/Missie1/Teacher/Teacher1.mp3", 1, false, true, teacherText);
 			p.y -= 192;
 			
 		}
@@ -169,33 +174,33 @@ class PlayState extends FlxState
 	function teacherText()
 	{
 		talkAdult2 = new FlxSprite();
-		talkAdult2.loadGraphic("assets/images/prof1.png");
+		talkAdult2.loadGraphic("assets/images/Missie1/intromissie1/prof1.png");
 		talkAdult2.x = _player.x - 300;
 		talkAdult2.y = _player.y - 100;
 		add(talkAdult2);
-		FlxG.sound.play("assets/sounds/Missie1/Test/Prof1-3.mp3", 1, false, true, teacherText1);
+		FlxG.sound.play("assets/sounds/Missie1/Teacher/Prof1-3.mp3", 1, false, true, teacherText1);
 	}
 	
 	function teacherText1()
 	{
 		talkAdult2.destroy();
 		talkAdult2 = new FlxSprite();
-		talkAdult2.loadGraphic("assets/images/prof1.png");
+		talkAdult2.loadGraphic("assets/images/Missie1/intromissie1/prof3.png");
 		talkAdult2.x = _player.x - 300;
 		talkAdult2.y = _player.y - 100;
 		add(talkAdult2);
-		FlxG.sound.play("assets/sounds/Missie1/Test/Teacher2.mp3", 1, false, true, teacherText2);
+		FlxG.sound.play("assets/sounds/Missie1/Teacher/Teacher2.mp3", 1, false, true, teacherText2);
 	}
 	
 	function teacherText2()
 	{
 		talkAdult2.destroy();
 		talkAdult2 = new FlxSprite();
-		talkAdult2.loadGraphic("assets/images/prof1.png");
+		talkAdult2.loadGraphic("assets/images/Missie1/intromissie1/prof6.png");
 		talkAdult2.x = _player.x - 300;
 		talkAdult2.y = _player.y - 100;
 		add(talkAdult2);
-		FlxG.sound.play("assets/sounds/Missie1/Test/Prof2-3.mp3", 1, false, true, mission1Load);
+		FlxG.sound.play("assets/sounds/Missie1/Teacher/Prof2-3.mp3", 1, false, true, mission1Load);
 	}
 	
 	function mission1Load()
