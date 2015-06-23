@@ -259,7 +259,7 @@ class Mission1Find extends FlxState
 		talkAdult2.x = _player.x - 100;
 		talkAdult2.y = _player.y - 300;
 		add(talkAdult2);
-		FlxG.sound.play("assets/sounds/Missie1/Kind1/Prof1-4.mp3", 1, false, true, adult2Talk2);
+		FlxG.sound.play("assets/sounds/Missie1/Kind1/Kind1-1.mp3", 1, false, true, adult2Talk2);
 	}
 	function adult2Talk2()
 	{
@@ -271,6 +271,7 @@ class Mission1Find extends FlxState
 		add(talkAdult2);
 		FlxG.sound.play("assets/sounds/Missie1/Kind1/Prof2-4.mp3", 1, false, true, adult2Talk3);
 	}
+	
 	function adult2Talk3()
 	{
 		talkAdult2.destroy();
@@ -279,8 +280,9 @@ class Mission1Find extends FlxState
 		talkAdult2.x = _player.x - 100;
 		talkAdult2.y = _player.y - 300;
 		add(talkAdult2);
-		FlxG.sound.play("assets/sounds/Missie1/Kind1/Prof2-4.mp3", 1, false, true, adult2Talk4);
+		FlxG.sound.play("assets/sounds/Missie1/Kind1/Kind1-2.mp3", 1, false, true, adult2Talk4);
 	}
+	
 	function adult2Talk4()
 	{
 		talkAdult2.destroy();
@@ -325,7 +327,6 @@ class Mission1Find extends FlxState
 			add(talkAdult2);
 			FlxG.sound.play("assets/sounds/Missie1/Kind3/Prof1-2.mp3", 1, false, true, kidTalk1);
 		}
-		
 	}
 	
 	function kidTalk1()
@@ -336,7 +337,7 @@ class Mission1Find extends FlxState
 		talkAdult2.x = _player.x - 600;
 		talkAdult2.y = _player.y;
 		add(talkAdult2);
-		FlxG.sound.play("assets/sounds/Missie1/Kind3/Prof1-2.mp3", 1, false, true, kidTalk2);
+		FlxG.sound.play("assets/sounds/Missie1/Kind3/Kind3-1.mp3", 1, false, true, kidTalk2);
 	}
 	function kidTalk2()
 	{
@@ -356,7 +357,7 @@ class Mission1Find extends FlxState
 		talkAdult2.x = _player.x - 600;
 		talkAdult2.y = _player.y;
 		add(talkAdult2);
-		FlxG.sound.play("assets/sounds/Missie1/Kind3/Prof2-2.mp3", 1, false, true, kidTalk4);
+		FlxG.sound.play("assets/sounds/Missie1/Kind3/Kind3-2.mp3", 1, false, true, kidTalk4);
 	}
 	function kidTalk4()
 	{
@@ -377,8 +378,9 @@ class Mission1Find extends FlxState
 		talkAdult2.x = _player.x - 600;
 		talkAdult2.y = _player.y;
 		add(talkAdult2);
-		FlxG.sound.play("assets/sounds/Missie1/Kind3/Prof3-2.mp3", 1, false, true, kidTalk6);
+		FlxG.sound.play("assets/sounds/Missie1/Kind3/Kind3-3.mp3", 1, false, true, kidTalk6);
 	}
+	
 	function kidTalk6()
 	{
 		talkAdult2.destroy();
@@ -395,11 +397,4 @@ class Mission1Find extends FlxState
 		FlxG.switchState(new Mission1());
 	}
 	
-	function playerEnemy(p:Player, e:Enemy)
-	{
-		p.speed = 0;
-		e.speed = 0;
-		e.velocity.x = 0;
-		e.velocity.y = 0;
-	}
 }
