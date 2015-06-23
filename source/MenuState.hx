@@ -47,7 +47,7 @@ class MenuState extends FlxState
 		_btnPlay.onUp.sound = FlxG.sound.load(AssetPaths.select__wav);
 		add(_btnPlay);
 		
-		_btnExit = new FlxButton(FlxG.width - 64, 8, "X", clickExit);
+		_btnExit = new FlxButton(FlxG.width - 64, 8, null, clickExit);
 		_btnExit.loadGraphic("assets/images/Story/xbutton.png");
 		add(_btnExit);
 		

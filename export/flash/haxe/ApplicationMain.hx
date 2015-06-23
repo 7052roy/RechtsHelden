@@ -106,10 +106,6 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
-		urls.push ("assets/images/AsianDad.psd");
-		types.push (lime.Assets.AssetType.BINARY);
-		
-		
 		urls.push ("assets/images/Attack128x64.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -118,16 +114,8 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
-		urls.push ("assets/images/Bald-Mission1.psd");
-		types.push (lime.Assets.AssetType.BINARY);
-		
-		
 		urls.push ("assets/images/BaldMission1.png");
 		types.push (lime.Assets.AssetType.IMAGE);
-		
-		
-		urls.push ("assets/images/Banner.psd");
-		types.push (lime.Assets.AssetType.BINARY);
 		
 		
 		urls.push ("assets/images/BeachBall-Mission3.png");
@@ -214,20 +202,12 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
-		urls.push ("assets/images/HATSNewRoadTiles.psd");
-		types.push (lime.Assets.AssetType.BINARY);
-		
-		
 		urls.push ("assets/images/health.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
 		urls.push ("assets/images/HOLE.png");
 		types.push (lime.Assets.AssetType.IMAGE);
-		
-		
-		urls.push ("assets/images/HOUSE.psd");
-		types.push (lime.Assets.AssetType.BINARY);
 		
 		
 		urls.push ("assets/images/Hp Bars/Bars.psd");
@@ -446,10 +426,6 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
-		urls.push ("assets/images/KRJW-Tutorial.psd");
-		types.push (lime.Assets.AssetType.BINARY);
-		
-		
 		urls.push ("assets/images/Missie1/intromissie1/prof0.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -614,10 +590,6 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
-		urls.push ("assets/images/Mission3 Dodgeball.psd");
-		types.push (lime.Assets.AssetType.BINARY);
-		
-		
 		urls.push ("assets/images/Mission3-Mother.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -650,20 +622,12 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
-		urls.push ("assets/images/Mother-Mission-3.psd");
-		types.push (lime.Assets.AssetType.BINARY);
-		
-		
 		urls.push ("assets/images/NEWTilesheet_Complete.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
 		urls.push ("assets/images/NEW_Tilesheet_Complete.png");
 		types.push (lime.Assets.AssetType.IMAGE);
-		
-		
-		urls.push ("assets/images/NEW_Tilesheet_Complete.psd");
-		types.push (lime.Assets.AssetType.BINARY);
 		
 		
 		urls.push ("assets/images/NPCCharacterTilesheet.png");
@@ -686,10 +650,6 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
-		urls.push ("assets/images/Principle.psd");
-		types.push (lime.Assets.AssetType.BINARY);
-		
-		
 		urls.push ("assets/images/Push1.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -704,10 +664,6 @@ class ApplicationMain {
 		
 		urls.push ("assets/images/Speechbubble.png");
 		types.push (lime.Assets.AssetType.IMAGE);
-		
-		
-		urls.push ("assets/images/Speechbubble.psd");
-		types.push (lime.Assets.AssetType.BINARY);
 		
 		
 		urls.push ("assets/images/Starting Screen.jpg");
@@ -798,10 +754,6 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
-		urls.push ("assets/images/Tilesheet_Complete.psd");
-		types.push (lime.Assets.AssetType.BINARY);
-		
-		
 		urls.push ("assets/images/Tilesheet_Complete2.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -812,10 +764,6 @@ class ApplicationMain {
 		
 		urls.push ("assets/images/Tmblr.png");
 		types.push (lime.Assets.AssetType.IMAGE);
-		
-		
-		urls.push ("assets/images/Wall.psd");
-		types.push (lime.Assets.AssetType.BINARY);
 		
 		
 		urls.push ("assets/images/WallKJRW.png");
@@ -1326,6 +1274,7 @@ class ApplicationMain {
 			file: "RechtsHelden",
 			fps: Std.int (60),
 			fullscreen: false,
+			hardware: true,
 			height: Std.int (720),
 			orientation: "portrait",
 			packageName: "com.example.myapp",
@@ -1334,13 +1283,13 @@ class ApplicationMain {
 			title: "RechtsHelden",
 			version: "0.0.1",
 			vsync: true,
-			width: Std.int (1080),
+			width: Std.int (1280),
 			
 		}
 		
 		#if (js && html5)
 		#if (munit || utest)
-		openfl.Lib.embed (null, 1080, 720, "000000");
+		openfl.Lib.embed (null, 1280, 720, "000000");
 		#end
 		#else
 		create ();

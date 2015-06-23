@@ -97,7 +97,7 @@ class Mission2Finish extends FlxState
 		talkDad.x = _player.x - 300;
 		talkDad.y = _player.y - 100;
 		add(talkDad);
-		FlxG.sound.play("assets/sounds/Missie1/Teacher/Prof1-3.mp3", 1, false, true, teacherText1);
+		FlxG.sound.play("assets/sounds/Missie1/Teacher/Prof1-3.mp3", 1, false, true);
 	}
 	
 	
