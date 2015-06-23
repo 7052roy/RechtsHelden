@@ -44,6 +44,7 @@ class Introduction2 extends FlxState
 	{
 		_map = new FlxOgmoLoader("assets/data/Final Maps/traininglevel2.oel");
 		_mWalls = _map.loadTilemap("assets/images/Tilesheet_Complete2.png", 64, 64, "tree");
+		_mWalls.setTileProperties(0, FlxObject.ANY);
 		_mWalls.setTileProperties(1, FlxObject.ANY);
 		_mWalls.setTileProperties(3, FlxObject.NONE);
 		_mWalls.setTileProperties(2, FlxObject.NONE);
