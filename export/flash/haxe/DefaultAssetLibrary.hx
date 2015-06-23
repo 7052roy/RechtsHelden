@@ -45,14 +45,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		#if flash
 		
-		className.set ("assets/data/BaseMap.oel", __ASSET__assets_data_basemap_oel);
-		type.set ("assets/data/BaseMap.oel", AssetType.TEXT);
-		className.set ("assets/data/basemap1.oel", __ASSET__assets_data_basemap1_oel);
-		type.set ("assets/data/basemap1.oel", AssetType.TEXT);
-		className.set ("assets/data/basemap2.oel", __ASSET__assets_data_basemap2_oel);
-		type.set ("assets/data/basemap2.oel", AssetType.TEXT);
-		className.set ("assets/data/data-goes-here.txt", __ASSET__assets_data_data_goes_here_txt);
-		type.set ("assets/data/data-goes-here.txt", AssetType.TEXT);
 		className.set ("assets/data/Final Maps/NightmareMap.oel", __ASSET__assets_data_final_maps_nightmaremap_oel);
 		type.set ("assets/data/Final Maps/NightmareMap.oel", AssetType.TEXT);
 		className.set ("assets/data/Final Maps/puzzle1.oel", __ASSET__assets_data_final_maps_puzzle1_oel);
@@ -83,28 +75,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/data/Final Maps/worldmap5.oel", AssetType.TEXT);
 		className.set ("assets/data/Final Maps/worldmap6.oel", __ASSET__assets_data_final_maps_worldmap6_oel);
 		type.set ("assets/data/Final Maps/worldmap6.oel", AssetType.TEXT);
-		className.set ("assets/data/kid_dad-testing.oel", __ASSET__assets_data_kid_dad_testing_oel);
-		type.set ("assets/data/kid_dad-testing.oel", AssetType.TEXT);
-		className.set ("assets/data/level_1.oel", __ASSET__assets_data_level_1_oel);
-		type.set ("assets/data/level_1.oel", AssetType.TEXT);
-		className.set ("assets/data/level_2.oel", __ASSET__assets_data_level_2_oel);
-		type.set ("assets/data/level_2.oel", AssetType.TEXT);
-		className.set ("assets/data/level_3.oel", __ASSET__assets_data_level_3_oel);
-		type.set ("assets/data/level_3.oel", AssetType.TEXT);
-		className.set ("assets/data/level_4.oel", __ASSET__assets_data_level_4_oel);
-		type.set ("assets/data/level_4.oel", AssetType.TEXT);
-		className.set ("assets/data/Mission1.oel", __ASSET__assets_data_mission1_oel);
-		type.set ("assets/data/Mission1.oel", AssetType.TEXT);
-		className.set ("assets/data/Mission1_0.oel", __ASSET__assets_data_mission1_0_oel);
-		type.set ("assets/data/Mission1_0.oel", AssetType.TEXT);
-		className.set ("assets/data/Mission1_1.oel", __ASSET__assets_data_mission1_1_oel);
-		type.set ("assets/data/Mission1_1.oel", AssetType.TEXT);
 		className.set ("assets/data/reachtshelden.oep", __ASSET__assets_data_reachtshelden_oep);
 		type.set ("assets/data/reachtshelden.oep", AssetType.TEXT);
-		className.set ("assets/data/room-001.oel", __ASSET__assets_data_room_001_oel);
-		type.set ("assets/data/room-001.oel", AssetType.TEXT);
-		className.set ("assets/data/testingmap.oel", __ASSET__assets_data_testingmap_oel);
-		type.set ("assets/data/testingmap.oel", AssetType.TEXT);
 		className.set ("assets/images/AngryDadMission2.png", __ASSET__assets_images_angrydadmission2_png);
 		type.set ("assets/images/AngryDadMission2.png", AssetType.IMAGE);
 		className.set ("assets/images/AsianDad.png", __ASSET__assets_images_asiandad_png);
@@ -517,6 +489,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/sounds/Abilities/Source/Shield1.wav", AssetType.SOUND);
 		className.set ("assets/sounds/Abilities/switch.mp3", __ASSET__assets_sounds_abilities_switch_mp3);
 		type.set ("assets/sounds/Abilities/switch.mp3", AssetType.MUSIC);
+		className.set ("assets/sounds/Ediroal.mid", __ASSET__assets_sounds_ediroal_mid);
+		type.set ("assets/sounds/Ediroal.mid", AssetType.BINARY);
 		className.set ("assets/sounds/Game/JUDGE-O-METERCOIN.mp3", __ASSET__assets_sounds_game_judge_o_metercoin_mp3);
 		type.set ("assets/sounds/Game/JUDGE-O-METERCOIN.mp3", AssetType.MUSIC);
 		className.set ("assets/sounds/Game/select-1.wav", __ASSET__assets_sounds_game_select_1_wav);
@@ -692,22 +666,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#elseif html5
 		
 		var id;
-		id = "assets/data/BaseMap.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/data/basemap1.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/data/basemap2.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/data/data-goes-here.txt";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
 		id = "assets/data/Final Maps/NightmareMap.oel";
 		path.set (id, id);
 		
@@ -768,47 +726,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.TEXT);
-		id = "assets/data/kid_dad-testing.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/data/level_1.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/data/level_2.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/data/level_3.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/data/level_4.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/data/Mission1.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/data/Mission1_0.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/data/Mission1_1.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
 		id = "assets/data/reachtshelden.oep";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/data/room-001.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/data/testingmap.oel";
 		path.set (id, id);
 		
 		type.set (id, AssetType.TEXT);
@@ -1636,6 +1554,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Ediroal.mid";
+		path.set (id, id);
+		
+		type.set (id, AssetType.BINARY);
 		id = "assets/sounds/Game/JUDGE-O-METERCOIN.mp3";
 		path.set (id, id);
 		
@@ -2298,36 +2220,11 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		#end
 		
 		#if (windows || mac || linux)
 		
 		var useManifest = false;
-		
-		className.set ("assets/data/BaseMap.oel", __ASSET__assets_data_basemap_oel);
-		type.set ("assets/data/BaseMap.oel", AssetType.TEXT);
-		
-		className.set ("assets/data/basemap1.oel", __ASSET__assets_data_basemap1_oel);
-		type.set ("assets/data/basemap1.oel", AssetType.TEXT);
-		
-		className.set ("assets/data/basemap2.oel", __ASSET__assets_data_basemap2_oel);
-		type.set ("assets/data/basemap2.oel", AssetType.TEXT);
-		
-		className.set ("assets/data/data-goes-here.txt", __ASSET__assets_data_data_goes_here_txt);
-		type.set ("assets/data/data-goes-here.txt", AssetType.TEXT);
 		
 		className.set ("assets/data/Final Maps/NightmareMap.oel", __ASSET__assets_data_final_maps_nightmaremap_oel);
 		type.set ("assets/data/Final Maps/NightmareMap.oel", AssetType.TEXT);
@@ -2374,38 +2271,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("assets/data/Final Maps/worldmap6.oel", __ASSET__assets_data_final_maps_worldmap6_oel);
 		type.set ("assets/data/Final Maps/worldmap6.oel", AssetType.TEXT);
 		
-		className.set ("assets/data/kid_dad-testing.oel", __ASSET__assets_data_kid_dad_testing_oel);
-		type.set ("assets/data/kid_dad-testing.oel", AssetType.TEXT);
-		
-		className.set ("assets/data/level_1.oel", __ASSET__assets_data_level_1_oel);
-		type.set ("assets/data/level_1.oel", AssetType.TEXT);
-		
-		className.set ("assets/data/level_2.oel", __ASSET__assets_data_level_2_oel);
-		type.set ("assets/data/level_2.oel", AssetType.TEXT);
-		
-		className.set ("assets/data/level_3.oel", __ASSET__assets_data_level_3_oel);
-		type.set ("assets/data/level_3.oel", AssetType.TEXT);
-		
-		className.set ("assets/data/level_4.oel", __ASSET__assets_data_level_4_oel);
-		type.set ("assets/data/level_4.oel", AssetType.TEXT);
-		
-		className.set ("assets/data/Mission1.oel", __ASSET__assets_data_mission1_oel);
-		type.set ("assets/data/Mission1.oel", AssetType.TEXT);
-		
-		className.set ("assets/data/Mission1_0.oel", __ASSET__assets_data_mission1_0_oel);
-		type.set ("assets/data/Mission1_0.oel", AssetType.TEXT);
-		
-		className.set ("assets/data/Mission1_1.oel", __ASSET__assets_data_mission1_1_oel);
-		type.set ("assets/data/Mission1_1.oel", AssetType.TEXT);
-		
 		className.set ("assets/data/reachtshelden.oep", __ASSET__assets_data_reachtshelden_oep);
 		type.set ("assets/data/reachtshelden.oep", AssetType.TEXT);
-		
-		className.set ("assets/data/room-001.oel", __ASSET__assets_data_room_001_oel);
-		type.set ("assets/data/room-001.oel", AssetType.TEXT);
-		
-		className.set ("assets/data/testingmap.oel", __ASSET__assets_data_testingmap_oel);
-		type.set ("assets/data/testingmap.oel", AssetType.TEXT);
 		
 		className.set ("assets/images/AngryDadMission2.png", __ASSET__assets_images_angrydadmission2_png);
 		type.set ("assets/images/AngryDadMission2.png", AssetType.IMAGE);
@@ -3024,6 +2891,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/sounds/Abilities/switch.mp3", __ASSET__assets_sounds_abilities_switch_mp3);
 		type.set ("assets/sounds/Abilities/switch.mp3", AssetType.MUSIC);
+		
+		className.set ("assets/sounds/Ediroal.mid", __ASSET__assets_sounds_ediroal_mid);
+		type.set ("assets/sounds/Ediroal.mid", AssetType.BINARY);
 		
 		className.set ("assets/sounds/Game/JUDGE-O-METERCOIN.mp3", __ASSET__assets_sounds_game_judge_o_metercoin_mp3);
 		type.set ("assets/sounds/Game/JUDGE-O-METERCOIN.mp3", AssetType.MUSIC);
@@ -3880,10 +3750,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 #if !display
 #if flash
 
-@:keep @:bind #if display private #end class __ASSET__assets_data_basemap_oel extends flash.utils.ByteArray { }
-@:keep @:bind #if display private #end class __ASSET__assets_data_basemap1_oel extends flash.utils.ByteArray { }
-@:keep @:bind #if display private #end class __ASSET__assets_data_basemap2_oel extends flash.utils.ByteArray { }
-@:keep @:bind #if display private #end class __ASSET__assets_data_data_goes_here_txt extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_final_maps_nightmaremap_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_final_maps_puzzle1_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_final_maps_puzzle2_1_oel extends flash.utils.ByteArray { }
@@ -3899,17 +3765,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_data_final_maps_worldmap4_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_final_maps_worldmap5_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_final_maps_worldmap6_oel extends flash.utils.ByteArray { }
-@:keep @:bind #if display private #end class __ASSET__assets_data_kid_dad_testing_oel extends flash.utils.ByteArray { }
-@:keep @:bind #if display private #end class __ASSET__assets_data_level_1_oel extends flash.utils.ByteArray { }
-@:keep @:bind #if display private #end class __ASSET__assets_data_level_2_oel extends flash.utils.ByteArray { }
-@:keep @:bind #if display private #end class __ASSET__assets_data_level_3_oel extends flash.utils.ByteArray { }
-@:keep @:bind #if display private #end class __ASSET__assets_data_level_4_oel extends flash.utils.ByteArray { }
-@:keep @:bind #if display private #end class __ASSET__assets_data_mission1_oel extends flash.utils.ByteArray { }
-@:keep @:bind #if display private #end class __ASSET__assets_data_mission1_0_oel extends flash.utils.ByteArray { }
-@:keep @:bind #if display private #end class __ASSET__assets_data_mission1_1_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_reachtshelden_oep extends flash.utils.ByteArray { }
-@:keep @:bind #if display private #end class __ASSET__assets_data_room_001_oel extends flash.utils.ByteArray { }
-@:keep @:bind #if display private #end class __ASSET__assets_data_testingmap_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_images_angrydadmission2_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_asiandad_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_asiandad_psd extends flash.utils.ByteArray { }
@@ -4116,6 +3972,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_abilities_source_push1_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_abilities_source_shield1_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_abilities_switch_mp3 extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__assets_sounds_ediroal_mid extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_game_judge_o_metercoin_mp3 extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_game_select_1_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_gesprek1_wav extends flash.media.Sound { }
@@ -4515,19 +4372,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 #else
 
 
@@ -4535,10 +4379,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 #if (windows || mac || linux)
 
 
-@:file("assets/data/BaseMap.oel") #if display private #end class __ASSET__assets_data_basemap_oel extends lime.utils.ByteArray {}
-@:file("assets/data/basemap1.oel") #if display private #end class __ASSET__assets_data_basemap1_oel extends lime.utils.ByteArray {}
-@:file("assets/data/basemap2.oel") #if display private #end class __ASSET__assets_data_basemap2_oel extends lime.utils.ByteArray {}
-@:file("assets/data/data-goes-here.txt") #if display private #end class __ASSET__assets_data_data_goes_here_txt extends lime.utils.ByteArray {}
 @:file("assets/data/Final Maps/NightmareMap.oel") #if display private #end class __ASSET__assets_data_final_maps_nightmaremap_oel extends lime.utils.ByteArray {}
 @:file("assets/data/Final Maps/puzzle1.oel") #if display private #end class __ASSET__assets_data_final_maps_puzzle1_oel extends lime.utils.ByteArray {}
 @:file("assets/data/Final Maps/puzzle2-1.oel") #if display private #end class __ASSET__assets_data_final_maps_puzzle2_1_oel extends lime.utils.ByteArray {}
@@ -4554,17 +4394,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:file("assets/data/Final Maps/worldmap4.oel") #if display private #end class __ASSET__assets_data_final_maps_worldmap4_oel extends lime.utils.ByteArray {}
 @:file("assets/data/Final Maps/worldmap5.oel") #if display private #end class __ASSET__assets_data_final_maps_worldmap5_oel extends lime.utils.ByteArray {}
 @:file("assets/data/Final Maps/worldmap6.oel") #if display private #end class __ASSET__assets_data_final_maps_worldmap6_oel extends lime.utils.ByteArray {}
-@:file("assets/data/kid_dad-testing.oel") #if display private #end class __ASSET__assets_data_kid_dad_testing_oel extends lime.utils.ByteArray {}
-@:file("assets/data/level_1.oel") #if display private #end class __ASSET__assets_data_level_1_oel extends lime.utils.ByteArray {}
-@:file("assets/data/level_2.oel") #if display private #end class __ASSET__assets_data_level_2_oel extends lime.utils.ByteArray {}
-@:file("assets/data/level_3.oel") #if display private #end class __ASSET__assets_data_level_3_oel extends lime.utils.ByteArray {}
-@:file("assets/data/level_4.oel") #if display private #end class __ASSET__assets_data_level_4_oel extends lime.utils.ByteArray {}
-@:file("assets/data/Mission1.oel") #if display private #end class __ASSET__assets_data_mission1_oel extends lime.utils.ByteArray {}
-@:file("assets/data/Mission1_0.oel") #if display private #end class __ASSET__assets_data_mission1_0_oel extends lime.utils.ByteArray {}
-@:file("assets/data/Mission1_1.oel") #if display private #end class __ASSET__assets_data_mission1_1_oel extends lime.utils.ByteArray {}
 @:file("assets/data/reachtshelden.oep") #if display private #end class __ASSET__assets_data_reachtshelden_oep extends lime.utils.ByteArray {}
-@:file("assets/data/room-001.oel") #if display private #end class __ASSET__assets_data_room_001_oel extends lime.utils.ByteArray {}
-@:file("assets/data/testingmap.oel") #if display private #end class __ASSET__assets_data_testingmap_oel extends lime.utils.ByteArray {}
 @:image("assets/images/AngryDadMission2.png") #if display private #end class __ASSET__assets_images_angrydadmission2_png extends lime.graphics.Image {}
 @:image("assets/images/AsianDad.png") #if display private #end class __ASSET__assets_images_asiandad_png extends lime.graphics.Image {}
 @:file("assets/images/AsianDad.psd") #if display private #end class __ASSET__assets_images_asiandad_psd extends lime.utils.ByteArray {}
@@ -4771,6 +4601,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:file("assets/sounds/Abilities/Source/Push1.wav") #if display private #end class __ASSET__assets_sounds_abilities_source_push1_wav extends lime.utils.ByteArray {}
 @:file("assets/sounds/Abilities/Source/Shield1.wav") #if display private #end class __ASSET__assets_sounds_abilities_source_shield1_wav extends lime.utils.ByteArray {}
 @:file("assets/sounds/Abilities/switch.mp3") #if display private #end class __ASSET__assets_sounds_abilities_switch_mp3 extends lime.utils.ByteArray {}
+@:file("assets/sounds/Ediroal.mid") #if display private #end class __ASSET__assets_sounds_ediroal_mid extends lime.utils.ByteArray {}
 @:file("assets/sounds/Game/JUDGE-O-METERCOIN.mp3") #if display private #end class __ASSET__assets_sounds_game_judge_o_metercoin_mp3 extends lime.utils.ByteArray {}
 @:file("assets/sounds/Game/select-1.wav") #if display private #end class __ASSET__assets_sounds_game_select_1_wav extends lime.utils.ByteArray {}
 @:file("assets/sounds/Gesprek1.wav") #if display private #end class __ASSET__assets_sounds_gesprek1_wav extends lime.utils.ByteArray {}

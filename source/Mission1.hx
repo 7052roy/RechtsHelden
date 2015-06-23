@@ -31,7 +31,7 @@ class Mission1 extends FlxState
 	private var _mWalls:FlxTilemap;
 	var mission1Music:FlxSound;
 	private var _kid:Kid;
-	var _teacher:Teacher;
+	private var _trigger:FlxTypedGroup<Trigger>;
 	private var _btnReset:FlxButton;
 	
 	#if mobile
@@ -43,9 +43,9 @@ class Mission1 extends FlxState
 	 */
 	override public function create():Void
 	{
-		_map = new FlxOgmoLoader("assets/data/Mission1_0.oel");
+		_map = new FlxOgmoLoader("assets/data/Final Maps/puzzle1.oel");
 		_mWalls = _map.loadTilemap("assets/images/Tilesheet_Complete.png", 64, 64, "tree");
-		_mWalls.setTileProperties(1, FlxObject.ANY);
+		_mWalls.setTileProperties(1, FlxObject.NONE);
 		_mWalls.setTileProperties(3, FlxObject.NONE);
 		_mWalls.setTileProperties(2, FlxObject.NONE);
 		_mWalls.setTileProperties(10, FlxObject.NONE);
@@ -57,8 +57,8 @@ class Mission1 extends FlxState
 		_kid = new Kid();
 		add(_kid);
 		
-		_teacher = new Teacher();
-		add(_teacher);
+		_trigger = new FlxTypedGroup<Trigger>();
+		add(_trigger);
 		
 		_btnReset = new FlxButton(0, 0, "Reset", clickReset);
 		_btnReset.x = (FlxG.width / 2) - _btnReset.width - 10;
@@ -106,10 +106,9 @@ class Mission1 extends FlxState
 			_kid.x = Std.parseInt(entityData.get("x"));
 			_kid.y = Std.parseInt(entityData.get("y"));
 		}
-		else if (entityName == "mission1_Teacher")
+		else if (entityName == "Tumblr")
 		{
-			_teacher.x = Std.parseInt(entityData.get("x"));
-			_teacher.y = Std.parseInt(entityData.get("y"));
+			_trigger.add(new Trigger(Std.parseInt(entityData.get("x"))+4, Std.parseInt(entityData.get("y")), Std.parseInt(entityData.get("etype"))));
 		}
 	}
 	
@@ -155,10 +154,10 @@ class Mission1 extends FlxState
 		
 		FlxG.overlap(_player, _kid);
 		FlxG.collide(_kid, _mWalls );
-		FlxG.overlap(_kid, _teacher, finishMission);
+		FlxG.overlap(_kid, _trigger, finishMission);
 	}	
 	
-	function finishMission(k:Kid, t:Teacher)
+	function finishMission(k:Kid, t:Trigger)
 	{
 		mission1Music.stop();
 		FlxG.switchState(new Mission1Finish());

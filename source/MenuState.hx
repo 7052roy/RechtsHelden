@@ -20,10 +20,7 @@ class MenuState extends FlxState
 	private var _btnOptions:FlxButton;
 	private var _btnPlay:FlxButton;
 	var menuBackground:FlxSprite;
-	#if desktop
 	private var _btnExit:FlxButton;
-	
-	#end
 	
 	/**
 	 * Function that is called up when to state is created to set it up. 
@@ -65,28 +62,24 @@ class MenuState extends FlxState
 		_btnOptions.onUp.sound = FlxG.sound.load(AssetPaths.select__wav);
 		add(_btnOptions);
 		
-		#if desktop
 		_btnExit = new FlxButton(FlxG.width - 28, 8, "X", clickExit);
 		_btnExit.loadGraphic(AssetPaths.button__png, true, 20, 20);
 		add(_btnExit);
-		#end
 		
 		FlxG.camera.fade(FlxColor.BLACK, .33, true);
 		
 		super.create();
 	}
 	
-	#if desktop
 	private function clickExit():Void
 	{
 		System.exit(0);
 	}
-	#end
 	
 	private function clickPlay():Void
 	{
 		FlxG.camera.fade(FlxColor.BLACK,.33, false, function() {
-			FlxG.switchState(new Introduction2());
+			FlxG.switchState(new Mission1());
 		});
 	}
 	
@@ -107,8 +100,6 @@ class MenuState extends FlxState
 		_txtTitle = FlxDestroyUtil.destroy(_txtTitle);
 		_btnPlay = FlxDestroyUtil.destroy(_btnPlay);
 		_btnOptions = FlxDestroyUtil.destroy(_btnOptions);
-		#if desktop
 		_btnExit = FlxDestroyUtil.destroy(_btnExit);
-		#end
 	}
 }

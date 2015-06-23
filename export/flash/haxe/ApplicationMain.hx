@@ -34,22 +34,6 @@ class ApplicationMain {
 		var types = [];
 		
 		
-		urls.push ("assets/data/BaseMap.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/basemap1.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/basemap2.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/data-goes-here.txt");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
 		urls.push ("assets/data/Final Maps/NightmareMap.oel");
 		types.push (lime.Assets.AssetType.TEXT);
 		
@@ -110,47 +94,7 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
-		urls.push ("assets/data/kid_dad-testing.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/level_1.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/level_2.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/level_3.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/level_4.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/Mission1.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/Mission1_0.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/Mission1_1.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
 		urls.push ("assets/data/reachtshelden.oep");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/room-001.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/testingmap.oel");
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
@@ -976,6 +920,10 @@ class ApplicationMain {
 		
 		urls.push ("assets/sounds/Abilities/switch.mp3");
 		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
+		urls.push ("assets/sounds/Ediroal.mid");
+		types.push (lime.Assets.AssetType.BINARY);
 		
 		
 		urls.push ("assets/sounds/Game/JUDGE-O-METERCOIN.mp3");
