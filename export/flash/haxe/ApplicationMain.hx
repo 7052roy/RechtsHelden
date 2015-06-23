@@ -830,48 +830,12 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.MUSIC);
 		
 		
-		urls.push ("assets/sounds/Abilities/Source/Heal.wav");
-		types.push (lime.Assets.AssetType.SOUND);
-		
-		
-		urls.push ("assets/sounds/Abilities/Source/Heal1.wav");
-		types.push (lime.Assets.AssetType.SOUND);
-		
-		
-		urls.push ("assets/sounds/Abilities/Source/Hit_Hurt18.wav");
-		types.push (lime.Assets.AssetType.SOUND);
-		
-		
-		urls.push ("assets/sounds/Abilities/Source/Hit_Hurt32.wav");
-		types.push (lime.Assets.AssetType.SOUND);
-		
-		
-		urls.push ("assets/sounds/Abilities/Source/JUDGE-O-METERCOIN.wav");
-		types.push (lime.Assets.AssetType.SOUND);
-		
-		
-		urls.push ("assets/sounds/Abilities/Source/Push.wav");
-		types.push (lime.Assets.AssetType.SOUND);
-		
-		
-		urls.push ("assets/sounds/Abilities/Source/Push1.wav");
-		types.push (lime.Assets.AssetType.SOUND);
-		
-		
-		urls.push ("assets/sounds/Abilities/Source/Shield1.wav");
-		types.push (lime.Assets.AssetType.SOUND);
-		
-		
 		urls.push ("assets/sounds/Abilities/switch.mp3");
 		types.push (lime.Assets.AssetType.MUSIC);
 		
 		
 		urls.push ("assets/sounds/Ediroal.mid");
 		types.push (lime.Assets.AssetType.BINARY);
-		
-		
-		urls.push ("assets/sounds/Game/JUDGE-O-METERCOIN.mp3");
-		types.push (lime.Assets.AssetType.MUSIC);
 		
 		
 		urls.push ("assets/sounds/Gesprek1.wav");
@@ -903,6 +867,10 @@ class ApplicationMain {
 		
 		
 		urls.push ("assets/sounds/IntroMissie/7IntroOutro.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
+		urls.push ("assets/sounds/Intromusic.mp3");
 		types.push (lime.Assets.AssetType.MUSIC);
 		
 		

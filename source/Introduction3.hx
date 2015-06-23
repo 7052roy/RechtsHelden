@@ -115,5 +115,4 @@ class Introduction3 extends FlxState
 			FlxG.switchState(new PlayState());
 		}
 	}
-	
 }
