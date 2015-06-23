@@ -50,6 +50,22 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
+		urls.push ("assets/data/Final Maps/puzzle1.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/data/Final Maps/puzzle2-1.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/data/Final Maps/puzzle2-2.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/data/Final Maps/puzzle2-3.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
 		urls.push ("assets/data/Final Maps/traininglevel1.oel");
 		types.push (lime.Assets.AssetType.TEXT);
 		
@@ -722,6 +738,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.BINARY);
 		
 		
+		urls.push ("assets/images/Push1.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/resetbutton.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -823,6 +843,14 @@ class ApplicationMain {
 		
 		
 		urls.push ("assets/images/Tilesheet_Complete2.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Tilesheet_Complete3.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Tmblr.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
