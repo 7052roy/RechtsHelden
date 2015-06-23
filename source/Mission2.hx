@@ -42,7 +42,7 @@ class Mission2 extends FlxState
 	 */
 	override public function create():Void
 	{
-		_map = new FlxOgmoLoader("assets/data/Final Maps/puzzle2-2.oel");
+		_map = new FlxOgmoLoader("assets/data/Final Maps/puzzle2-3.oel");
 		_mWalls = _map.loadTilemap("assets/images/Tilesheet_Complete3.png", 64, 64, "tree");
 		_mWalls.setTileProperties(1, FlxObject.NONE);
 		add(_mWalls);
@@ -78,7 +78,7 @@ class Mission2 extends FlxState
 	
 	function clickReset()
 	{
-		FlxG.switchState(new Mission1());
+		FlxG.switchState(new Mission2());
 	}
 	
 	private function placeEntities(entityName:String, entityData:Xml):Void
@@ -122,13 +122,12 @@ class Mission2 extends FlxState
 		_player.speed = 300;
 		FlxG.collide(_player, _mWalls);
 		FlxG.overlap(_player, _angryDad, dadCollision);
-		FlxG.collide(_kid, _mWalls);
+		//FlxG.collide(_kid, _mWalls);
 	}	
 	
 	function dadCollision(p:Player, a:AngryDad)
 	{
-		p.speed = 0;
-		a.speed = 0;
+		
 		if (_player.CharacterNumber == 1 && _player.ability2 == true)
 		{
 			FlxG.switchState(new Mission2Finish());

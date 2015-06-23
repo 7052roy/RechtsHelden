@@ -31,9 +31,8 @@ class Mission2Finish extends FlxState
 	private var _mWalls:FlxTilemap;
 	var mission1Music:FlxSound;
 	private var _btnReset:FlxButton;
-	var _kid:Kid;
-	var _angryDad:AngryDad;
-	
+	var talkDad:FlxSprite;
+
 	#if mobile
 	public static var virtualPad:FlxVirtualPad;
 	#end
@@ -43,16 +42,14 @@ class Mission2Finish extends FlxState
 	 */
 	override public function create():Void
 	{
-		_map = new FlxOgmoLoader("assets/data/puzzle2-3.oel");
+		_map = new FlxOgmoLoader("assets/data/Final Maps/puzzle2-2.oel");
 		_mWalls = _map.loadTilemap("assets/images/Tilesheet_Complete3.png", 64, 64, "tree");
-		_mWalls.setTileProperties(1, FlxObject.ANY);
+		_mWalls.setTileProperties(1, FlxObject.NONE);
 		add(_mWalls);
 		
 		_player = new Player();
 		add(_player);
 		
-		_kid = new Kid();
-		add(_kid);
 		
 		_btnReset = new FlxButton(0, 0, "Reset", clickReset);
 		_btnReset.x = (FlxG.width / 2) - _btnReset.width - 10;
@@ -61,9 +58,6 @@ class Mission2Finish extends FlxState
 		add(_btnReset);
 		
 		_map.loadEntities(placeEntities, "entities");
-		
-		
-		
 		
 		FlxG.camera.follow(_player, FlxCamera.STYLE_TOPDOWN, null, 1);
 		
@@ -74,10 +68,7 @@ class Mission2Finish extends FlxState
 		
 		FlxG.camera.fade(FlxColor.BLACK, 2, true);
 		
-		#if mobile
-		virtualPad = new FlxVirtualPad(FULL, NONE);	
-		add(virtualPad);
-		#end
+		dadText();
 		
 		super.create();	
 		
@@ -95,11 +86,18 @@ class Mission2Finish extends FlxState
 			_player.x = Std.parseInt(entityData.get("x"));
 			_player.y = Std.parseInt(entityData.get("y"));
 		}
-		else if (entityName == "mission2_kid")
-		{
-			_kid.x = Std.parseInt(entityData.get("x"));
-			_kid.y = Std.parseInt(entityData.get("y"));
-		}
+		
+	}
+	
+	function dadText()
+	{
+		talkDad.destroy();
+		talkDad = new FlxSprite();
+		talkDad.loadGraphic("assets/images/Missie1/intromissie1/prof1.png");
+		talkDad.x = _player.x - 300;
+		talkDad.y = _player.y - 100;
+		add(talkDad);
+		FlxG.sound.play("assets/sounds/Missie1/Teacher/Prof1-3.mp3", 1, false, true, teacherText1);
 	}
 	
 	
@@ -118,5 +116,8 @@ class Mission2Finish extends FlxState
 	override public function update():Void
 	{
 		super.update();
-	}	
+		FlxG.collide(_player, _mWalls);
+	}
+	
+	
 }

@@ -42,12 +42,12 @@ class Mission2Talk extends FlxState
 	{
 		_map = new FlxOgmoLoader("assets/data/Final Maps/puzzle2-1.oel");
 		_mWalls = _map.loadTilemap("assets/images/Tilesheet_Complete3.png", 64, 64, "tree");
-		_mWalls.setTileProperties(1, FlxObject.ANY);
+		_mWalls.setTileProperties(0, FlxObject.ANY);
+		_mWalls.setTileProperties(1, FlxObject.NONE);
 		add(_mWalls);
 		
 		_player = new Player();
 		add(_player);
-		
 		
 		_trigger = new FlxTypedGroup<Trigger>();
 		add(_trigger);
@@ -59,9 +59,6 @@ class Mission2Talk extends FlxState
 		add(_btnReset);
 		
 		_map.loadEntities(placeEntities, "entities");
-		
-		
-		
 		
 		FlxG.camera.follow(_player, FlxCamera.STYLE_TOPDOWN, null, 1);
 		
@@ -117,12 +114,13 @@ class Mission2Talk extends FlxState
 	{
 		super.update();
 		FlxG.overlap(_player, _trigger, finishMissionBier);
+		FlxG.collide(_player, _mWalls);
 	}
 	
-	function finishMissionBier(k:Kid, t:Trigger)
+	function finishMissionBier(p:Player, t:Trigger)
 	{
 		mission1Music.stop();
-		FlxG.switchState(new Mission1Finish());
+		FlxG.switchState(new Mission2());
 	}
 
 	

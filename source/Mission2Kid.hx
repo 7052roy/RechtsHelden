@@ -74,12 +74,12 @@ class Mission2Kid extends Entities
 			movementAngle = 180;
 			FlxAngle.rotatePoint(speed * .5, 0, 0, 0, movementAngle, velocity);
 		}
-		if (positionTest == 0 && playerPosition - 128 >= x)
+		if (positionTest == 0 && playerPosition - 192 >= x)
 		{
 			positionTest = 1;
 			movementAngle = 270;
 			FlxAngle.rotatePoint(speed * .5, 0, 0, 0, movementAngle, velocity);
-			_idleTmr = 3;
+			_idleTmr = 4;
 		}
 		if (positionTest == 1 && _idleTmr <= 0)
 		{
@@ -89,7 +89,7 @@ class Mission2Kid extends Entities
 				movementAngle = 0;
 			}
 			FlxAngle.rotatePoint(speed * .5, 0, 0, 0, movementAngle, velocity);
-			_idleTmr = 3;
+			_idleTmr = 4;
 		}
 	}
 	
