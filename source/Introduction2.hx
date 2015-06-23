@@ -122,7 +122,6 @@ class Introduction2 extends FlxState
 	
 	function dadCollision(p:Player, a:AngryDad)
 	{
-		p.speed = 0;
 		a.speed = 0;
 		if (_player.CharacterNumber == 1 && _player.ability2 == true)
 		{

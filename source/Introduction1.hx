@@ -32,6 +32,7 @@ class Introduction1 extends FlxState
 	var mission1Music:FlxSound;
 	var _chair:Chair;
 	var _trigger:Trigger;
+	var introTalk1:FlxSprite;
 	
 	#if mobile
 	public static var virtualPad:FlxVirtualPad;
@@ -96,6 +97,27 @@ class Introduction1 extends FlxState
 			_trigger.x = Std.parseInt(entityData.get("x"));
 			_trigger.y = Std.parseInt(entityData.get("y"));
 		}
+	}
+	
+	function introTalk()
+	{
+		if (introTalk1 != null)
+			{
+				introTalk1.destroy();
+			}
+			introTalk1 = new FlxSprite();
+			introTalk1.loadGraphic("assets/images/Missie1/intromissie1/prof0.png");
+			introTalk1.x = _player.x - 300;
+			introTalk1.y = _player.y - 100;
+			add(introTalk1);
+			FlxG.sound.destroy(true);
+			p.speed = 0;
+			FlxG.sound.play("assets/sounds/IntroMissie/1IntroPijltjestoetsen.mp3", 1, false, true, introTalk2);
+	}
+	
+	function introTalk2()
+	{
+		
 	}
 	
 	

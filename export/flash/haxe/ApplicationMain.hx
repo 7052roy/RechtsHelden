@@ -66,6 +66,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
+		urls.push ("assets/data/Final Maps/puzzle3.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
 		urls.push ("assets/data/Final Maps/traininglevel1.oel");
 		types.push (lime.Assets.AssetType.TEXT);
 		
