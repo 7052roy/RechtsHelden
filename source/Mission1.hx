@@ -34,10 +34,6 @@ class Mission1 extends FlxState
 	private var _trigger:FlxTypedGroup<Trigger>;
 	private var _btnReset:FlxButton;
 	
-	#if mobile
-	public static var virtualPad:FlxVirtualPad;
-	#end
-	
 	/**
 	 * Function that is called up when to state is created to set it up. 
 	 */
