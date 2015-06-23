@@ -9,10 +9,9 @@ import flixel.util.FlxRandom;
 import flixel.util.FlxTimer;
 import flixel.util.FlxVelocity;
 
-class AngryDad extends FlxSprite
+class AngryDad extends Entities
 {
 	public var speed:Float = 200.1;
-	public var etype(default, null):Int;
 	private var _brain:FSM;
 	private var _idleTmr:Float;
 	private var _moveDir:Float;
@@ -22,12 +21,13 @@ class AngryDad extends FlxSprite
 	var positiony = 0;
 	var position:FlxPoint;
 	var movementAngle:Int = 0;
+	var positionTest:Int = 0;
+	public var playerPosition:Float;
 	
-	public function new(X:Float=0, Y:Float=0, EType:Int) 
+	public function new() 
 	{
 		
-		super(X, Y);
-		etype = EType;
+		super();
 		loadGraphic("assets/images/AngryDadMission2.png", true, 64, 64);
 		setFacingFlip(FlxObject.LEFT, false, false);
 		setFacingFlip(FlxObject.RIGHT, true, false);
@@ -68,40 +68,36 @@ class AngryDad extends FlxSprite
 	
 	public function idle():Void
 	{
-		if (_idleTmr <= 0)
+		_idleTmr -= FlxG.elapsed;
+		if (positionTest == 0)
 		{
-			speed = 200.1;
-			var randomMovement = 0; //FlxRandom.intRanged(0, 2);
-			if (randomMovement == 0)
-			{
-				FlxAngle.rotatePoint(speed * .5, 0, 0, 0, movementAngle, velocity);
-				movementAngle += 90;
-				if (movementAngle > 270)
-				{
-					movementAngle = 0;
-				}
-			}else if (randomMovement == 1)
-			{
-				FlxAngle.rotatePoint(speed * .5, 0, 0, 0, movementAngle, velocity);
-				movementAngle += 180;
-				if (movementAngle > 270)
-				{
-					movementAngle = 0;
-				}
-			}else if (randomMovement == 2)
-			{
-				movementAngle = 90;
-				FlxAngle.rotatePoint(speed * .5, 0, 0, 0, movementAngle, velocity);
-				movementAngle += 180;
-				if (movementAngle > 270)
-				{
-					movementAngle = 90;
-				}
-			}
-			_idleTmr = 4;
+			speed = 200;
+			movementAngle = 180;
+			FlxAngle.rotatePoint(speed * .5, 0, 0, 0, movementAngle, velocity);
 		}
-		else
-			_idleTmr -= FlxG.elapsed;
+		if (positionTest == 0 && playerPosition - 320 >= x)
+		{
+			positionTest = 1;
+			movementAngle = 270;
+			FlxAngle.rotatePoint(speed * .5, 0, 0, 0, movementAngle, velocity);
+			_idleTmr = 3;
+		}
+		if (positionTest == 1 && _idleTmr <= 0)
+		{
+			movementAngle += 90;
+			if (movementAngle > 270)
+			{
+				movementAngle = 0;
+			}
+			FlxAngle.rotatePoint(speed * .5, 0, 0, 0, movementAngle, velocity);
+			_idleTmr = 3;
+		}
+		
+		
+		trace(_idleTmr);
+		
+		
+		
 	}
 	
 	function moveDirection()
@@ -114,24 +110,7 @@ class AngryDad extends FlxSprite
 		}else {
 			FlxAngle.rotatePoint(speed * .5, 0, 0, 0, _moveDir, velocity);
 		}
-		
 	}
-	
-	/*public function chase(timer:FlxTimer)
-	{
-		
-		if (!seesPlayer)
-		{
-			_brain.activeState = idle;
-		}
-		position = new FlxPoint(positionx, positiony);
-		FlxVelocity.moveTowardsPoint(this, position, Std.int(speed));
-		
-		positionx += 100;
-		
-		
-	}*/
-	
 	
 	override public function draw():Void 
 	{

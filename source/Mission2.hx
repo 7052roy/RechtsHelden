@@ -31,8 +31,8 @@ class Mission2 extends FlxState
 	private var _mWalls:FlxTilemap;
 	var mission1Music:FlxSound;
 	private var _btnReset:FlxButton;
-	private var _angryDad:FlxTypedGroup<AngryDad>;
-	private var _kid:FlxTypedGroup<Mission2Kid>;
+	private var _angryDad:AngryDad;
+	private var _kid:Mission2Kid;
 	#if mobile
 	public static var virtualPad:FlxVirtualPad;
 	#end
@@ -53,10 +53,10 @@ class Mission2 extends FlxState
 		_player = new Player();
 		add(_player);
 		
-		_kid = new FlxTypedGroup<Mission2Kid>();
+		_kid = new Mission2Kid();
 		add(_kid);
 		
-		_angryDad = new FlxTypedGroup<AngryDad>();
+		_angryDad = new AngryDad();
 		add(_angryDad);
 		
 		_map.loadEntities(placeEntities, "entities");
@@ -93,11 +93,15 @@ class Mission2 extends FlxState
 		}
 		else if (entityName == "mission2_angryDad")
 		{
-			_angryDad.add(new AngryDad(Std.parseInt(entityData.get("x"))+4, Std.parseInt(entityData.get("y")), Std.parseInt(entityData.get("etype"))));
+			_angryDad.x = Std.parseInt(entityData.get("x"));
+			_angryDad.y = Std.parseInt(entityData.get("y"));
+			_angryDad.playerPosition = _angryDad.x;
 		}
 		else if (entityName == "Mission2_Kid")
 		{
-			_kid.add(new Mission2Kid(Std.parseInt(entityData.get("x"))+4, Std.parseInt(entityData.get("y")), Std.parseInt(entityData.get("etype"))));
+			_kid.x = Std.parseInt(entityData.get("x"));
+			_kid.y = Std.parseInt(entityData.get("y"));
+			_kid.playerPosition = _kid.x;
 		}
 	}
 	

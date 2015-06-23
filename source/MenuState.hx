@@ -40,11 +40,12 @@ class MenuState extends FlxState
 		}
 		
 		menuBackground = new FlxSprite();
-		menuBackground.loadGraphic("assets/images/Starting Screen.jpg");
-		menuBackground.x = 200;
-		menuBackground.y = 230;
-		menuBackground.scale.x = 2;
-		menuBackground.scale.y = 2;
+		menuBackground.loadGraphic("assets/images/Story/1StartingScreeeeeeen.png");
+		//menuBackground.setGraphicSize(FlxG.width, FlxG.height);
+		//menuBackground.x = 200;
+		//menuBackground.y = 230;
+		//menuBackground.scale.x = 2;
+		//menuBackground.scale.y = 2;
 		add(menuBackground);
 		
 		_txtTitle = new FlxText(0, 20, 0, "RechtsHelden\nKJRW", 22);
@@ -85,7 +86,7 @@ class MenuState extends FlxState
 	private function clickPlay():Void
 	{
 		FlxG.camera.fade(FlxColor.BLACK,.33, false, function() {
-			FlxG.switchState(new Mission1());
+			FlxG.switchState(new Mission2());
 		});
 	}
 	

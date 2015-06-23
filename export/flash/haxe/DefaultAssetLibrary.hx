@@ -57,6 +57,14 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/data/Final Maps/worldmap1.oel", AssetType.TEXT);
 		className.set ("assets/data/Final Maps/worldmap2.oel", __ASSET__assets_data_final_maps_worldmap2_oel);
 		type.set ("assets/data/Final Maps/worldmap2.oel", AssetType.TEXT);
+		className.set ("assets/data/Final Maps/worldmap3.oel", __ASSET__assets_data_final_maps_worldmap3_oel);
+		type.set ("assets/data/Final Maps/worldmap3.oel", AssetType.TEXT);
+		className.set ("assets/data/Final Maps/worldmap4.oel", __ASSET__assets_data_final_maps_worldmap4_oel);
+		type.set ("assets/data/Final Maps/worldmap4.oel", AssetType.TEXT);
+		className.set ("assets/data/Final Maps/worldmap5.oel", __ASSET__assets_data_final_maps_worldmap5_oel);
+		type.set ("assets/data/Final Maps/worldmap5.oel", AssetType.TEXT);
+		className.set ("assets/data/Final Maps/worldmap6.oel", __ASSET__assets_data_final_maps_worldmap6_oel);
+		type.set ("assets/data/Final Maps/worldmap6.oel", AssetType.TEXT);
 		className.set ("assets/data/kid_dad-testing.oel", __ASSET__assets_data_kid_dad_testing_oel);
 		type.set ("assets/data/kid_dad-testing.oel", AssetType.TEXT);
 		className.set ("assets/data/level_1.oel", __ASSET__assets_data_level_1_oel);
@@ -663,6 +671,22 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		type.set (id, AssetType.TEXT);
 		id = "assets/data/Final Maps/worldmap2.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/Final Maps/worldmap3.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/Final Maps/worldmap4.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/Final Maps/worldmap5.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/Final Maps/worldmap6.oel";
 		path.set (id, id);
 		
 		type.set (id, AssetType.TEXT);
@@ -2136,6 +2160,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
+		
+		
 		#end
 		
 		#if (windows || mac || linux)
@@ -2159,6 +2187,18 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/data/Final Maps/worldmap2.oel", __ASSET__assets_data_final_maps_worldmap2_oel);
 		type.set ("assets/data/Final Maps/worldmap2.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/Final Maps/worldmap3.oel", __ASSET__assets_data_final_maps_worldmap3_oel);
+		type.set ("assets/data/Final Maps/worldmap3.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/Final Maps/worldmap4.oel", __ASSET__assets_data_final_maps_worldmap4_oel);
+		type.set ("assets/data/Final Maps/worldmap4.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/Final Maps/worldmap5.oel", __ASSET__assets_data_final_maps_worldmap5_oel);
+		type.set ("assets/data/Final Maps/worldmap5.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/Final Maps/worldmap6.oel", __ASSET__assets_data_final_maps_worldmap6_oel);
+		type.set ("assets/data/Final Maps/worldmap6.oel", AssetType.TEXT);
 		
 		className.set ("assets/data/kid_dad-testing.oel", __ASSET__assets_data_kid_dad_testing_oel);
 		type.set ("assets/data/kid_dad-testing.oel", AssetType.TEXT);
@@ -3636,6 +3676,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_data_data_goes_here_txt extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_final_maps_worldmap1_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_final_maps_worldmap2_oel extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_final_maps_worldmap3_oel extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_final_maps_worldmap4_oel extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_final_maps_worldmap5_oel extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_final_maps_worldmap6_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_kid_dad_testing_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_level_1_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_level_2_oel extends flash.utils.ByteArray { }
@@ -4228,6 +4272,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
+
+
+
 #else
 
 
@@ -4241,6 +4289,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:file("assets/data/data-goes-here.txt") #if display private #end class __ASSET__assets_data_data_goes_here_txt extends lime.utils.ByteArray {}
 @:file("assets/data/Final Maps/worldmap1.oel") #if display private #end class __ASSET__assets_data_final_maps_worldmap1_oel extends lime.utils.ByteArray {}
 @:file("assets/data/Final Maps/worldmap2.oel") #if display private #end class __ASSET__assets_data_final_maps_worldmap2_oel extends lime.utils.ByteArray {}
+@:file("assets/data/Final Maps/worldmap3.oel") #if display private #end class __ASSET__assets_data_final_maps_worldmap3_oel extends lime.utils.ByteArray {}
+@:file("assets/data/Final Maps/worldmap4.oel") #if display private #end class __ASSET__assets_data_final_maps_worldmap4_oel extends lime.utils.ByteArray {}
+@:file("assets/data/Final Maps/worldmap5.oel") #if display private #end class __ASSET__assets_data_final_maps_worldmap5_oel extends lime.utils.ByteArray {}
+@:file("assets/data/Final Maps/worldmap6.oel") #if display private #end class __ASSET__assets_data_final_maps_worldmap6_oel extends lime.utils.ByteArray {}
 @:file("assets/data/kid_dad-testing.oel") #if display private #end class __ASSET__assets_data_kid_dad_testing_oel extends lime.utils.ByteArray {}
 @:file("assets/data/level_1.oel") #if display private #end class __ASSET__assets_data_level_1_oel extends lime.utils.ByteArray {}
 @:file("assets/data/level_2.oel") #if display private #end class __ASSET__assets_data_level_2_oel extends lime.utils.ByteArray {}
