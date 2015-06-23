@@ -53,6 +53,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/data/basemap2.oel", AssetType.TEXT);
 		className.set ("assets/data/data-goes-here.txt", __ASSET__assets_data_data_goes_here_txt);
 		type.set ("assets/data/data-goes-here.txt", AssetType.TEXT);
+		className.set ("assets/data/Final Maps/NightmareMap.oel", __ASSET__assets_data_final_maps_nightmaremap_oel);
+		type.set ("assets/data/Final Maps/NightmareMap.oel", AssetType.TEXT);
 		className.set ("assets/data/Final Maps/puzzle1.oel", __ASSET__assets_data_final_maps_puzzle1_oel);
 		type.set ("assets/data/Final Maps/puzzle1.oel", AssetType.TEXT);
 		className.set ("assets/data/Final Maps/puzzle2-1.oel", __ASSET__assets_data_final_maps_puzzle2_1_oel);
@@ -703,6 +705,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		type.set (id, AssetType.TEXT);
 		id = "assets/data/data-goes-here.txt";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/Final Maps/NightmareMap.oel";
 		path.set (id, id);
 		
 		type.set (id, AssetType.TEXT);
@@ -2304,6 +2310,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
 		#end
 		
 		#if (windows || mac || linux)
@@ -2321,6 +2328,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/data/data-goes-here.txt", __ASSET__assets_data_data_goes_here_txt);
 		type.set ("assets/data/data-goes-here.txt", AssetType.TEXT);
+		
+		className.set ("assets/data/Final Maps/NightmareMap.oel", __ASSET__assets_data_final_maps_nightmaremap_oel);
+		type.set ("assets/data/Final Maps/NightmareMap.oel", AssetType.TEXT);
 		
 		className.set ("assets/data/Final Maps/puzzle1.oel", __ASSET__assets_data_final_maps_puzzle1_oel);
 		type.set ("assets/data/Final Maps/puzzle1.oel", AssetType.TEXT);
@@ -3874,6 +3884,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_data_basemap1_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_basemap2_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_data_goes_here_txt extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_final_maps_nightmaremap_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_final_maps_puzzle1_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_final_maps_puzzle2_1_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_final_maps_puzzle2_2_oel extends flash.utils.ByteArray { }
@@ -4516,6 +4527,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
 #else
 
 
@@ -4527,6 +4539,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:file("assets/data/basemap1.oel") #if display private #end class __ASSET__assets_data_basemap1_oel extends lime.utils.ByteArray {}
 @:file("assets/data/basemap2.oel") #if display private #end class __ASSET__assets_data_basemap2_oel extends lime.utils.ByteArray {}
 @:file("assets/data/data-goes-here.txt") #if display private #end class __ASSET__assets_data_data_goes_here_txt extends lime.utils.ByteArray {}
+@:file("assets/data/Final Maps/NightmareMap.oel") #if display private #end class __ASSET__assets_data_final_maps_nightmaremap_oel extends lime.utils.ByteArray {}
 @:file("assets/data/Final Maps/puzzle1.oel") #if display private #end class __ASSET__assets_data_final_maps_puzzle1_oel extends lime.utils.ByteArray {}
 @:file("assets/data/Final Maps/puzzle2-1.oel") #if display private #end class __ASSET__assets_data_final_maps_puzzle2_1_oel extends lime.utils.ByteArray {}
 @:file("assets/data/Final Maps/puzzle2-2.oel") #if display private #end class __ASSET__assets_data_final_maps_puzzle2_2_oel extends lime.utils.ByteArray {}

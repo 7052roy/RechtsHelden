@@ -125,7 +125,7 @@ class Introduction2 extends FlxState
 		a.speed = 0;
 		if (_player.CharacterNumber == 1 && _player.ability2 == true)
 		{
-			FlxG.switchState(new Mission2Finish());
+			FlxG.switchState(new Introduction3());
 		}
 	}
 }

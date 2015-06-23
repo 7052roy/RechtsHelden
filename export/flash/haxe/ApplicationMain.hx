@@ -50,6 +50,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
+		urls.push ("assets/data/Final Maps/NightmareMap.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
 		urls.push ("assets/data/Final Maps/puzzle1.oel");
 		types.push (lime.Assets.AssetType.TEXT);
 		
