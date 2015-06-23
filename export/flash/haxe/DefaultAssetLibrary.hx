@@ -401,6 +401,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/Story/Pat.png", AssetType.IMAGE);
 		className.set ("assets/images/Story/Prof.png", __ASSET__assets_images_story_prof_png);
 		type.set ("assets/images/Story/Prof.png", AssetType.IMAGE);
+		className.set ("assets/images/Story/startbutton.png", __ASSET__assets_images_story_startbutton_png);
+		type.set ("assets/images/Story/startbutton.png", AssetType.IMAGE);
 		className.set ("assets/images/Story/Tec.png", __ASSET__assets_images_story_tec_png);
 		type.set ("assets/images/Story/Tec.png", AssetType.IMAGE);
 		className.set ("assets/images/street.PNG", __ASSET__assets_images_street_png);
@@ -1378,6 +1380,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Story/startbutton.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
 		id = "assets/images/Story/Tec.png";
 		path.set (id, id);
 		
@@ -1910,6 +1916,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#else
 		
 		#if openfl
+		
 		
 		
 		
@@ -2759,6 +2766,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/images/Story/Prof.png", __ASSET__assets_images_story_prof_png);
 		type.set ("assets/images/Story/Prof.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/Story/startbutton.png", __ASSET__assets_images_story_startbutton_png);
+		type.set ("assets/images/Story/startbutton.png", AssetType.IMAGE);
 		
 		className.set ("assets/images/Story/Tec.png", __ASSET__assets_images_story_tec_png);
 		type.set ("assets/images/Story/Tec.png", AssetType.IMAGE);
@@ -3928,6 +3938,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_images_story_introscreen_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_story_pat_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_story_prof_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_story_startbutton_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_story_tec_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_street_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_swag_kid_walk_kopie_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
@@ -4061,6 +4072,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 #elseif html5
+
 
 
 
@@ -4557,6 +4569,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:image("assets/images/Story/Introscreen.png") #if display private #end class __ASSET__assets_images_story_introscreen_png extends lime.graphics.Image {}
 @:image("assets/images/Story/Pat.png") #if display private #end class __ASSET__assets_images_story_pat_png extends lime.graphics.Image {}
 @:image("assets/images/Story/Prof.png") #if display private #end class __ASSET__assets_images_story_prof_png extends lime.graphics.Image {}
+@:image("assets/images/Story/startbutton.png") #if display private #end class __ASSET__assets_images_story_startbutton_png extends lime.graphics.Image {}
 @:image("assets/images/Story/Tec.png") #if display private #end class __ASSET__assets_images_story_tec_png extends lime.graphics.Image {}
 @:image("assets/images/street.PNG") #if display private #end class __ASSET__assets_images_street_png extends lime.graphics.Image {}
 @:image("assets/images/SWAG-Kid-Walk-Kopie.png") #if display private #end class __ASSET__assets_images_swag_kid_walk_kopie_png extends lime.graphics.Image {}

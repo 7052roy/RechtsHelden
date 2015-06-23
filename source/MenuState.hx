@@ -38,29 +38,14 @@ class MenuState extends FlxState
 		
 		menuBackground = new FlxSprite();
 		menuBackground.loadGraphic("assets/images/Story/1StartingScreeeeeeen.png");
-		//menuBackground.setGraphicSize(FlxG.width, FlxG.height);
-		//menuBackground.x = 200;
-		//menuBackground.y = 230;
-		//menuBackground.scale.x = 2;
-		//menuBackground.scale.y = 2;
 		add(menuBackground);
 		
-		_txtTitle = new FlxText(0, 20, 0, "RechtsHelden\nKJRW", 22);
-		_txtTitle.alignment = "center";
-		_txtTitle.screenCenter(true, false);
-		add(_txtTitle);
-		
-		_btnPlay = new FlxButton(0, 0, "Play", clickPlay);
-		_btnPlay.x = (FlxG.width / 2) - _btnPlay.width - 10;
+		_btnPlay = new FlxButton(0, 0, null, clickPlay);
+		_btnPlay.loadGraphic("assets/images/Story/startbutton.png");
+		_btnPlay.x = (FlxG.width / 2) - (_btnPlay.width / 2);
 		_btnPlay.y = FlxG.height - _btnPlay.height - 10;
 		_btnPlay.onUp.sound = FlxG.sound.load(AssetPaths.select__wav);
 		add(_btnPlay);
-		
-		_btnOptions = new FlxButton(0, 0, "Options", clickOptions);
-		_btnOptions.x = (FlxG.width / 2) + 10;
-		_btnOptions.y = FlxG.height - _btnOptions.height - 10;
-		_btnOptions.onUp.sound = FlxG.sound.load(AssetPaths.select__wav);
-		add(_btnOptions);
 		
 		_btnExit = new FlxButton(FlxG.width - 28, 8, "X", clickExit);
 		_btnExit.loadGraphic(AssetPaths.button__png, true, 20, 20);
