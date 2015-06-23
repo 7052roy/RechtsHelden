@@ -19,20 +19,19 @@ import flixel.util.FlxDestroyUtil;
 import flixel.util.FlxMath;
 import flixel.util.FlxPoint;
 import flixel.util.FlxTimer;
+import lime.audio.AudioManager;
 
 /**
  * A FlxState which can be used for the actual gameplay.
  */
-class Mission1 extends FlxState
+class Introduction1 extends FlxState
 {
-	
 	private var _player:Player;
 	private var _map:FlxOgmoLoader;
 	private var _mWalls:FlxTilemap;
 	var mission1Music:FlxSound;
-	private var _kid:Kid;
-	var _teacher:Teacher;
-	private var _btnReset:FlxButton;
+	var _chair:Chair;
+	var _trigger:Trigger;
 	
 	#if mobile
 	public static var virtualPad:FlxVirtualPad;
@@ -43,8 +42,8 @@ class Mission1 extends FlxState
 	 */
 	override public function create():Void
 	{
-		_map = new FlxOgmoLoader("assets/data/Mission1_0.oel");
-		_mWalls = _map.loadTilemap("assets/images/Tilesheet_Complete.png", 64, 64, "tree");
+		_map = new FlxOgmoLoader("assets/data/Final Maps/traininglevel1.oel");
+		_mWalls = _map.loadTilemap("assets/images/Tilesheet_Complete2.png", 64, 64, "tree");
 		_mWalls.setTileProperties(1, FlxObject.ANY);
 		_mWalls.setTileProperties(3, FlxObject.NONE);
 		_mWalls.setTileProperties(2, FlxObject.NONE);
@@ -54,22 +53,13 @@ class Mission1 extends FlxState
 		_player = new Player();
 		add(_player);
 		
-		_kid = new Kid();
-		add(_kid);
+		_trigger = new Trigger();
+		add(_trigger);
 		
-		_teacher = new Teacher();
-		add(_teacher);
-		
-		_btnReset = new FlxButton(0, 0, "Reset", clickReset);
-		_btnReset.x = (FlxG.width / 2) - _btnReset.width - 10;
-		_btnReset.y = FlxG.height - _btnReset.height - 10;
-		_btnReset.onUp.sound = FlxG.sound.load(AssetPaths.select__wav);
-		add(_btnReset);
+		_chair = new Chair();
+		add(_chair);
 		
 		_map.loadEntities(placeEntities, "entities");
-		
-		
-		
 		
 		FlxG.camera.follow(_player, FlxCamera.STYLE_TOPDOWN, null, 1);
 		
@@ -89,11 +79,6 @@ class Mission1 extends FlxState
 		
 	}
 	
-	function clickReset()
-	{
-		FlxG.switchState(new Mission1());
-	}
-	
 	private function placeEntities(entityName:String, entityData:Xml):Void
 	{
 		if (entityName == "player")
@@ -101,15 +86,15 @@ class Mission1 extends FlxState
 			_player.x = Std.parseInt(entityData.get("x"));
 			_player.y = Std.parseInt(entityData.get("y"));
 		}
-		else if (entityName == "mission1_Kid")
+		else if (entityName == "Push1")
 		{
-			_kid.x = Std.parseInt(entityData.get("x"));
-			_kid.y = Std.parseInt(entityData.get("y"));
+			_chair.x = Std.parseInt(entityData.get("x"));
+			_chair.y = Std.parseInt(entityData.get("y"));
 		}
-		else if (entityName == "mission1_Teacher")
+		else if (entityName == "Tumblr")
 		{
-			_teacher.x = Std.parseInt(entityData.get("x"));
-			_teacher.y = Std.parseInt(entityData.get("y"));
+			_trigger.x = Std.parseInt(entityData.get("x"));
+			_trigger.y = Std.parseInt(entityData.get("y"));
 		}
 	}
 	
@@ -128,39 +113,20 @@ class Mission1 extends FlxState
 	 */
 	override public function update():Void
 	{
-
-		super.update();
-		_player.speed = 300;
 		
-		FlxG.collide(_player, _mWalls);
 		if (_player.CharacterNumber == 2 && _player.ability2 == true)
 		{
-			if (_player.facing == FlxObject.RIGHT && _player.x > _kid.x-80)
+			if (_player.facing == FlxObject.RIGHT && _player.x > _chair.x-80)
 			{
-				_kid.velocity.x = 100;
-			}
-			else if (_player.facing == FlxObject.LEFT && _player.x < _kid.x+80) 
-			{
-				_kid.velocity.x = -100;
-			}
-			else if (_player.facing == FlxObject.DOWN && _player.y > _kid.y-80) 
-			{
-				_kid.velocity.y = 100;
-			}
-			else if (_player.facing == FlxObject.UP && _player.y < _kid.y+80) 
-			{
-				_kid.velocity.y = -100;
+				_chair.velocity.x = 100;
 			}
 		}
-		
-		FlxG.overlap(_player, _kid);
-		FlxG.collide(_kid, _mWalls );
-		FlxG.overlap(_kid, _teacher, finishMission);
+		FlxG.overlap(_chair, _trigger, loadIntroduction2);
+		super.update();
 	}	
 	
-	function finishMission(k:Kid, t:Teacher)
+	function loadIntroduction2(c:Chair, t:Trigger)
 	{
-		mission1Music.stop();
-		FlxG.switchState(new Mission1Finish());
+		FlxG.switchState(new Introduction2());
 	}
 }
