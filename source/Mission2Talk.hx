@@ -22,28 +22,25 @@ import flixel.util.FlxTimer;
 import lime.audio.AudioManager;
 
 /**
- * A FlxState which can be used for the actual gameplay.
+ * ...
+ * @author Luuk
  */
-class Mission2Finish extends FlxState
+class Mission2Talk extends FlxState
 {
 	private var _player:Player;
 	private var _map:FlxOgmoLoader;
 	private var _mWalls:FlxTilemap;
 	var mission1Music:FlxSound;
 	private var _btnReset:FlxButton;
-	var _kid:Kid;
-	var _angryDad:AngryDad;
+	private var _trigger:FlxTypedGroup<Trigger>;
 	
 	#if mobile
 	public static var virtualPad:FlxVirtualPad;
 	#end
 	
-	/**
-	 * Function that is called up when to state is created to set it up. 
-	 */
 	override public function create():Void
 	{
-		_map = new FlxOgmoLoader("assets/data/puzzle2-3.oel");
+		_map = new FlxOgmoLoader("assets/data/Final Maps/puzzle2-1.oel");
 		_mWalls = _map.loadTilemap("assets/images/Tilesheet_Complete3.png", 64, 64, "tree");
 		_mWalls.setTileProperties(1, FlxObject.ANY);
 		add(_mWalls);
@@ -51,8 +48,9 @@ class Mission2Finish extends FlxState
 		_player = new Player();
 		add(_player);
 		
-		_kid = new Kid();
-		add(_kid);
+		
+		_trigger = new FlxTypedGroup<Trigger>();
+		add(_trigger);
 		
 		_btnReset = new FlxButton(0, 0, "Reset", clickReset);
 		_btnReset.x = (FlxG.width / 2) - _btnReset.width - 10;
@@ -85,7 +83,7 @@ class Mission2Finish extends FlxState
 	
 	function clickReset()
 	{
-		FlxG.switchState(new Mission1());
+		FlxG.switchState(new Mission2Talk());
 	}
 	
 	private function placeEntities(entityName:String, entityData:Xml):Void
@@ -95,10 +93,10 @@ class Mission2Finish extends FlxState
 			_player.x = Std.parseInt(entityData.get("x"));
 			_player.y = Std.parseInt(entityData.get("y"));
 		}
-		else if (entityName == "mission2_kid")
+		
+		else if (entityName == "Tumblr")
 		{
-			_kid.x = Std.parseInt(entityData.get("x"));
-			_kid.y = Std.parseInt(entityData.get("y"));
+			_trigger.add(new Trigger(Std.parseInt(entityData.get("x"))+4, Std.parseInt(entityData.get("y")), Std.parseInt(entityData.get("etype"))));
 		}
 	}
 	
@@ -118,5 +116,14 @@ class Mission2Finish extends FlxState
 	override public function update():Void
 	{
 		super.update();
-	}	
+		FlxG.overlap(_player, _trigger, finishMissionBier);
+	}
+	
+	function finishMissionBier(k:Kid, t:Trigger)
+	{
+		mission1Music.stop();
+		FlxG.switchState(new Mission1Finish());
+	}
+
+	
 }

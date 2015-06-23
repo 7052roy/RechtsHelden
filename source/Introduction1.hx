@@ -45,6 +45,7 @@ class Introduction1 extends FlxState
 	{
 		_map = new FlxOgmoLoader("assets/data/Final Maps/traininglevel1.oel");
 		_mWalls = _map.loadTilemap("assets/images/Tilesheet_Complete2.png", 64, 64, "tree");
+		_mWalls.setTileProperties(0, FlxObject.ANY);
 		_mWalls.setTileProperties(1, FlxObject.ANY);
 		_mWalls.setTileProperties(3, FlxObject.NONE);
 		_mWalls.setTileProperties(2, FlxObject.NONE);
@@ -110,8 +111,8 @@ class Introduction1 extends FlxState
 			introTalk1.y = _player.y - 100;
 			add(introTalk1);
 			FlxG.sound.destroy(true);
-			p.speed = 0;
-			FlxG.sound.play("assets/sounds/IntroMissie/1IntroPijltjestoetsen.mp3", 1, false, true, introTalk2);
+			//p.speed = 0;
+			//FlxG.sound.play("assets/sounds/IntroMissie/1IntroPijltjestoetsen.mp3", 1, false, true, introTalk2);
 	}
 	
 	

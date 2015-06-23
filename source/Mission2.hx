@@ -42,12 +42,9 @@ class Mission2 extends FlxState
 	 */
 	override public function create():Void
 	{
-		_map = new FlxOgmoLoader("assets/data/kid_dad-testing.oel");
-		_mWalls = _map.loadTilemap("assets/images/Tilesheet_Complete.png", 64, 64, "tree");
+		_map = new FlxOgmoLoader("assets/data/Final Maps/puzzle2-2.oel");
+		_mWalls = _map.loadTilemap("assets/images/Tilesheet_Complete3.png", 64, 64, "tree");
 		_mWalls.setTileProperties(1, FlxObject.NONE);
-		_mWalls.setTileProperties(3, FlxObject.NONE);
-		_mWalls.setTileProperties(2, FlxObject.NONE);
-		_mWalls.setTileProperties(10, FlxObject.NONE);
 		add(_mWalls);
 		
 		_player = new Player();
