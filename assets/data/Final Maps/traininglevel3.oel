@@ -10,5 +10,13 @@
   <entities>
     <player id="0" x="256" y="320" />
     <Tumblr id="1" x="384" y="320" />
+    <Tumblr id="2" x="320" y="320" />
+    <Tumblr id="3" x="320" y="256" />
+    <Tumblr id="4" x="384" y="192" />
+    <Tumblr id="5" x="320" y="192" />
+    <Tumblr id="6" x="448" y="192" />
+    <Tumblr id="7" x="448" y="256" />
+    <Tumblr id="8" x="448" y="256" />
+    <Tumblr id="9" x="448" y="320" />
   </entities>
 </level>
