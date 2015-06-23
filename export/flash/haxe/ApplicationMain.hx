@@ -50,6 +50,18 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
+		urls.push ("assets/data/Final Maps/traininglevel1.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/data/Final Maps/traininglevel2.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/data/Final Maps/traininglevel3.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
 		urls.push ("assets/data/Final Maps/worldmap1.oel");
 		types.push (lime.Assets.AssetType.TEXT);
 		
@@ -116,22 +128,6 @@ class ApplicationMain {
 		
 		urls.push ("assets/data/testingmap.oel");
 		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/female/kind2-1.mp3");
-		types.push (lime.Assets.AssetType.MUSIC);
-		
-		
-		urls.push ("assets/female/kind2-2.mp3");
-		types.push (lime.Assets.AssetType.MUSIC);
-		
-		
-		urls.push ("assets/female/moeder1.mp3");
-		types.push (lime.Assets.AssetType.MUSIC);
-		
-		
-		urls.push ("assets/female/moeder2.mp3");
-		types.push (lime.Assets.AssetType.MUSIC);
 		
 		
 		urls.push ("assets/images/AngryDadMission2.png");
@@ -338,6 +334,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/images/ion2.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/Judge-Mission-3.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -422,6 +422,30 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/images/Knightmare Fight/Text2.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Knightmare Fight/Text3.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Knightmare Fight/Text4.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Knightmare Fight/Text5.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Knightmare Fight/Text6.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Knightmare Fight/Text7.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/Knightmare.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -443,6 +467,10 @@ class ApplicationMain {
 		
 		
 		urls.push ("assets/images/KnightmareText.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Knightmare_Tilesheet_Complete.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
@@ -794,6 +822,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.BINARY);
 		
 		
+		urls.push ("assets/images/Tilesheet_Complete2.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/Wall.psd");
 		types.push (lime.Assets.AssetType.BINARY);
 		
@@ -1006,6 +1038,14 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.MUSIC);
 		
 		
+		urls.push ("assets/sounds/Missie1/Kind2/Kind2-1.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
+		urls.push ("assets/sounds/Missie1/Kind2/Kind2-2.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
 		urls.push ("assets/sounds/Missie1/Kind2/Prof1-1.mp3");
 		types.push (lime.Assets.AssetType.MUSIC);
 		
@@ -1134,7 +1174,15 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.MUSIC);
 		
 		
+		urls.push ("assets/sounds/Missie3/missie3-11.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
 		urls.push ("assets/sounds/Missie3/Missie3-12.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
+		urls.push ("assets/sounds/Missie3/missie3-13.mp3");
 		types.push (lime.Assets.AssetType.MUSIC);
 		
 		

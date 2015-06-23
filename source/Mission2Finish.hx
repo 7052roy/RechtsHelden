@@ -57,12 +57,6 @@ class Mission2Finish extends FlxState
 		_kid = new Kid();
 		add(_kid);
 		
-		_grpEnemies = new FlxTypedGroup<Enemy>();
-		add(_grpEnemies);
-		
-		_grpCoins = new FlxTypedGroup<Coin>();
-		add(_grpCoins);
-		
 		_btnReset = new FlxButton(0, 0, "Reset", clickReset);
 		_btnReset.x = (FlxG.width / 2) - _btnReset.width - 10;
 		_btnReset.y = FlxG.height - _btnReset.height - 10;
@@ -109,15 +103,6 @@ class Mission2Finish extends FlxState
 			_kid.x = Std.parseInt(entityData.get("x"));
 			_kid.y = Std.parseInt(entityData.get("y"));
 		}
-		else if (entityName == "coin") 
-		{
-			_grpCoins.add(new Coin(Std.parseInt(entityData.get("x")) + 4, Std.parseInt(entityData.get("y")) + 4));
-			
-		}
-		else if (entityName == "enemy")
-		{
-			_grpEnemies.add(new Enemy(Std.parseInt(entityData.get("x"))+4, Std.parseInt(entityData.get("y")), Std.parseInt(entityData.get("etype"))));
-		}
 	}
 	
 	
@@ -135,26 +120,6 @@ class Mission2Finish extends FlxState
 	 */
 	override public function update():Void
 	{
-
 		super.update();
-		_player.speed = 300;
-		FlxG.collide(_player, _mWalls);
-		if (_player.CharacterNumber == 2 && _player.ability2 == true)
-		{
-			FlxG.collide(_player, _kid, kidCollision);
-		}
-		FlxG.collide(_kid, _mWalls);
-		FlxG.overlap(_kid, _teacher, finishMission);
 	}	
-	
-	function finishMission(k:Kid, t:Teacher)
-	{
-		mission1Music.stop();
-		FlxG.switchState(new Mission1Finish());
-	}
-	
-	function kidCollision(p:Player, k:Kid)
-	{
-		_kid.kidMovement();
-	}
 }

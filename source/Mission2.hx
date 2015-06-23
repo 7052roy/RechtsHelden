@@ -124,21 +124,18 @@ class Mission2 extends FlxState
 		super.update();
 		_player.speed = 300;
 		FlxG.collide(_player, _mWalls);
-		if (_player.CharacterNumber == 2 && _player.ability2 == true)
-		{
-			FlxG.collide(_player, _kid, kidCollision);
-		}
+		FlxG.overlap(_player, _angryDad, dadCollision);
 		FlxG.collide(_kid, _mWalls);
 	}	
 	
-	function finishMission(k:Kid, t:Teacher)
+	function dadCollision(p:Player, a:AngryDad)
 	{
-		mission1Music.stop();
-		FlxG.switchState(new Mission1Finish());
+		p.speed = 0;
+		a.speed = 0;
+		if (_player.CharacterNumber == 1 && _player.ability2 == true)
+		{
+			FlxG.switchState(new Mission2Finish());
+		}
 	}
 	
-	function kidCollision(p:Player, k:Kid)
-	{
-		
-	}
 }
