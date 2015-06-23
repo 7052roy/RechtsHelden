@@ -111,8 +111,9 @@ class Mission1 extends FlxState
 		_trigger = new FlxTypedGroup<Trigger>();
 		add(_trigger);
 		
-		_btnReset = new FlxButton(0, 0, "Reset", clickReset);
-		_btnReset.x = (FlxG.width / 2) - _btnReset.width - 10;
+		_btnReset = new FlxButton(0, 0, null, clickReset);
+		_btnReset.loadGraphic("assets/images/resetbutton.png");
+		_btnReset.x = (FlxG.width / 2) - (_btnReset.width / 2);
 		_btnReset.y = FlxG.height - _btnReset.height - 10;
 		_btnReset.onUp.sound = FlxG.sound.load(AssetPaths.select__wav);
 		add(_btnReset);
