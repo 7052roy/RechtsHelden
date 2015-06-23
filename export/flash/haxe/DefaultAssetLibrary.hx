@@ -53,6 +53,16 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/data/basemap2.oel", AssetType.TEXT);
 		className.set ("assets/data/data-goes-here.txt", __ASSET__assets_data_data_goes_here_txt);
 		type.set ("assets/data/data-goes-here.txt", AssetType.TEXT);
+		className.set ("assets/data/Final Maps/puzzle1.oel", __ASSET__assets_data_final_maps_puzzle1_oel);
+		type.set ("assets/data/Final Maps/puzzle1.oel", AssetType.TEXT);
+		className.set ("assets/data/Final Maps/puzzle2-1.oel", __ASSET__assets_data_final_maps_puzzle2_1_oel);
+		type.set ("assets/data/Final Maps/puzzle2-1.oel", AssetType.TEXT);
+		className.set ("assets/data/Final Maps/puzzle2-2.oel", __ASSET__assets_data_final_maps_puzzle2_2_oel);
+		type.set ("assets/data/Final Maps/puzzle2-2.oel", AssetType.TEXT);
+		className.set ("assets/data/Final Maps/puzzle2-3.oel", __ASSET__assets_data_final_maps_puzzle2_3_oel);
+		type.set ("assets/data/Final Maps/puzzle2-3.oel", AssetType.TEXT);
+		className.set ("assets/data/Final Maps/puzzle3.oel", __ASSET__assets_data_final_maps_puzzle3_oel);
+		type.set ("assets/data/Final Maps/puzzle3.oel", AssetType.TEXT);
 		className.set ("assets/data/Final Maps/traininglevel1.oel", __ASSET__assets_data_final_maps_traininglevel1_oel);
 		type.set ("assets/data/Final Maps/traininglevel1.oel", AssetType.TEXT);
 		className.set ("assets/data/Final Maps/traininglevel2.oel", __ASSET__assets_data_final_maps_traininglevel2_oel);
@@ -389,6 +399,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/Principle.png", AssetType.IMAGE);
 		className.set ("assets/images/Principle.psd", __ASSET__assets_images_principle_psd);
 		type.set ("assets/images/Principle.psd", AssetType.BINARY);
+		className.set ("assets/images/Push1.png", __ASSET__assets_images_push1_png);
+		type.set ("assets/images/Push1.png", AssetType.IMAGE);
 		className.set ("assets/images/resetbutton.png", __ASSET__assets_images_resetbutton_png);
 		type.set ("assets/images/resetbutton.png", AssetType.IMAGE);
 		className.set ("assets/images/SChool modified.png", __ASSET__assets_images_school_modified_png);
@@ -441,6 +453,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/Tilesheet_Complete.psd", AssetType.BINARY);
 		className.set ("assets/images/Tilesheet_Complete2.png", __ASSET__assets_images_tilesheet_complete2_png);
 		type.set ("assets/images/Tilesheet_Complete2.png", AssetType.IMAGE);
+		className.set ("assets/images/Tilesheet_Complete3.png", __ASSET__assets_images_tilesheet_complete3_png);
+		type.set ("assets/images/Tilesheet_Complete3.png", AssetType.IMAGE);
+		className.set ("assets/images/Tmblr.png", __ASSET__assets_images_tmblr_png);
+		type.set ("assets/images/Tmblr.png", AssetType.IMAGE);
 		className.set ("assets/images/Wall.psd", __ASSET__assets_images_wall_psd);
 		type.set ("assets/images/Wall.psd", AssetType.BINARY);
 		className.set ("assets/images/WallKJRW.png", __ASSET__assets_images_wallkjrw_png);
@@ -687,6 +703,26 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		type.set (id, AssetType.TEXT);
 		id = "assets/data/data-goes-here.txt";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/Final Maps/puzzle1.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/Final Maps/puzzle2-1.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/Final Maps/puzzle2-2.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/Final Maps/puzzle2-3.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/Final Maps/puzzle3.oel";
 		path.set (id, id);
 		
 		type.set (id, AssetType.TEXT);
@@ -1362,6 +1398,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.BINARY);
+		id = "assets/images/Push1.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
 		id = "assets/images/resetbutton.png";
 		path.set (id, id);
 		
@@ -1463,6 +1503,14 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		type.set (id, AssetType.BINARY);
 		id = "assets/images/Tilesheet_Complete2.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Tilesheet_Complete3.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Tmblr.png";
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
@@ -2248,6 +2296,14 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
 		#end
 		
 		#if (windows || mac || linux)
@@ -2265,6 +2321,21 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/data/data-goes-here.txt", __ASSET__assets_data_data_goes_here_txt);
 		type.set ("assets/data/data-goes-here.txt", AssetType.TEXT);
+		
+		className.set ("assets/data/Final Maps/puzzle1.oel", __ASSET__assets_data_final_maps_puzzle1_oel);
+		type.set ("assets/data/Final Maps/puzzle1.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/Final Maps/puzzle2-1.oel", __ASSET__assets_data_final_maps_puzzle2_1_oel);
+		type.set ("assets/data/Final Maps/puzzle2-1.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/Final Maps/puzzle2-2.oel", __ASSET__assets_data_final_maps_puzzle2_2_oel);
+		type.set ("assets/data/Final Maps/puzzle2-2.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/Final Maps/puzzle2-3.oel", __ASSET__assets_data_final_maps_puzzle2_3_oel);
+		type.set ("assets/data/Final Maps/puzzle2-3.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/Final Maps/puzzle3.oel", __ASSET__assets_data_final_maps_puzzle3_oel);
+		type.set ("assets/data/Final Maps/puzzle3.oel", AssetType.TEXT);
 		
 		className.set ("assets/data/Final Maps/traininglevel1.oel", __ASSET__assets_data_final_maps_traininglevel1_oel);
 		type.set ("assets/data/Final Maps/traininglevel1.oel", AssetType.TEXT);
@@ -2770,6 +2841,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("assets/images/Principle.psd", __ASSET__assets_images_principle_psd);
 		type.set ("assets/images/Principle.psd", AssetType.BINARY);
 		
+		className.set ("assets/images/Push1.png", __ASSET__assets_images_push1_png);
+		type.set ("assets/images/Push1.png", AssetType.IMAGE);
+		
 		className.set ("assets/images/resetbutton.png", __ASSET__assets_images_resetbutton_png);
 		type.set ("assets/images/resetbutton.png", AssetType.IMAGE);
 		
@@ -2847,6 +2921,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/images/Tilesheet_Complete2.png", __ASSET__assets_images_tilesheet_complete2_png);
 		type.set ("assets/images/Tilesheet_Complete2.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/Tilesheet_Complete3.png", __ASSET__assets_images_tilesheet_complete3_png);
+		type.set ("assets/images/Tilesheet_Complete3.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/Tmblr.png", __ASSET__assets_images_tmblr_png);
+		type.set ("assets/images/Tmblr.png", AssetType.IMAGE);
 		
 		className.set ("assets/images/Wall.psd", __ASSET__assets_images_wall_psd);
 		type.set ("assets/images/Wall.psd", AssetType.BINARY);
@@ -3794,6 +3874,11 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_data_basemap1_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_basemap2_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_data_goes_here_txt extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_final_maps_puzzle1_oel extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_final_maps_puzzle2_1_oel extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_final_maps_puzzle2_2_oel extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_final_maps_puzzle2_3_oel extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_final_maps_puzzle3_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_final_maps_traininglevel1_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_final_maps_traininglevel2_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_final_maps_traininglevel3_oel extends flash.utils.ByteArray { }
@@ -3962,6 +4047,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_images_pointer_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_principle_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_principle_psd extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_images_push1_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_resetbutton_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_school_modified_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_speechbubble_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
@@ -3988,6 +4074,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_images_tilesheet_complete_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_tilesheet_complete_psd extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_images_tilesheet_complete2_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_tilesheet_complete3_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_tmblr_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_wall_psd extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_images_wallkjrw_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_music_music_goes_here_txt extends flash.utils.ByteArray { }
@@ -4420,6 +4508,14 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
+
+
+
+
+
+
+
 #else
 
 
@@ -4431,6 +4527,11 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:file("assets/data/basemap1.oel") #if display private #end class __ASSET__assets_data_basemap1_oel extends lime.utils.ByteArray {}
 @:file("assets/data/basemap2.oel") #if display private #end class __ASSET__assets_data_basemap2_oel extends lime.utils.ByteArray {}
 @:file("assets/data/data-goes-here.txt") #if display private #end class __ASSET__assets_data_data_goes_here_txt extends lime.utils.ByteArray {}
+@:file("assets/data/Final Maps/puzzle1.oel") #if display private #end class __ASSET__assets_data_final_maps_puzzle1_oel extends lime.utils.ByteArray {}
+@:file("assets/data/Final Maps/puzzle2-1.oel") #if display private #end class __ASSET__assets_data_final_maps_puzzle2_1_oel extends lime.utils.ByteArray {}
+@:file("assets/data/Final Maps/puzzle2-2.oel") #if display private #end class __ASSET__assets_data_final_maps_puzzle2_2_oel extends lime.utils.ByteArray {}
+@:file("assets/data/Final Maps/puzzle2-3.oel") #if display private #end class __ASSET__assets_data_final_maps_puzzle2_3_oel extends lime.utils.ByteArray {}
+@:file("assets/data/Final Maps/puzzle3.oel") #if display private #end class __ASSET__assets_data_final_maps_puzzle3_oel extends lime.utils.ByteArray {}
 @:file("assets/data/Final Maps/traininglevel1.oel") #if display private #end class __ASSET__assets_data_final_maps_traininglevel1_oel extends lime.utils.ByteArray {}
 @:file("assets/data/Final Maps/traininglevel2.oel") #if display private #end class __ASSET__assets_data_final_maps_traininglevel2_oel extends lime.utils.ByteArray {}
 @:file("assets/data/Final Maps/traininglevel3.oel") #if display private #end class __ASSET__assets_data_final_maps_traininglevel3_oel extends lime.utils.ByteArray {}
@@ -4599,6 +4700,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:image("assets/images/pointer.png") #if display private #end class __ASSET__assets_images_pointer_png extends lime.graphics.Image {}
 @:image("assets/images/Principle.png") #if display private #end class __ASSET__assets_images_principle_png extends lime.graphics.Image {}
 @:file("assets/images/Principle.psd") #if display private #end class __ASSET__assets_images_principle_psd extends lime.utils.ByteArray {}
+@:image("assets/images/Push1.png") #if display private #end class __ASSET__assets_images_push1_png extends lime.graphics.Image {}
 @:image("assets/images/resetbutton.png") #if display private #end class __ASSET__assets_images_resetbutton_png extends lime.graphics.Image {}
 @:image("assets/images/SChool modified.png") #if display private #end class __ASSET__assets_images_school_modified_png extends lime.graphics.Image {}
 @:image("assets/images/Speechbubble.png") #if display private #end class __ASSET__assets_images_speechbubble_png extends lime.graphics.Image {}
@@ -4625,6 +4727,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:image("assets/images/Tilesheet_Complete.png") #if display private #end class __ASSET__assets_images_tilesheet_complete_png extends lime.graphics.Image {}
 @:file("assets/images/Tilesheet_Complete.psd") #if display private #end class __ASSET__assets_images_tilesheet_complete_psd extends lime.utils.ByteArray {}
 @:image("assets/images/Tilesheet_Complete2.png") #if display private #end class __ASSET__assets_images_tilesheet_complete2_png extends lime.graphics.Image {}
+@:image("assets/images/Tilesheet_Complete3.png") #if display private #end class __ASSET__assets_images_tilesheet_complete3_png extends lime.graphics.Image {}
+@:image("assets/images/Tmblr.png") #if display private #end class __ASSET__assets_images_tmblr_png extends lime.graphics.Image {}
 @:file("assets/images/Wall.psd") #if display private #end class __ASSET__assets_images_wall_psd extends lime.utils.ByteArray {}
 @:image("assets/images/WallKJRW.png") #if display private #end class __ASSET__assets_images_wallkjrw_png extends lime.graphics.Image {}
 @:file("assets/music/music-goes-here.txt") #if display private #end class __ASSET__assets_music_music_goes_here_txt extends lime.utils.ByteArray {}

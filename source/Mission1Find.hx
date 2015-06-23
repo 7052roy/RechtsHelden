@@ -162,7 +162,7 @@ class Mission1Find extends FlxState
 		super.update();
 		//_player.speed = 600;
 		FlxG.collide(_player, _mWalls);
-		FlxG.collide(_player, _grpEnemies, playerEnemy);
+		//FlxG.collide(_player, _grpEnemies, playerEnemy);
 		FlxG.overlap(_player, _kid, kidTalk);
 		FlxG.overlap(_player, _adult1, adult1Talk1);
 		FlxG.overlap(_player, _adult2, adult2Talk);
