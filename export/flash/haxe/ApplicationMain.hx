@@ -102,8 +102,20 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
-		urls.push ("assets/images/1StartingScreeeeeeen.png");
-		types.push (lime.Assets.AssetType.IMAGE);
+		urls.push ("assets/female/kind2-1.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
+		urls.push ("assets/female/kind2-2.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
+		urls.push ("assets/female/moeder1.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
+		urls.push ("assets/female/moeder2.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
 		
 		
 		urls.push ("assets/images/AngryDadMission2.png");
@@ -236,6 +248,70 @@ class ApplicationMain {
 		
 		urls.push ("assets/images/HOUSE.psd");
 		types.push (lime.Assets.AssetType.BINARY);
+		
+		
+		urls.push ("assets/images/Hp Bars/Bars.psd");
+		types.push (lime.Assets.AssetType.BINARY);
+		
+		
+		urls.push ("assets/images/Hp Bars/Hero0.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Hp Bars/Hero1.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Hp Bars/Hero2.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Hp Bars/Hero3.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Hp Bars/Knightmare0.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Hp Bars/Knightmare1.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Hp Bars/Knightmare10.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Hp Bars/Knightmare2.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Hp Bars/Knightmare3.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Hp Bars/Knightmare4.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Hp Bars/Knightmare5.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Hp Bars/Knightmare6.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Hp Bars/Knightmare7.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Hp Bars/Knightmare8.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Hp Bars/Knightmare9.png");
+		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
 		urls.push ("assets/images/images-go-here.txt");
@@ -626,6 +702,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/images/Story/1StartingScreeeeeeen.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/Story/2.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -716,6 +796,10 @@ class ApplicationMain {
 		
 		urls.push ("assets/music/townMusic.wav");
 		types.push (lime.Assets.AssetType.SOUND);
+		
+		
+		urls.push ("assets/Playtest.txt");
+		types.push (lime.Assets.AssetType.TEXT);
 		
 		
 		urls.push ("assets/sounds/Abilities/dooropening.mp3");
