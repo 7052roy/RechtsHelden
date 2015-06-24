@@ -174,8 +174,9 @@ class NightmareMode extends FlxState
 		_nightmare.playerPos.copyFrom(_player.getMidpoint());
 		super.update();
 		FlxG.collide(_player, _mWalls);
-		FlxG.collide(_player, _attack, attackPlayer);
+		FlxG.overlap(_player, _attack, attackPlayer);
 		FlxG.overlap(_nightmare, _attack, attackNightmare);
+		FlxG.overlap(_player, _nightmare, playerNightmare);
 		
 		_attackTimer -= FlxG.elapsed;
 		_timer -= FlxG.elapsed;
@@ -202,5 +203,10 @@ class NightmareMode extends FlxState
 		}
 	}
 	
-	
+	function playerNightmare(p:Player, n:NightMare)
+	{
+		playerLife -= 1;
+		p.x - 128;
+		_hud.
+	}
 }

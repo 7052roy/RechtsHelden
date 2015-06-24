@@ -153,8 +153,9 @@ class Mission3 extends FlxState
 	
 	function kjrwText2(p:Player, t:Trigger)
 	{
-		if ( _player.CharacterNumber == 3 && _player.ability2 == true) 
+		if ( _player.CharacterNumber == 3 && _player.ability2 == true ) 
 		{
+<<<<<<< HEAD
 			kjrwTalk = new FlxSprite();
 			kjrwTalk.loadGraphic("assets/images/Missie3/Pro1.png");
 			kjrwTalk.x = _player.x + 100;
@@ -162,6 +163,20 @@ class Mission3 extends FlxState
 			add(kjrwTalk);
 			_player.speed = 0;
 			FlxG.sound.play("assets/sounds/Missie3/Missie3-2.mp3", 1, false, true, kjrwText3);
+=======
+			if (kjrwTalk != null)
+			{
+				kjrwTalk.destroy();
+			}
+		kjrwTalk = new FlxSprite();
+		kjrwTalk.loadGraphic("assets/images/Missie3/Pro1.png");
+		kjrwTalk.x = _player.x - 164;
+		kjrwTalk.y = _player.y - 300;
+		add(kjrwTalk);
+		_player.speed = 0;
+		FlxG.sound.destroy(true);
+		FlxG.sound.play("assets/sounds/Missie3/Missie3-2.mp3", 1, false, true, kjrwText3);
+>>>>>>> origin/master
 		}
 	}
 	
@@ -171,11 +186,11 @@ class Mission3 extends FlxState
 		kjrwTalk.destroy();
 		kjrwTalk = new FlxSprite();
 		kjrwTalk.loadGraphic("assets/images/Missie3/Feggit2.png");
-		kjrwTalk.x = _player.x + 100;
+		kjrwTalk.x = _player.x - 164;
 		kjrwTalk.y = _player.y - 300;
 		add(kjrwTalk);
 		_player.speed = 0;
-		FlxG.sound.play("assets/sounds/Missie3/Missie3-2.mp3", 1, false, true, kjrwText4);
+		FlxG.sound.play("assets/sounds/Missie3/Missie3-3.mp3", 1, false, true, kjrwText4);
 		
 	}
 	
@@ -184,11 +199,11 @@ class Mission3 extends FlxState
 		kjrwTalk.destroy();
 		kjrwTalk = new FlxSprite();
 		kjrwTalk.loadGraphic("assets/images/Missie3/Feggit3.png");
-		kjrwTalk.x = _player.x + 100;
+		kjrwTalk.x = _player.x - 164;
 		kjrwTalk.y = _player.y - 300;
 		add(kjrwTalk);
 		_player.speed = 0;
-		FlxG.sound.play("assets/sounds/Missie3/Missie3-3.mp3", 1, false, true, kjrwText5);
+		FlxG.sound.play("assets/sounds/Missie3/Missie3-3.1.mp3", 1, false, true, kjrwText5);
 		
 	}
 	
@@ -197,7 +212,7 @@ class Mission3 extends FlxState
 		kjrwTalk.destroy();
 		kjrwTalk = new FlxSprite();
 		kjrwTalk.loadGraphic("assets/images/Missie3/Pro2.png");
-		kjrwTalk.x = _player.x + 100;
+		kjrwTalk.x = _player.x - 164;
 		kjrwTalk.y = _player.y - 300;
 		add(kjrwTalk);
 		_player.speed = 0;
@@ -210,7 +225,7 @@ class Mission3 extends FlxState
 		kjrwTalk.destroy();
 		kjrwTalk = new FlxSprite();
 		kjrwTalk.loadGraphic("assets/images/Missie3/Feggit4.png");
-		kjrwTalk.x = _player.x + 100;
+		kjrwTalk.x = _player.x - 164;
 		kjrwTalk.y = _player.y - 300;
 		add(kjrwTalk);
 		_player.speed = 0;
@@ -223,11 +238,11 @@ class Mission3 extends FlxState
 		kjrwTalk.destroy();
 		kjrwTalk = new FlxSprite();
 		kjrwTalk.loadGraphic("assets/images/Missie3/Feggit5.png");
-		kjrwTalk.x = _player.x + 100;
+		kjrwTalk.x = _player.x - 164;
 		kjrwTalk.y = _player.y - 300;
 		add(kjrwTalk);
 		_player.speed = 0;
-		FlxG.sound.play("assets/sounds/Missie3/Missie3-6.mp3", 1, false, true, kjrwText8);
+		FlxG.sound.play("assets/sounds/Missie3/Missie3-5-1.mp3", 1, false, true, kjrwText8);
 		
 	}
 	
@@ -236,11 +251,11 @@ class Mission3 extends FlxState
 		kjrwTalk.destroy();
 		kjrwTalk = new FlxSprite();
 		kjrwTalk.loadGraphic("assets/images/Missie3/Pro3.png");
-		kjrwTalk.x = _player.x + 100;
+		kjrwTalk.x = _player.x - 164;
 		kjrwTalk.y = _player.y - 300;
 		add(kjrwTalk);
 		_player.speed = 0;
-		FlxG.sound.play("assets/sounds/Missie3/Missie3-7.mp3", 1, false, true, play2);
+		FlxG.sound.play("assets/sounds/Missie3/Missie3-6.mp3", 1, false, true, finishMission);
 		
 	}
 	
@@ -248,6 +263,7 @@ class Mission3 extends FlxState
 	{
 		_player.speed = 300;
 		kjrwTalk.destroy();
+		finishMission();
 	}
 	
 	
@@ -294,7 +310,7 @@ class Mission3 extends FlxState
 		
 	}	
 	
-	function finishMission(p:Player, t:Trigger)
+	function finishMission()
 	{
 		mission1Music.stop();
 		FlxG.switchState(new Mission3Finish());
