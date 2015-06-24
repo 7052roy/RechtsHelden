@@ -31,9 +31,9 @@ class AngryDad extends Entities
 		loadGraphic("assets/images/AngryDadMission2.png", true, 64, 64);
 		setFacingFlip(FlxObject.LEFT, false, false);
 		setFacingFlip(FlxObject.RIGHT, true, false);
-		animation.add("d", [0, 1, 0, 2], 6, false);
-		animation.add("lr", [6, 7, 6, 8], 6, false);
-		animation.add("u", [3, 4, 3, 5], 6, false);
+		animation.add("d", [0, 1, 2, 3], 6, false);
+		animation.add("lr", [8, 9, 10, 11], 6, false);
+		animation.add("u", [4, 5, 6, 7], 6, false);
 		drag.x = drag.y = 0;
 		width = 64;
 		height = 64;
