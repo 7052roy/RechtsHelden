@@ -790,6 +790,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/images/Story/Victory.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/Story/xbutton.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -1142,6 +1146,14 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.MUSIC);
 		
 		
+		urls.push ("assets/sounds/Missie3/judge1.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
+		urls.push ("assets/sounds/Missie3/judge2.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
 		urls.push ("assets/sounds/Missie3/Missie3-1.mp3");
 		types.push (lime.Assets.AssetType.MUSIC);
 		
@@ -1203,6 +1215,10 @@ class ApplicationMain {
 		
 		
 		urls.push ("assets/sounds/Missie3/Missie3-8.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
+		urls.push ("assets/sounds/Missie3/Missie3-9.mp3");
 		types.push (lime.Assets.AssetType.MUSIC);
 		
 		
@@ -1354,7 +1370,6 @@ class ApplicationMain {
 			file: "RechtsHelden",
 			fps: Std.int (60),
 			fullscreen: false,
-			hardware: true,
 			height: Std.int (720),
 			orientation: "portrait",
 			packageName: "com.example.myapp",
