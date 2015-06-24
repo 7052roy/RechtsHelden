@@ -26,8 +26,7 @@ import lime.audio.AudioManager;
  */
 class Outro extends FlxState
 {
-	var introMusic:FlxSound;
-	var introImage:FlxSprite;
+	var outroImage:FlxSprite;
 	var _idleTmr:Float;
 	var introState:Int = 0;
 	
@@ -36,19 +35,19 @@ class Outro extends FlxState
 	 */
 	override public function create():Void
 	{
-		FlxG.sound.play("assets/sounds/Intromusic.mp3", 1, false, true, startGame);
-		intro1();
+		FlxG.sound.play("assets/sounds/OutroVoice.mp3", 1, false, true, mainMenu);
+		outro1();
 		super.create();	
 		
 	}
 	
-	function intro1()
+	function outro1()
 	{
 		FlxG.camera.fade(FlxColor.BLACK, 1, true);
-		introImage = new FlxSprite();
-		introImage.loadGraphic("assets/images/Story/1.png");
-		add(introImage);
-		_idleTmr = 7;
+		outroImage = new FlxSprite();
+		outroImage.loadGraphic("assets/images/Story/2.png");
+		add(outroImage);
+		_idleTmr = 10;
 		introState = 1;
 		
 	}
@@ -65,91 +64,31 @@ class Outro extends FlxState
 	
 	function nextImage()
 	{
-		//FlxG.camera.fade(FlxColor.BLACK, 1);
 		switch (introState)
 		{
-			case 1: intro2();
-			case 2: intro3();
-			case 3: intro4();
-			case 4: intro5();
-			case 5: intro6();
-			case 6: intro7();
+			case 1: outro2();
 		}
 	}
 	
-	function intro2()
+	function outro2()
 	{
 		
 		FlxG.camera.fade(FlxColor.BLACK, 1, true);
-		introImage.destroy();
+		outroImage.destroy();
 		
-		introImage = new FlxSprite();
-		introImage.loadGraphic("assets/images/Story/2.png");
-		add(introImage);
+		outroImage = new FlxSprite();
+		outroImage.loadGraphic("assets/images/Story/1.png");
+		add(outroImage);
 		
-		_idleTmr = 3;
-		introState = 2;
-	}
-	
-	function intro3()
-	{
-		FlxG.camera.fade(FlxColor.BLACK, 1, true);
-		introImage.destroy();
-		introImage = new FlxSprite();
-		introImage.loadGraphic("assets/images/Story/3.png");
-		add(introImage);
-		_idleTmr = 24;
-		introState = 3;
-	}
-	
-	function intro4()
-	{
-		FlxG.camera.fade(FlxColor.BLACK, 1, true);
-		introImage.destroy();
-		introImage = new FlxSprite();
-		introImage.loadGraphic("assets/images/Story/4.png");
-		add(introImage);
-		_idleTmr = 18;
-		introState = 4;
-	}
-	
-	function intro5()
-	{
-		FlxG.camera.fade(FlxColor.BLACK, 1, true);
-		introImage.destroy();
-		introImage = new FlxSprite();
-		introImage.loadGraphic("assets/images/Story/Prof.png");
-		add(introImage);
-		_idleTmr = 14;
-		introState = 5;
-	}
-	
-	function intro6()
-	{
-		FlxG.camera.fade(FlxColor.BLACK, 1, true);
-		introImage.destroy();
-		introImage = new FlxSprite();
-		introImage.loadGraphic("assets/images/Story/Pat.png");
-		add(introImage);
-		_idleTmr = 12;
-		introState = 6;
-	}
-	
-	function intro7()
-	{
-		FlxG.camera.fade(FlxColor.BLACK, 1, true);
-		introImage.destroy();
-		introImage = new FlxSprite();
-		introImage.loadGraphic("assets/images/Story/Tec.png");
-		add(introImage);
-		_idleTmr = 12;
-		introState = 7;
+		_idleTmr = 50;
+		
 	}
 	
 	
-	function startGame()
+	
+	function mainMenu()
 	{
-		FlxG.switchState(new Introduction1());
+		FlxG.switchState(new MenuState());
 	}
 	
 }

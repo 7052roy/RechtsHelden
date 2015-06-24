@@ -156,6 +156,7 @@ class NightmareMode extends FlxState
 	{
 		if (nightmareLife <= 0)
 		{
+			FlxG.sound.destroy(true);
 			FlxG.switchState(new Outro());
 		}
 		
@@ -180,7 +181,7 @@ class NightmareMode extends FlxState
 		super.update();
 		FlxG.collide(_player, _mWalls);
 		FlxG.overlap(_player, _attack, attackPlayer);
-		FlxG.overlap(_nightmare, _attack, attackNightmare);
+		FlxG.collide(_nightmare, _attack, attackNightmare);
 		FlxG.overlap(_player, _nightmare, playerNightmare);
 		
 		_attackTimer -= FlxG.elapsed;
@@ -205,14 +206,14 @@ class NightmareMode extends FlxState
 		{
 			_attack.destroy();
 			nightmareLife -= 1;
-			_hud.updateHUD(playerLife, nightmareLife);
+			_hud.updateHUD( nightmareLife);
 		}
 	}
 	
 	function playerNightmare(p:Player, n:NightMare)
 	{
-		playerLife -= 1;
+		//playerLife -= 1;
 		_player.x - 320;
-		_hud.updateHUD(playerLife, nightmareLife);
+		_hud.updateHUD( nightmareLife);
 	}
 }
