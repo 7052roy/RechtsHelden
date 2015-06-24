@@ -40,7 +40,7 @@ class BeforeNightmare extends FlxState
 	{
 		_map = new FlxOgmoLoader("assets/data/Final Maps/worldmap6.oel");
 		_mWalls = _map.loadTilemap("assets/images/Tilesheet_Complete.png", 64, 64, "tree");
-	_mWalls.setTileProperties(1, FlxObject.NONE);
+		_mWalls.setTileProperties(1, FlxObject.NONE);
 		_mWalls.setTileProperties(2, FlxObject.NONE);
 		_mWalls.setTileProperties(3, FlxObject.NONE);
 		_mWalls.setTileProperties(4, FlxObject.NONE);
@@ -112,11 +112,6 @@ class BeforeNightmare extends FlxState
 		
 		FlxG.camera.follow(_player, FlxCamera.STYLE_TOPDOWN, null, 1);
 		
-		//_hud = new HUD();
-		//add(_hud);
-		mission1Music = FlxG.sound.load("assets/music/townMusic.wav");
-		mission1Music.play(true);
-		
 		FlxG.camera.fade(FlxColor.BLACK, 2, true);
 		
 		finishMission();
@@ -173,7 +168,7 @@ class BeforeNightmare extends FlxState
 	function finishMission()
 	{
 		FlxG.sound.destroy(true);
-		FlxG.sound.play("assets/sounds/Missie3/missie3-15.mp3", 1, false, true, finish);
+		FlxG.sound.play("assets/sounds/Missie3/Missie3-15.mp3", 1, false, true, finish);
 		
 	}
 	
