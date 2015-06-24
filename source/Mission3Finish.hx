@@ -120,14 +120,12 @@ class Mission3Finish extends FlxState
 		
 		FlxG.camera.fade(FlxColor.BLACK, 2, true);
 		
-		judgeText();
-		
 		super.create();	
 		
 		
 	}
 	
-	function judgeText()
+	function judgeText(p:Player, t:Trigger)
 	{
 		if ( _player.CharacterNumber == 3 && _player.ability2 == true ) 
 		{
@@ -136,14 +134,27 @@ class Mission3Finish extends FlxState
 				judgeTalk.destroy();
 			}
 		judgeTalk = new FlxSprite();
+		judgeTalk.loadGraphic("assets/images/Missie3/Pro4.png");
+		judgeTalk.x = _player.x - 164;
+		judgeTalk.y = _player.y - 200;
+		add(judgeTalk);
+		_player.speed = 0;
+		FlxG.sound.destroy(true);
+		FlxG.sound.play("assets/sounds/Missie3/Missie3-7.mp3", 1, false, true, judgeText1);
+		}
+	}
+	
+	function judgeText1()
+	{
+		judgeTalk.destroy;
+		judgeTalk = new FlxSprite();
 		judgeTalk.loadGraphic("assets/images/Missie3/Pro1.png");
 		judgeTalk.x = _player.x - 164;
 		judgeTalk.y = _player.y - 300;
 		add(judgeTalk);
 		_player.speed = 0;
 		FlxG.sound.destroy(true);
-		FlxG.sound.play("assets/sounds/Missie3/Missie3-2.mp3", 1, false, true, finishMission);
-		}
+		FlxG.sound.play("assets/sounds/Missie3/Missie3-2.mp3", 1, false, true);
 	}
 	
 	function clickReset()
@@ -183,7 +194,7 @@ class Mission3Finish extends FlxState
 		super.update();
 		_player.speed = 300;
 		FlxG.collide(_player, _mWalls);
-		FlxG.collide(_player, _trigger, judgeText);
+		FlxG.overlap(_player, _trigger, judgeText);
 	
 	}	
 	
