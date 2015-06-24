@@ -31,7 +31,6 @@ class Mission2Talk extends FlxState
 	private var _map:FlxOgmoLoader;
 	private var _mWalls:FlxTilemap;
 	var mission1Music:FlxSound;
-	private var _btnReset:FlxButton;
 	private var _trigger:FlxTypedGroup<Trigger>;
 	var conversation:FlxSprite;
 

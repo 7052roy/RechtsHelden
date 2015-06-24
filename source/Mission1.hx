@@ -125,10 +125,7 @@ class Mission1 extends FlxState
 		
 		FlxG.camera.follow(_player, FlxCamera.STYLE_TOPDOWN, null, 1);
 		
-		//_hud = new HUD();
-		//add(_hud);
-		mission1Music = FlxG.sound.load("assets/music/townMusic.wav");
-		mission1Music.play(true);
+		FlxG.sound.playMusic(AssetPaths.Puzzle__mp3, 1, true);
 		
 		FlxG.camera.fade(FlxColor.BLACK, 2, true);
 		
@@ -186,19 +183,19 @@ class Mission1 extends FlxState
 		FlxG.collide(_player, _mWalls);
 		if (_player.CharacterNumber == 2 && _player.ability2 == true)
 		{
-			if (_player.facing == FlxObject.RIGHT && _player.x > _kid.x-80)
+			if (_player.facing == FlxObject.RIGHT &&  FlxG.overlap(_player, _kid))
 			{
 				_kid.velocity.x = 300;
 			}
-			else if (_player.facing == FlxObject.LEFT && _player.x < _kid.x+80) 
+			else if (_player.facing == FlxObject.LEFT && FlxG.overlap(_player, _kid)) 
 			{
 				_kid.velocity.x = -300;
 			}
-			else if (_player.facing == FlxObject.DOWN && _player.y > _kid.y-80) 
+			else if (_player.facing == FlxObject.DOWN && FlxG.overlap(_player, _kid)) 
 			{
 				_kid.velocity.y = 300;
 			}
-			else if (_player.facing == FlxObject.UP && _player.y < _kid.y+80) 
+			else if (_player.facing == FlxObject.UP && FlxG.overlap(_player, _kid)) 
 			{
 				_kid.velocity.y = -300;
 			}
@@ -211,7 +208,7 @@ class Mission1 extends FlxState
 	
 	function finishMission(k:Kid, t:Trigger)
 	{
-		mission1Music.stop();
+		FlxG.sound.destroy(true);
 		FlxG.switchState(new Mission1Finish());
 	}
 }

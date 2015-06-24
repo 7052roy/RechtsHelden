@@ -120,7 +120,7 @@ class Mission1Find extends FlxState
 		
 		_player = new Player();
 		add(_player);
-		_player.speed = 600;
+		_player.speed = 300;
 		
 		_adult1 = new Adult1();
 		add(_adult1);
@@ -133,22 +133,10 @@ class Mission1Find extends FlxState
 		
 		_map.loadEntities(placeEntities, "entities");
 		
-		
-		
-		
 		FlxG.camera.follow(_player, FlxCamera.STYLE_TOPDOWN, null, 1);
 		
-		//_hud = new HUD();
-		//add(_hud);
-		//townMusic = FlxG.sound.load("assets/music/townMusic.wav");
-		//townMusic.play(true);
-		FlxG.sound.playMusic(AssetPaths.townMusic__wav, 1, true);
+		FlxG.sound.playMusic(AssetPaths.Puzzle__mp3, 1, true);
 		FlxG.camera.fade(FlxColor.BLACK, 2, true);
-		
-		#if mobile
-		virtualPad = new FlxVirtualPad(FULL, NONE);		
-		add(virtualPad);
-		#end
 		
 		super.create();	
 		
@@ -195,9 +183,7 @@ class Mission1Find extends FlxState
 	override public function update():Void
 	{
 		super.update();
-		//_player.speed = 600;
 		FlxG.collide(_player, _mWalls);
-		//FlxG.collide(_player, _grpEnemies, playerEnemy);
 		FlxG.overlap(_player, _kid, kidTalk);
 		FlxG.overlap(_player, _adult1, adult1Talk1);
 		FlxG.overlap(_player, _adult2, adult2Talk);
@@ -339,7 +325,7 @@ class Mission1Find extends FlxState
 		{
 			talkAdult2.destroy();
 		}
-		_player.speed = 600;
+		_player.speed = 300;
 		FlxG.sound.playMusic(AssetPaths.townMusic__wav, 1, true);
 	}
 	
@@ -358,7 +344,7 @@ class Mission1Find extends FlxState
 			talkAdult2 = new FlxSprite();
 			talkAdult2.loadGraphic("assets/images/kind3.1.png");
 			talkAdult2.x = _player.x - 600;
-			talkAdult2.y = _player.y;
+			talkAdult2.y = _player.y - 200;
 			add(talkAdult2);
 			FlxG.sound.play("assets/sounds/Missie1/Kind3/Prof1-2.mp3", 1, false, true, kidTalk1);
 		}
@@ -370,7 +356,7 @@ class Mission1Find extends FlxState
 		talkAdult2 = new FlxSprite();
 		talkAdult2.loadGraphic("assets/images/kind3.2.png");
 		talkAdult2.x = _player.x - 600;
-		talkAdult2.y = _player.y;
+		talkAdult2.y = _player.y - 200;
 		add(talkAdult2);
 		FlxG.sound.play("assets/sounds/Missie1/Kind3/Kind3-1.mp3", 1, false, true, kidTalk2);
 	}
@@ -380,7 +366,7 @@ class Mission1Find extends FlxState
 		talkAdult2 = new FlxSprite();
 		talkAdult2.loadGraphic("assets/images/kind3.3.png");
 		talkAdult2.x = _player.x - 600;
-		talkAdult2.y = _player.y;
+		talkAdult2.y = _player.y - 200;
 		add(talkAdult2);
 		FlxG.sound.play("assets/sounds/Missie1/Kind3/Prof2-2.mp3", 1, false, true, kidTalk3);
 	}
@@ -390,7 +376,7 @@ class Mission1Find extends FlxState
 		talkAdult2 = new FlxSprite();
 		talkAdult2.loadGraphic("assets/images/kind3.4.png");
 		talkAdult2.x = _player.x - 600;
-		talkAdult2.y = _player.y;
+		talkAdult2.y = _player.y - 200;
 		add(talkAdult2);
 		FlxG.sound.play("assets/sounds/Missie1/Kind3/Kind3-2.mp3", 1, false, true, kidTalk4);
 	}
@@ -400,7 +386,7 @@ class Mission1Find extends FlxState
 		talkAdult2 = new FlxSprite();
 		talkAdult2.loadGraphic("assets/images/kind3.5.png");
 		talkAdult2.x = _player.x - 600;
-		talkAdult2.y = _player.y;
+		talkAdult2.y = _player.y - 200;
 		add(talkAdult2);
 		FlxG.sound.play("assets/sounds/Missie1/Kind3/Prof3-2.mp3", 1, false, true, kidTalk5);
 	}
@@ -411,7 +397,7 @@ class Mission1Find extends FlxState
 		talkAdult2 = new FlxSprite();
 		talkAdult2.loadGraphic("assets/images/kind3.6.png");
 		talkAdult2.x = _player.x - 600;
-		talkAdult2.y = _player.y;
+		talkAdult2.y = _player.y - 200;
 		add(talkAdult2);
 		FlxG.sound.play("assets/sounds/Missie1/Kind3/Kind3-3.mp3", 1, false, true, kidTalk6);
 	}
@@ -422,13 +408,14 @@ class Mission1Find extends FlxState
 		talkAdult2 = new FlxSprite();
 		talkAdult2.loadGraphic("assets/images/kind3.7.png");
 		talkAdult2.x = _player.x - 600;
-		talkAdult2.y = _player.y;
+		talkAdult2.y = _player.y - 200;
 		add(talkAdult2);
 		FlxG.sound.play("assets/sounds/Missie1/Kind3/Prof4-2.mp3", 1, false, true, mission1Load);
 	}
 	
 	function mission1Load()
 	{
+		FlxG.sound.destroy(true);
 		FlxG.switchState(new Mission1());
 	}
 	

@@ -98,7 +98,7 @@ class Intro extends FlxState
 		introImage = new FlxSprite();
 		introImage.loadGraphic("assets/images/Story/3.png");
 		add(introImage);
-		_idleTmr = 28;
+		_idleTmr = 24;
 		introState = 3;
 	}
 	
@@ -107,9 +107,9 @@ class Intro extends FlxState
 		FlxG.camera.fade(FlxColor.BLACK, 1, true);
 		introImage.destroy();
 		introImage = new FlxSprite();
-		introImage.loadGraphic("assets/images/Story/1StartingScreeeeeeen.png");
+		introImage.loadGraphic("assets/images/Story/4.png");
 		add(introImage);
-		_idleTmr = 15;
+		_idleTmr = 18;
 		introState = 4;
 	}
 	
@@ -120,7 +120,7 @@ class Intro extends FlxState
 		introImage = new FlxSprite();
 		introImage.loadGraphic("assets/images/Story/Prof.png");
 		add(introImage);
-		_idleTmr = 13;
+		_idleTmr = 14;
 		introState = 5;
 	}
 	

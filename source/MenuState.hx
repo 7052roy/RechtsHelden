@@ -51,6 +51,8 @@ class MenuState extends FlxState
 		_btnExit.loadGraphic("assets/images/Story/xbutton.png");
 		add(_btnExit);
 		
+		FlxG.sound.playMusic(AssetPaths.Startscreen__mp3, 1, true);
+		
 		FlxG.camera.fade(FlxColor.BLACK, .33, true);
 		
 		super.create();
@@ -63,6 +65,7 @@ class MenuState extends FlxState
 	
 	private function clickPlay():Void
 	{
+		FlxG.sound.destroy(true);
 		FlxG.camera.fade(FlxColor.BLACK,.33, false, function() {
 			FlxG.switchState(new Introduction1());
 		});
