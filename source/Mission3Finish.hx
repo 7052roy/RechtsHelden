@@ -133,7 +133,6 @@ class Mission3Finish extends FlxState
 			{
 				judgeTalk.destroy();
 			}
-<<<<<<< HEAD
 		judgeTalk = new FlxSprite();
 		judgeTalk.loadGraphic("assets/images/Missie3/Pro4.png");
 		judgeTalk.x = _player.x - 164;
@@ -149,32 +148,97 @@ class Mission3Finish extends FlxState
 	{
 		judgeTalk.destroy;
 		judgeTalk = new FlxSprite();
-		judgeTalk.loadGraphic("assets/images/Missie3/Pro1.png");
+		judgeTalk.loadGraphic("assets/images/Missie3/Judge1.png");
 		judgeTalk.x = _player.x - 164;
 		judgeTalk.y = _player.y - 300;
 		add(judgeTalk);
 		_player.speed = 0;
 		FlxG.sound.destroy(true);
-		FlxG.sound.play("assets/sounds/Missie3/Missie3-2.mp3", 1, false, true);
-=======
-			judgeTalk = new FlxSprite();
-			judgeTalk.loadGraphic("assets/images/Missie3/Pro1.png");
-			judgeTalk.x = _player.x - 164;
-			judgeTalk.y = _player.y - 300;
-			add(judgeTalk);
-			_player.speed = 0;
-			FlxG.sound.destroy(true);
-			FlxG.sound.play("assets/sounds/Missie3/Missie3-2.mp3", 1, false, true, finishMission);
-		}
->>>>>>> origin/master
+		FlxG.sound.play("assets/sounds/Missie3/judge1.mp3", 1, false, true, JudgeText2);
 	}
-	
-	function clickReset()
+
+	function JudgeText2()
 	{
-		FlxG.switchState(new Mission1());
+		judgeTalk.destroy;
+		judgeTalk = new FlxSprite();
+		judgeTalk.loadGraphic("assets/images/Missie3/Judge2.png");
+		judgeTalk.x = _player.x - 164;
+		judgeTalk.y = _player.y - 300;
+		add(judgeTalk);
+		_player.speed = 0;
+		FlxG.sound.destroy(true);
+		FlxG.sound.play("assets/sounds/Missie3/judge2.mp3", 1, false, true, JudgeText3);
 	}
 	
-	private function placeEntities(entityName:String, entityData:Xml):Void
+	function JudgeText3()
+	{
+		judgeTalk.destroy;
+		judgeTalk = new FlxSprite();
+		judgeTalk.loadGraphic("assets/images/Missie3/Pro6.png");
+		judgeTalk.x = _player.x - 164;
+		judgeTalk.y = _player.y - 300;
+		add(judgeTalk);
+		_player.speed = 0;
+		FlxG.sound.destroy(true);
+		FlxG.sound.play("assets/sounds/Missie3/Missie3-9.mp3", 1, false, true, JudgeText4);
+	}
+	
+	function JudgeText4()
+	{
+		judgeTalk.destroy;
+		judgeTalk = new FlxSprite();
+		judgeTalk.loadGraphic("assets/images/Missie3/Pro7.png");
+		judgeTalk.x = _player.x - 164;
+		judgeTalk.y = _player.y - 300;
+		add(judgeTalk);
+		_player.speed = 0;
+		FlxG.sound.destroy(true);
+		FlxG.sound.play("assets/sounds/Missie3/Missie3-10.mp3", 1, false, true, JudgeText5);
+	}
+	
+	function JudgeText5()
+	{
+		judgeTalk.destroy;
+		judgeTalk = new FlxSprite();
+		judgeTalk.loadGraphic("assets/images/Missie3/Mom2.png");
+		judgeTalk.x = _player.x - 164;
+		judgeTalk.y = _player.y - 300;
+		add(judgeTalk);
+		_player.speed = 0;
+		FlxG.sound.destroy(true);
+		FlxG.sound.play("assets/sounds/Missie3/missie3-11.mp3", 1, false, true, JudgeText6);
+	}
+	
+	function JudgeText6()
+	{
+		judgeTalk.destroy;
+		judgeTalk = new FlxSprite();
+		judgeTalk.loadGraphic("assets/images/Missie3/Pro8.png");
+		judgeTalk.x = _player.x - 164;
+		judgeTalk.y = _player.y - 300;
+		add(judgeTalk);
+		_player.speed = 0;
+		FlxG.sound.destroy(true);
+		FlxG.sound.play("assets/sounds/Missie3/Missie3-12.mp3", 1, false, true, JudgeText7);
+	}
+	
+	function JudgeText7()
+	{
+		judgeTalk.destroy;
+		judgeTalk = new FlxSprite();
+		judgeTalk.loadGraphic("assets/images/Missie3/Pro8.png");
+		judgeTalk.x = _player.x - 164;
+		judgeTalk.y = _player.y - 300;
+		add(judgeTalk);
+		_player.speed = 0;
+		FlxG.sound.destroy(true);
+		FlxG.sound.play("assets/sounds/Missie3/Missie3-12.mp3", 1, false, true, finishMission);
+	}
+	
+	
+	
+
+    private function placeEntities(entityName:String, entityData:Xml):Void
 	{
 		if (entityName == "player")
 		{
