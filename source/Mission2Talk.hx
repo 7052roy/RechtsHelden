@@ -108,11 +108,11 @@ class Mission2Talk extends FlxState
 			conversation = new FlxSprite();
 			conversation.loadGraphic("assets/images/Missie2/emo1.3.png");
 			conversation.x = _player.x - 300;
-			conversation.y = _player.y - 100;
+			conversation.y = _player.y - 300;
 			add(conversation);
 			FlxG.sound.destroy(true);
 			_player.speed = 0;
-			FlxG.sound.play("assets/sounds/Missie1/Teacher/Teacher1.mp3", 1, false, true, talkKid2);
+			FlxG.sound.play("assets/sounds/Missie2/Prof2.mp3", 1, false, true, talkKid2);
 	}
 	
 	function talkKid2()
@@ -123,7 +123,7 @@ class Mission2Talk extends FlxState
 		conversation.x = _player.x - 300;
 		conversation.y = _player.y - 100;
 		add(conversation);
-		FlxG.sound.play("assets/sounds/Missie1/Teacher/Teacher1.mp3", 1, false, true, talkKid3);
+		FlxG.sound.play("assets/sounds/Missie2/Kid1.mp3", 1, false, true, talkKid3);
 	}
 	
 	function talkKid3()
@@ -132,9 +132,9 @@ class Mission2Talk extends FlxState
 		conversation = new FlxSprite();
 		conversation.loadGraphic("assets/images/Missie2/emo1.5.png");
 		conversation.x = _player.x - 300;
-		conversation.y = _player.y - 100;
+		conversation.y = _player.y - 300;
 		add(conversation);
-		FlxG.sound.play("assets/sounds/Missie1/Teacher/Teacher1.mp3", 1, false, true, talkKid4);
+		FlxG.sound.play("assets/sounds/Missie2/Prof3.mp3", 1, false, true, talkKid4);
 	}
 	
 	function talkKid4()
@@ -143,9 +143,9 @@ class Mission2Talk extends FlxState
 		conversation = new FlxSprite();
 		conversation.loadGraphic("assets/images/Missie2/emo1.6.png");
 		conversation.x = _player.x - 300;
-		conversation.y = _player.y - 100;
+		conversation.y = _player.y - 300;
 		add(conversation);
-		FlxG.sound.play("assets/sounds/Missie1/Teacher/Teacher1.mp3", 1, false, true, talkKid5);
+		FlxG.sound.play("assets/sounds/Missie2/Kid2.mp3", 1, false, true, talkKid5);
 	}
 	
 	function talkKid5()
@@ -154,9 +154,9 @@ class Mission2Talk extends FlxState
 		conversation = new FlxSprite();
 		conversation.loadGraphic("assets/images/Missie2/emo1.7.png");
 		conversation.x = _player.x - 300;
-		conversation.y = _player.y - 100;
+		conversation.y = _player.y - 300;
 		add(conversation);
-		FlxG.sound.play("assets/sounds/Missie1/Teacher/Teacher1.mp3", 1, false, true, newMap);
+		FlxG.sound.play("assets/sounds/Missie2/Prof4.mp3", 1, false, true, newMap);
 	}
 	
 	
@@ -187,9 +187,9 @@ class Mission2Talk extends FlxState
 		conversation = new FlxSprite();
 		conversation.loadGraphic("assets/images/Missie2/emo1.8.png");
 		conversation.x = _player.x - 300;
-		conversation.y = _player.y - 100;
+		conversation.y = _player.y - 300;
 		add(conversation);
-		FlxG.sound.play("assets/sounds/Missie1/Teacher/Teacher1.mp3", 1, false, true, talkKid7);
+		FlxG.sound.play("assets/sounds/Missie2/Dad1.mp3", 1, false, true, talkKid7);
 	}
 	
 	function talkKid7()
@@ -198,9 +198,9 @@ class Mission2Talk extends FlxState
 		conversation = new FlxSprite();
 		conversation.loadGraphic("assets/images/Missie2/emo1.9.png");
 		conversation.x = _player.x - 300;
-		conversation.y = _player.y - 100;
+		conversation.y = _player.y - 300;
 		add(conversation);
-		FlxG.sound.play("assets/sounds/Missie1/Teacher/Teacher1.mp3", 1, false, true, finishMissionBier);
+		FlxG.sound.play("assets/sounds/Missie2/Prof5.mp3", 1, false, true, finishMissionBier);
 	}
 	
 	function finishMissionBier()
