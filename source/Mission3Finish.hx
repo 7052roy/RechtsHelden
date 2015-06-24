@@ -133,6 +133,7 @@ class Mission3Finish extends FlxState
 			{
 				judgeTalk.destroy();
 			}
+<<<<<<< HEAD
 		judgeTalk = new FlxSprite();
 		judgeTalk.loadGraphic("assets/images/Missie3/Pro4.png");
 		judgeTalk.x = _player.x - 164;
@@ -155,6 +156,17 @@ class Mission3Finish extends FlxState
 		_player.speed = 0;
 		FlxG.sound.destroy(true);
 		FlxG.sound.play("assets/sounds/Missie3/Missie3-2.mp3", 1, false, true);
+=======
+			judgeTalk = new FlxSprite();
+			judgeTalk.loadGraphic("assets/images/Missie3/Pro1.png");
+			judgeTalk.x = _player.x - 164;
+			judgeTalk.y = _player.y - 300;
+			add(judgeTalk);
+			_player.speed = 0;
+			FlxG.sound.destroy(true);
+			FlxG.sound.play("assets/sounds/Missie3/Missie3-2.mp3", 1, false, true, finishMission);
+		}
+>>>>>>> origin/master
 	}
 	
 	function clickReset()
