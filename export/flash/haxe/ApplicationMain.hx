@@ -790,6 +790,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/images/Story/Victory.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/Story/xbutton.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -1139,6 +1143,14 @@ class ApplicationMain {
 		
 		
 		urls.push ("assets/sounds/Missie2/Prof5.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
+		urls.push ("assets/sounds/Missie3/judge1.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
+		urls.push ("assets/sounds/Missie3/judge2.mp3");
 		types.push (lime.Assets.AssetType.MUSIC);
 		
 		
