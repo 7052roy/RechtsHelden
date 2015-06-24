@@ -207,6 +207,6 @@ class NightmareMode extends FlxState
 	{
 		playerLife -= 1;
 		p.x - 128;
-		_hud.
+		_hud.updateHUD(playerLife, nightmareLife);
 	}
 }

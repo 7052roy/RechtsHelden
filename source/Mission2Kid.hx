@@ -69,7 +69,7 @@ class Mission2Kid extends Entities
 		_idleTmr -= FlxG.elapsed;
 		if (positionTest == 0)
 		{
-			speed = 200;
+			speed = 350;
 			movementAngle = 180;
 			FlxAngle.rotatePoint(speed * .5, 0, 0, 0, movementAngle, velocity);
 		}

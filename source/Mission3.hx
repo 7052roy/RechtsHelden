@@ -155,7 +155,6 @@ class Mission3 extends FlxState
 	{
 		if ( _player.CharacterNumber == 3 && _player.ability2 == true ) 
 		{
-<<<<<<< HEAD
 			kjrwTalk = new FlxSprite();
 			kjrwTalk.loadGraphic("assets/images/Missie3/Pro1.png");
 			kjrwTalk.x = _player.x + 100;
@@ -163,7 +162,6 @@ class Mission3 extends FlxState
 			add(kjrwTalk);
 			_player.speed = 0;
 			FlxG.sound.play("assets/sounds/Missie3/Missie3-2.mp3", 1, false, true, kjrwText3);
-=======
 			if (kjrwTalk != null)
 			{
 				kjrwTalk.destroy();
@@ -176,7 +174,6 @@ class Mission3 extends FlxState
 		_player.speed = 0;
 		FlxG.sound.destroy(true);
 		FlxG.sound.play("assets/sounds/Missie3/Missie3-2.mp3", 1, false, true, kjrwText3);
->>>>>>> origin/master
 		}
 	}
 	
