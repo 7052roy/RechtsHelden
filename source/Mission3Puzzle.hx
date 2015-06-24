@@ -110,8 +110,6 @@ class Mission3Puzzle extends FlxState
 		_trigger = new FlxTypedGroup<Trigger>();
 		add(_trigger);
 		
-<<<<<<< HEAD
-=======
 		_ball = new Ball();
 		add(_ball);
 		
@@ -121,13 +119,6 @@ class Mission3Puzzle extends FlxState
 		_ball2 = new Ball2();
 		add(_ball2);
 		
-		_btnReset = new FlxButton(0, 0, "Reset", clickReset);
-		_btnReset.x = (FlxG.width / 2) - _btnReset.width - 10;
-		_btnReset.y = FlxG.height - _btnReset.height - 10;
-		_btnReset.onUp.sound = FlxG.sound.load(AssetPaths.select__wav);
-		add(_btnReset);
-		
->>>>>>> origin/master
 		_map.loadEntities(placeEntities, "entities");
 		
 		

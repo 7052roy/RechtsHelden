@@ -114,6 +114,14 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/images/Attackdown128x128.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/AttackUp128x128.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/Bald-Mission1.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -179,6 +187,14 @@ class ApplicationMain {
 		
 		
 		urls.push ("assets/images/Extra UI/Missie1-Voltooid.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Extra UI/Missie2-Voltooid.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Extra UI/Missie3-Voltooid.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
@@ -930,6 +946,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.MUSIC);
 		
 		
+		urls.push ("assets/sounds/Knightmare/Luuk1.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
 		urls.push ("assets/sounds/Missie1/Kind1/Kind1-1.mp3");
 		types.push (lime.Assets.AssetType.MUSIC);
 		
@@ -1282,6 +1302,7 @@ class ApplicationMain {
 			file: "RechtsHelden",
 			fps: Std.int (60),
 			fullscreen: false,
+			hardware: true,
 			height: Std.int (720),
 			orientation: "portrait",
 			packageName: "com.example.myapp",

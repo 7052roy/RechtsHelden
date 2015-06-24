@@ -30,7 +30,6 @@ class Mission3Finish extends FlxState
 	private var _map:FlxOgmoLoader;
 	private var _mWalls:FlxTilemap;
 	var mission1Music:FlxSound;
-	private var _btnReset:FlxButton;
 	private var _trigger:FlxTypedGroup<Trigger>;
 
 	
@@ -41,7 +40,7 @@ class Mission3Finish extends FlxState
 	{
 		_map = new FlxOgmoLoader("assets/data/Final Maps/worldmap5.oel");
 		_mWalls = _map.loadTilemap("assets/images/Tilesheet_Complete.png", 64, 64, "tree");
-	_mWalls.setTileProperties(1, FlxObject.NONE);
+		_mWalls.setTileProperties(1, FlxObject.NONE);
 		_mWalls.setTileProperties(2, FlxObject.NONE);
 		_mWalls.setTileProperties(3, FlxObject.NONE);
 		_mWalls.setTileProperties(4, FlxObject.NONE);
@@ -107,13 +106,6 @@ class Mission3Finish extends FlxState
 		
 		_trigger = new FlxTypedGroup<Trigger>();
 		add(_trigger);
-		
-	
-		_btnReset = new FlxButton(0, 0, "Reset", clickReset);
-		_btnReset.x = (FlxG.width / 2) - _btnReset.width - 10;
-		_btnReset.y = FlxG.height - _btnReset.height - 10;
-		_btnReset.onUp.sound = FlxG.sound.load(AssetPaths.select__wav);
-		add(_btnReset);
 		
 		_map.loadEntities(placeEntities, "entities");
 		
