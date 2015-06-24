@@ -204,10 +204,10 @@ class Mission3Puzzle extends FlxState
 		super.update();
 		_player.speed = 300;
 		FlxG.collide(_player, _mWalls);
-		FlxG.collide(_player, _ball, stopBalls);
-		FlxG.collide(_player, _ball1, stopBalls1);
-		FlxG.collide(_player, _ball2, stopBalls2);
-		FlxG.overlap(_player, _trigger);
+		FlxG.overlap(_player, _ball, stopBalls);
+		FlxG.overlap(_player, _ball1, stopBalls1);
+		FlxG.overlap(_player, _ball2, stopBalls2);
+		FlxG.overlap(_player, _trigger, finishMission);
 		FlxG.collide(_ball, _mWalls, setSpeed1);
 		FlxG.collide(_ball1, _mWalls, setSpeed2);
 		FlxG.collide(_ball2, _mWalls, setSpeed3);
@@ -254,17 +254,26 @@ class Mission3Puzzle extends FlxState
 	
 	function stopBalls(p:Player, b:Ball )
 	{
-		b.velocity.x = 0;
+		if (p.CharacterNumber == 1 && p.ability2 == true)
+		{
+			b.velocity.x = 0;
+		}
 	}
 	
 	function stopBalls1(p:Player, b:Ball1 )
 	{
-		b.velocity.x = 0;
+		if (p.CharacterNumber == 1 && p.ability2 == true)
+		{
+			b.velocity.x = 0;
+		}
 	}
 	
 	function stopBalls2(p:Player, b:Ball2 )
 	{
-		b.velocity.x = 0;
+		if (p.CharacterNumber == 1 && p.ability2 == true)
+		{
+			b.velocity.x = 0;
+		}
 	}
 	
 	

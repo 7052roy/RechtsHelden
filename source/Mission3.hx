@@ -32,6 +32,8 @@ class Mission3 extends FlxState
 	var mission1Music:FlxSound;
 	private var _btnReset:FlxButton;
 	private var _trigger:FlxTypedGroup<Trigger>;
+	var kjrwTalk:FlxSprite;
+
 	
 	#if mobile
 	public static var virtualPad:FlxVirtualPad;
@@ -111,16 +113,7 @@ class Mission3 extends FlxState
 		_trigger = new FlxTypedGroup<Trigger>();
 		add(_trigger);
 		
-		_btnReset = new FlxButton(0, 0, "Reset", clickReset);
-		_btnReset.x = (FlxG.width / 2) - _btnReset.width - 10;
-		_btnReset.y = FlxG.height - _btnReset.height - 10;
-		_btnReset.onUp.sound = FlxG.sound.load(AssetPaths.select__wav);
-		add(_btnReset);
-		
 		_map.loadEntities(placeEntities, "entities");
-		
-		
-		
 		
 		FlxG.camera.follow(_player, FlxCamera.STYLE_TOPDOWN, null, 1);
 		
@@ -131,19 +124,134 @@ class Mission3 extends FlxState
 		
 		FlxG.camera.fade(FlxColor.BLACK, 2, true);
 		
-		#if mobile
-		virtualPad = new FlxVirtualPad(FULL, NONE);	
-		add(virtualPad);
-		#end
+		kjrwText();
 		
 		super.create();	
 		
 	}
 	
-	function clickReset()
+	function kjrwText()
 	{
-		FlxG.switchState(new Mission1());
+		if (kjrwTalk != null)
+			{
+				kjrwTalk.destroy();
+			}
+		kjrwTalk = new FlxSprite();
+		kjrwTalk.loadGraphic("assets/images/Missie3/Feggit1.png");
+		kjrwTalk.x = _player.x + 100;
+		kjrwTalk.y = _player.y - 300;
+		add(kjrwTalk);
+		_player.speed = 0;
+		FlxG.sound.play("assets/sounds/Missie3/Missie3-1.mp3", 1, false, true,play);
 	}
+	
+	function play()
+	{
+		_player.speed = 300;
+		kjrwTalk.destroy();
+	}
+	
+	function kjrwText2()
+	{
+		if ( _player.CharacterNumber == 3 && _player.ability2 == true) 
+		{
+		kjrwTalk = new FlxSprite();
+		kjrwTalk.loadGraphic("assets/images/Missie3/Pro1.png");
+		kjrwTalk.x = _player.x + 100;
+		kjrwTalk.y = _player.y - 300;
+		add(kjrwTalk);
+		_player.speed = 0;
+		FlxG.sound.play("assets/sounds/Missie3/Missie3-2.mp3", 1, false, true, kjrwText3);
+		}
+	}
+	
+	function kjrwText3()
+	{
+		
+		kjrwTalk.destroy();
+		kjrwTalk = new FlxSprite();
+		kjrwTalk.loadGraphic("assets/images/Missie3/Feggit2.png");
+		kjrwTalk.x = _player.x + 100;
+		kjrwTalk.y = _player.y - 300;
+		add(kjrwTalk);
+		_player.speed = 0;
+		FlxG.sound.play("assets/sounds/Missie3/Missie3-2.mp3", 1, false, true, kjrwText4);
+		
+	}
+	
+	function kjrwText4()
+	{
+		kjrwTalk.destroy();
+		kjrwTalk = new FlxSprite();
+		kjrwTalk.loadGraphic("assets/images/Missie3/Feggit3.png");
+		kjrwTalk.x = _player.x + 100;
+		kjrwTalk.y = _player.y - 300;
+		add(kjrwTalk);
+		_player.speed = 0;
+		FlxG.sound.play("assets/sounds/Missie3/Missie3-3.mp3", 1, false, true, kjrwText5);
+		
+	}
+	
+	function kjrwText5()
+	{
+		kjrwTalk.destroy();
+		kjrwTalk = new FlxSprite();
+		kjrwTalk.loadGraphic("assets/images/Missie3/Pro2.png");
+		kjrwTalk.x = _player.x + 100;
+		kjrwTalk.y = _player.y - 300;
+		add(kjrwTalk);
+		_player.speed = 0;
+		FlxG.sound.play("assets/sounds/Missie3/Missie3-4.mp3", 1, false, true, kjrwText6);
+		
+	}
+	
+	function kjrwText6()
+	{
+		kjrwTalk.destroy();
+		kjrwTalk = new FlxSprite();
+		kjrwTalk.loadGraphic("assets/images/Missie3/Feggit4.png");
+		kjrwTalk.x = _player.x + 100;
+		kjrwTalk.y = _player.y - 300;
+		add(kjrwTalk);
+		_player.speed = 0;
+		FlxG.sound.play("assets/sounds/Missie3/Missie3-5.mp3", 1, false, true, kjrwText7);
+		
+	}
+	
+	function kjrwText7()
+	{
+		kjrwTalk.destroy();
+		kjrwTalk = new FlxSprite();
+		kjrwTalk.loadGraphic("assets/images/Missie3/Feggit5.png");
+		kjrwTalk.x = _player.x + 100;
+		kjrwTalk.y = _player.y - 300;
+		add(kjrwTalk);
+		_player.speed = 0;
+		FlxG.sound.play("assets/sounds/Missie3/Missie3-6.mp3", 1, false, true, kjrwText8);
+		
+	}
+	
+	function kjrwText8()
+	{
+		kjrwTalk.destroy();
+		kjrwTalk = new FlxSprite();
+		kjrwTalk.loadGraphic("assets/images/Missie3/Pro3.png");
+		kjrwTalk.x = _player.x + 100;
+		kjrwTalk.y = _player.y - 300;
+		add(kjrwTalk);
+		_player.speed = 0;
+		FlxG.sound.play("assets/sounds/Missie3/Missie3-7.mp3", 1, false, true, play2);
+		
+	}
+	
+	function play2()
+	{
+		_player.speed = 300;
+		kjrwTalk.destroy();
+	}
+	
+	
+	
 	
 	private function placeEntities(entityName:String, entityData:Xml):Void
 	{
@@ -158,6 +266,7 @@ class Mission3 extends FlxState
 		}
 		
 	}
+	
 	
 	
 	/**
@@ -178,7 +287,8 @@ class Mission3 extends FlxState
 		super.update();
 		_player.speed = 300;
 		FlxG.collide(_player, _mWalls);
-		FlxG.collide(_player, _trigger, finishMission);
+		FlxG.overlap(_player, _trigger);
+		
 		
 		
 		

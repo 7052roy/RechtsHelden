@@ -207,7 +207,7 @@ class PlayState extends FlxState
 			talkAdult2 = new FlxSprite();
 			talkAdult2.loadGraphic("assets/images/Missie1/intromissie1/prof0.png");
 			talkAdult2.x = _player.x - 300;
-			talkAdult2.y = _player.y;
+			talkAdult2.y = _player.y - 100;
 			add(talkAdult2);
 			FlxG.sound.destroy(true);
 			p.speed = 0;

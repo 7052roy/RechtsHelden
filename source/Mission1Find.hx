@@ -176,7 +176,7 @@ class Mission1Find extends FlxState
 			_adult2.x = Std.parseInt(entityData.get("x"));
 			_adult2.y = Std.parseInt(entityData.get("y"));
 		}
-		trace("finished");
+		
 	}
 	
 	
@@ -217,7 +217,7 @@ class Mission1Find extends FlxState
 			talkAdult1 = new FlxSprite();
 			talkAdult1.loadGraphic("assets/images/kind1.1.png");
 			talkAdult1.x = _player.x - 400;
-			talkAdult1.y = _player.y - 200;
+			talkAdult1.y = _player.y - 100;
 			add(talkAdult1);
 			
 			FlxG.sound.play("assets/sounds/Missie1/Kind2/Prof1-1.mp3", 1, false, true, adult1Talk2);
@@ -240,8 +240,8 @@ class Mission1Find extends FlxState
 		talkAdult1.destroy();
 		talkAdult1 = new FlxSprite();
 		talkAdult1.loadGraphic("assets/images/kind1.3.png");
-		talkAdult1.x = _player.x - 400;
-		talkAdult1.y = _player.y - 200;
+		talkAdult1.x = _player.x - 300;
+		talkAdult1.y = _player.y - 150;
 		add(talkAdult1);
 		FlxG.sound.play("assets/sounds/Missie1/Kind2/Prof2-1.mp3", 1, false, true, adult1Talk4);
 	}
