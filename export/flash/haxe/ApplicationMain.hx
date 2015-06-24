@@ -1370,6 +1370,7 @@ class ApplicationMain {
 			file: "RechtsHelden",
 			fps: Std.int (60),
 			fullscreen: false,
+			hardware: true,
 			height: Std.int (720),
 			orientation: "portrait",
 			packageName: "com.example.myapp",
