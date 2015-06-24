@@ -33,10 +33,8 @@ class Mission2Talk extends FlxState
 	var mission1Music:FlxSound;
 	private var _btnReset:FlxButton;
 	private var _trigger:FlxTypedGroup<Trigger>;
-	
-	#if mobile
-	public static var virtualPad:FlxVirtualPad;
-	#end
+	var conversation:FlxSprite;
+
 	
 	override public function create():Void
 	{
@@ -52,27 +50,11 @@ class Mission2Talk extends FlxState
 		_trigger = new FlxTypedGroup<Trigger>();
 		add(_trigger);
 		
-		_btnReset = new FlxButton(0, 0, "Reset", clickReset);
-		_btnReset.x = (FlxG.width / 2) - _btnReset.width - 10;
-		_btnReset.y = FlxG.height - _btnReset.height - 10;
-		_btnReset.onUp.sound = FlxG.sound.load(AssetPaths.select__wav);
-		add(_btnReset);
-		
 		_map.loadEntities(placeEntities, "entities");
 		
 		FlxG.camera.follow(_player, FlxCamera.STYLE_TOPDOWN, null, 1);
 		
-		//_hud = new HUD();
-		//add(_hud);
-		mission1Music = FlxG.sound.load("assets/music/townMusic.wav");
-		mission1Music.play(true);
-		
 		FlxG.camera.fade(FlxColor.BLACK, 2, true);
-		
-		#if mobile
-		virtualPad = new FlxVirtualPad(FULL, NONE);	
-		add(virtualPad);
-		#end
 		
 		super.create();	
 		
@@ -113,11 +95,93 @@ class Mission2Talk extends FlxState
 	override public function update():Void
 	{
 		super.update();
-		FlxG.overlap(_player, _trigger, finishMissionBier);
+		FlxG.collide(_player, _trigger, talkKid);
 		FlxG.collide(_player, _mWalls);
 	}
 	
-	function finishMissionBier(p:Player, t:Trigger)
+	function talkKid(p:Player, t:Trigger)
+	{
+		if (conversation != null)
+			{
+				conversation.destroy();
+			}
+			conversation = new FlxSprite();
+			conversation.loadGraphic("assets/images/Missie2/emo1.3.png");
+			conversation.x = _player.x - 300;
+			conversation.y = _player.y - 100;
+			add(conversation);
+			FlxG.sound.destroy(true);
+			_player.speed = 0;
+			FlxG.sound.play("assets/sounds/Missie1/Teacher/Teacher1.mp3", 1, false, true, talkKid2);
+	}
+	
+	function talkKid2()
+	{
+		conversation.destroy();
+		conversation = new FlxSprite();
+		conversation.loadGraphic("assets/images/Missie2/emo1.4.png");
+		conversation.x = _player.x - 300;
+		conversation.y = _player.y - 100;
+		add(conversation);
+		FlxG.sound.play("assets/sounds/Missie1/Teacher/Teacher1.mp3", 1, false, true, talkKid3);
+	}
+	
+	function talkKid3()
+	{
+		conversation.destroy();
+		conversation = new FlxSprite();
+		conversation.loadGraphic("assets/images/Missie2/emo1.5.png");
+		conversation.x = _player.x - 300;
+		conversation.y = _player.y - 100;
+		add(conversation);
+		FlxG.sound.play("assets/sounds/Missie1/Teacher/Teacher1.mp3", 1, false, true, talkKid4);
+	}
+	
+	function talkKid4()
+	{
+		conversation.destroy();
+		conversation = new FlxSprite();
+		conversation.loadGraphic("assets/images/Missie2/emo1.6.png");
+		conversation.x = _player.x - 300;
+		conversation.y = _player.y - 100;
+		add(conversation);
+		FlxG.sound.play("assets/sounds/Missie1/Teacher/Teacher1.mp3", 1, false, true, talkKid5);
+	}
+	
+	function talkKid5()
+	{
+		conversation.destroy();
+		conversation = new FlxSprite();
+		conversation.loadGraphic("assets/images/Missie2/emo1.7.png");
+		conversation.x = _player.x - 300;
+		conversation.y = _player.y - 100;
+		add(conversation);
+		FlxG.sound.play("assets/sounds/Missie1/Teacher/Teacher1.mp3", 1, false, true, talkKid6);
+	}
+	
+	function talkKid6()
+	{
+		conversation.destroy();
+		conversation = new FlxSprite();
+		conversation.loadGraphic("assets/images/Missie2/emo1.8.png");
+		conversation.x = _player.x - 300;
+		conversation.y = _player.y - 100;
+		add(conversation);
+		FlxG.sound.play("assets/sounds/Missie1/Teacher/Teacher1.mp3", 1, false, true, talkKid7);
+	}
+	
+	function talkKid7()
+	{
+		conversation.destroy();
+		conversation = new FlxSprite();
+		conversation.loadGraphic("assets/images/Missie2/emo1.9.png");
+		conversation.x = _player.x - 300;
+		conversation.y = _player.y - 100;
+		add(conversation);
+		FlxG.sound.play("assets/sounds/Missie1/Teacher/Teacher1.mp3", 1, false, true, finishMissionBier);
+	}
+	
+	function finishMissionBier()
 	{
 		mission1Music.stop();
 		FlxG.switchState(new Mission2());

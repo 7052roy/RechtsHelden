@@ -32,7 +32,7 @@ class Mission1Finish extends FlxState
 	var _teacher:Teacher;
 	var _enemy:Enemy;
 	var _trigger:FlxTypedGroup<Trigger>;
-
+	var conversation:FlxSprite;
 	
 	/**
 	 * Function that is called up when to state is created to set it up. 
@@ -120,13 +120,12 @@ class Mission1Finish extends FlxState
 		
 		//_hud = new HUD();
 		//add(_hud);
-		townMusic = FlxG.sound.load("assets/music/townMusic.wav");
-		townMusic.play(true);
+		FlxG.sound.playMusic(AssetPaths.townMusic__wav, 1, true);
 		
 		FlxG.camera.fade(FlxColor.BLACK, 2, true);
 		
 		super.create();	
-		
+		mission2Text();
 	}
 	
 	private function placeEntities(entityName:String, entityData:Xml):Void
@@ -153,6 +152,32 @@ class Mission1Finish extends FlxState
 		super.destroy();
 	}
 
+	function mission2Text()
+	{
+		if (conversation != null)
+		{
+			conversation.destroy();
+		}
+		FlxG.sound.destroy(true);
+		_player.speed = 0;
+		conversation = new FlxSprite();
+		conversation.loadGraphic("assets/images/Missie2/emo1.1.png");
+		conversation.x = _player.x - 300;
+		conversation.y = _player.y - 500;
+		add(conversation);
+		FlxG.sound.play("assets/sounds/Missie2/Prof1.mp3", 1, false, true, playMusic);
+	}
+	
+	
+	function playMusic()
+	{
+		if (conversation != null)
+		{
+			conversation.destroy();
+		}
+		FlxG.sound.playMusic(AssetPaths.townMusic__wav, 1, true);
+		_player.speed = 300;
+	}
 	/**
 	 * Function that is called once every frame.
 	 */
@@ -160,8 +185,8 @@ class Mission1Finish extends FlxState
 	{
 
 		super.update();
-		_player.speed = 300;
-		FlxG.overlap(_player, _trigger, loadMission2Talk);
+		//_player.speed = 300;
+		FlxG.collide(_player, _trigger, loadMission2Talk);
 		FlxG.collide(_player, _mWalls);
 	}	
 	
