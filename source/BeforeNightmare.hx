@@ -24,7 +24,7 @@ import lime.audio.AudioManager;
 /**
  * A FlxState which can be used for the actual gameplay.
  */
-class Mission3Puzzle extends FlxState
+class BeforeNightmare extends FlxState
 {
 	private var _player:Player;
 	private var _map:FlxOgmoLoader;
@@ -39,7 +39,7 @@ class Mission3Puzzle extends FlxState
 	 */
 	override public function create():Void
 	{
-		_map = new FlxOgmoLoader("assets/data/Final Maps/puzzle3.oel");
+		_map = new FlxOgmoLoader("assets/data/Final Maps/worldmap6.oel");
 		_mWalls = _map.loadTilemap("assets/images/Tilesheet_Complete.png", 64, 64, "tree");
 	_mWalls.setTileProperties(1, FlxObject.NONE);
 		_mWalls.setTileProperties(2, FlxObject.NONE);
@@ -180,7 +180,7 @@ class Mission3Puzzle extends FlxState
 	function finishMission(p:Player, t:Trigger)
 	{
 		
-		FlxG.switchState(new BeforeNightmare());
+		FlxG.switchState(new Mission3Puzzle());
 	}
 	
 }
