@@ -1154,6 +1154,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.MUSIC);
 		
 		
+		urls.push ("assets/sounds/OutroVoice.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
 		urls.push ("assets/sounds/sounds-go-here.txt");
 		types.push (lime.Assets.AssetType.TEXT);
 		
@@ -1262,7 +1266,6 @@ class ApplicationMain {
 			file: "RechtsHelden",
 			fps: Std.int (60),
 			fullscreen: false,
-			hardware: true,
 			height: Std.int (720),
 			orientation: "portrait",
 			packageName: "com.example.myapp",

@@ -605,6 +605,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/sounds/Music/Tobeedited.mp3", AssetType.MUSIC);
 		className.set ("assets/sounds/Music/Townsong.mp3", __ASSET__assets_sounds_music_townsong_mp3);
 		type.set ("assets/sounds/Music/Townsong.mp3", AssetType.MUSIC);
+		className.set ("assets/sounds/OutroVoice.mp3", __ASSET__assets_sounds_outrovoice_mp3);
+		type.set ("assets/sounds/OutroVoice.mp3", AssetType.MUSIC);
 		className.set ("assets/sounds/sounds-go-here.txt", __ASSET__assets_sounds_sounds_go_here_txt);
 		type.set ("assets/sounds/sounds-go-here.txt", AssetType.TEXT);
 		className.set ("assets/sounds/Tjalle/Back.png", __ASSET__assets_sounds_tjalle_back_png);
@@ -1750,6 +1752,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/OutroVoice.mp3";
+		path.set (id, id);
+		
+		type.set (id, AssetType.MUSIC);
 		id = "assets/sounds/sounds-go-here.txt";
 		path.set (id, id);
 		
@@ -1802,6 +1808,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#else
 		
 		#if openfl
+		
 		
 		
 		
@@ -2940,6 +2947,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("assets/sounds/Music/Townsong.mp3", __ASSET__assets_sounds_music_townsong_mp3);
 		type.set ("assets/sounds/Music/Townsong.mp3", AssetType.MUSIC);
 		
+		className.set ("assets/sounds/OutroVoice.mp3", __ASSET__assets_sounds_outrovoice_mp3);
+		type.set ("assets/sounds/OutroVoice.mp3", AssetType.MUSIC);
+		
 		className.set ("assets/sounds/sounds-go-here.txt", __ASSET__assets_sounds_sounds_go_here_txt);
 		type.set ("assets/sounds/sounds-go-here.txt", AssetType.TEXT);
 		
@@ -3850,6 +3860,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_music_startscreen_mp3 extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_music_tobeedited_mp3 extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_music_townsong_mp3 extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__assets_sounds_outrovoice_mp3 extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_sounds_go_here_txt extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_tjalle_back_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_tjalle_grass_flower_64x64_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
@@ -3863,6 +3874,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 #elseif html5
+
 
 
 
@@ -4443,6 +4455,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:file("assets/sounds/Music/Startscreen.mp3") #if display private #end class __ASSET__assets_sounds_music_startscreen_mp3 extends lime.utils.ByteArray {}
 @:file("assets/sounds/Music/Tobeedited.mp3") #if display private #end class __ASSET__assets_sounds_music_tobeedited_mp3 extends lime.utils.ByteArray {}
 @:file("assets/sounds/Music/Townsong.mp3") #if display private #end class __ASSET__assets_sounds_music_townsong_mp3 extends lime.utils.ByteArray {}
+@:file("assets/sounds/OutroVoice.mp3") #if display private #end class __ASSET__assets_sounds_outrovoice_mp3 extends lime.utils.ByteArray {}
 @:file("assets/sounds/sounds-go-here.txt") #if display private #end class __ASSET__assets_sounds_sounds_go_here_txt extends lime.utils.ByteArray {}
 @:image("assets/sounds/Tjalle/Back.png") #if display private #end class __ASSET__assets_sounds_tjalle_back_png extends lime.graphics.Image {}
 @:image("assets/sounds/Tjalle/Grass Flower 64x64.png") #if display private #end class __ASSET__assets_sounds_tjalle_grass_flower_64x64_png extends lime.graphics.Image {}
