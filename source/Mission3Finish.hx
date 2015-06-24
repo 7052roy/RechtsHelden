@@ -31,35 +31,84 @@ class Mission3Finish extends FlxState
 	private var _mWalls:FlxTilemap;
 	var mission1Music:FlxSound;
 	private var _btnReset:FlxButton;
-	var _kid:Kid;
-	var _angryDad:AngryDad;
-	
-	#if mobile
-	public static var virtualPad:FlxVirtualPad;
-	#end
+	private var _trigger:FlxTypedGroup<Trigger>;
+
 	
 	/**
 	 * Function that is called up when to state is created to set it up. 
 	 */
 	override public function create():Void
 	{
-		_map = new FlxOgmoLoader("assets/data/puzzle3.oel");
+		_map = new FlxOgmoLoader("assets/data/Final Maps/worldmap5.oel");
 		_mWalls = _map.loadTilemap("assets/images/Tilesheet_Complete.png", 64, 64, "tree");
-		_mWalls.setTileProperties(1, FlxObject.ANY);
-		_mWalls.setTileProperties(3, FlxObject.NONE);
+	_mWalls.setTileProperties(1, FlxObject.NONE);
 		_mWalls.setTileProperties(2, FlxObject.NONE);
+		_mWalls.setTileProperties(3, FlxObject.NONE);
+		_mWalls.setTileProperties(4, FlxObject.NONE);
+		_mWalls.setTileProperties(5, FlxObject.NONE);
+		_mWalls.setTileProperties(6, FlxObject.NONE);
+		_mWalls.setTileProperties(7, FlxObject.NONE);
+		_mWalls.setTileProperties(8, FlxObject.NONE);
+		_mWalls.setTileProperties(9, FlxObject.NONE);
 		_mWalls.setTileProperties(10, FlxObject.NONE);
+		_mWalls.setTileProperties(11, FlxObject.NONE);
+		_mWalls.setTileProperties(12, FlxObject.NONE);
+		_mWalls.setTileProperties(13, FlxObject.NONE);
+		_mWalls.setTileProperties(14, FlxObject.NONE);
+		_mWalls.setTileProperties(15, FlxObject.NONE);
+		_mWalls.setTileProperties(16, FlxObject.NONE);
+		_mWalls.setTileProperties(17, FlxObject.NONE);
+		_mWalls.setTileProperties(18, FlxObject.NONE);
+		_mWalls.setTileProperties(19, FlxObject.NONE);
+		_mWalls.setTileProperties(20, FlxObject.NONE);
+		_mWalls.setTileProperties(21, FlxObject.NONE);
+		_mWalls.setTileProperties(22, FlxObject.NONE);
+		_mWalls.setTileProperties(23, FlxObject.NONE);
+		_mWalls.setTileProperties(24, FlxObject.NONE);
+		_mWalls.setTileProperties(170, FlxObject.NONE);
+		_mWalls.setTileProperties(171, FlxObject.NONE);
+		_mWalls.setTileProperties(172, FlxObject.NONE);
+		_mWalls.setTileProperties(173, FlxObject.NONE);
+		_mWalls.setTileProperties(174, FlxObject.NONE);
+		_mWalls.setTileProperties(175, FlxObject.NONE);
+		_mWalls.setTileProperties(176, FlxObject.NONE);
+		_mWalls.setTileProperties(187, FlxObject.NONE);
+		_mWalls.setTileProperties(188, FlxObject.NONE);
+		_mWalls.setTileProperties(189, FlxObject.NONE);
+		_mWalls.setTileProperties(190, FlxObject.NONE);
+		_mWalls.setTileProperties(191, FlxObject.NONE);
+		_mWalls.setTileProperties(192, FlxObject.NONE);
+		_mWalls.setTileProperties(193, FlxObject.NONE);
+		_mWalls.setTileProperties(204, FlxObject.NONE);
+		_mWalls.setTileProperties(205, FlxObject.NONE);
+		_mWalls.setTileProperties(206, FlxObject.NONE);
+		_mWalls.setTileProperties(207, FlxObject.NONE);
+		_mWalls.setTileProperties(208, FlxObject.NONE);
+		_mWalls.setTileProperties(209, FlxObject.NONE);
+		_mWalls.setTileProperties(210, FlxObject.NONE);
+		_mWalls.setTileProperties(221, FlxObject.NONE);
+		_mWalls.setTileProperties(222, FlxObject.NONE);
+		_mWalls.setTileProperties(223, FlxObject.NONE);
+		_mWalls.setTileProperties(224, FlxObject.NONE);
+		_mWalls.setTileProperties(225, FlxObject.NONE);
+		_mWalls.setTileProperties(226, FlxObject.NONE);
+		_mWalls.setTileProperties(227, FlxObject.NONE);
+		_mWalls.setTileProperties(238, FlxObject.NONE);
+		_mWalls.setTileProperties(239, FlxObject.NONE);
+		_mWalls.setTileProperties(240, FlxObject.NONE);
+		_mWalls.setTileProperties(241, FlxObject.NONE);
+		_mWalls.setTileProperties(242, FlxObject.NONE);
+		_mWalls.setTileProperties(243, FlxObject.NONE);
+		_mWalls.setTileProperties(244, FlxObject.NONE);
 		add(_mWalls);
 		
 		_player = new Player();
 		add(_player);
 		
-		_kid = new Kid();
-		add(_kid);
+		_trigger = new FlxTypedGroup<Trigger>();
+		add(_trigger);
 		
-		_angryDad = new AngryDad();
-		add(_angryDad);
-		
+	
 		_btnReset = new FlxButton(0, 0, "Reset", clickReset);
 		_btnReset.x = (FlxG.width / 2) - _btnReset.width - 10;
 		_btnReset.y = FlxG.height - _btnReset.height - 10;
@@ -67,8 +116,6 @@ class Mission3Finish extends FlxState
 		add(_btnReset);
 		
 		_map.loadEntities(placeEntities, "entities");
-		
-		
 		
 		
 		FlxG.camera.follow(_player, FlxCamera.STYLE_TOPDOWN, null, 1);
@@ -101,15 +148,9 @@ class Mission3Finish extends FlxState
 			_player.x = Std.parseInt(entityData.get("x"));
 			_player.y = Std.parseInt(entityData.get("y"));
 		}
-		else if (entityName == "mission2_angryDad")
+		else if (entityName == "Tumblr")
 		{
-			_angryDad.x = Std.parseInt(entityData.get("x"));
-			_angryDad.y = Std.parseInt(entityData.get("y"));
-		}
-		else if (entityName == "mission2_kid")
-		{
-			_kid.x = Std.parseInt(entityData.get("x"));
-			_kid.y = Std.parseInt(entityData.get("y"));
+			_trigger.add(new Trigger(Std.parseInt(entityData.get("x"))+4, Std.parseInt(entityData.get("y")), Std.parseInt(entityData.get("etype"))));
 		}
 	}
 	
@@ -132,22 +173,14 @@ class Mission3Finish extends FlxState
 		super.update();
 		_player.speed = 300;
 		FlxG.collide(_player, _mWalls);
-		if (_player.CharacterNumber == 2 && _player.ability2 == true)
-		{
-			FlxG.collide(_player, _kid, kidCollision);
-		}
-		FlxG.collide(_kid, _mWalls);
-		FlxG.overlap(_kid, _teacher, finishMission);
+		FlxG.collide(_player, _trigger, finishMission);
+	
 	}	
 	
-	function finishMission(k:Kid, t:Teacher)
+	function finishMission(p:Player, t:Trigger)
 	{
-		mission1Music.stop();
-		FlxG.switchState(new Mission1Finish());
+		
+		FlxG.switchState(new Mission3Puzzle());
 	}
 	
-	function kidCollision(p:Player, k:Kid)
-	{
-		_kid.kidMovement();
-	}
 }

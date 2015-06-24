@@ -24,7 +24,7 @@ import lime.audio.AudioManager;
 /**
  * A FlxState which can be used for the actual gameplay.
  */
-class Mission3 extends FlxState
+class Mission3Puzzle extends FlxState
 {
 	private var _player:Player;
 	private var _map:FlxOgmoLoader;
@@ -32,19 +32,16 @@ class Mission3 extends FlxState
 	var mission1Music:FlxSound;
 	private var _btnReset:FlxButton;
 	private var _trigger:FlxTypedGroup<Trigger>;
-	
-	#if mobile
-	public static var virtualPad:FlxVirtualPad;
-	#end
+
 	
 	/**
 	 * Function that is called up when to state is created to set it up. 
 	 */
 	override public function create():Void
 	{
-		_map = new FlxOgmoLoader("assets/data/Final Maps/worldmap4.oel");
+		_map = new FlxOgmoLoader("assets/data/Final Maps/puzzle3.oel");
 		_mWalls = _map.loadTilemap("assets/images/Tilesheet_Complete.png", 64, 64, "tree");
-		_mWalls.setTileProperties(1, FlxObject.NONE);
+	_mWalls.setTileProperties(1, FlxObject.NONE);
 		_mWalls.setTileProperties(2, FlxObject.NONE);
 		_mWalls.setTileProperties(3, FlxObject.NONE);
 		_mWalls.setTileProperties(4, FlxObject.NONE);
@@ -111,6 +108,7 @@ class Mission3 extends FlxState
 		_trigger = new FlxTypedGroup<Trigger>();
 		add(_trigger);
 		
+	
 		_btnReset = new FlxButton(0, 0, "Reset", clickReset);
 		_btnReset.x = (FlxG.width / 2) - _btnReset.width - 10;
 		_btnReset.y = FlxG.height - _btnReset.height - 10;
@@ -118,8 +116,6 @@ class Mission3 extends FlxState
 		add(_btnReset);
 		
 		_map.loadEntities(placeEntities, "entities");
-		
-		
 		
 		
 		FlxG.camera.follow(_player, FlxCamera.STYLE_TOPDOWN, null, 1);
@@ -156,7 +152,6 @@ class Mission3 extends FlxState
 		{
 			_trigger.add(new Trigger(Std.parseInt(entityData.get("x"))+4, Std.parseInt(entityData.get("y")), Std.parseInt(entityData.get("etype"))));
 		}
-		
 	}
 	
 	
@@ -179,16 +174,13 @@ class Mission3 extends FlxState
 		_player.speed = 300;
 		FlxG.collide(_player, _mWalls);
 		FlxG.collide(_player, _trigger, finishMission);
-		
-		
-		
+	
 	}	
 	
 	function finishMission(p:Player, t:Trigger)
 	{
-		mission1Music.stop();
-		FlxG.switchState(new Mission3Finish());
+		
+		FlxG.switchState(new Mission3Puzzle());
 	}
-	
 	
 }

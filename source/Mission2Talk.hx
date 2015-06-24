@@ -156,12 +156,34 @@ class Mission2Talk extends FlxState
 		conversation.x = _player.x - 300;
 		conversation.y = _player.y - 100;
 		add(conversation);
-		FlxG.sound.play("assets/sounds/Missie1/Teacher/Teacher1.mp3", 1, false, true, talkKid6);
+		FlxG.sound.play("assets/sounds/Missie1/Teacher/Teacher1.mp3", 1, false, true, newMap);
+	}
+	
+	
+	function newMap()
+	{
+		remove(_mWalls,true);
+		remove(_player, true);
+		conversation.destroy();
+		_map = new FlxOgmoLoader("assets/data/Final Maps/puzzle2-1-1.oel");
+		_mWalls = _map.loadTilemap("assets/images/Tilesheet_Complete3.png", 64, 64, "tree");
+		_mWalls.setTileProperties(0, FlxObject.ANY);
+		_mWalls.setTileProperties(1, FlxObject.NONE);
+		add(_mWalls);
+		
+		_player = new Player();
+		add(_player);
+		
+		_map.loadEntities(placeEntities, "entities");
+		
+		FlxG.camera.follow(_player, FlxCamera.STYLE_TOPDOWN, null, 1);
+		
+		talkKid6();
 	}
 	
 	function talkKid6()
 	{
-		conversation.destroy();
+		
 		conversation = new FlxSprite();
 		conversation.loadGraphic("assets/images/Missie2/emo1.8.png");
 		conversation.x = _player.x - 300;
@@ -183,7 +205,7 @@ class Mission2Talk extends FlxState
 	
 	function finishMissionBier()
 	{
-		mission1Music.stop();
+		
 		FlxG.switchState(new Mission2());
 	}
 
