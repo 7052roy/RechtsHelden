@@ -32,7 +32,7 @@ class NightmareMode extends FlxState
 	private var _mWalls:FlxTilemap;
 	var talk:FlxSprite;
 	var _nightmare:NightMare;
-	var _timer:Float = 10;
+	var _timer:Float = 15;
 	var _attack:NightmareAttack;
 	var _hud:HUD;
 	var _attackTimer:Float = 2;
@@ -154,6 +154,11 @@ class NightmareMode extends FlxState
 	 */
 	override public function update():Void
 	{
+		if (nightmareLife <= 0)
+		{
+			FlxG.switchState(new Outro());
+		}
+		
 		if (_timer < 0)
 		{
 			if (_attack != null)
@@ -181,6 +186,7 @@ class NightmareMode extends FlxState
 		_attackTimer -= FlxG.elapsed;
 		_timer -= FlxG.elapsed;
 	
+		
 	}	
 	
 	function attackPlayer(p:Player, a:NightmareAttack)
@@ -206,7 +212,7 @@ class NightmareMode extends FlxState
 	function playerNightmare(p:Player, n:NightMare)
 	{
 		playerLife -= 1;
-		p.x - 128;
+		_player.x - 320;
 		_hud.updateHUD(playerLife, nightmareLife);
 	}
 }
