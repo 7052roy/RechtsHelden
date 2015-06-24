@@ -232,7 +232,7 @@ class Mission3 extends FlxState
 		kjrwTalk.y = _player.y - 300;
 		add(kjrwTalk);
 		_player.speed = 0;
-		FlxG.sound.play("assets/sounds/Missie3/Missie3-6.mp3", 1, false, true, kjrwText8);
+		FlxG.sound.play("assets/sounds/Missie3/Missie3-5-1.mp3", 1, false, true, kjrwText8);
 		
 	}
 	
@@ -245,7 +245,7 @@ class Mission3 extends FlxState
 		kjrwTalk.y = _player.y - 300;
 		add(kjrwTalk);
 		_player.speed = 0;
-		FlxG.sound.play("assets/sounds/Missie3/Missie3-7.mp3", 1, false, true, finishMission);
+		FlxG.sound.play("assets/sounds/Missie3/Missie3-6.mp3", 1, false, true, finishMission);
 		
 	}
 	
