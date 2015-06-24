@@ -127,10 +127,6 @@ class BeforeNightmare extends FlxState
 		
 		FlxG.camera.fade(FlxColor.BLACK, 2, true);
 		
-		#if mobile
-		virtualPad = new FlxVirtualPad(FULL, NONE);	
-		add(virtualPad);
-		#end
 		
 		super.create();	
 		
@@ -177,10 +173,16 @@ class BeforeNightmare extends FlxState
 	
 	}	
 	
+	function finish()
+	{
+		FlxG.switchState(new NightmareMode());
+	}
+	
 	function finishMission(p:Player, t:Trigger)
 	{
+		FlxG.sound.destroy(true);
+		FlxG.sound.play("assets/sounds/Missie3/missie3-15.mp3", 1, false, true, finish);
 		
-		FlxG.switchState(new Mission3Puzzle());
 	}
 	
 }

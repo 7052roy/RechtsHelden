@@ -116,9 +116,7 @@ class Mission3 extends FlxState
 		_map.loadEntities(placeEntities, "entities");
 		
 		FlxG.camera.follow(_player, FlxCamera.STYLE_TOPDOWN, null, 1);
-		
-		//_hud = new HUD();
-		//add(_hud);
+
 		mission1Music = FlxG.sound.load("assets/music/townMusic.wav");
 		mission1Music.play(true);
 		
@@ -155,6 +153,11 @@ class Mission3 extends FlxState
 	{
 		if ( _player.CharacterNumber == 3 && _player.ability2 == true ) 
 		{
+			if (kjrwTalk != null)
+			{
+				kjrwTalk.destroy();
+			}
+			FlxG.sound.destroy(true);
 			kjrwTalk = new FlxSprite();
 			kjrwTalk.loadGraphic("assets/images/Missie3/Pro1.png");
 			kjrwTalk.x = _player.x + 100;
@@ -162,18 +165,6 @@ class Mission3 extends FlxState
 			add(kjrwTalk);
 			_player.speed = 0;
 			FlxG.sound.play("assets/sounds/Missie3/Missie3-2.mp3", 1, false, true, kjrwText3);
-			if (kjrwTalk != null)
-			{
-				kjrwTalk.destroy();
-			}
-		kjrwTalk = new FlxSprite();
-		kjrwTalk.loadGraphic("assets/images/Missie3/Pro1.png");
-		kjrwTalk.x = _player.x - 164;
-		kjrwTalk.y = _player.y - 300;
-		add(kjrwTalk);
-		_player.speed = 0;
-		FlxG.sound.destroy(true);
-		FlxG.sound.play("assets/sounds/Missie3/Missie3-2.mp3", 1, false, true, kjrwText3);
 		}
 	}
 	
@@ -298,7 +289,6 @@ class Mission3 extends FlxState
 	{
 
 		super.update();
-		_player.speed = 300;
 		FlxG.collide(_player, _mWalls);
 		FlxG.overlap(_player, _trigger, kjrwText2);
 		
