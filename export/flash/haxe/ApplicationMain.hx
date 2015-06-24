@@ -846,31 +846,31 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.SOUND);
 		
 		
-		urls.push ("assets/sounds/IntroMissie/1IntroPijltjestoetsen.mp3");
+		urls.push ("assets/sounds/IntroMissie/Tut1.mp3");
 		types.push (lime.Assets.AssetType.MUSIC);
 		
 		
-		urls.push ("assets/sounds/IntroMissie/2GoedGedaan.mp3");
+		urls.push ("assets/sounds/IntroMissie/Tut2.mp3");
 		types.push (lime.Assets.AssetType.MUSIC);
 		
 		
-		urls.push ("assets/sounds/IntroMissie/3PatInstructie.mp3");
+		urls.push ("assets/sounds/IntroMissie/Tut3.mp3");
 		types.push (lime.Assets.AssetType.MUSIC);
 		
 		
-		urls.push ("assets/sounds/IntroMissie/4TecInstructie1.mp3");
+		urls.push ("assets/sounds/IntroMissie/Tut4.mp3");
 		types.push (lime.Assets.AssetType.MUSIC);
 		
 		
-		urls.push ("assets/sounds/IntroMissie/5TecInstructie2.mp3");
+		urls.push ("assets/sounds/IntroMissie/Tut5.mp3");
 		types.push (lime.Assets.AssetType.MUSIC);
 		
 		
-		urls.push ("assets/sounds/IntroMissie/6ProfInstructie.mp3");
+		urls.push ("assets/sounds/IntroMissie/Tut6.mp3");
 		types.push (lime.Assets.AssetType.MUSIC);
 		
 		
-		urls.push ("assets/sounds/IntroMissie/7IntroOutro.mp3");
+		urls.push ("assets/sounds/IntroMissie/Tut7.mp3");
 		types.push (lime.Assets.AssetType.MUSIC);
 		
 		
@@ -1118,6 +1118,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.MUSIC);
 		
 		
+		urls.push ("assets/sounds/Music/80's loop.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
 		urls.push ("assets/sounds/Music/Chase.mp3");
 		types.push (lime.Assets.AssetType.MUSIC);
 		
@@ -1126,11 +1130,23 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.SOUND);
 		
 		
-		urls.push ("assets/sounds/Music/Lab Junk.wav");
+		urls.push ("assets/sounds/Music/introstuk.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
+		urls.push ("assets/sounds/Music/KJRWHouse.wav");
 		types.push (lime.Assets.AssetType.SOUND);
 		
 		
 		urls.push ("assets/sounds/Music/Puzzle.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
+		urls.push ("assets/sounds/Music/Startscreen.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
+		urls.push ("assets/sounds/Music/Tobeedited.mp3");
 		types.push (lime.Assets.AssetType.MUSIC);
 		
 		

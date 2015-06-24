@@ -44,11 +44,13 @@ class Intro extends FlxState
 	
 	function intro1()
 	{
+		FlxG.camera.fade(FlxColor.BLACK, 1, true);
 		introImage = new FlxSprite();
 		introImage.loadGraphic("assets/images/Story/1.png");
 		add(introImage);
 		_idleTmr = 7;
 		introState = 1;
+		
 	}
 	
 	override public function  update()
@@ -63,32 +65,87 @@ class Intro extends FlxState
 	
 	function nextImage()
 	{
+		//FlxG.camera.fade(FlxColor.BLACK, 1);
 		switch (introState)
 		{
 			case 1: intro2();
 			case 2: intro3();
+			case 3: intro4();
+			case 4: intro5();
+			case 5: intro6();
+			case 6: intro7();
 		}
 	}
 	
 	function intro2()
 	{
+		
+		FlxG.camera.fade(FlxColor.BLACK, 1, true);
 		introImage.destroy();
+		
 		introImage = new FlxSprite();
-		introImage.loadGraphic("assets/images/Missie2/emo1.4.png");
+		introImage.loadGraphic("assets/images/Story/2.png");
 		add(introImage);
+		
 		_idleTmr = 3;
 		introState = 2;
 	}
 	
 	function intro3()
 	{
+		FlxG.camera.fade(FlxColor.BLACK, 1, true);
 		introImage.destroy();
 		introImage = new FlxSprite();
-		introImage.loadGraphic("assets/images/Missie2/emo1.4.png");
+		introImage.loadGraphic("assets/images/Story/3.png");
 		add(introImage);
-		_idleTmr = 3;
+		_idleTmr = 28;
 		introState = 3;
 	}
+	
+	function intro4()
+	{
+		FlxG.camera.fade(FlxColor.BLACK, 1, true);
+		introImage.destroy();
+		introImage = new FlxSprite();
+		introImage.loadGraphic("assets/images/Story/1StartingScreeeeeeen.png");
+		add(introImage);
+		_idleTmr = 15;
+		introState = 4;
+	}
+	
+	function intro5()
+	{
+		FlxG.camera.fade(FlxColor.BLACK, 1, true);
+		introImage.destroy();
+		introImage = new FlxSprite();
+		introImage.loadGraphic("assets/images/Story/Prof.png");
+		add(introImage);
+		_idleTmr = 15;
+		introState = 5;
+	}
+	
+	function intro6()
+	{
+		FlxG.camera.fade(FlxColor.BLACK, 1, true);
+		introImage.destroy();
+		introImage = new FlxSprite();
+		introImage.loadGraphic("assets/images/Story/Pat.png");
+		add(introImage);
+		_idleTmr = 15;
+		introState = 6;
+	}
+	
+	function intro7()
+	{
+		FlxG.camera.fade(FlxColor.BLACK, 1, true);
+		introImage.destroy();
+		introImage = new FlxSprite();
+		introImage.loadGraphic("assets/images/Story/Pat.png");
+		add(introImage);
+		_idleTmr = 8;
+		introState = 7;
+	}
+	
 	
 	function startGame()
 	{

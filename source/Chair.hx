@@ -13,4 +13,5 @@ class Chair extends Entities
 		super();
 		loadGraphic("assets/images/Push1.png", true, 64, 64);
 	}
+
 }
