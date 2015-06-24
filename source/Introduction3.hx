@@ -60,17 +60,9 @@ class Introduction3 extends FlxState
 		
 		FlxG.camera.follow(_player, FlxCamera.STYLE_TOPDOWN, null, 1);
 		
-		//_hud = new HUD();
-		//add(_hud);
-		mission1Music = FlxG.sound.load("assets/music/townMusic.wav");
-		mission1Music.play(true);
-		
 		FlxG.camera.fade(FlxColor.BLACK, 2, true);
 		
-		#if mobile
-		virtualPad = new FlxVirtualPad(FULL, NONE);	
-		add(virtualPad);
-		#end
+		introTalk();
 		
 		super.create();	
 		
@@ -87,6 +79,19 @@ class Introduction3 extends FlxState
 		{
 			_trigger.add(new Trigger(Std.parseInt(entityData.get("x"))+4, Std.parseInt(entityData.get("y")), Std.parseInt(entityData.get("etype"))));
 		}
+	}
+	
+	function introTalk()
+	{
+		FlxG.sound.destroy(true);
+		_player.speed = 0;
+		FlxG.sound.play("assets/sounds/IntroMissie/Tut5.mp3", 1, false, true, play);
+	}
+	
+	function play()
+	{
+		FlxG.sound.playMusic(AssetPaths.KJRWHouse__wav, 1, true);
+		_player.speed = 300;
 	}
 	
 	
@@ -112,6 +117,7 @@ class Introduction3 extends FlxState
 	{
 		if (p.CharacterNumber == 3 && p.ability2 == true)
 		{
+			FlxG.sound.destroy();
 			FlxG.switchState(new PlayState());
 		}
 	}

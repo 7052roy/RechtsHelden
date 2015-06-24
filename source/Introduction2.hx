@@ -62,19 +62,11 @@ class Introduction2 extends FlxState
 		
 		_map.loadEntities(placeEntities, "entities");
 		
-		FlxG.camera.follow(_player, FlxCamera.STYLE_TOPDOWN, null, 1);
-		
-		//_hud = new HUD();
-		//add(_hud);
-		mission1Music = FlxG.sound.load("assets/music/townMusic.wav");
-		mission1Music.play(true);
+		FlxG.camera.follow(_player, FlxCamera.STYLE_TOPDOWN, null, 1);		
 		
 		FlxG.camera.fade(FlxColor.BLACK, 2, true);
 		
-		#if mobile
-		virtualPad = new FlxVirtualPad(FULL, NONE);	
-		add(virtualPad);
-		#end
+		introTalk();
 		
 		super.create();	
 		
@@ -101,6 +93,23 @@ class Introduction2 extends FlxState
 		}
 	}
 	
+	function introTalk()
+	{
+		FlxG.sound.destroy(true);
+		_player.speed = 0;
+		FlxG.sound.play("assets/sounds/IntroMissie/Tut3.mp3", 1, false, true, introTalk2);
+	}
+	
+	function introTalk2()
+	{
+		FlxG.sound.play("assets/sounds/IntroMissie/Tut4.mp3", 1, false, true, play);
+	}
+	
+	function play()
+	{
+		FlxG.sound.playMusic(AssetPaths.KJRWHouse__wav, 1, true);
+		_player.speed = 300;
+	}
 	
 	/**
 	 * Function that is called when this state is destroyed - you might want to 
@@ -117,7 +126,6 @@ class Introduction2 extends FlxState
 	override public function update():Void
 	{
 		FlxG.overlap(_player, _dad, dadCollision);
-		//FlxG.overlap(_chair, _trigger, loadIntroduction2);
 		super.update();
 	}	
 	

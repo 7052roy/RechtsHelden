@@ -14,7 +14,7 @@ class Player extends FlxSprite
 {
 
 	public var speed:Float = 300.1;
-	public var CharacterNumber = 1;
+	public var CharacterNumber = 3;
 	var test = 1;
 	public var ability2:Bool = false;
 	public var level:Int;
@@ -23,7 +23,7 @@ class Player extends FlxSprite
 	public function new(X:Float=0, Y:Float=0) 
 	{
 		super(X, Y);
-		loadGraphic("assets/images/tec.png", true, 64, 64);
+		loadGraphic("assets/images/ion.png", true, 64, 64);
 		setFacingFlip(FlxObject.LEFT, false, false);
 		setFacingFlip(FlxObject.RIGHT, true, false);
 		animation.add("d",  [1, 2, 3, 0], 5, false);
