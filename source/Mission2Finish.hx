@@ -44,7 +44,7 @@ class Mission2Finish extends FlxState
 	{
 		_map = new FlxOgmoLoader("assets/data/Final Maps/puzzle2-2.oel");
 		_mWalls = _map.loadTilemap("assets/images/Tilesheet_Complete3.png", 64, 64, "tree");
-		_mWalls.setTileProperties(1, FlxObject.NONE);
+		_mWalls.setTileProperties(1, FlxObject.ANY);
 		add(_mWalls);
 		
 		_player = new Player();
@@ -91,14 +91,40 @@ class Mission2Finish extends FlxState
 	
 	function dadText()
 	{
+		if (talkDad != null)
+			{
+				talkDad.destroy();
+			}
+		talkDad = new FlxSprite();
+		talkDad.loadGraphic("assets/images/Missie2/emo1.10.png");
+		talkDad.x = _player.x - 200;
+		talkDad.y = _player.y - 200;
+		add(talkDad);
+		FlxG.sound.play("assets/sounds/Missie2/Dad2.mp3", 1, false, true, dadText1);
+		
+	}
+	
+	function dadText1()
+	{
 		talkDad.destroy();
 		talkDad = new FlxSprite();
-		talkDad.loadGraphic("assets/images/Missie1/intromissie1/prof1.png");
-		talkDad.x = _player.x - 300;
-		talkDad.y = _player.y - 100;
+		talkDad.loadGraphic("assets/images/Missie2/emo1.10.png");
+		talkDad.x = _player.x - 200;
+		talkDad.y = _player.y - 200;
 		add(talkDad);
-		FlxG.sound.play("assets/sounds/Missie1/Teacher/Prof1-3.mp3", 1, false, true);
+		FlxG.sound.play("assets/sounds/Missie2/Dad3.mp3", 1, false, true, dadText2);
 	}
+	function dadText2()
+	{
+		talkDad.destroy();
+		talkDad = new FlxSprite();
+		talkDad.loadGraphic("assets/images/Missie2/emo1.11.png");
+		talkDad.x = _player.x - 200;
+		talkDad.y = _player.y - 200;
+		add(talkDad);
+		FlxG.sound.play("assets/sounds/Missie2/Kid3.mp3", 1, false, true, goToNew);
+	}
+
 	
 	
 	/**
@@ -108,6 +134,7 @@ class Mission2Finish extends FlxState
 	override public function destroy():Void
 	{
 		super.destroy();
+		
 	}
 
 	/**
@@ -118,6 +145,12 @@ class Mission2Finish extends FlxState
 		super.update();
 		FlxG.collide(_player, _mWalls);
 	}
+	
+	function goToNew()
+	{
+		FlxG.switchState(new Mission3());
+	}
+	
 	
 	
 }

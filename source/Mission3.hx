@@ -31,8 +31,7 @@ class Mission3 extends FlxState
 	private var _mWalls:FlxTilemap;
 	var mission1Music:FlxSound;
 	private var _btnReset:FlxButton;
-	var _kid:Kid;
-	var _angryDad:AngryDad;
+	private var _trigger:FlxTypedGroup<Trigger>;
 	
 	#if mobile
 	public static var virtualPad:FlxVirtualPad;
@@ -43,7 +42,7 @@ class Mission3 extends FlxState
 	 */
 	override public function create():Void
 	{
-		_map = new FlxOgmoLoader("assets/data/puzzle3.oel");
+		_map = new FlxOgmoLoader("assets/data/Final Maps/worldmap4.oel");
 		_mWalls = _map.loadTilemap("assets/images/Tilesheet_Complete.png", 64, 64, "tree");
 		_mWalls.setTileProperties(1, FlxObject.NONE);
 		_mWalls.setTileProperties(2, FlxObject.NONE);
@@ -109,8 +108,8 @@ class Mission3 extends FlxState
 		_player = new Player();
 		add(_player);
 		
-		_kid = new Kid();
-		add(_kid);
+		_trigger = new FlxTypedGroup<Trigger>();
+		add(_trigger);
 		
 		_btnReset = new FlxButton(0, 0, "Reset", clickReset);
 		_btnReset.x = (FlxG.width / 2) - _btnReset.width - 10;
@@ -153,16 +152,7 @@ class Mission3 extends FlxState
 			_player.x = Std.parseInt(entityData.get("x"));
 			_player.y = Std.parseInt(entityData.get("y"));
 		}
-		else if (entityName == "mission2_angryDad")
-		{
-			_angryDad.x = Std.parseInt(entityData.get("x"));
-			_angryDad.y = Std.parseInt(entityData.get("y"));
-		}
-		else if (entityName == "mission2_kid")
-		{
-			_kid.x = Std.parseInt(entityData.get("x"));
-			_kid.y = Std.parseInt(entityData.get("y"));
-		}
+		
 	}
 	
 	
@@ -184,22 +174,17 @@ class Mission3 extends FlxState
 		super.update();
 		_player.speed = 300;
 		FlxG.collide(_player, _mWalls);
-		if (_player.CharacterNumber == 2 && _player.ability2 == true)
-		{
-			FlxG.collide(_player, _kid, kidCollision);
-		}
-		FlxG.collide(_kid, _mWalls);
-		FlxG.overlap(_kid, _teacher, finishMission);
+		FlxG.collide(_player, _trigger);
+		
+		
+		
 	}	
 	
-	function finishMission(k:Kid, t:Teacher)
+	/*function finishMission(p:Player, t:Teacher)
 	{
 		mission1Music.stop();
-		FlxG.switchState(new Mission1Finish());
-	}
+		FlxG.switchState(new NightMare());
+	}*/
 	
-	function kidCollision(p:Player, k:Kid)
-	{
-		_kid.kidMovement();
-	}
+	
 }
