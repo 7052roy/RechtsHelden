@@ -138,6 +138,8 @@ class Mission1Find extends FlxState
 		FlxG.sound.playMusic(AssetPaths.Puzzle__mp3, 1, true);
 		FlxG.camera.fade(FlxColor.BLACK, 2, true);
 		
+		FlxG.sound.playMusic(AssetPaths.townMusic__wav, 1, true);
+		
 		super.create();	
 		
 	}

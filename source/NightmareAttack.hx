@@ -9,9 +9,9 @@ import flixel.util.FlxRandom;
 import flixel.util.FlxTimer;
 import flixel.util.FlxVelocity;
 
-class NightMare extends Entities
+class NightmareAttack extends Entities
 {
-	public var speed:Float = 100;
+	public var speed:Float = 400;
 	public var etype(default, null):Int;
 	private var _brain:FSM;
 	private var _idleTmr:Float;
@@ -24,15 +24,15 @@ class NightMare extends Entities
 		
 		super();
 
-		loadGraphic("assets/images/KnightmareCompleteTilesheet.png", true, 128, 128);
+		loadGraphic("assets/images/AttackCircle128x64.png", true, 64, 64);
 		setFacingFlip(FlxObject.LEFT, false, false);
 		setFacingFlip(FlxObject.RIGHT, true, false);
 		animation.add("d", [0, 1, 2, 3], 6, false);
 		animation.add("lr", [8, 9, 10, 11], 6, false);
 		animation.add("u", [4, 5, 6, 7], 6, false);
 		drag.x = drag.y = 0;
-		width = 128;
-		height = 128;
+		width = 64;
+		height = 64;
 		offset.x = 4;
 		offset.y = 2;
 		_brain = new FSM(chase);

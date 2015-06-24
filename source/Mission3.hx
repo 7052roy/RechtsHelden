@@ -133,9 +133,9 @@ class Mission3 extends FlxState
 	function kjrwText()
 	{
 		if (kjrwTalk != null)
-			{
-				kjrwTalk.destroy();
-			}
+		{
+			kjrwTalk.destroy();
+		}
 		kjrwTalk = new FlxSprite();
 		kjrwTalk.loadGraphic("assets/images/Missie3/Feggit1.png");
 		kjrwTalk.x = _player.x + 100;
@@ -155,13 +155,13 @@ class Mission3 extends FlxState
 	{
 		if ( _player.CharacterNumber == 3 && _player.ability2 == true) 
 		{
-		kjrwTalk = new FlxSprite();
-		kjrwTalk.loadGraphic("assets/images/Missie3/Pro1.png");
-		kjrwTalk.x = _player.x + 100;
-		kjrwTalk.y = _player.y - 300;
-		add(kjrwTalk);
-		_player.speed = 0;
-		FlxG.sound.play("assets/sounds/Missie3/Missie3-2.mp3", 1, false, true, kjrwText3);
+			kjrwTalk = new FlxSprite();
+			kjrwTalk.loadGraphic("assets/images/Missie3/Pro1.png");
+			kjrwTalk.x = _player.x + 100;
+			kjrwTalk.y = _player.y - 300;
+			add(kjrwTalk);
+			_player.speed = 0;
+			FlxG.sound.play("assets/sounds/Missie3/Missie3-2.mp3", 1, false, true, kjrwText3);
 		}
 	}
 	

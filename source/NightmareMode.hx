@@ -18,6 +18,7 @@ import flixel.util.FlxColor;
 import flixel.util.FlxDestroyUtil;
 import flixel.util.FlxMath;
 import flixel.util.FlxPoint;
+import flixel.util.FlxRandom;
 import flixel.util.FlxTimer;
 import lime.audio.AudioManager;
 
@@ -31,8 +32,12 @@ class NightmareMode extends FlxState
 	private var _mWalls:FlxTilemap;
 	var talk:FlxSprite;
 	var _nightmare:NightMare;
-	var _timer:Float = 3;
+	var _timer:Float = 10;
 	var _attack:NightmareAttack;
+	var _hud:HUD;
+	var _attackTimer:Float = 2;
+	var nightmareLife:Int = 3;
+	var playerLife:Int = 3;
 	
 	/**
 	 * Function that is called up when to state is created to set it up. 
@@ -72,8 +77,8 @@ class NightmareMode extends FlxState
 		
 		FlxG.camera.follow(_player, FlxCamera.STYLE_TOPDOWN, null, 1);
 		
-		//_hud = new HUD();
-		//add(_hud);
+		_hud = new HUD();
+		add(_hud);
 		
 		FlxG.sound.playMusic(AssetPaths.Knightmare__mp3, 1, true);
 		
@@ -88,7 +93,7 @@ class NightmareMode extends FlxState
 	{
 		if (talk != null)
 		{
-		talk.destroy();
+			talk.destroy();
 		}
 		_player.speed = 0;
 		_nightmare.speed = 0;
@@ -151,18 +156,51 @@ class NightmareMode extends FlxState
 	{
 		if (_timer < 0)
 		{
+			if (_attack != null)
+			{
+				_attack.destroy();
+			}
 			_attack = new NightmareAttack();
-			add(_attack);
+			_attack.x = _nightmare.x;
+			_attack.y = _nightmare.y;
+			
 			_attack.playerPos.copyFrom(_player.getMidpoint());
 			_attack.chase();
+			add(_attack);
+			_timer = FlxRandom.intRanged(5, 10);
+			_attackTimer = 2;
 		}
+		
 		_nightmare.playerPos.copyFrom(_player.getMidpoint());
 		super.update();
-		_player.speed = 300;
 		FlxG.collide(_player, _mWalls);
-		_timer -= FlxG.elapsed();
+		FlxG.collide(_player, _attack, attackPlayer);
+		FlxG.overlap(_nightmare, _attack, attackNightmare);
+		
+		_attackTimer -= FlxG.elapsed;
+		_timer -= FlxG.elapsed;
 	
 	}	
+	
+	function attackPlayer(p:Player, a:NightmareAttack)
+	{
+		if (p.CharacterNumber == 2 && p.ability2 == true)
+		{
+			_timer = 1;
+			a.playerPos.copyFrom(_nightmare.getMidpoint());
+			a.chase();
+		}
+	}
+	
+	function attackNightmare(m:NightMare, a:NightmareAttack)
+	{
+		if (_attackTimer <= 0)
+		{
+			_attack.destroy();
+			nightmareLife -= 1;
+			_hud.updateHUD(playerLife, nightmareLife);
+		}
+	}
 	
 	
 }

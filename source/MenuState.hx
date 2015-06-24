@@ -16,8 +16,6 @@ using flixel.util.FlxSpriteUtil;
  */
 class MenuState extends FlxState
 {
-	private var _txtTitle:FlxText;
-	private var _btnOptions:FlxButton;
 	private var _btnPlay:FlxButton;
 	var menuBackground:FlxSprite;
 	private var _btnExit:FlxButton;
@@ -64,7 +62,7 @@ class MenuState extends FlxState
 	private function clickPlay():Void
 	{
 		FlxG.camera.fade(FlxColor.BLACK,.33, false, function() {
-			FlxG.switchState(new Mission3());
+			FlxG.switchState(new NightmareMode());
 		});
 	}
 	
@@ -82,9 +80,7 @@ class MenuState extends FlxState
 	override public function destroy():Void
 	{
 		super.destroy();
-		_txtTitle = FlxDestroyUtil.destroy(_txtTitle);
 		_btnPlay = FlxDestroyUtil.destroy(_btnPlay);
-		_btnOptions = FlxDestroyUtil.destroy(_btnOptions);
 		_btnExit = FlxDestroyUtil.destroy(_btnExit);
 	}
 }

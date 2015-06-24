@@ -14,9 +14,9 @@ class HUD extends FlxTypedGroup<FlxSprite>
 	
 	private var _sprBack:FlxSprite;
 	private var _txtHealth:FlxText;
-	private var _txtMoney:FlxText;
+	private var _txtNight:FlxText;
 	private var _sprHealth:FlxSprite;
-	private var _sprMoney:FlxSprite;
+	private var _sprNight:FlxSprite;
 	
 	public function new() 
 	{
@@ -25,17 +25,17 @@ class HUD extends FlxTypedGroup<FlxSprite>
 		_sprBack.drawRect(0, 19, FlxG.width, 1, FlxColor.WHITE);
 		_txtHealth = new FlxText(16, 2, 0, "3 / 3", 8);
 		_txtHealth.setBorderStyle(FlxText.BORDER_SHADOW, FlxColor.GRAY, 1, 1);
-		_txtMoney = new FlxText(0, 2, 0, "0", 8);
-		_txtMoney.setBorderStyle(FlxText.BORDER_SHADOW, FlxColor.GRAY, 1, 1);
 		_sprHealth = new FlxSprite(4, _txtHealth.y + (_txtHealth.height/2)  - 4, AssetPaths.health__png);
-		_sprMoney = new FlxSprite(FlxG.width - 12, _txtMoney.y + (_txtMoney.height/2)  - 4, AssetPaths.coin__png);
-		_txtMoney.alignment = "right";
-		_txtMoney.x = _sprMoney.x - _txtMoney.width - 4;
+		
+		_sprNight = new FlxSprite(FlxG.width - 16, _txtHealth.y + (_txtHealth.height/2)  - 4, AssetPaths.health__png);
+		_txtNight = new FlxText(FlxG.width - 64, 2, 0, "3 / 3", 8);
+		_txtNight.setBorderStyle(FlxText.BORDER_SHADOW, FlxColor.GRAY, 1, 1);
+		_txtNight.alignment = "right";
 		add(_sprBack);
 		add(_sprHealth);
-		add(_sprMoney);
+		add(_sprNight);
 		add(_txtHealth);
-		add(_txtMoney);
+		add(_txtNight);
 		forEach(function(spr:FlxSprite) {
 			spr.scrollFactor.set();
 		});
@@ -43,11 +43,10 @@ class HUD extends FlxTypedGroup<FlxSprite>
 	
 	
 	
-	public function updateHUD(Health:Int = 0, Money:Int = 0):Void
+	public function updateHUD(Health:Int = 0, healthNightmare:Int = 0):Void
 	{
 		_txtHealth.text = Std.string(Health) + " / 3";
-		_txtMoney.text = Std.string(Money);
-		_txtMoney.x = _sprMoney.x - _txtMoney.width - 4;
+		_txtNight.text = Std.string(healthNightmare) + " / 3";
 	}
 	
 	
