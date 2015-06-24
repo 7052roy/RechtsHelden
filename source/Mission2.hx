@@ -42,6 +42,7 @@ class Mission2 extends FlxState
 		_map = new FlxOgmoLoader("assets/data/Final Maps/puzzle2-3.oel");
 		_mWalls = _map.loadTilemap("assets/images/Tilesheet_Complete3.png", 64, 64, "tree");
 		_mWalls.setTileProperties(1, FlxObject.NONE);
+		_mWalls.setTileProperties(0, FlxObject.ANY);
 		add(_mWalls);
 		
 		_player = new Player();
@@ -62,11 +63,6 @@ class Mission2 extends FlxState
 		FlxG.sound.playMusic(AssetPaths.Chase__mp3, 1, true);
 		
 		FlxG.camera.fade(FlxColor.BLACK, 2, true);
-		
-		#if mobile
-		virtualPad = new FlxVirtualPad(FULL, NONE);	
-		add(virtualPad);
-		#end
 		
 		super.create();	
 		
@@ -123,7 +119,6 @@ class Mission2 extends FlxState
 	
 	function dadCollision(p:Player, a:AngryDad)
 	{
-		
 		if (_player.CharacterNumber == 1 && _player.ability2 == true)
 		{
 			FlxG.sound.destroy(true);

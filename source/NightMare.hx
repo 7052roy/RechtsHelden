@@ -9,49 +9,40 @@ import flixel.util.FlxRandom;
 import flixel.util.FlxTimer;
 import flixel.util.FlxVelocity;
 
-class NightMare extends FlxSprite
+class NightMare extends Entities
 {
-	public var speed:Float = 200.1;
+	public var speed:Float = 100;
 	public var etype(default, null):Int;
 	private var _brain:FSM;
 	private var _idleTmr:Float;
 	private var _moveDir:Float;
-	public var seesPlayer:Bool = false;
+	public var seesPlayer:Bool = true;
 	public var playerPos(default, null):FlxPoint;
-	var positionx = 0;
-	var positiony = 0;
-	var position:FlxPoint;
-	var movementAngle:Int = 0;
 	
-	public function new(X:Float=0, Y:Float=0, EType:Int) 
+	public function new() 
 	{
 		
-		super(X, Y);
-		etype = EType;
-		loadGraphic("assets/images/enemy-" + FlxRandom.intRanged(0, 2) + ".png", true, 64, 64);
+		super();
+
+		loadGraphic("assets/images/KnightmareCompleteTilesheet.png", true, 128, 128);
 		setFacingFlip(FlxObject.LEFT, false, false);
 		setFacingFlip(FlxObject.RIGHT, true, false);
-		animation.add("d", [0, 1, 0, 2], 6, false);
-		animation.add("lr", [6, 7, 6, 8], 6, false);
-		animation.add("u", [3, 4, 3, 5], 6, false);
+		animation.add("d", [0, 1, 2, 3], 6, false);
+		animation.add("lr", [8, 9, 10, 11], 6, false);
+		animation.add("u", [4, 5, 6, 7], 6, false);
 		drag.x = drag.y = 0;
-		width = 64;
-		height = 64;
+		width = 128;
+		height = 128;
 		offset.x = 4;
 		offset.y = 2;
-		_brain = new FSM(idle);
+		_brain = new FSM(chase);
 		_idleTmr = 0;
 		playerPos = FlxPoint.get();
-		//immovable = true;
 	}
 	
-	public function setSpeed()
-	{
-		speed = 0;
-	}
 	
 	override public function update():Void 
-	{
+	{		
 		_brain.update();
 		super.update();
 	}
@@ -68,40 +59,24 @@ class NightMare extends FlxSprite
 	
 	public function idle():Void
 	{
-		if (_idleTmr <= 0)
+		if (seesPlayer)
 		{
-			speed = 200.1;
-			var randomMovement = 0; //FlxRandom.intRanged(0, 2);
-			if (randomMovement == 0)
-			{
-				FlxAngle.rotatePoint(speed * .5, 0, 0, 0, movementAngle, velocity);
-				movementAngle += 90;
-				if (movementAngle > 270)
-				{
-					movementAngle = 0;
-				}
-			}else if (randomMovement == 1)
-			{
-				FlxAngle.rotatePoint(speed * .5, 0, 0, 0, movementAngle, velocity);
-				movementAngle += 180;
-				if (movementAngle > 270)
-				{
-					movementAngle = 0;
-				}
-			}else if (randomMovement == 2)
-			{
-				movementAngle = 90;
-				FlxAngle.rotatePoint(speed * .5, 0, 0, 0, movementAngle, velocity);
-				movementAngle += 180;
-				if (movementAngle > 270)
-				{
-					movementAngle = 90;
-				}
-			}
-			_idleTmr = 4;
+			_brain.activeState = chase;
+		}
+		else if (_idleTmr <= 0)
+		{
+			
+				_moveDir = FlxRandom.intRanged(0, 8) * 45;
+				
+				velocity.set(speed * 0.5, 0);
+				
+				
+			
+			_idleTmr = FlxRandom.intRanged(1, 4);			
 		}
 		else
 			_idleTmr -= FlxG.elapsed;
+		
 	}
 	
 	function moveDirection()
@@ -117,20 +92,10 @@ class NightMare extends FlxSprite
 		
 	}
 	
-	/*public function chase(timer:FlxTimer)
+	public function chase():Void
 	{
-		
-		if (!seesPlayer)
-		{
-			_brain.activeState = idle;
-		}
-		position = new FlxPoint(positionx, positiony);
-		FlxVelocity.moveTowardsPoint(this, position, Std.int(speed));
-		
-		positionx += 100;
-		
-		
-	}*/
+		FlxVelocity.moveTowardsPoint(this, playerPos, Std.int(speed));
+	}
 	
 	
 	override public function draw():Void 
@@ -167,6 +132,11 @@ class NightMare extends FlxSprite
 		}
 			
 		super.draw();
+	}
+	
+	override public function destroy():Void 
+	{
+		super.destroy();
 	}
 	
 }

@@ -30,7 +30,6 @@ class Mission2Finish extends FlxState
 	private var _map:FlxOgmoLoader;
 	private var _mWalls:FlxTilemap;
 	var mission1Music:FlxSound;
-	private var _btnReset:FlxButton;
 	var talkDad:FlxSprite;
 
 	#if mobile
@@ -49,13 +48,6 @@ class Mission2Finish extends FlxState
 		
 		_player = new Player();
 		add(_player);
-		
-		
-		_btnReset = new FlxButton(0, 0, "Reset", clickReset);
-		_btnReset.x = (FlxG.width / 2) - _btnReset.width - 10;
-		_btnReset.y = FlxG.height - _btnReset.height - 10;
-		_btnReset.onUp.sound = FlxG.sound.load(AssetPaths.select__wav);
-		add(_btnReset);
 		
 		_map.loadEntities(placeEntities, "entities");
 		

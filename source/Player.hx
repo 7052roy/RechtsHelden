@@ -60,7 +60,7 @@ class Player extends FlxSprite
 		animation.add("d",  [1, 2, 3, 0], 5, false);
 		animation.add("lr", [9, 10, 11, 8], 5, false);
 		animation.add("u", [5, 7, 7, 4], 5, false);
-		animation.add("da", [0, 12, 13, 14, 0], 20, false);
+		animation.add("da", [0, 12, 13, 14, 0], 5, false);
 		animation.add("lra", [8, 18, 19, 20 ,8], 5, false);
 		animation.add("ua", [4, 15, 16, 17,4], 5, false);
 		drag.x = drag.y = 1600;
@@ -77,9 +77,9 @@ class Player extends FlxSprite
 		animation.add("d",  [1, 2, 3, 0], 5, false);
 		animation.add("lr", [9, 10, 11, 8], 5, false);
 		animation.add("u", [5, 7, 7, 4], 5, false);
-		animation.add("da", [0, 12, 13, 14,0], 5, false);
-		animation.add("lra", [8, 18, 19, 20 ,8], 5, false);
-		animation.add("ua", [4, 15, 16, 17,4], 5, false);
+		animation.add("da", [0, 12, 13, 14,0], 10, false);
+		animation.add("lra", [8, 18, 19, 20 ,8], 10, false);
+		animation.add("ua", [4, 15, 16, 17,4], 10, false);
 		drag.x = drag.y = 1600;
 		setSize(50, 50); 
 		offset.set(14, 7);

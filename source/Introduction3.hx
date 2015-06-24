@@ -44,10 +44,7 @@ class Introduction3 extends FlxState
 		_map = new FlxOgmoLoader("assets/data/Final Maps/traininglevel3.oel");
 		_mWalls = _map.loadTilemap("assets/images/Tilesheet_Complete2.png", 64, 64, "tree");
 		_mWalls.setTileProperties(0, FlxObject.ANY);
-		_mWalls.setTileProperties(1, FlxObject.ANY);
-		_mWalls.setTileProperties(3, FlxObject.NONE);
-		_mWalls.setTileProperties(2, FlxObject.NONE);
-		_mWalls.setTileProperties(10, FlxObject.NONE);
+		_mWalls.setTileProperties(5, FlxObject.NONE);
 		add(_mWalls);
 		
 		_player = new Player();
@@ -111,13 +108,14 @@ class Introduction3 extends FlxState
 	{
 		super.update();
 		FlxG.overlap(_player, _trigger, speaking);
+		FlxG.collide(_player, _mWalls);
 	}	
 	
 	function speaking(p:Player, t:Trigger)
 	{
 		if (p.CharacterNumber == 3 && p.ability2 == true)
 		{
-			FlxG.sound.destroy();
+			FlxG.sound.destroy(true);
 			FlxG.switchState(new PlayState());
 		}
 	}

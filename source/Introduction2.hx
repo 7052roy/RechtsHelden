@@ -45,10 +45,7 @@ class Introduction2 extends FlxState
 		_map = new FlxOgmoLoader("assets/data/Final Maps/traininglevel2.oel");
 		_mWalls = _map.loadTilemap("assets/images/Tilesheet_Complete2.png", 64, 64, "tree");
 		_mWalls.setTileProperties(0, FlxObject.ANY);
-		_mWalls.setTileProperties(1, FlxObject.ANY);
-		_mWalls.setTileProperties(3, FlxObject.NONE);
-		_mWalls.setTileProperties(2, FlxObject.NONE);
-		_mWalls.setTileProperties(10, FlxObject.NONE);
+		_mWalls.setTileProperties(5, FlxObject.NONE);
 		add(_mWalls);
 		
 		_player = new Player();
@@ -126,12 +123,12 @@ class Introduction2 extends FlxState
 	override public function update():Void
 	{
 		FlxG.overlap(_player, _dad, dadCollision);
+		FlxG.collide(_player, _mWalls);
 		super.update();
 	}	
 	
 	function dadCollision(p:Player, a:AngryDad)
 	{
-		a.speed = 0;
 		if (_player.CharacterNumber == 1 && _player.ability2 == true)
 		{
 			FlxG.switchState(new Introduction3());
