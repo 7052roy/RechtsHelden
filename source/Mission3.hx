@@ -151,7 +151,7 @@ class Mission3 extends FlxState
 		kjrwTalk.destroy();
 	}
 	
-	function kjrwText2()
+	function kjrwText2(p:Player, t:Trigger)
 	{
 		if ( _player.CharacterNumber == 3 && _player.ability2 == true) 
 		{
@@ -287,7 +287,7 @@ class Mission3 extends FlxState
 		super.update();
 		_player.speed = 300;
 		FlxG.collide(_player, _mWalls);
-		FlxG.overlap(_player, _trigger);
+		FlxG.overlap(_player, _trigger, kjrwText2);
 		
 		
 		

@@ -114,6 +114,14 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/images/Attackdown128x128.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/AttackUp128x128.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/Bald-Mission1.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -166,6 +174,46 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/images/End Credit/1-1.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/End Credit/2-1.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/End Credit/3-1.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/End Credit/4-1.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/End Credit/5.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/End Credit/6.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/End Credit/7.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/End Credit/8.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/End Credit/Credit.gif");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/End Credit/Credit_Tilesheet1280x720.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/enemy-0.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -183,6 +231,10 @@ class ApplicationMain {
 		
 		
 		urls.push ("assets/images/Extra UI/Missie2-Voltooid.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Extra UI/Missie3-Voltooid.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
@@ -662,10 +714,6 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
-		urls.push ("assets/images/player.png");
-		types.push (lime.Assets.AssetType.IMAGE);
-		
-		
 		urls.push ("assets/images/pointer.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -931,6 +979,10 @@ class ApplicationMain {
 		
 		
 		urls.push ("assets/sounds/Knightmare/Knightmare8.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
+		urls.push ("assets/sounds/Knightmare/Luuk1.mp3");
 		types.push (lime.Assets.AssetType.MUSIC);
 		
 		
@@ -1286,6 +1338,7 @@ class ApplicationMain {
 			file: "RechtsHelden",
 			fps: Std.int (60),
 			fullscreen: false,
+			hardware: true,
 			height: Std.int (720),
 			orientation: "portrait",
 			packageName: "com.example.myapp",

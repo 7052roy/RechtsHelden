@@ -47,26 +47,13 @@ class NightMare extends Entities
 		super.update();
 	}
 	
-	function moveDirection()
-	{
-		_moveDir = FlxRandom.intRanged(0, 8) * 45;
-		
-		if (_moveDir == 45 || _moveDir == 135 || _moveDir == 225 || _moveDir == 315)
-		{
-			moveDirection();
-		}else {
-			FlxAngle.rotatePoint(speed * .5, 0, 0, 0, _moveDir, velocity);
-		}
-		
-	}
-	
 	public function chase():Void
 	{
 		FlxVelocity.moveTowardsPoint(this, playerPos, Std.int(speed));
 	}
 	
 	
-	override public function draw():Void 
+	/*override public function draw():Void 
 	{
 		if (velocity.x != 0 || velocity.y != 0)
 		{
@@ -100,7 +87,7 @@ class NightMare extends Entities
 		}
 			
 		super.draw();
-	}
+	}*/
 	
 	override public function destroy():Void 
 	{
