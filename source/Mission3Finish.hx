@@ -120,8 +120,10 @@ class Mission3Finish extends FlxState
 		
 		FlxG.camera.fade(FlxColor.BLACK, 2, true);
 		
-		super.create();	
 		judgeText();
+		
+		super.create();	
+		
 		
 	}
 	
@@ -140,7 +142,7 @@ class Mission3Finish extends FlxState
 		add(judgeTalk);
 		_player.speed = 0;
 		FlxG.sound.destroy(true);
-		FlxG.sound.play("assets/sounds/Missie3/Missie3-2.mp3", 1, false, true);
+		FlxG.sound.play("assets/sounds/Missie3/Missie3-2.mp3", 1, false, true, finishMission);
 		}
 	}
 	
@@ -181,11 +183,11 @@ class Mission3Finish extends FlxState
 		super.update();
 		_player.speed = 300;
 		FlxG.collide(_player, _mWalls);
-		FlxG.collide(_player, _trigger);
+		FlxG.collide(_player, _trigger, judgeText);
 	
 	}	
 	
-	function finishMission(p:Player, t:Trigger)
+	function finishMission()
 	{
 		
 		FlxG.switchState(new Mission3Puzzle());
