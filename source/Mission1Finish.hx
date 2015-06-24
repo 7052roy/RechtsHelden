@@ -163,7 +163,7 @@ class Mission1Finish extends FlxState
 		conversation = new FlxSprite();
 		conversation.loadGraphic("assets/images/Missie2/emo1.1.png");
 		conversation.x = _player.x - 300;
-		conversation.y = _player.y - 100;
+		conversation.y = _player.y - 300;
 		add(conversation);
 		FlxG.sound.play("assets/sounds/Missie2/Prof1.mp3", 1, false, true, playMusic);
 	}

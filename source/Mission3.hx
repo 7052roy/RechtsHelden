@@ -160,7 +160,7 @@ class Mission3 extends FlxState
 			FlxG.sound.destroy(true);
 			kjrwTalk = new FlxSprite();
 			kjrwTalk.loadGraphic("assets/images/Missie3/Pro1.png");
-			kjrwTalk.x = _player.x + 100;
+			kjrwTalk.x = _player.x - 164;
 			kjrwTalk.y = _player.y - 300;
 			add(kjrwTalk);
 			_player.speed = 0;
