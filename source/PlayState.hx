@@ -39,12 +39,7 @@ class PlayState extends FlxState
 	private var _teacher:Teacher;
 	var mission1Talk:FlxSound;
 	var _interaction:Bool = false;
-	public var talk:Int = 0;
 	var talkAdult2:FlxSprite;
-	
-	#if mobile
-	public static var virtualPad:FlxVirtualPad;
-	#end
 	
 	/**
 	 * Function that is called up when to state is created to set it up. 
@@ -130,15 +125,9 @@ class PlayState extends FlxState
 		
 		FlxG.camera.follow(_player, FlxCamera.STYLE_TOPDOWN, null, 1);
 		
-		//_hud = new HUD();
-		//add(_hud);
-		//FlxG.sound.playMusic(AssetPaths.townMusic__wav, 1, true);
 		FlxG.camera.fade(FlxColor.BLACK, 2, true);
 		
-		#if mobile
-		virtualPad = new FlxVirtualPad(FULL, NONE);		
-		add(virtualPad);
-		#end
+		introTalk();
 		
 		super.create();	
 		
@@ -183,7 +172,6 @@ class PlayState extends FlxState
 	override public function update():Void
 	{
 		super.update();
-		_player.speed = 600;
 		FlxG.collide(_player, _mWalls);
 		FlxG.overlap(_player, _grpCoins, playerTouchCoin);
 		FlxG.collide(_grpEnemies, _mWalls);
@@ -192,6 +180,18 @@ class PlayState extends FlxState
 		FlxG.collide(_player, _grpEnemies, playerEnemy);
 	}	
 	
+	function introTalk()
+	{
+		_player.speed = 0;
+		FlxG.sound.play("assets/sounds/IntroMissie/Tut7.mp3", 1, false, true, play);
+	}
+	
+	function play()
+	{
+		FlxG.sound.playMusic(AssetPaths.townMusic__wav, 1, true);
+		_player.speed = 300;
+	}
+	
 	
 	function loadMission1(p:Player, t:Teacher)
 	{
@@ -199,7 +199,7 @@ class PlayState extends FlxState
 		_interaction = FlxG.keys.anyPressed(["space", "space"]);
 		if (_interaction && _player.CharacterNumber == 3)
 		{
-			p.y -= 192;
+			p.speed = 0;
 			if (talkAdult2 != null)
 			{
 				talkAdult2.destroy();
@@ -207,9 +207,8 @@ class PlayState extends FlxState
 			talkAdult2 = new FlxSprite();
 			talkAdult2.loadGraphic("assets/images/Missie1/intromissie1/prof0.png");
 			talkAdult2.x = _player.x - 300;
-			talkAdult2.y = _player.y - 100;
+			talkAdult2.y = _player.y;
 			add(talkAdult2);
-			talk = 1;
 			FlxG.sound.destroy(true);
 			p.speed = 0;
 			FlxG.sound.play("assets/sounds/Missie1/Teacher/Teacher1.mp3", 1, false, true, teacherText);
@@ -223,7 +222,7 @@ class PlayState extends FlxState
 		talkAdult2 = new FlxSprite();
 		talkAdult2.loadGraphic("assets/images/Missie1/intromissie1/prof1.png");
 		talkAdult2.x = _player.x - 300;
-		talkAdult2.y = _player.y - 100;
+		talkAdult2.y = _player.y ;
 		add(talkAdult2);
 		FlxG.sound.play("assets/sounds/Missie1/Teacher/Prof1-3.mp3", 1, false, true, teacherText1);
 	}
@@ -234,7 +233,7 @@ class PlayState extends FlxState
 		talkAdult2 = new FlxSprite();
 		talkAdult2.loadGraphic("assets/images/Missie1/intromissie1/prof2.png");
 		talkAdult2.x = _player.x - 300;
-		talkAdult2.y = _player.y - 100;
+		talkAdult2.y = _player.y;
 		add(talkAdult2);
 		FlxG.sound.play("assets/sounds/Missie1/Teacher/Teacher1-1.mp3", 1, false, true, teacherText2);
 	}
@@ -245,7 +244,7 @@ class PlayState extends FlxState
 		talkAdult2 = new FlxSprite();
 		talkAdult2.loadGraphic("assets/images/Missie1/intromissie1/prof3.png");
 		talkAdult2.x = _player.x - 300;
-		talkAdult2.y = _player.y - 100;
+		talkAdult2.y = _player.y;
 		add(talkAdult2);
 		FlxG.sound.play("assets/sounds/Missie1/Teacher/Teacher1-2.mp3", 1, false, true, teacherText3);
 	}
@@ -256,7 +255,7 @@ class PlayState extends FlxState
 		talkAdult2 = new FlxSprite();
 		talkAdult2.loadGraphic("assets/images/Missie1/intromissie1/prof4.png");
 		talkAdult2.x = _player.x - 300;
-		talkAdult2.y = _player.y - 100;
+		talkAdult2.y = _player.y;
 		add(talkAdult2);
 		FlxG.sound.play("assets/sounds/Missie1/Teacher/Teacher1-3.mp3", 1, false, true, teacherText4);
 	}
@@ -267,7 +266,7 @@ class PlayState extends FlxState
 		talkAdult2 = new FlxSprite();
 		talkAdult2.loadGraphic("assets/images/Missie1/intromissie1/prof5.png");
 		talkAdult2.x = _player.x - 300;
-		talkAdult2.y = _player.y - 100;
+		talkAdult2.y = _player.y;
 		add(talkAdult2);
 		FlxG.sound.play("assets/sounds/Missie1/Teacher/Teacher1-4.mp3", 1, false, true, teacherText5);
 	}
@@ -278,7 +277,7 @@ class PlayState extends FlxState
 		talkAdult2 = new FlxSprite();
 		talkAdult2.loadGraphic("assets/images/Missie1/intromissie1/prof6.png");
 		talkAdult2.x = _player.x - 300;
-		talkAdult2.y = _player.y - 100;
+		talkAdult2.y = _player.y;
 		add(talkAdult2);
 		FlxG.sound.play("assets/sounds/Missie1/Teacher/Prof2-3.mp3", 1, false, true, mission1Load);
 	}

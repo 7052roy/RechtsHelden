@@ -72,10 +72,7 @@ class Introduction1 extends FlxState
 		
 		FlxG.camera.fade(FlxColor.BLACK, 2, true);
 		
-		#if mobile
-		virtualPad = new FlxVirtualPad(FULL, NONE);	
-		add(virtualPad);
-		#end
+		introTalk();
 		
 		super.create();	
 		
@@ -101,18 +98,20 @@ class Introduction1 extends FlxState
 	
 	function introTalk()
 	{
-		if (introTalk1 != null)
-			{
-				introTalk1.destroy();
-			}
-			introTalk1 = new FlxSprite();
-			introTalk1.loadGraphic("assets/images/Missie1/intromissie1/prof0.png");
-			introTalk1.x = _player.x - 300;
-			introTalk1.y = _player.y - 100;
-			add(introTalk1);
-			FlxG.sound.destroy(true);
-			//p.speed = 0;
-			//FlxG.sound.play("assets/sounds/IntroMissie/1IntroPijltjestoetsen.mp3", 1, false, true, introTalk2);
+		FlxG.sound.destroy(true);
+		_player.speed = 0;
+		FlxG.sound.play("assets/sounds/IntroMissie/Tut1.mp3", 1, false, true, introTalk2);
+	}
+	
+	function introTalk2()
+	{
+		FlxG.sound.play("assets/sounds/IntroMissie/Tut2.mp3", 1, false, true, play);
+	}
+	
+	function play()
+	{
+		FlxG.sound.playMusic(AssetPaths.KJRWHouse__wav, 1, true);
+		_player.speed = 300;
 	}
 	
 	
