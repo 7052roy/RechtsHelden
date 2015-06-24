@@ -62,8 +62,7 @@ class Mission2 extends FlxState
 		
 		//_hud = new HUD();
 		//add(_hud);
-		mission1Music = FlxG.sound.load("assets/music/townMusic.wav");
-		mission1Music.play(true);
+		FlxG.sound.playMusic(AssetPaths.Chase__mp3, 1, true);
 		
 		FlxG.camera.fade(FlxColor.BLACK, 2, true);
 		
@@ -130,6 +129,7 @@ class Mission2 extends FlxState
 		
 		if (_player.CharacterNumber == 1 && _player.ability2 == true)
 		{
+			FlxG.sound.destroy(true);
 			FlxG.switchState(new Mission2Finish());
 		}
 	}

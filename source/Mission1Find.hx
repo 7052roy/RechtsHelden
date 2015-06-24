@@ -233,7 +233,7 @@ class Mission1Find extends FlxState
 		talkAdult1.y = _player.y - 200;
 		add(talkAdult1);
 		
-		FlxG.sound.play("assets/sounds/Missie1/Kind2/Prof1-1.mp3", 1, false, true, adult1Talk3);
+		FlxG.sound.play("assets/sounds/Missie1/Kind2/Kind2-1.mp3", 1, false, true, adult1Talk3);
 	}
 	function adult1Talk3()
 	{
@@ -253,7 +253,7 @@ class Mission1Find extends FlxState
 		talkAdult1.x = _player.x - 400;
 		talkAdult1.y = _player.y - 200;
 		add(talkAdult1);
-		FlxG.sound.play("assets/sounds/Missie1/Kind2/Prof2-1.mp3", 1, false, true, adult1Talk5);
+		FlxG.sound.play("assets/sounds/Missie1/Kind2/Kind2-2.mp3", 1, false, true, adult1Talk5);
 	}
 	function adult1Talk5()
 	{

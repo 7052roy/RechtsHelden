@@ -49,6 +49,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/data/Final Maps/NightmareMap.oel", AssetType.TEXT);
 		className.set ("assets/data/Final Maps/puzzle1.oel", __ASSET__assets_data_final_maps_puzzle1_oel);
 		type.set ("assets/data/Final Maps/puzzle1.oel", AssetType.TEXT);
+		className.set ("assets/data/Final Maps/puzzle2-1-1.oel", __ASSET__assets_data_final_maps_puzzle2_1_1_oel);
+		type.set ("assets/data/Final Maps/puzzle2-1-1.oel", AssetType.TEXT);
 		className.set ("assets/data/Final Maps/puzzle2-1.oel", __ASSET__assets_data_final_maps_puzzle2_1_oel);
 		type.set ("assets/data/Final Maps/puzzle2-1.oel", AssetType.TEXT);
 		className.set ("assets/data/Final Maps/puzzle2-2.oel", __ASSET__assets_data_final_maps_puzzle2_2_oel);
@@ -443,28 +445,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/sounds/Abilities/Shield.mp3", AssetType.MUSIC);
 		className.set ("assets/sounds/Abilities/Shield1.mp3", __ASSET__assets_sounds_abilities_shield1_mp3);
 		type.set ("assets/sounds/Abilities/Shield1.mp3", AssetType.MUSIC);
-		className.set ("assets/sounds/Abilities/Source/Heal.wav", __ASSET__assets_sounds_abilities_source_heal_wav);
-		type.set ("assets/sounds/Abilities/Source/Heal.wav", AssetType.SOUND);
-		className.set ("assets/sounds/Abilities/Source/Heal1.wav", __ASSET__assets_sounds_abilities_source_heal1_wav);
-		type.set ("assets/sounds/Abilities/Source/Heal1.wav", AssetType.SOUND);
-		className.set ("assets/sounds/Abilities/Source/Hit_Hurt18.wav", __ASSET__assets_sounds_abilities_source_hit_hurt18_wav);
-		type.set ("assets/sounds/Abilities/Source/Hit_Hurt18.wav", AssetType.SOUND);
-		className.set ("assets/sounds/Abilities/Source/Hit_Hurt32.wav", __ASSET__assets_sounds_abilities_source_hit_hurt32_wav);
-		type.set ("assets/sounds/Abilities/Source/Hit_Hurt32.wav", AssetType.SOUND);
-		className.set ("assets/sounds/Abilities/Source/JUDGE-O-METERCOIN.wav", __ASSET__assets_sounds_abilities_source_judge_o_metercoin_wav);
-		type.set ("assets/sounds/Abilities/Source/JUDGE-O-METERCOIN.wav", AssetType.SOUND);
-		className.set ("assets/sounds/Abilities/Source/Push.wav", __ASSET__assets_sounds_abilities_source_push_wav);
-		type.set ("assets/sounds/Abilities/Source/Push.wav", AssetType.SOUND);
-		className.set ("assets/sounds/Abilities/Source/Push1.wav", __ASSET__assets_sounds_abilities_source_push1_wav);
-		type.set ("assets/sounds/Abilities/Source/Push1.wav", AssetType.SOUND);
-		className.set ("assets/sounds/Abilities/Source/Shield1.wav", __ASSET__assets_sounds_abilities_source_shield1_wav);
-		type.set ("assets/sounds/Abilities/Source/Shield1.wav", AssetType.SOUND);
 		className.set ("assets/sounds/Abilities/switch.mp3", __ASSET__assets_sounds_abilities_switch_mp3);
 		type.set ("assets/sounds/Abilities/switch.mp3", AssetType.MUSIC);
 		className.set ("assets/sounds/Ediroal.mid", __ASSET__assets_sounds_ediroal_mid);
 		type.set ("assets/sounds/Ediroal.mid", AssetType.BINARY);
-		className.set ("assets/sounds/Game/JUDGE-O-METERCOIN.mp3", __ASSET__assets_sounds_game_judge_o_metercoin_mp3);
-		type.set ("assets/sounds/Game/JUDGE-O-METERCOIN.mp3", AssetType.MUSIC);
 		className.set ("assets/sounds/Gesprek1.wav", __ASSET__assets_sounds_gesprek1_wav);
 		type.set ("assets/sounds/Gesprek1.wav", AssetType.SOUND);
 		className.set ("assets/sounds/IntroMissie/1IntroPijltjestoetsen.mp3", __ASSET__assets_sounds_intromissie_1intropijltjestoetsen_mp3);
@@ -481,6 +465,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/sounds/IntroMissie/6ProfInstructie.mp3", AssetType.MUSIC);
 		className.set ("assets/sounds/IntroMissie/7IntroOutro.mp3", __ASSET__assets_sounds_intromissie_7introoutro_mp3);
 		type.set ("assets/sounds/IntroMissie/7IntroOutro.mp3", AssetType.MUSIC);
+		className.set ("assets/sounds/Intromusic.mp3", __ASSET__assets_sounds_intromusic_mp3);
+		type.set ("assets/sounds/Intromusic.mp3", AssetType.MUSIC);
 		className.set ("assets/sounds/IntroVoice.mp3", __ASSET__assets_sounds_introvoice_mp3);
 		type.set ("assets/sounds/IntroVoice.mp3", AssetType.MUSIC);
 		className.set ("assets/sounds/Knightmare/Knightmare1.mp3", __ASSET__assets_sounds_knightmare_knightmare1_mp3);
@@ -641,6 +627,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		type.set (id, AssetType.TEXT);
 		id = "assets/data/Final Maps/puzzle1.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/Final Maps/puzzle2-1-1.oel";
 		path.set (id, id);
 		
 		type.set (id, AssetType.TEXT);
@@ -1432,38 +1422,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.MUSIC);
-		id = "assets/sounds/Abilities/Source/Heal.wav";
-		path.set (id, id);
-		
-		type.set (id, AssetType.SOUND);
-		id = "assets/sounds/Abilities/Source/Heal1.wav";
-		path.set (id, id);
-		
-		type.set (id, AssetType.SOUND);
-		id = "assets/sounds/Abilities/Source/Hit_Hurt18.wav";
-		path.set (id, id);
-		
-		type.set (id, AssetType.SOUND);
-		id = "assets/sounds/Abilities/Source/Hit_Hurt32.wav";
-		path.set (id, id);
-		
-		type.set (id, AssetType.SOUND);
-		id = "assets/sounds/Abilities/Source/JUDGE-O-METERCOIN.wav";
-		path.set (id, id);
-		
-		type.set (id, AssetType.SOUND);
-		id = "assets/sounds/Abilities/Source/Push.wav";
-		path.set (id, id);
-		
-		type.set (id, AssetType.SOUND);
-		id = "assets/sounds/Abilities/Source/Push1.wav";
-		path.set (id, id);
-		
-		type.set (id, AssetType.SOUND);
-		id = "assets/sounds/Abilities/Source/Shield1.wav";
-		path.set (id, id);
-		
-		type.set (id, AssetType.SOUND);
 		id = "assets/sounds/Abilities/switch.mp3";
 		path.set (id, id);
 		
@@ -1472,10 +1430,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.BINARY);
-		id = "assets/sounds/Game/JUDGE-O-METERCOIN.mp3";
-		path.set (id, id);
-		
-		type.set (id, AssetType.MUSIC);
 		id = "assets/sounds/Gesprek1.wav";
 		path.set (id, id);
 		
@@ -1505,6 +1459,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		type.set (id, AssetType.MUSIC);
 		id = "assets/sounds/IntroMissie/7IntroOutro.mp3";
+		path.set (id, id);
+		
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/Intromusic.mp3";
 		path.set (id, id);
 		
 		type.set (id, AssetType.MUSIC);
@@ -2108,13 +2066,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
-		
-		
-		
-		
-		
-		
-		
 		#end
 		
 		#if (windows || mac || linux)
@@ -2126,6 +2077,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/data/Final Maps/puzzle1.oel", __ASSET__assets_data_final_maps_puzzle1_oel);
 		type.set ("assets/data/Final Maps/puzzle1.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/Final Maps/puzzle2-1-1.oel", __ASSET__assets_data_final_maps_puzzle2_1_1_oel);
+		type.set ("assets/data/Final Maps/puzzle2-1-1.oel", AssetType.TEXT);
 		
 		className.set ("assets/data/Final Maps/puzzle2-1.oel", __ASSET__assets_data_final_maps_puzzle2_1_oel);
 		type.set ("assets/data/Final Maps/puzzle2-1.oel", AssetType.TEXT);
@@ -2718,38 +2672,11 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("assets/sounds/Abilities/Shield1.mp3", __ASSET__assets_sounds_abilities_shield1_mp3);
 		type.set ("assets/sounds/Abilities/Shield1.mp3", AssetType.MUSIC);
 		
-		className.set ("assets/sounds/Abilities/Source/Heal.wav", __ASSET__assets_sounds_abilities_source_heal_wav);
-		type.set ("assets/sounds/Abilities/Source/Heal.wav", AssetType.SOUND);
-		
-		className.set ("assets/sounds/Abilities/Source/Heal1.wav", __ASSET__assets_sounds_abilities_source_heal1_wav);
-		type.set ("assets/sounds/Abilities/Source/Heal1.wav", AssetType.SOUND);
-		
-		className.set ("assets/sounds/Abilities/Source/Hit_Hurt18.wav", __ASSET__assets_sounds_abilities_source_hit_hurt18_wav);
-		type.set ("assets/sounds/Abilities/Source/Hit_Hurt18.wav", AssetType.SOUND);
-		
-		className.set ("assets/sounds/Abilities/Source/Hit_Hurt32.wav", __ASSET__assets_sounds_abilities_source_hit_hurt32_wav);
-		type.set ("assets/sounds/Abilities/Source/Hit_Hurt32.wav", AssetType.SOUND);
-		
-		className.set ("assets/sounds/Abilities/Source/JUDGE-O-METERCOIN.wav", __ASSET__assets_sounds_abilities_source_judge_o_metercoin_wav);
-		type.set ("assets/sounds/Abilities/Source/JUDGE-O-METERCOIN.wav", AssetType.SOUND);
-		
-		className.set ("assets/sounds/Abilities/Source/Push.wav", __ASSET__assets_sounds_abilities_source_push_wav);
-		type.set ("assets/sounds/Abilities/Source/Push.wav", AssetType.SOUND);
-		
-		className.set ("assets/sounds/Abilities/Source/Push1.wav", __ASSET__assets_sounds_abilities_source_push1_wav);
-		type.set ("assets/sounds/Abilities/Source/Push1.wav", AssetType.SOUND);
-		
-		className.set ("assets/sounds/Abilities/Source/Shield1.wav", __ASSET__assets_sounds_abilities_source_shield1_wav);
-		type.set ("assets/sounds/Abilities/Source/Shield1.wav", AssetType.SOUND);
-		
 		className.set ("assets/sounds/Abilities/switch.mp3", __ASSET__assets_sounds_abilities_switch_mp3);
 		type.set ("assets/sounds/Abilities/switch.mp3", AssetType.MUSIC);
 		
 		className.set ("assets/sounds/Ediroal.mid", __ASSET__assets_sounds_ediroal_mid);
 		type.set ("assets/sounds/Ediroal.mid", AssetType.BINARY);
-		
-		className.set ("assets/sounds/Game/JUDGE-O-METERCOIN.mp3", __ASSET__assets_sounds_game_judge_o_metercoin_mp3);
-		type.set ("assets/sounds/Game/JUDGE-O-METERCOIN.mp3", AssetType.MUSIC);
 		
 		className.set ("assets/sounds/Gesprek1.wav", __ASSET__assets_sounds_gesprek1_wav);
 		type.set ("assets/sounds/Gesprek1.wav", AssetType.SOUND);
@@ -2774,6 +2701,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/sounds/IntroMissie/7IntroOutro.mp3", __ASSET__assets_sounds_intromissie_7introoutro_mp3);
 		type.set ("assets/sounds/IntroMissie/7IntroOutro.mp3", AssetType.MUSIC);
+		
+		className.set ("assets/sounds/Intromusic.mp3", __ASSET__assets_sounds_intromusic_mp3);
+		type.set ("assets/sounds/Intromusic.mp3", AssetType.MUSIC);
 		
 		className.set ("assets/sounds/IntroVoice.mp3", __ASSET__assets_sounds_introvoice_mp3);
 		type.set ("assets/sounds/IntroVoice.mp3", AssetType.MUSIC);
@@ -3602,6 +3532,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 @:keep @:bind #if display private #end class __ASSET__assets_data_final_maps_nightmaremap_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_final_maps_puzzle1_oel extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_final_maps_puzzle2_1_1_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_final_maps_puzzle2_1_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_final_maps_puzzle2_2_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_final_maps_puzzle2_3_oel extends flash.utils.ByteArray { }
@@ -3799,17 +3730,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_abilities_patoutdoor1_mp3 extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_abilities_shield_mp3 extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_abilities_shield1_mp3 extends flash.media.Sound { }
-@:keep @:bind #if display private #end class __ASSET__assets_sounds_abilities_source_heal_wav extends flash.media.Sound { }
-@:keep @:bind #if display private #end class __ASSET__assets_sounds_abilities_source_heal1_wav extends flash.media.Sound { }
-@:keep @:bind #if display private #end class __ASSET__assets_sounds_abilities_source_hit_hurt18_wav extends flash.media.Sound { }
-@:keep @:bind #if display private #end class __ASSET__assets_sounds_abilities_source_hit_hurt32_wav extends flash.media.Sound { }
-@:keep @:bind #if display private #end class __ASSET__assets_sounds_abilities_source_judge_o_metercoin_wav extends flash.media.Sound { }
-@:keep @:bind #if display private #end class __ASSET__assets_sounds_abilities_source_push_wav extends flash.media.Sound { }
-@:keep @:bind #if display private #end class __ASSET__assets_sounds_abilities_source_push1_wav extends flash.media.Sound { }
-@:keep @:bind #if display private #end class __ASSET__assets_sounds_abilities_source_shield1_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_abilities_switch_mp3 extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_ediroal_mid extends flash.utils.ByteArray { }
-@:keep @:bind #if display private #end class __ASSET__assets_sounds_game_judge_o_metercoin_mp3 extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_gesprek1_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_intromissie_1intropijltjestoetsen_mp3 extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_intromissie_2goedgedaan_mp3 extends flash.media.Sound { }
@@ -3818,6 +3740,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_intromissie_5tecinstructie2_mp3 extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_intromissie_6profinstructie_mp3 extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_intromissie_7introoutro_mp3 extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__assets_sounds_intromusic_mp3 extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_introvoice_mp3 extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_knightmare_knightmare1_mp3 extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_knightmare_knightmare2_mp3 extends flash.media.Sound { }
@@ -4185,13 +4108,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
-
-
-
-
-
-
-
 #else
 
 
@@ -4201,6 +4117,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 @:file("assets/data/Final Maps/NightmareMap.oel") #if display private #end class __ASSET__assets_data_final_maps_nightmaremap_oel extends lime.utils.ByteArray {}
 @:file("assets/data/Final Maps/puzzle1.oel") #if display private #end class __ASSET__assets_data_final_maps_puzzle1_oel extends lime.utils.ByteArray {}
+@:file("assets/data/Final Maps/puzzle2-1-1.oel") #if display private #end class __ASSET__assets_data_final_maps_puzzle2_1_1_oel extends lime.utils.ByteArray {}
 @:file("assets/data/Final Maps/puzzle2-1.oel") #if display private #end class __ASSET__assets_data_final_maps_puzzle2_1_oel extends lime.utils.ByteArray {}
 @:file("assets/data/Final Maps/puzzle2-2.oel") #if display private #end class __ASSET__assets_data_final_maps_puzzle2_2_oel extends lime.utils.ByteArray {}
 @:file("assets/data/Final Maps/puzzle2-3.oel") #if display private #end class __ASSET__assets_data_final_maps_puzzle2_3_oel extends lime.utils.ByteArray {}
@@ -4398,17 +4315,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:file("assets/sounds/Abilities/PatOutdoor1.mp3") #if display private #end class __ASSET__assets_sounds_abilities_patoutdoor1_mp3 extends lime.utils.ByteArray {}
 @:file("assets/sounds/Abilities/Shield.mp3") #if display private #end class __ASSET__assets_sounds_abilities_shield_mp3 extends lime.utils.ByteArray {}
 @:file("assets/sounds/Abilities/Shield1.mp3") #if display private #end class __ASSET__assets_sounds_abilities_shield1_mp3 extends lime.utils.ByteArray {}
-@:file("assets/sounds/Abilities/Source/Heal.wav") #if display private #end class __ASSET__assets_sounds_abilities_source_heal_wav extends lime.utils.ByteArray {}
-@:file("assets/sounds/Abilities/Source/Heal1.wav") #if display private #end class __ASSET__assets_sounds_abilities_source_heal1_wav extends lime.utils.ByteArray {}
-@:file("assets/sounds/Abilities/Source/Hit_Hurt18.wav") #if display private #end class __ASSET__assets_sounds_abilities_source_hit_hurt18_wav extends lime.utils.ByteArray {}
-@:file("assets/sounds/Abilities/Source/Hit_Hurt32.wav") #if display private #end class __ASSET__assets_sounds_abilities_source_hit_hurt32_wav extends lime.utils.ByteArray {}
-@:file("assets/sounds/Abilities/Source/JUDGE-O-METERCOIN.wav") #if display private #end class __ASSET__assets_sounds_abilities_source_judge_o_metercoin_wav extends lime.utils.ByteArray {}
-@:file("assets/sounds/Abilities/Source/Push.wav") #if display private #end class __ASSET__assets_sounds_abilities_source_push_wav extends lime.utils.ByteArray {}
-@:file("assets/sounds/Abilities/Source/Push1.wav") #if display private #end class __ASSET__assets_sounds_abilities_source_push1_wav extends lime.utils.ByteArray {}
-@:file("assets/sounds/Abilities/Source/Shield1.wav") #if display private #end class __ASSET__assets_sounds_abilities_source_shield1_wav extends lime.utils.ByteArray {}
 @:file("assets/sounds/Abilities/switch.mp3") #if display private #end class __ASSET__assets_sounds_abilities_switch_mp3 extends lime.utils.ByteArray {}
 @:file("assets/sounds/Ediroal.mid") #if display private #end class __ASSET__assets_sounds_ediroal_mid extends lime.utils.ByteArray {}
-@:file("assets/sounds/Game/JUDGE-O-METERCOIN.mp3") #if display private #end class __ASSET__assets_sounds_game_judge_o_metercoin_mp3 extends lime.utils.ByteArray {}
 @:file("assets/sounds/Gesprek1.wav") #if display private #end class __ASSET__assets_sounds_gesprek1_wav extends lime.utils.ByteArray {}
 @:file("assets/sounds/IntroMissie/1IntroPijltjestoetsen.mp3") #if display private #end class __ASSET__assets_sounds_intromissie_1intropijltjestoetsen_mp3 extends lime.utils.ByteArray {}
 @:file("assets/sounds/IntroMissie/2GoedGedaan.mp3") #if display private #end class __ASSET__assets_sounds_intromissie_2goedgedaan_mp3 extends lime.utils.ByteArray {}
@@ -4417,6 +4325,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:file("assets/sounds/IntroMissie/5TecInstructie2.mp3") #if display private #end class __ASSET__assets_sounds_intromissie_5tecinstructie2_mp3 extends lime.utils.ByteArray {}
 @:file("assets/sounds/IntroMissie/6ProfInstructie.mp3") #if display private #end class __ASSET__assets_sounds_intromissie_6profinstructie_mp3 extends lime.utils.ByteArray {}
 @:file("assets/sounds/IntroMissie/7IntroOutro.mp3") #if display private #end class __ASSET__assets_sounds_intromissie_7introoutro_mp3 extends lime.utils.ByteArray {}
+@:file("assets/sounds/Intromusic.mp3") #if display private #end class __ASSET__assets_sounds_intromusic_mp3 extends lime.utils.ByteArray {}
 @:file("assets/sounds/IntroVoice.mp3") #if display private #end class __ASSET__assets_sounds_introvoice_mp3 extends lime.utils.ByteArray {}
 @:file("assets/sounds/Knightmare/Knightmare1.mp3") #if display private #end class __ASSET__assets_sounds_knightmare_knightmare1_mp3 extends lime.utils.ByteArray {}
 @:file("assets/sounds/Knightmare/Knightmare2.mp3") #if display private #end class __ASSET__assets_sounds_knightmare_knightmare2_mp3 extends lime.utils.ByteArray {}

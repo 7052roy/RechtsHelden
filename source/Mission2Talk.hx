@@ -121,7 +121,7 @@ class Mission2Talk extends FlxState
 		conversation = new FlxSprite();
 		conversation.loadGraphic("assets/images/Missie2/emo1.4.png");
 		conversation.x = _player.x - 300;
-		conversation.y = _player.y - 100;
+		conversation.y = _player.y - 300;
 		add(conversation);
 		FlxG.sound.play("assets/sounds/Missie2/Kid1.mp3", 1, false, true, talkKid3);
 	}
@@ -187,7 +187,7 @@ class Mission2Talk extends FlxState
 		conversation = new FlxSprite();
 		conversation.loadGraphic("assets/images/Missie2/emo1.8.png");
 		conversation.x = _player.x - 300;
-		conversation.y = _player.y - 300;
+		conversation.y = _player.y - 200;
 		add(conversation);
 		FlxG.sound.play("assets/sounds/Missie2/Dad1.mp3", 1, false, true, talkKid7);
 	}
@@ -198,7 +198,7 @@ class Mission2Talk extends FlxState
 		conversation = new FlxSprite();
 		conversation.loadGraphic("assets/images/Missie2/emo1.9.png");
 		conversation.x = _player.x - 300;
-		conversation.y = _player.y - 300;
+		conversation.y = _player.y - 200;
 		add(conversation);
 		FlxG.sound.play("assets/sounds/Missie2/Prof5.mp3", 1, false, true, finishMissionBier);
 	}
