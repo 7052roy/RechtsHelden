@@ -127,6 +127,7 @@ class BeforeNightmare extends FlxState
 		
 		FlxG.camera.fade(FlxColor.BLACK, 2, true);
 		
+		finishMission();
 		
 		super.create();	
 		
@@ -169,7 +170,6 @@ class BeforeNightmare extends FlxState
 		super.update();
 		_player.speed = 300;
 		FlxG.collide(_player, _mWalls);
-		FlxG.collide(_player, _trigger, finishMission);
 	
 	}	
 	
@@ -178,7 +178,7 @@ class BeforeNightmare extends FlxState
 		FlxG.switchState(new NightmareMode());
 	}
 	
-	function finishMission(p:Player, t:Trigger)
+	function finishMission()
 	{
 		FlxG.sound.destroy(true);
 		FlxG.sound.play("assets/sounds/Missie3/missie3-15.mp3", 1, false, true, finish);
