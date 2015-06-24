@@ -39,7 +39,24 @@ class NightmareMode extends FlxState
 	{
 		_map = new FlxOgmoLoader("assets/data/Final Maps/NightmareMap.oel");
 		_mWalls = _map.loadTilemap("assets/images/Knightmare_Tilesheet_Complete.png", 64, 64, "tree");
-		_mWalls.setTileProperties(1, FlxObject.NONE);
+		var e:Int = 1;
+		for (i in 0...245)
+		{
+			_mWalls.setTileProperties(e, FlxObject.NONE);
+			e++;
+		}
+		
+		_mWalls.setTileProperties(47, FlxObject.ANY);
+		_mWalls.setTileProperties(67, FlxObject.ANY);
+		_mWalls.setTileProperties(26, FlxObject.ANY);
+		_mWalls.setTileProperties(27, FlxObject.ANY);
+		_mWalls.setTileProperties(60, FlxObject.ANY);
+		_mWalls.setTileProperties(61, FlxObject.ANY);
+		_mWalls.setTileProperties(51, FlxObject.ANY);
+		_mWalls.setTileProperties(52, FlxObject.ANY);
+		_mWalls.setTileProperties(53, FlxObject.ANY);
+		
+		/*_mWalls.setTileProperties(1, FlxObject.NONE);
 		_mWalls.setTileProperties(2, FlxObject.NONE);
 		_mWalls.setTileProperties(3, FlxObject.NONE);
 		_mWalls.setTileProperties(4, FlxObject.NONE);
@@ -97,7 +114,7 @@ class NightmareMode extends FlxState
 		_mWalls.setTileProperties(241, FlxObject.NONE);
 		_mWalls.setTileProperties(242, FlxObject.NONE);
 		_mWalls.setTileProperties(243, FlxObject.NONE);
-		_mWalls.setTileProperties(244, FlxObject.NONE);
+		_mWalls.setTileProperties(244, FlxObject.NONE);*/
 		add(_mWalls);
 		
 		_player = new Player();
@@ -155,7 +172,7 @@ class NightmareMode extends FlxState
 	{
 		talk.destroy();
 		_player.speed = 300;
-		_nightmare.speed = 200;
+		_nightmare.speed = 100;
 		FlxG.sound.playMusic(AssetPaths.Knightmare__mp3, 1, true);
 	}
 	
@@ -168,7 +185,8 @@ class NightmareMode extends FlxState
 		}
 		else if (entityName == "Nightmare")
 		{
-			_nightmare.add(new Enemy(Std.parseInt(entityData.get("x"))+4, Std.parseInt(entityData.get("y")), Std.parseInt(entityData.get("etype"))));
+			_nightmare.x = Std.parseInt(entityData.get("x"));
+			_nightmare.y = Std.parseInt(entityData.get("y"));
 		}
 	}
 	
@@ -187,7 +205,7 @@ class NightmareMode extends FlxState
 	 */
 	override public function update():Void
 	{
-
+		_nightmare.playerPos.copyFrom(_player.getMidpoint());
 		super.update();
 		_player.speed = 300;
 		FlxG.collide(_player, _mWalls);

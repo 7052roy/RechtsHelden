@@ -11,7 +11,7 @@ import flixel.util.FlxVelocity;
 
 class NightMare extends Entities
 {
-	public var speed:Float = 200;
+	public var speed:Float = 100;
 	public var etype(default, null):Int;
 	private var _brain:FSM;
 	private var _idleTmr:Float;
@@ -19,11 +19,11 @@ class NightMare extends Entities
 	public var seesPlayer:Bool = true;
 	public var playerPos(default, null):FlxPoint;
 	
-	public function new(X:Float=0, Y:Float=0, EType:Int) 
+	public function new() 
 	{
 		
-		super(X,Y);
-		etype = EType;
+		super();
+
 		loadGraphic("assets/images/KnightmareCompleteTilesheet.png", true, 128, 128);
 		setFacingFlip(FlxObject.LEFT, false, false);
 		setFacingFlip(FlxObject.RIGHT, true, false);
@@ -100,7 +100,7 @@ class NightMare extends Entities
 	
 	override public function draw():Void 
 	{
-		if ((velocity.x != 0 || velocity.y != 0) && touching != FlxObject.NONE)
+		if (velocity.x != 0 || velocity.y != 0)
 		{
 			
 			if (Math.abs(velocity.x) > Math.abs(velocity.y))

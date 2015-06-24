@@ -115,6 +115,26 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/EmoKidMission2.png", AssetType.IMAGE);
 		className.set ("assets/images/emokidMission3.png", __ASSET__assets_images_emokidmission3_png);
 		type.set ("assets/images/emokidMission3.png", AssetType.IMAGE);
+		className.set ("assets/images/End Credit/1-1.png", __ASSET__assets_images_end_credit_1_1_png);
+		type.set ("assets/images/End Credit/1-1.png", AssetType.IMAGE);
+		className.set ("assets/images/End Credit/2-1.png", __ASSET__assets_images_end_credit_2_1_png);
+		type.set ("assets/images/End Credit/2-1.png", AssetType.IMAGE);
+		className.set ("assets/images/End Credit/3-1.png", __ASSET__assets_images_end_credit_3_1_png);
+		type.set ("assets/images/End Credit/3-1.png", AssetType.IMAGE);
+		className.set ("assets/images/End Credit/4-1.png", __ASSET__assets_images_end_credit_4_1_png);
+		type.set ("assets/images/End Credit/4-1.png", AssetType.IMAGE);
+		className.set ("assets/images/End Credit/5.png", __ASSET__assets_images_end_credit_5_png);
+		type.set ("assets/images/End Credit/5.png", AssetType.IMAGE);
+		className.set ("assets/images/End Credit/6.png", __ASSET__assets_images_end_credit_6_png);
+		type.set ("assets/images/End Credit/6.png", AssetType.IMAGE);
+		className.set ("assets/images/End Credit/7.png", __ASSET__assets_images_end_credit_7_png);
+		type.set ("assets/images/End Credit/7.png", AssetType.IMAGE);
+		className.set ("assets/images/End Credit/8.png", __ASSET__assets_images_end_credit_8_png);
+		type.set ("assets/images/End Credit/8.png", AssetType.IMAGE);
+		className.set ("assets/images/End Credit/Credit.gif", __ASSET__assets_images_end_credit_credit_gif);
+		type.set ("assets/images/End Credit/Credit.gif", AssetType.IMAGE);
+		className.set ("assets/images/End Credit/Credit_Tilesheet1280x720.png", __ASSET__assets_images_end_credit_credit_tilesheet1280x720_png);
+		type.set ("assets/images/End Credit/Credit_Tilesheet1280x720.png", AssetType.IMAGE);
 		className.set ("assets/images/enemy-0.png", __ASSET__assets_images_enemy_0_png);
 		type.set ("assets/images/enemy-0.png", AssetType.IMAGE);
 		className.set ("assets/images/enemy-1.png", __ASSET__assets_images_enemy_1_png);
@@ -787,6 +807,46 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		type.set (id, AssetType.IMAGE);
 		id = "assets/images/emokidMission3.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/End Credit/1-1.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/End Credit/2-1.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/End Credit/3-1.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/End Credit/4-1.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/End Credit/5.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/End Credit/6.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/End Credit/7.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/End Credit/8.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/End Credit/Credit.gif";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/End Credit/Credit_Tilesheet1280x720.png";
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
@@ -2164,6 +2224,16 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		#end
 		
 		#if (windows || mac || linux)
@@ -2274,6 +2344,36 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/images/emokidMission3.png", __ASSET__assets_images_emokidmission3_png);
 		type.set ("assets/images/emokidMission3.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/End Credit/1-1.png", __ASSET__assets_images_end_credit_1_1_png);
+		type.set ("assets/images/End Credit/1-1.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/End Credit/2-1.png", __ASSET__assets_images_end_credit_2_1_png);
+		type.set ("assets/images/End Credit/2-1.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/End Credit/3-1.png", __ASSET__assets_images_end_credit_3_1_png);
+		type.set ("assets/images/End Credit/3-1.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/End Credit/4-1.png", __ASSET__assets_images_end_credit_4_1_png);
+		type.set ("assets/images/End Credit/4-1.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/End Credit/5.png", __ASSET__assets_images_end_credit_5_png);
+		type.set ("assets/images/End Credit/5.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/End Credit/6.png", __ASSET__assets_images_end_credit_6_png);
+		type.set ("assets/images/End Credit/6.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/End Credit/7.png", __ASSET__assets_images_end_credit_7_png);
+		type.set ("assets/images/End Credit/7.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/End Credit/8.png", __ASSET__assets_images_end_credit_8_png);
+		type.set ("assets/images/End Credit/8.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/End Credit/Credit.gif", __ASSET__assets_images_end_credit_credit_gif);
+		type.set ("assets/images/End Credit/Credit.gif", AssetType.IMAGE);
+		
+		className.set ("assets/images/End Credit/Credit_Tilesheet1280x720.png", __ASSET__assets_images_end_credit_credit_tilesheet1280x720_png);
+		type.set ("assets/images/End Credit/Credit_Tilesheet1280x720.png", AssetType.IMAGE);
 		
 		className.set ("assets/images/enemy-0.png", __ASSET__assets_images_enemy_0_png);
 		type.set ("assets/images/enemy-0.png", AssetType.IMAGE);
@@ -3705,6 +3805,16 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_images_emo_kid_mission3__png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_emokidmission2_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_emokidmission3_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_end_credit_1_1_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_end_credit_2_1_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_end_credit_3_1_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_end_credit_4_1_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_end_credit_5_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_end_credit_6_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_end_credit_7_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_end_credit_8_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_end_credit_credit_gif extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_end_credit_credit_tilesheet1280x720_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_enemy_0_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_enemy_1_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_enemy_2_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
@@ -4276,6 +4386,16 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
+
+
+
+
+
+
+
+
+
 #else
 
 
@@ -4318,6 +4438,16 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:image("assets/images/Emo-Kid-Mission3).png") #if display private #end class __ASSET__assets_images_emo_kid_mission3__png extends lime.graphics.Image {}
 @:image("assets/images/EmoKidMission2.png") #if display private #end class __ASSET__assets_images_emokidmission2_png extends lime.graphics.Image {}
 @:image("assets/images/emokidMission3.png") #if display private #end class __ASSET__assets_images_emokidmission3_png extends lime.graphics.Image {}
+@:image("assets/images/End Credit/1-1.png") #if display private #end class __ASSET__assets_images_end_credit_1_1_png extends lime.graphics.Image {}
+@:image("assets/images/End Credit/2-1.png") #if display private #end class __ASSET__assets_images_end_credit_2_1_png extends lime.graphics.Image {}
+@:image("assets/images/End Credit/3-1.png") #if display private #end class __ASSET__assets_images_end_credit_3_1_png extends lime.graphics.Image {}
+@:image("assets/images/End Credit/4-1.png") #if display private #end class __ASSET__assets_images_end_credit_4_1_png extends lime.graphics.Image {}
+@:image("assets/images/End Credit/5.png") #if display private #end class __ASSET__assets_images_end_credit_5_png extends lime.graphics.Image {}
+@:image("assets/images/End Credit/6.png") #if display private #end class __ASSET__assets_images_end_credit_6_png extends lime.graphics.Image {}
+@:image("assets/images/End Credit/7.png") #if display private #end class __ASSET__assets_images_end_credit_7_png extends lime.graphics.Image {}
+@:image("assets/images/End Credit/8.png") #if display private #end class __ASSET__assets_images_end_credit_8_png extends lime.graphics.Image {}
+@:image("assets/images/End Credit/Credit.gif") #if display private #end class __ASSET__assets_images_end_credit_credit_gif extends lime.graphics.Image {}
+@:image("assets/images/End Credit/Credit_Tilesheet1280x720.png") #if display private #end class __ASSET__assets_images_end_credit_credit_tilesheet1280x720_png extends lime.graphics.Image {}
 @:image("assets/images/enemy-0.png") #if display private #end class __ASSET__assets_images_enemy_0_png extends lime.graphics.Image {}
 @:image("assets/images/enemy-1.png") #if display private #end class __ASSET__assets_images_enemy_1_png extends lime.graphics.Image {}
 @:image("assets/images/enemy-2.png") #if display private #end class __ASSET__assets_images_enemy_2_png extends lime.graphics.Image {}
