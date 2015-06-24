@@ -29,6 +29,9 @@ class Mission3Puzzle extends FlxState
 	private var _player:Player;
 	private var _map:FlxOgmoLoader;
 	private var _mWalls:FlxTilemap;
+	private var _ball:Ball;
+	private var _ball1:Ball1;
+	private var _ball2:Ball2;
 	var mission1Music:FlxSound;
 	private var _trigger:FlxTypedGroup<Trigger>;
 
@@ -40,7 +43,7 @@ class Mission3Puzzle extends FlxState
 	{
 		_map = new FlxOgmoLoader("assets/data/Final Maps/puzzle3.oel");
 		_mWalls = _map.loadTilemap("assets/images/Tilesheet_Complete.png", 64, 64, "tree");
-	_mWalls.setTileProperties(1, FlxObject.NONE);
+		_mWalls.setTileProperties(1, FlxObject.NONE);
 		_mWalls.setTileProperties(2, FlxObject.NONE);
 		_mWalls.setTileProperties(3, FlxObject.NONE);
 		_mWalls.setTileProperties(4, FlxObject.NONE);
@@ -107,6 +110,24 @@ class Mission3Puzzle extends FlxState
 		_trigger = new FlxTypedGroup<Trigger>();
 		add(_trigger);
 		
+<<<<<<< HEAD
+=======
+		_ball = new Ball();
+		add(_ball);
+		
+		_ball1 = new Ball1();
+		add(_ball1);
+		
+		_ball2 = new Ball2();
+		add(_ball2);
+		
+		_btnReset = new FlxButton(0, 0, "Reset", clickReset);
+		_btnReset.x = (FlxG.width / 2) - _btnReset.width - 10;
+		_btnReset.y = FlxG.height - _btnReset.height - 10;
+		_btnReset.onUp.sound = FlxG.sound.load(AssetPaths.select__wav);
+		add(_btnReset);
+		
+>>>>>>> origin/master
 		_map.loadEntities(placeEntities, "entities");
 		
 		
@@ -140,11 +161,31 @@ class Mission3Puzzle extends FlxState
 			_player.x = Std.parseInt(entityData.get("x"));
 			_player.y = Std.parseInt(entityData.get("y"));
 		}
+		else if (entityName == "ball1")
+		{
+			_ball.x = Std.parseInt(entityData.get("x"));
+			_ball.y = Std.parseInt(entityData.get("y"));
+		}
+		
+		else if (entityName == "ball2")
+		{
+			_ball1.x = Std.parseInt(entityData.get("x"));
+			_ball1.y = Std.parseInt(entityData.get("y"));
+		}
+		
+		else if (entityName == "ball3")
+		{
+			_ball2.x = Std.parseInt(entityData.get("x"));
+			_ball2.y = Std.parseInt(entityData.get("y"));
+		}
+		
 		else if (entityName == "Tumblr")
 		{
 			_trigger.add(new Trigger(Std.parseInt(entityData.get("x"))+4, Std.parseInt(entityData.get("y")), Std.parseInt(entityData.get("etype"))));
 		}
 	}
+	
+	
 	
 	
 	/**
@@ -165,9 +206,70 @@ class Mission3Puzzle extends FlxState
 		super.update();
 		_player.speed = 300;
 		FlxG.collide(_player, _mWalls);
-		FlxG.collide(_player, _trigger, finishMission);
+		FlxG.collide(_player, _ball, stopBalls);
+		FlxG.collide(_player, _ball1, stopBalls1);
+		FlxG.collide(_player, _ball2, stopBalls2);
+		FlxG.overlap(_player, _trigger);
+		FlxG.collide(_ball, _mWalls, setSpeed1);
+		FlxG.collide(_ball1, _mWalls, setSpeed2);
+		FlxG.collide(_ball2, _mWalls, setSpeed3);
 	
-	}	
+	}
+	
+	function setSpeed1(b:Ball, w:FlxTilemap)
+	{
+		if (_ball.x < 192)
+		{
+			b.velocity.x = 100;
+		}
+		else if (_ball.x <400)
+		{
+			b.velocity.x = -100;
+		}
+		
+	}
+	
+	function setSpeed2(b:Ball1, w:FlxTilemap)
+	{
+		if (_ball.x > 192)
+		{
+			b.velocity.x = -100;
+		}
+		else if (_ball.x <400)
+		{
+			b.velocity.x = 100;
+		}
+		
+	}
+	function setSpeed3(b:Ball2, w:FlxTilemap)
+	{
+		if (_ball.x <192)
+		{
+			b.velocity.x = 100;
+		}
+		else if (_ball.x <400)
+		{
+			b.velocity.x = -100;
+		}
+		
+	}
+	
+	function stopBalls(p:Player, b:Ball )
+	{
+		b.velocity.x = 0;
+	}
+	
+	function stopBalls1(p:Player, b:Ball1 )
+	{
+		b.velocity.x = 0;
+	}
+	
+	function stopBalls2(p:Player, b:Ball2 )
+	{
+		b.velocity.x = 0;
+	}
+	
+	
 	
 	function finishMission(p:Player, t:Trigger)
 	{

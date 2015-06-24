@@ -67,7 +67,7 @@ class MenuState extends FlxState
 	{
 		FlxG.sound.destroy(true);
 		FlxG.camera.fade(FlxColor.BLACK,.33, false, function() {
-			FlxG.switchState(new Introduction1());
+			FlxG.switchState(new Mission3Puzzle());
 		});
 	}
 	
