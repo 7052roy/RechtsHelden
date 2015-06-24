@@ -280,7 +280,6 @@ class Mission3Finish extends FlxState
 	{
 
 		super.update();
-		_player.speed = 300;
 		FlxG.collide(_player, _mWalls);
 		FlxG.overlap(_player, _trigger, judgeText);
 	
