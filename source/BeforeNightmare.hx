@@ -22,15 +22,16 @@ import flixel.util.FlxTimer;
 import lime.audio.AudioManager;
 
 /**
- * A FlxState which can be used for the actual gameplay.
+ * A FlxState for the before nightmare mode.
+ * 
+ * @author Roy Leinenga
+ * @author Luuk Huizing
  */
 class BeforeNightmare extends FlxState
 {
 	private var _player:Player;
 	private var _map:FlxOgmoLoader;
 	private var _mWalls:FlxTilemap;
-	var mission1Music:FlxSound;
-	private var _trigger:FlxTypedGroup<Trigger>;
 
 	
 	/**
@@ -40,75 +41,12 @@ class BeforeNightmare extends FlxState
 	{
 		_map = new FlxOgmoLoader("assets/data/Final Maps/worldmap6.oel");
 		_mWalls = _map.loadTilemap("assets/images/Tilesheet_Complete.png", 64, 64, "tree");
-		_mWalls.setTileProperties(1, FlxObject.NONE);
-		_mWalls.setTileProperties(2, FlxObject.NONE);
-		_mWalls.setTileProperties(3, FlxObject.NONE);
-		_mWalls.setTileProperties(4, FlxObject.NONE);
-		_mWalls.setTileProperties(5, FlxObject.NONE);
-		_mWalls.setTileProperties(6, FlxObject.NONE);
-		_mWalls.setTileProperties(7, FlxObject.NONE);
-		_mWalls.setTileProperties(8, FlxObject.NONE);
-		_mWalls.setTileProperties(9, FlxObject.NONE);
-		_mWalls.setTileProperties(10, FlxObject.NONE);
-		_mWalls.setTileProperties(11, FlxObject.NONE);
-		_mWalls.setTileProperties(12, FlxObject.NONE);
-		_mWalls.setTileProperties(13, FlxObject.NONE);
-		_mWalls.setTileProperties(14, FlxObject.NONE);
-		_mWalls.setTileProperties(15, FlxObject.NONE);
-		_mWalls.setTileProperties(16, FlxObject.NONE);
-		_mWalls.setTileProperties(17, FlxObject.NONE);
-		_mWalls.setTileProperties(18, FlxObject.NONE);
-		_mWalls.setTileProperties(19, FlxObject.NONE);
-		_mWalls.setTileProperties(20, FlxObject.NONE);
-		_mWalls.setTileProperties(21, FlxObject.NONE);
-		_mWalls.setTileProperties(22, FlxObject.NONE);
-		_mWalls.setTileProperties(23, FlxObject.NONE);
-		_mWalls.setTileProperties(24, FlxObject.NONE);
-		_mWalls.setTileProperties(170, FlxObject.NONE);
-		_mWalls.setTileProperties(171, FlxObject.NONE);
-		_mWalls.setTileProperties(172, FlxObject.NONE);
-		_mWalls.setTileProperties(173, FlxObject.NONE);
-		_mWalls.setTileProperties(174, FlxObject.NONE);
-		_mWalls.setTileProperties(175, FlxObject.NONE);
-		_mWalls.setTileProperties(176, FlxObject.NONE);
-		_mWalls.setTileProperties(187, FlxObject.NONE);
-		_mWalls.setTileProperties(188, FlxObject.NONE);
-		_mWalls.setTileProperties(189, FlxObject.NONE);
-		_mWalls.setTileProperties(190, FlxObject.NONE);
-		_mWalls.setTileProperties(191, FlxObject.NONE);
-		_mWalls.setTileProperties(192, FlxObject.NONE);
-		_mWalls.setTileProperties(193, FlxObject.NONE);
-		_mWalls.setTileProperties(204, FlxObject.NONE);
-		_mWalls.setTileProperties(205, FlxObject.NONE);
-		_mWalls.setTileProperties(206, FlxObject.NONE);
-		_mWalls.setTileProperties(207, FlxObject.NONE);
-		_mWalls.setTileProperties(208, FlxObject.NONE);
-		_mWalls.setTileProperties(209, FlxObject.NONE);
-		_mWalls.setTileProperties(210, FlxObject.NONE);
-		_mWalls.setTileProperties(221, FlxObject.NONE);
-		_mWalls.setTileProperties(222, FlxObject.NONE);
-		_mWalls.setTileProperties(223, FlxObject.NONE);
-		_mWalls.setTileProperties(224, FlxObject.NONE);
-		_mWalls.setTileProperties(225, FlxObject.NONE);
-		_mWalls.setTileProperties(226, FlxObject.NONE);
-		_mWalls.setTileProperties(227, FlxObject.NONE);
-		_mWalls.setTileProperties(238, FlxObject.NONE);
-		_mWalls.setTileProperties(239, FlxObject.NONE);
-		_mWalls.setTileProperties(240, FlxObject.NONE);
-		_mWalls.setTileProperties(241, FlxObject.NONE);
-		_mWalls.setTileProperties(242, FlxObject.NONE);
-		_mWalls.setTileProperties(243, FlxObject.NONE);
-		_mWalls.setTileProperties(244, FlxObject.NONE);
 		add(_mWalls);
 		
 		_player = new Player();
 		add(_player);
 		
-		_trigger = new FlxTypedGroup<Trigger>();
-		add(_trigger);
-		
 		_map.loadEntities(placeEntities, "entities");
-		
 		
 		FlxG.camera.follow(_player, FlxCamera.STYLE_TOPDOWN, null, 1);
 		
@@ -117,24 +55,20 @@ class BeforeNightmare extends FlxState
 		finishMission();
 		
 		super.create();	
-		
 	}
 	
-	function clickReset()
-	{
-		FlxG.switchState(new Mission1());
-	}
-	
+	/**
+	 * Function that places the entities to their location on the screen
+	 * 
+	 * @param	entityName
+	 * @param	entityData
+	 */
 	private function placeEntities(entityName:String, entityData:Xml):Void
 	{
 		if (entityName == "player")
 		{
 			_player.x = Std.parseInt(entityData.get("x"));
 			_player.y = Std.parseInt(entityData.get("y"));
-		}
-		else if (entityName == "Tumblr")
-		{
-			_trigger.add(new Trigger(Std.parseInt(entityData.get("x"))+4, Std.parseInt(entityData.get("y")), Std.parseInt(entityData.get("etype"))));
 		}
 	}
 	
@@ -153,23 +87,23 @@ class BeforeNightmare extends FlxState
 	 */
 	override public function update():Void
 	{
-
 		super.update();
-		_player.speed = 300;
-		FlxG.collide(_player, _mWalls);
-	
 	}	
 	
+	/**
+	 * Function that switches the gameState to a new state using a new class
+	 */
 	function finish()
 	{
 		FlxG.switchState(new NightmareMode());
 	}
 	
+	/**
+	 * Function that plays a soundfile and calls to another function
+	 */
 	function finishMission()
 	{
-		FlxG.sound.destroy(true);
 		FlxG.sound.play("assets/sounds/Missie3/Missie3-15.mp3", 1, false, true, finish);
-		
 	}
 	
 }

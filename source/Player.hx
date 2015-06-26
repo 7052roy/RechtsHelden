@@ -10,6 +10,12 @@ import flixel.FlxSprite;
 import flixel.util.FlxAngle;
 import flixel.FlxG;
 
+/**
+ * This class creates the player
+ * 
+ * @author Roy Leinenga
+ * @author Luuk Huizing
+ */
 class Player extends FlxSprite
 {
 
@@ -19,7 +25,9 @@ class Player extends FlxSprite
 	public var ability2:Bool = false;
 	public var level:Int;
 	
-	
+	/**
+	 * Function that is called up when the player is created. 
+	 */
 	public function new(X:Float=0, Y:Float=0) 
 	{
 		super(X, Y);
@@ -35,9 +43,11 @@ class Player extends FlxSprite
 		drag.x = drag.y = 1600;
 		setSize(50, 50);
 		offset.set(14, 7);
-		//immovable = true;
 	}
 	
+	/**
+	 * function that checks the current character
+	 */
 	public function checkCharacter()
 	{
 		if (CharacterNumber == 1 && test != 1)
@@ -52,6 +62,9 @@ class Player extends FlxSprite
 		}
 	}
 	
+	/**
+	 * function to create tec
+	 */
 	function tec()
 	{
 		loadGraphic("assets/images/tec.png", true, 64, 64);
@@ -69,6 +82,9 @@ class Player extends FlxSprite
 		test= 1;
 	}
 	
+	/**
+	 * function to create pat
+	 */
 	function pat()
 	{
 		loadGraphic("assets/images/pat.png", true, 64, 64);
@@ -86,6 +102,9 @@ class Player extends FlxSprite
 		test= 2;
 	}
 	
+	/**
+	 * function to create prof
+	 */
 	function ion()
 	{
 		loadGraphic("assets/images/ion.png", true, 64, 64);
@@ -103,6 +122,9 @@ class Player extends FlxSprite
 		test= 3;
 	}
 	
+	/**
+	 * This funtion draws the entities animation for every direction it is walking in
+	 */
 	override public function draw():Void 
 	{
 		if (velocity.x != 0 || velocity.y != 0)
@@ -142,6 +164,9 @@ class Player extends FlxSprite
 		super.draw();
 	}
 	
+	/**
+	 * function for the player movement
+	 */
 	private function movement():Void
 	{
 		var _up:Bool = false;
@@ -182,7 +207,6 @@ class Player extends FlxSprite
 		{
 			CharacterNumber = 3;
 		}
-		//trace(CharacterNumber);
 		
 		if (_up && _down)
 			_up = _down = false;
@@ -234,6 +258,9 @@ class Player extends FlxSprite
 		}
 	}
 	
+	/**
+	 * function that is called every frame
+	 */
 	override public function update():Void 
 	{
 		checkCharacter();

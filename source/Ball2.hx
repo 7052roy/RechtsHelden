@@ -7,7 +7,7 @@ import flixel.group.FlxTypedGroup;
  * This class creates the third ball for mission 3
  * 
  * @author Roy Leinenga
- * @author Luuk huizing
+ * @author Luuk Huizing
  */
 
 class Ball2 extends Entities
@@ -22,5 +22,4 @@ class Ball2 extends Entities
 		loadGraphic("assets/images/BeachBall-Mission3.png", true, 64, 64);
 		velocity.x = -100;
 	}
-	
 }

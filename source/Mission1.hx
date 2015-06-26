@@ -21,7 +21,10 @@ import flixel.util.FlxPoint;
 import flixel.util.FlxTimer;
 
 /**
- * A FlxState which can be used for the actual gameplay.
+ * A FlxState which creates the puzzle for mission1.
+ * 
+ * @author Roy Leinenga
+ * @author Luuk Huizing
  */
 class Mission1 extends FlxState
 {
@@ -120,29 +123,29 @@ class Mission1 extends FlxState
 		
 		_map.loadEntities(placeEntities, "entities");
 		
-		
-		
-		
 		FlxG.camera.follow(_player, FlxCamera.STYLE_TOPDOWN, null, 1);
 		
 		FlxG.sound.playMusic(AssetPaths.Puzzle__mp3, 1, true);
 		
 		FlxG.camera.fade(FlxColor.BLACK, 2, true);
 		
-		#if mobile
-		virtualPad = new FlxVirtualPad(FULL, NONE);	
-		add(virtualPad);
-		#end
-		
 		super.create();	
-		
 	}
 	
+	/**
+	 * Function to reset the puzzle
+	 */
 	function clickReset()
 	{
 		FlxG.switchState(new Mission1());
 	}
 	
+	/**
+	 * Function that places the entities on their set locations
+	 * 
+	 * @param	entityName
+	 * @param	entityData
+	 */
 	private function placeEntities(entityName:String, entityData:Xml):Void
 	{
 		if (entityName == "player")
@@ -206,6 +209,12 @@ class Mission1 extends FlxState
 		FlxG.overlap(_kid, _trigger, finishMission);
 	}	
 	
+	/**
+	 * function that finishes the mission and loads the next state
+	 * 
+	 * @param	k
+	 * @param	t
+	 */
 	function finishMission(k:Kid, t:Trigger)
 	{
 		FlxG.sound.destroy(true);

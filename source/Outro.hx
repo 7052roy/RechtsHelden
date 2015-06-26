@@ -22,7 +22,10 @@ import flixel.util.FlxTimer;
 import lime.audio.AudioManager;
 
 /**
- * A FlxState which can be used for the actual gameplay.
+ * This class creates the outro
+ * 
+ * @author Roy Leinenga
+ * @author Luuk Huizing
  */
 class Outro extends FlxState
 {
@@ -41,6 +44,9 @@ class Outro extends FlxState
 		
 	}
 	
+	/**
+	 * function to create an image
+	 */
 	function outro1()
 	{
 		FlxG.camera.fade(FlxColor.BLACK, 1, true);
@@ -52,6 +58,9 @@ class Outro extends FlxState
 		
 	}
 	
+	/**
+	 * function that is called every frame
+	 */
 	override public function  update()
 	{
 		_idleTmr -= FlxG.elapsed;
@@ -62,6 +71,9 @@ class Outro extends FlxState
 		super.update();
 	}
 	
+	/**
+	 * function that calls all of the different images
+	 */
 	function nextImage()
 	{
 		switch (introState)
@@ -70,6 +82,9 @@ class Outro extends FlxState
 		}
 	}
 	
+	/**
+	 * function to create an image
+	 */
 	function outro2()
 	{
 		
@@ -85,7 +100,9 @@ class Outro extends FlxState
 	}
 	
 	
-	
+	/**
+	 * function that switches to the menu
+	 */
 	function mainMenu()
 	{
 		FlxG.switchState(new MenuState());

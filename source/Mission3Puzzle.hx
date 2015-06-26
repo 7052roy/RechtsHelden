@@ -22,7 +22,10 @@ import flixel.util.FlxTimer;
 import lime.audio.AudioManager;
 
 /**
- * A FlxState which can be used for the actual gameplay.
+ * This class creates the angry dad for mission 3 puzzle
+ * 
+ * @author Roy Leinenga
+ * @author Luuk Huizing
  */
 class Mission3Puzzle extends FlxState
 {
@@ -123,28 +126,20 @@ class Mission3Puzzle extends FlxState
 		
 		
 		FlxG.camera.follow(_player, FlxCamera.STYLE_TOPDOWN, null, 1);
-		
-		//_hud = new HUD();
-		//add(_hud);
 		mission1Music = FlxG.sound.load("assets/music/townMusic.wav");
 		mission1Music.play(true);
 		
 		FlxG.camera.fade(FlxColor.BLACK, 2, true);
 		
-		#if mobile
-		virtualPad = new FlxVirtualPad(FULL, NONE);	
-		add(virtualPad);
-		#end
-		
 		super.create();	
-		
 	}
 	
-	function clickReset()
-	{
-		FlxG.switchState(new Mission1());
-	}
-	
+	/**
+	 * Function that places the entities on their set locations
+	 * 
+	 * @param	entityName
+	 * @param	entityData
+	 */
 	private function placeEntities(entityName:String, entityData:Xml):Void
 	{
 		if (entityName == "player")
@@ -176,9 +171,6 @@ class Mission3Puzzle extends FlxState
 		}
 	}
 	
-	
-	
-	
 	/**
 	 * Function that is called when this state is destroyed - you might want to 
 	 * consider setting all objects this state uses to null to help garbage collection.
@@ -207,6 +199,12 @@ class Mission3Puzzle extends FlxState
 	
 	}
 	
+	/**
+	 * fuction that sets the speed of the ball
+	 * 
+	 * @param	b
+	 * @param	w
+	 */
 	function setSpeed1(b:Ball, w:FlxTilemap)
 	{
 		if (_ball.x < 192)
@@ -220,6 +218,12 @@ class Mission3Puzzle extends FlxState
 		
 	}
 	
+	/**
+	 * fuction that sets the speed of the ball
+	 * 
+	 * @param	b
+	 * @param	w
+	 */
 	function setSpeed2(b:Ball1, w:FlxTilemap)
 	{
 		if (_ball.x > 192)
@@ -232,6 +236,13 @@ class Mission3Puzzle extends FlxState
 		}
 		
 	}
+	
+	/**
+	 * fuction that sets the speed of the ball
+	 * 
+	 * @param	b
+	 * @param	w
+	 */
 	function setSpeed3(b:Ball2, w:FlxTilemap)
 	{
 		if (_ball.x <192)
@@ -245,6 +256,12 @@ class Mission3Puzzle extends FlxState
 		
 	}
 	
+	/**
+	 * function that stops the ball
+	 * 
+	 * @param	p
+	 * @param	b
+	 */
 	function stopBalls(p:Player, b:Ball )
 	{
 		if (p.CharacterNumber == 1 && p.ability2 == true)
@@ -253,6 +270,12 @@ class Mission3Puzzle extends FlxState
 		}
 	}
 	
+	/**
+	 * function that stops the ball
+	 * 
+	 * @param	p
+	 * @param	b
+	 */
 	function stopBalls1(p:Player, b:Ball1 )
 	{
 		if (p.CharacterNumber == 1 && p.ability2 == true)
@@ -261,6 +284,12 @@ class Mission3Puzzle extends FlxState
 		}
 	}
 	
+	/**
+	 * function that stops the ball
+	 * 
+	 * @param	p
+	 * @param	b
+	 */
 	function stopBalls2(p:Player, b:Ball2 )
 	{
 		if (p.CharacterNumber == 1 && p.ability2 == true)
@@ -269,11 +298,11 @@ class Mission3Puzzle extends FlxState
 		}
 	}
 	
-	
-	
+	/**
+	 * function that loads the next state
+	 */
 	function finishMission(p:Player, t:Trigger)
 	{
-		
 		FlxG.switchState(new BeforeNightmare());
 	}
 	

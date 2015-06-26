@@ -22,7 +22,10 @@ import flixel.util.FlxTimer;
 import lime.audio.AudioManager;
 
 /**
- * A FlxState which can be used for the actual gameplay.
+ * A FlxState which creates the third introduction.
+ * 
+ * @author Roy Leinenga
+ * @author Luuk Huizing
  */
 class Introduction3 extends FlxState
 {
@@ -31,10 +34,6 @@ class Introduction3 extends FlxState
 	private var _mWalls:FlxTilemap;
 	var mission1Music:FlxSound;
 	private var _trigger:FlxTypedGroup<Trigger>;
-	
-	#if mobile
-	public static var virtualPad:FlxVirtualPad;
-	#end
 	
 	/**
 	 * Function that is called up when to state is created to set it up. 
@@ -65,6 +64,12 @@ class Introduction3 extends FlxState
 		
 	}
 	
+	/**
+	 * Function that places the entities on their set locations
+	 * 
+	 * @param	entityName
+	 * @param	entityData
+	 */
 	private function placeEntities(entityName:String, entityData:Xml):Void
 	{
 		if (entityName == "player")
@@ -78,6 +83,9 @@ class Introduction3 extends FlxState
 		}
 	}
 	
+	/**
+	 * function that plays the introtalk
+	 */
 	function introTalk()
 	{
 		FlxG.sound.destroy(true);
@@ -85,6 +93,9 @@ class Introduction3 extends FlxState
 		FlxG.sound.play("assets/sounds/IntroMissie/Tut5.mp3", 1, false, true, play);
 	}
 	
+	/**
+	 * function that plays the music and lets the player walk
+	 */
 	function play()
 	{
 		FlxG.sound.playMusic(AssetPaths.KJRWHouse__wav, 1, true);
@@ -111,6 +122,12 @@ class Introduction3 extends FlxState
 		FlxG.collide(_player, _mWalls);
 	}	
 	
+	/**
+	 * function that checks if the player uses ability at the right time and then loads the playstate
+	 * 
+	 * @param	p
+	 * @param	t
+	 */
 	function speaking(p:Player, t:Trigger)
 	{
 		if (p.CharacterNumber == 3 && p.ability2 == true)

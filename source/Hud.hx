@@ -9,6 +9,13 @@ import flixel.text.FlxText;
 import flixel.util.FlxColor;
 using flixel.util.FlxSpriteUtil;
 
+
+/**
+ * This class creates the HUD for the nightmare mode
+ * 
+ * @author Roy Leinenga
+ * @author Luuk Huizing
+ */
 class HUD extends FlxTypedGroup<FlxSprite>
 {
 	
@@ -18,6 +25,9 @@ class HUD extends FlxTypedGroup<FlxSprite>
 	private var _sprHealth:FlxSprite;
 	private var _sprNight:FlxSprite;
 	
+	/**
+	 * function that creates the hud
+	 */
 	public function new() 
 	{
 		super();
@@ -42,7 +52,12 @@ class HUD extends FlxTypedGroup<FlxSprite>
 	}
 	
 	
-	
+	/**
+	 * function for updating the hud
+	 * 
+	 * @param	Health
+	 * @param	healthNightmare
+	 */
 	public function updateHUD(Health:Int = 0, healthNightmare:Int = 0):Void
 	{
 		_txtHealth.text = Std.string(Health) + " / 3";

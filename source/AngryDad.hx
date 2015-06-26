@@ -13,7 +13,7 @@ import flixel.util.FlxVelocity;
  * This class creates the angry dad for mission 2 and the introduction
  * 
  * @author Roy Leinenga
- * @author Luuk huizing
+ * @author Luuk Huizing
  */
 class AngryDad extends Entities
 {
@@ -26,9 +26,10 @@ class AngryDad extends Entities
 	var position:FlxPoint;
 	var positionTest:Int = 0;
 	public var playerPosition:Float;
+	var movementAngle:Int = 0;
 	
 	/**
-	 * This function loeds the image and adds animations
+	 * This function loads the image and adds animations
 	 */
 	public function new() 
 	{
@@ -46,7 +47,6 @@ class AngryDad extends Entities
 		offset.y = 2;
 		_brain = new FSM(idle);
 		_idleTmr = 0;
-		playerPos = FlxPoint.get();
 	}
 	
 	/**
@@ -112,7 +112,6 @@ class AngryDad extends Entities
 				else
 					facing = FlxObject.DOWN;
 			}
-			
 			switch(facing)
 			{
 				case FlxObject.LEFT, FlxObject.RIGHT:
@@ -128,5 +127,4 @@ class AngryDad extends Entities
 			
 		super.draw();
 	}
-	
 }

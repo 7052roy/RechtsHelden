@@ -22,7 +22,10 @@ import flixel.util.FlxTimer;
 import lime.audio.AudioManager;
 
 /**
- * A FlxState which can be used for the actual gameplay.
+ * This class creates the angry dad for mission 3
+ * 
+ * @author Roy Leinenga
+ * @author Luuk Huizing
  */
 class Mission3 extends FlxState
 {
@@ -30,14 +33,8 @@ class Mission3 extends FlxState
 	private var _map:FlxOgmoLoader;
 	private var _mWalls:FlxTilemap;
 	var mission1Music:FlxSound;
-	private var _btnReset:FlxButton;
 	private var _trigger:FlxTypedGroup<Trigger>;
 	var kjrwTalk:FlxSprite;
-
-	
-	#if mobile
-	public static var virtualPad:FlxVirtualPad;
-	#end
 	
 	/**
 	 * Function that is called up when to state is created to set it up. 
@@ -128,6 +125,9 @@ class Mission3 extends FlxState
 		
 	}
 	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function kjrwText()
 	{
 		if (kjrwTalk != null)
@@ -149,6 +149,9 @@ class Mission3 extends FlxState
 		kjrwTalk.destroy();
 	}
 	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function kjrwText2(p:Player, t:Trigger)
 	{
 		if ( _player.CharacterNumber == 3 && _player.ability2 == true ) 
@@ -168,6 +171,9 @@ class Mission3 extends FlxState
 		}
 	}
 	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function kjrwText3()
 	{
 		
@@ -182,6 +188,9 @@ class Mission3 extends FlxState
 		
 	}
 	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function kjrwText4()
 	{
 		kjrwTalk.destroy();
@@ -195,6 +204,9 @@ class Mission3 extends FlxState
 		
 	}
 	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function kjrwText5()
 	{
 		kjrwTalk.destroy();
@@ -208,6 +220,9 @@ class Mission3 extends FlxState
 		
 	}
 	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function kjrwText6()
 	{
 		kjrwTalk.destroy();
@@ -221,6 +236,9 @@ class Mission3 extends FlxState
 		
 	}
 	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function kjrwText7()
 	{
 		kjrwTalk.destroy();
@@ -234,6 +252,9 @@ class Mission3 extends FlxState
 		
 	}
 	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function kjrwText8()
 	{
 		kjrwTalk.destroy();
@@ -247,16 +268,21 @@ class Mission3 extends FlxState
 		
 	}
 	
+	/**
+	 * function to go to the next mission
+	 */
 	function play2()
 	{
-		_player.speed = 300;
 		kjrwTalk.destroy();
 		finishMission();
 	}
 	
-	
-	
-	
+	/**
+	 * Function that places the entities on their set locations
+	 * 
+	 * @param	entityName
+	 * @param	entityData
+	 */
 	private function placeEntities(entityName:String, entityData:Xml):Void
 	{
 		if (entityName == "player")
@@ -287,16 +313,14 @@ class Mission3 extends FlxState
 	 */
 	override public function update():Void
 	{
-
 		super.update();
 		FlxG.collide(_player, _mWalls);
 		FlxG.overlap(_player, _trigger, kjrwText2);
-		
-		
-		
-		
 	}	
 	
+	/**
+	 * function that loads the next state
+	 */
 	function finishMission()
 	{
 		mission1Music.stop();

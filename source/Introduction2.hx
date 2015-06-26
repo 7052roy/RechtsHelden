@@ -22,7 +22,10 @@ import flixel.util.FlxTimer;
 import lime.audio.AudioManager;
 
 /**
- * A FlxState which can be used for the actual gameplay.
+ * A FlxState which creates the second introduction.
+ * 
+ * @author Roy Leinenga
+ * @author Luuk Huizing
  */
 class Introduction2 extends FlxState
 {
@@ -32,10 +35,6 @@ class Introduction2 extends FlxState
 	var mission1Music:FlxSound;
 	var _dad:AngryDad;
 	var _kid:Mission2Kid;
-	
-	#if mobile
-	public static var virtualPad:FlxVirtualPad;
-	#end
 	
 	/**
 	 * Function that is called up when to state is created to set it up. 
@@ -69,6 +68,12 @@ class Introduction2 extends FlxState
 		
 	}
 	
+	/**
+	 * Function that places the entities on their set locations
+	 * 
+	 * @param	entityName
+	 * @param	entityData
+	 */
 	private function placeEntities(entityName:String, entityData:Xml):Void
 	{
 		if (entityName == "player")
@@ -90,6 +95,9 @@ class Introduction2 extends FlxState
 		}
 	}
 	
+	/**
+	 * function that plays the introtalk
+	 */
 	function introTalk()
 	{
 		FlxG.sound.destroy(true);
@@ -97,11 +105,17 @@ class Introduction2 extends FlxState
 		FlxG.sound.play("assets/sounds/IntroMissie/Tut3.mp3", 1, false, true, introTalk2);
 	}
 	
+	/**
+	 * function that plays the introtalk
+	 */
 	function introTalk2()
 	{
 		FlxG.sound.play("assets/sounds/IntroMissie/Tut4.mp3", 1, false, true, play);
 	}
 	
+	/**
+	 * function that plays the music and lets the player walk
+	 */
 	function play()
 	{
 		FlxG.sound.playMusic(AssetPaths.KJRWHouse__wav, 1, true);
@@ -127,6 +141,12 @@ class Introduction2 extends FlxState
 		super.update();
 	}	
 	
+	/**
+	 * function that checks if the player uses ability at the right time and then loads introduction3
+	 * 
+	 * @param	p
+	 * @param	a
+	 */
 	function dadCollision(p:Player, a:AngryDad)
 	{
 		if (_player.CharacterNumber == 1 && _player.ability2 == true)

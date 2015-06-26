@@ -7,7 +7,7 @@ import flixel.group.FlxTypedGroup;
  * This class creates the first ball for mission 3
  * 
  * @author Roy Leinenga
- * @author Luuk huizing
+ * @author Luuk Huizing
  */
 
 class Ball extends Entities
@@ -22,5 +22,4 @@ class Ball extends Entities
 		loadGraphic("assets/images/DodgeBall-Mission-3.png", true, 64, 64);
 		velocity.x = -100;
 	}
-	
 }

@@ -23,7 +23,10 @@ import flixel.util.FlxTimer;
 import lime.audio.AudioManager;
 
 /**
- * A FlxState which can be used for the actual gameplay.
+ * This class creates the nightmare mode
+ * 
+ * @author Roy Leinenga
+ * @author Luuk Huizing
  */
 class NightmareMode extends FlxState
 {
@@ -89,6 +92,9 @@ class NightmareMode extends FlxState
 		super.create();	
 	}
 	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function nightmarTalk()
 	{
 		if (talk != null)
@@ -106,6 +112,9 @@ class NightmareMode extends FlxState
 		FlxG.sound.play("assets/sounds/Knightmare/Knightmare1.mp3", 1, false, true, nightmareTalk2);
 	}
 	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function nightmareTalk2()
 	{
 		talk.destroy();
@@ -117,6 +126,9 @@ class NightmareMode extends FlxState
 		FlxG.sound.play("assets/sounds/Knightmare/Luuk1.mp3", 1, false, true, play);
 	}
 	
+	/**
+	 * function that plays music and lets the entities move
+	 */
 	function play()
 	{
 		talk.destroy();
@@ -125,6 +137,12 @@ class NightmareMode extends FlxState
 		FlxG.sound.playMusic(AssetPaths.Knightmare__mp3, 1, true);
 	}
 	
+	/**
+	 * Function that places the entities on their set locations
+	 * 
+	 * @param	entityName
+	 * @param	entityData
+	 */
 	private function placeEntities(entityName:String, entityData:Xml):Void
 	{
 		if (entityName == "player")
@@ -186,10 +204,14 @@ class NightmareMode extends FlxState
 		
 		_attackTimer -= FlxG.elapsed;
 		_timer -= FlxG.elapsed;
-	
-		
 	}	
 	
+	/**
+	 * function that is called when nightmare attack and the player collide
+	 * 
+	 * @param	p
+	 * @param	a
+	 */
 	function attackPlayer(p:Player, a:NightmareAttack)
 	{
 		if (p.CharacterNumber == 2 && p.ability2 == true)
@@ -200,20 +222,31 @@ class NightmareMode extends FlxState
 		}
 	}
 	
-	function attackNightmare(m:NightMare, a:NightmareAttack)
+	/**
+	 * function that is called when nightmare and nightmare attack collide
+	 * 
+	 * @param	n
+	 * @param	a
+	 */
+	function attackNightmare(n:NightMare, a:NightmareAttack)
 	{
 		if (_attackTimer <= 0)
 		{
 			_attack.destroy();
 			nightmareLife -= 1;
-			_hud.updateHUD( nightmareLife);
+			_hud.updateHUD(playerLife, nightmareLife);
 		}
 	}
 	
+	/**
+	 * function that is called when player and nightmare collide
+	 * 
+	 * @param	n
+	 * @param	a
+	 */
 	function playerNightmare(p:Player, n:NightMare)
 	{
-		//playerLife -= 1;
 		_player.x - 320;
-		_hud.updateHUD( nightmareLife);
+		_hud.updateHUD(playerLife, nightmareLife);
 	}
 }

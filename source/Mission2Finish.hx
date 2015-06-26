@@ -22,19 +22,17 @@ import flixel.util.FlxTimer;
 import lime.audio.AudioManager;
 
 /**
- * A FlxState which can be used for the actual gameplay.
+ * A FlxState which creates mission2 finish.
+ * 
+ * @author Roy Leinenga
+ * @author Luuk Huizing
  */
 class Mission2Finish extends FlxState
 {
 	private var _player:Player;
 	private var _map:FlxOgmoLoader;
 	private var _mWalls:FlxTilemap;
-	var mission1Music:FlxSound;
 	var talkDad:FlxSprite;
-
-	#if mobile
-	public static var virtualPad:FlxVirtualPad;
-	#end
 	
 	/**
 	 * Function that is called up when to state is created to set it up. 
@@ -53,11 +51,6 @@ class Mission2Finish extends FlxState
 		
 		FlxG.camera.follow(_player, FlxCamera.STYLE_TOPDOWN, null, 1);
 		
-		//_hud = new HUD();
-		//add(_hud);
-		mission1Music = FlxG.sound.load("assets/music/townMusic.wav");
-		mission1Music.play(true);
-		
 		FlxG.camera.fade(FlxColor.BLACK, 2, true);
 		
 		dadText();
@@ -66,11 +59,12 @@ class Mission2Finish extends FlxState
 		
 	}
 	
-	function clickReset()
-	{
-		FlxG.switchState(new Mission1());
-	}
-	
+	/**
+	 * Function that places the entities on their set locations
+	 * 
+	 * @param	entityName
+	 * @param	entityData
+	 */
 	private function placeEntities(entityName:String, entityData:Xml):Void
 	{
 		if (entityName == "player")
@@ -81,6 +75,9 @@ class Mission2Finish extends FlxState
 		
 	}
 	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function dadText()
 	{
 		if (talkDad != null)
@@ -96,6 +93,9 @@ class Mission2Finish extends FlxState
 		
 	}
 	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function dadText1()
 	{
 		talkDad.destroy();
@@ -106,6 +106,10 @@ class Mission2Finish extends FlxState
 		add(talkDad);
 		FlxG.sound.play("assets/sounds/Missie2/Dad3.mp3", 1, false, true, dadText2);
 	}
+	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function dadText2()
 	{
 		talkDad.destroy();
@@ -117,8 +121,6 @@ class Mission2Finish extends FlxState
 		FlxG.sound.play("assets/sounds/Missie2/Kid3.mp3", 1, false, true, goToNew);
 	}
 
-	
-	
 	/**
 	 * Function that is called when this state is destroyed - you might want to 
 	 * consider setting all objects this state uses to null to help garbage collection.
@@ -138,6 +140,9 @@ class Mission2Finish extends FlxState
 		FlxG.collide(_player, _mWalls);
 	}
 	
+	/**
+	 * function that loads the next state
+	 */
 	function goToNew()
 	{
 		FlxG.switchState(new Mission3());

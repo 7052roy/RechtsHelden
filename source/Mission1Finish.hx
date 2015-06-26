@@ -21,7 +21,10 @@ import flixel.util.FlxPoint;
 import flixel.util.FlxTimer;
 
 /**
- * A FlxState which can be used for the actual gameplay.
+ * A FlxState which creates mission1 finish.
+ * 
+ * @author Roy Leinenga
+ * @author Luuk Huizing
  */
 class Mission1Finish extends FlxState
 {
@@ -30,7 +33,6 @@ class Mission1Finish extends FlxState
 	private var _mWalls:FlxTilemap;
 	var townMusic:FlxSound;
 	var _teacher:Teacher;
-	var _enemy:Enemy;
 	var _trigger:FlxTypedGroup<Trigger>;
 	var conversation:FlxSprite;
 	
@@ -105,21 +107,14 @@ class Mission1Finish extends FlxState
 		_player = new Player();
 		add(_player);
 		
-		
-		
 		_trigger = new FlxTypedGroup<Trigger>();
 		add(_trigger);
 		
 		
 		_map.loadEntities(placeEntities, "entities");
 		
-		
-		
-		
 		FlxG.camera.follow(_player, FlxCamera.STYLE_TOPDOWN, null, 1);
-		
-		//_hud = new HUD();
-		//add(_hud);
+
 		FlxG.sound.playMusic(AssetPaths.townMusic__wav, 1, true);
 		
 		FlxG.camera.fade(FlxColor.BLACK, 2, true);
@@ -128,6 +123,12 @@ class Mission1Finish extends FlxState
 		mission2Text();
 	}
 	
+	/**
+	 * Function that places the entities on their set locations
+	 * 
+	 * @param	entityName
+	 * @param	entityData
+	 */
 	private function placeEntities(entityName:String, entityData:Xml):Void
 	{
 		if (entityName == "player")
@@ -152,6 +153,9 @@ class Mission1Finish extends FlxState
 		super.destroy();
 	}
 
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function mission2Text()
 	{
 		if (conversation != null)
@@ -168,7 +172,9 @@ class Mission1Finish extends FlxState
 		FlxG.sound.play("assets/sounds/Missie2/Prof1.mp3", 1, false, true, playMusic);
 	}
 	
-	
+	/**
+	 * Function that plays the music and lets the player walk.
+	 */
 	function playMusic()
 	{
 		if (conversation != null)
@@ -178,6 +184,7 @@ class Mission1Finish extends FlxState
 		FlxG.sound.playMusic(AssetPaths.townMusic__wav, 1, true);
 		_player.speed = 300;
 	}
+	
 	/**
 	 * Function that is called once every frame.
 	 */
@@ -185,11 +192,13 @@ class Mission1Finish extends FlxState
 	{
 
 		super.update();
-		//_player.speed = 300;
 		FlxG.collide(_player, _trigger, loadMission2Talk);
 		FlxG.collide(_player, _mWalls);
 	}	
 	
+	/**
+	 * function that loads the next state
+	 */
 	private function loadMission2Talk(p:Player, t:Trigger)
 	{
 		FlxG.switchState(new Mission2Talk());

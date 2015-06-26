@@ -5,11 +5,10 @@ import flixel.FlxSprite;
  * This class creates the adult girl for mission 1
  * 
  * @author Roy Leinenga
- * @author Luuk huizing
+ * @author Luuk Huizing
  */
 class Adult1 extends Entities
 {
-
 	/**
 	 * This funstion loads and creates the girl to the screen
 	 * 
@@ -21,5 +20,4 @@ class Adult1 extends Entities
 		super();
 		loadGraphic("assets/images/Girl-Mission1.png", true, 63, 63);
 	}
-	
 }

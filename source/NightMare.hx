@@ -9,19 +9,26 @@ import flixel.util.FlxRandom;
 import flixel.util.FlxTimer;
 import flixel.util.FlxVelocity;
 
+/**
+ * This class creates nightmare
+ * 
+ * @author Roy Leinenga
+ * @author Luuk Huizing
+ */
 class NightMare extends Entities
 {
 	public var speed:Float = 100;
 	public var etype(default, null):Int;
 	private var _brain:FSM;
 	private var _idleTmr:Float;
-	private var _moveDir:Float;
 	public var seesPlayer:Bool = true;
 	public var playerPos(default, null):FlxPoint;
 	
+	/**
+	 * This funstion loads and creates the nightmare
+	 */
 	public function new() 
 	{
-		
 		super();
 
 		loadGraphic("assets/images/KnightmareCompleteTilesheet.png", true, 128, 128);
@@ -40,32 +47,26 @@ class NightMare extends Entities
 		playerPos = FlxPoint.get();
 	}
 	
-	
+	/**
+	 * function that is called every frame
+	 */
 	override public function update():Void 
 	{		
 		_brain.update();
 		super.update();
 	}
 	
-	function moveDirection()
-	{
-		_moveDir = FlxRandom.intRanged(0, 8) * 45;
-		
-		if (_moveDir == 45 || _moveDir == 135 || _moveDir == 225 || _moveDir == 315)
-		{
-			moveDirection();
-		}else {
-			FlxAngle.rotatePoint(speed * .5, 0, 0, 0, _moveDir, velocity);
-		}
-		
-	}
-	
+	/**
+	 * function to let nightmare chase the player
+	 */
 	public function chase():Void
 	{
 		FlxVelocity.moveTowardsPoint(this, playerPos, Std.int(speed));
 	}
 	
-	
+	/**
+	 * This funtion draws the entities animation for every direction it is walking in
+	 */
 	override public function draw():Void 
 	{
 		if (velocity.x != 0 || velocity.y != 0)
@@ -101,10 +102,4 @@ class NightMare extends Entities
 			
 		super.draw();
 	}
-	
-	override public function destroy():Void 
-	{
-		super.destroy();
-	}
-	
 }

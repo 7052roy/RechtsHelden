@@ -22,7 +22,10 @@ import flixel.util.FlxTimer;
 import lime.audio.AudioManager;
 
 /**
- * A FlxState which can be used for the actual gameplay.
+ * A FlxState for the introduction of the game.
+ * 
+ * @author Roy Leinenga
+ * @author Luuk Huizing
  */
 class Intro extends FlxState
 {
@@ -42,6 +45,9 @@ class Intro extends FlxState
 		
 	}
 	
+	/**
+	 * function to create the first image of the intro
+	 */
 	function intro1()
 	{
 		FlxG.camera.fade(FlxColor.BLACK, 1, true);
@@ -53,6 +59,9 @@ class Intro extends FlxState
 		
 	}
 	
+	/**
+	 * function that is called every frame
+	 */
 	override public function  update()
 	{
 		_idleTmr -= FlxG.elapsed;
@@ -63,9 +72,11 @@ class Intro extends FlxState
 		super.update();
 	}
 	
+	/**
+	 * function that calls all of the different images
+	 */
 	function nextImage()
 	{
-		//FlxG.camera.fade(FlxColor.BLACK, 1);
 		switch (introState)
 		{
 			case 1: intro2();
@@ -77,6 +88,9 @@ class Intro extends FlxState
 		}
 	}
 	
+	/**
+	 * function to create the second image of the intro
+	 */
 	function intro2()
 	{
 		
@@ -91,6 +105,9 @@ class Intro extends FlxState
 		introState = 2;
 	}
 	
+	/**
+	 * function to create the third image of the intro
+	 */
 	function intro3()
 	{
 		FlxG.camera.fade(FlxColor.BLACK, 1, true);
@@ -98,10 +115,13 @@ class Intro extends FlxState
 		introImage = new FlxSprite();
 		introImage.loadGraphic("assets/images/Story/3.png");
 		add(introImage);
-		_idleTmr = 24;
+		_idleTmr = 21;
 		introState = 3;
 	}
 	
+	/**
+	 * function to create the fourth image of the intro
+	 */
 	function intro4()
 	{
 		FlxG.camera.fade(FlxColor.BLACK, 1, true);
@@ -109,10 +129,13 @@ class Intro extends FlxState
 		introImage = new FlxSprite();
 		introImage.loadGraphic("assets/images/Story/4.png");
 		add(introImage);
-		_idleTmr = 18;
+		_idleTmr = 16;
 		introState = 4;
 	}
 	
+	/**
+	 * function to create the fifth image of the intro
+	 */
 	function intro5()
 	{
 		FlxG.camera.fade(FlxColor.BLACK, 1, true);
@@ -124,6 +147,9 @@ class Intro extends FlxState
 		introState = 5;
 	}
 	
+	/**
+	 * function to create the sixth image of the intro
+	 */
 	function intro6()
 	{
 		FlxG.camera.fade(FlxColor.BLACK, 1, true);
@@ -131,10 +157,13 @@ class Intro extends FlxState
 		introImage = new FlxSprite();
 		introImage.loadGraphic("assets/images/Story/Pat.png");
 		add(introImage);
-		_idleTmr = 12;
+		_idleTmr = 11;
 		introState = 6;
 	}
 	
+	/**
+	 * function to create the seventh image of the intro
+	 */
 	function intro7()
 	{
 		FlxG.camera.fade(FlxColor.BLACK, 1, true);
@@ -146,7 +175,9 @@ class Intro extends FlxState
 		introState = 7;
 	}
 	
-	
+	/**
+	 * function to switch to the first part of the introduction
+	 */
 	function startGame()
 	{
 		FlxG.switchState(new Introduction1());

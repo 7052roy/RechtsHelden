@@ -9,21 +9,27 @@ import flixel.util.FlxRandom;
 import flixel.util.FlxTimer;
 import flixel.util.FlxVelocity;
 
+/**
+ * This class creates the kid for mission 2 and the introduction
+ * 
+ * @author Roy Leinenga
+ * @author Luuk Huizing
+ */
 class Mission2Kid extends Entities 
 {
 	public var speed:Float = 200.1;
 	private var _brain:FSM;
 	private var _idleTmr:Float;
-	private var _moveDir:Float;
-	public var seesPlayer:Bool = false;
-	public var playerPos(default, null):FlxPoint;
 	var positionx = 0;
 	var positiony = 0;
 	var position:FlxPoint;
-	var movementAngle:Int = 0;
 	var positionTest:Int = 0;
 	public var playerPosition:Float;
+	var movementAngle:Int = 0;
 	
+	/**
+	 * This function loeds the image and adds animations
+	 */
 	public function new() 
 	{
 		super();
@@ -40,30 +46,21 @@ class Mission2Kid extends Entities
 		offset.y = 2;
 		_brain = new FSM(idle);
 		_idleTmr = 0;
-		playerPos = FlxPoint.get();
 	}
 	
-	public function setSpeed()
-	{
-		speed = 0;
-	}
-	
+	/**
+	 * This function is called every frame
+	 */
 	override public function update():Void 
 	{
 		_brain.update();
 		super.update();
 	}
 	
-	public function stopped1()
-	{
-		_brain.activeState = stopped;
-	}
-	
-	public function stopped()
-	{
-		speed = 0;
-	}
-	
+	/**
+	 * this function is calldes if the brainstate is in its idle state 
+	 * this lets the entitie move in squares
+	 */
 	public function idle():Void
 	{
 		_idleTmr -= FlxG.elapsed;
@@ -92,35 +89,9 @@ class Mission2Kid extends Entities
 		}
 	}
 	
-	function moveDirection()
-	{
-		_moveDir = FlxRandom.intRanged(0, 8) * 45;
-		
-		if (_moveDir == 45 || _moveDir == 135 || _moveDir == 225 || _moveDir == 315)
-		{
-			moveDirection();
-		}else {
-			FlxAngle.rotatePoint(speed * .5, 0, 0, 0, _moveDir, velocity);
-		}
-		
-	}
-	
-	/*public function chase(timer:FlxTimer)
-	{
-		
-		if (!seesPlayer)
-		{
-			_brain.activeState = idle;
-		}
-		position = new FlxPoint(positionx, positiony);
-		FlxVelocity.moveTowardsPoint(this, position, Std.int(speed));
-		
-		positionx += 100;
-		
-		
-	}*/
-	
-	
+	/**
+	 * This funtion draws the entities animation for every direction it is walking in
+	 */
 	override public function draw():Void 
 	{
 		if (velocity.x != 0 || velocity.y != 0)

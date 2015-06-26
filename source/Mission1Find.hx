@@ -21,7 +21,10 @@ import flixel.util.FlxPoint;
 import flixel.util.FlxTimer;
 
 /**
- * A FlxState which can be used for the actual gameplay.
+ * A FlxState which creates thefind game for mission 1.
+ * 
+ * @author Roy Leinenga
+ * @author Luuk Huizing
  */
 class Mission1Find extends FlxState
 {
@@ -29,7 +32,6 @@ class Mission1Find extends FlxState
 	private var _player:Player;
 	private var _map:FlxOgmoLoader;
 	private var _mWalls:FlxTilemap;
-	private var _grpEnemies:FlxTypedGroup<Enemy>;
 	var townMusic:FlxSound;
 	private var _money:Int = 0;
 	private var _health:Int = 3;
@@ -43,10 +45,6 @@ class Mission1Find extends FlxState
 	var _adult2:Adult2;
 	var talkAdult1:FlxSprite;
 	var talkAdult2:FlxSprite;
-	
-	#if mobile
-	public static var virtualPad:FlxVirtualPad;
-	#end
 	
 	/**
 	 * Function that is called up when to state is created to set it up. 
@@ -116,8 +114,6 @@ class Mission1Find extends FlxState
 		_mWalls.setTileProperties(244, FlxObject.NONE);
 		add(_mWalls);
 		
-		
-		
 		_player = new Player();
 		add(_player);
 		_player.speed = 300;
@@ -138,12 +134,16 @@ class Mission1Find extends FlxState
 		FlxG.sound.playMusic(AssetPaths.Puzzle__mp3, 1, true);
 		FlxG.camera.fade(FlxColor.BLACK, 2, true);
 		
-		FlxG.sound.playMusic(AssetPaths.townMusic__wav, 1, true);
-		
 		super.create();	
 		
 	}
 	
+	/**
+	 * Function that places the entities on their set locations
+	 * 
+	 * @param	entityName
+	 * @param	entityData
+	 */
 	private function placeEntities(entityName:String, entityData:Xml):Void
 	{
 		if (entityName == "player")
@@ -191,6 +191,12 @@ class Mission1Find extends FlxState
 		FlxG.overlap(_player, _adult2, adult2Talk);
 	}	
 	
+	/**
+	 * function that creates a textbox and play a sound file
+	 * 
+	 * @param	p
+	 * @param	a
+	 */
 	function adult1Talk1(p:Player, a:Adult1)
 	{
 		_interaction = FlxG.keys.anyPressed(["space", "space"]);
@@ -212,6 +218,10 @@ class Mission1Find extends FlxState
 		}
 	}
 	
+	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function adult1Talk2()
 	{
 		talkAdult1.destroy();
@@ -223,6 +233,10 @@ class Mission1Find extends FlxState
 		
 		FlxG.sound.play("assets/sounds/Missie1/Kind2/Kind2-1.mp3", 1, false, true, adult1Talk3);
 	}
+	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function adult1Talk3()
 	{
 		talkAdult1.destroy();
@@ -233,6 +247,10 @@ class Mission1Find extends FlxState
 		add(talkAdult1);
 		FlxG.sound.play("assets/sounds/Missie1/Kind2/Prof2-1.mp3", 1, false, true, adult1Talk4);
 	}
+	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function adult1Talk4()
 	{
 		talkAdult1.destroy();
@@ -243,6 +261,10 @@ class Mission1Find extends FlxState
 		add(talkAdult1);
 		FlxG.sound.play("assets/sounds/Missie1/Kind2/Kind2-2.mp3", 1, false, true, adult1Talk5);
 	}
+	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function adult1Talk5()
 	{
 		talkAdult1.destroy();
@@ -254,6 +276,12 @@ class Mission1Find extends FlxState
 		FlxG.sound.play("assets/sounds/Missie1/Kind2/Prof3-1.mp3", 1, false, true, musicPlay);
 	}
 	
+	/**
+	 * function that creates a textbox and play a sound file
+	 * 
+	 * @param	p
+	 * @param	a
+	 */
 	function adult2Talk(p:Player, a:Adult2)
 	{
 		_interaction = FlxG.keys.anyPressed(["space", "space"]);
@@ -274,6 +302,9 @@ class Mission1Find extends FlxState
 		}
 	}
 	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function adult2Talk1()
 	{
 		talkAdult2.destroy();
@@ -284,6 +315,10 @@ class Mission1Find extends FlxState
 		add(talkAdult2);
 		FlxG.sound.play("assets/sounds/Missie1/Kind1/Kind1-1.mp3", 1, false, true, adult2Talk2);
 	}
+	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function adult2Talk2()
 	{
 		talkAdult2.destroy();
@@ -295,6 +330,9 @@ class Mission1Find extends FlxState
 		FlxG.sound.play("assets/sounds/Missie1/Kind1/Prof2-4.mp3", 1, false, true, adult2Talk3);
 	}
 	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function adult2Talk3()
 	{
 		talkAdult2.destroy();
@@ -306,6 +344,9 @@ class Mission1Find extends FlxState
 		FlxG.sound.play("assets/sounds/Missie1/Kind1/Kind1-2.mp3", 1, false, true, adult2Talk4);
 	}
 	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function adult2Talk4()
 	{
 		talkAdult2.destroy();
@@ -317,6 +358,9 @@ class Mission1Find extends FlxState
 		FlxG.sound.play("assets/sounds/Missie1/Kind1/Prof3-4.mp3", 1, false, true, musicPlay);
 	}
 	
+	/**
+	 * function that plays the music and lets the player walk
+	 */
 	function musicPlay()
 	{
 		if(talkAdult1 != null)
@@ -331,6 +375,12 @@ class Mission1Find extends FlxState
 		FlxG.sound.playMusic(AssetPaths.townMusic__wav, 1, true);
 	}
 	
+	/**
+	 * function that creates a textbox and play a sound file
+	 * 
+	 * @param p 
+	 * @param k
+	 */
 	function kidTalk(p:Player, k:Kid)
 	{
 		_interaction = FlxG.keys.anyPressed(["space", "space"]);
@@ -352,6 +402,9 @@ class Mission1Find extends FlxState
 		}
 	}
 	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function kidTalk1()
 	{
 		talkAdult2.destroy();
@@ -372,6 +425,10 @@ class Mission1Find extends FlxState
 		add(talkAdult2);
 		FlxG.sound.play("assets/sounds/Missie1/Kind3/Prof2-2.mp3", 1, false, true, kidTalk3);
 	}
+	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function kidTalk3()
 	{
 		talkAdult2.destroy();
@@ -382,6 +439,10 @@ class Mission1Find extends FlxState
 		add(talkAdult2);
 		FlxG.sound.play("assets/sounds/Missie1/Kind3/Kind3-2.mp3", 1, false, true, kidTalk4);
 	}
+	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function kidTalk4()
 	{
 		talkAdult2.destroy();
@@ -393,6 +454,9 @@ class Mission1Find extends FlxState
 		FlxG.sound.play("assets/sounds/Missie1/Kind3/Prof3-2.mp3", 1, false, true, kidTalk5);
 	}
 	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function kidTalk5()
 	{
 		talkAdult2.destroy();
@@ -404,6 +468,9 @@ class Mission1Find extends FlxState
 		FlxG.sound.play("assets/sounds/Missie1/Kind3/Kind3-3.mp3", 1, false, true, kidTalk6);
 	}
 	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function kidTalk6()
 	{
 		talkAdult2.destroy();
@@ -415,6 +482,9 @@ class Mission1Find extends FlxState
 		FlxG.sound.play("assets/sounds/Missie1/Kind3/Prof4-2.mp3", 1, false, true, mission1Load);
 	}
 	
+	/**
+	 * function that loads the next state
+	 */
 	function mission1Load()
 	{
 		FlxG.sound.destroy(true);

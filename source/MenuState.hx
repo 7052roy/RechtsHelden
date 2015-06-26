@@ -13,6 +13,9 @@ using flixel.util.FlxSpriteUtil;
 
 /**
  * A FlxState which can be used for the game's menu.
+ * 
+ * @author Roy Leinenga
+ * @author Luuk Huizing
  */
 class MenuState extends FlxState
 {
@@ -25,15 +28,6 @@ class MenuState extends FlxState
 	 */
 	override public function create():Void
 	{
-		if (FlxG.sound.music == null) // don't restart the music if it's alredy playing
-		{
-			#if flash
-			//FlxG.sound.playMusic(AssetPaths.HaxeFlixel_Tutorial_Game__mp3, 1, true);
-			#else
-			//FlxG.sound.playMusic(AssetPaths.HaxeFlixel_Tutorial_Game__ogg, 1, true);
-			#end
-		}
-		
 		menuBackground = new FlxSprite();
 		menuBackground.loadGraphic("assets/images/Story/1StartingScreeeeeeen.png");
 		add(menuBackground);
@@ -49,27 +43,29 @@ class MenuState extends FlxState
 		_btnExit.loadGraphic("assets/images/Story/xbutton.png");
 		add(_btnExit);
 		
+		FlxG.sound.playMusic(AssetPaths.Startscreen__mp3, 1, true);
+		
 		FlxG.camera.fade(FlxColor.BLACK, .33, true);
 		
 		super.create();
 	}
 	
+	/**
+	 * Function that is called when players click on the exit button
+	 */
 	private function clickExit():Void
 	{
 		System.exit(0);
 	}
 	
+	/**
+	 * function that starts the game if the button is pressed
+	 */
 	private function clickPlay():Void
 	{
+		FlxG.sound.destroy(true);
 		FlxG.camera.fade(FlxColor.BLACK,.33, false, function() {
-			FlxG.switchState(new Intro());
-		});
-	}
-	
-	private function clickOptions():Void
-	{
-		FlxG.camera.fade(FlxColor.BLACK,.33, false, function() {
-			FlxG.switchState(new OptionsState());
+			FlxG.switchState(new NightmareMode());
 		});
 	}
 	

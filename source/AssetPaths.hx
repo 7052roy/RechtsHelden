@@ -6,6 +6,6 @@ package;
  * This class creates all the assetPath to be used inside the code
  * 
  * @author Roy Leinenga
- * @author Luuk huizing
+ * @author Luuk Huizing
  */
 class AssetPaths {}

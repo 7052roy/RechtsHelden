@@ -22,7 +22,10 @@ import flixel.util.FlxTimer;
 import lime.audio.AudioManager;
 
 /**
- * A FlxState which can be used for the actual gameplay.
+ * A FlxState which creates the first introduction.
+ * 
+ * @author Roy Leinenga
+ * @author Luuk Huizing
  */
 class Introduction1 extends FlxState
 {
@@ -33,10 +36,6 @@ class Introduction1 extends FlxState
 	var _chair:Chair;
 	private var _trigger:FlxTypedGroup<Trigger>;
 	var introTalk1:FlxSprite;
-	
-	#if mobile
-	public static var virtualPad:FlxVirtualPad;
-	#end
 	
 	/**
 	 * Function that is called up when to state is created to set it up. 
@@ -62,11 +61,6 @@ class Introduction1 extends FlxState
 		
 		FlxG.camera.follow(_player, FlxCamera.STYLE_TOPDOWN, null, 1);
 		
-		//_hud = new HUD();
-		//add(_hud);
-		mission1Music = FlxG.sound.load("assets/music/townMusic.wav");
-		mission1Music.play(true);
-		
 		FlxG.camera.fade(FlxColor.BLACK, 2, true);
 		
 		introTalk();
@@ -75,6 +69,12 @@ class Introduction1 extends FlxState
 		
 	}
 	
+	/**
+	 * Function that places the entities on their set locations
+	 * 
+	 * @param	entityName
+	 * @param	entityData
+	 */
 	private function placeEntities(entityName:String, entityData:Xml):Void
 	{
 		if (entityName == "player")
@@ -93,6 +93,9 @@ class Introduction1 extends FlxState
 		}
 	}
 	
+	/**
+	 * function that plays the introtalk
+	 */
 	function introTalk()
 	{
 		FlxG.sound.destroy(true);
@@ -100,11 +103,17 @@ class Introduction1 extends FlxState
 		FlxG.sound.play("assets/sounds/IntroMissie/Tut1.mp3", 1, false, true, introTalk2);
 	}
 	
+	/**
+	 * function that plays the introtalk
+	 */
 	function introTalk2()
 	{
 		FlxG.sound.play("assets/sounds/IntroMissie/Tut2.mp3", 1, false, true, play);
 	}
 	
+	/**
+	 * function that plays the music and lets the player walk
+	 */
 	function play()
 	{
 		FlxG.sound.playMusic(AssetPaths.KJRWHouse__wav, 1, true);
@@ -139,6 +148,12 @@ class Introduction1 extends FlxState
 		super.update();
 	}	
 	
+	/**
+	 * Function that loads the next state (introduction2)
+	 * 
+	 * @param	c
+	 * @param	t
+	 */
 	function loadIntroduction2(c:Chair, t:Trigger)
 	{
 		FlxG.switchState(new Introduction2());

@@ -21,7 +21,10 @@ import flixel.util.FlxPoint;
 import flixel.util.FlxTimer;
 
 /**
- * A FlxState which can be used for the actual gameplay.
+ * This class creates the playstate
+ * 
+ * @author Roy Leinenga
+ * @author Luuk Huizing
  */
 class PlayState extends FlxState
 {
@@ -29,8 +32,6 @@ class PlayState extends FlxState
 	private var _player:Player;
 	private var _map:FlxOgmoLoader;
 	private var _mWalls:FlxTilemap;
-	private var _grpCoins:FlxTypedGroup<Coin>;
-	private var _grpEnemies:FlxTypedGroup<Enemy>;
 	var townMusic:FlxSound;
 	private var _hud:HUD;
 	private var _money:Int = 0;
@@ -109,12 +110,6 @@ class PlayState extends FlxState
 		_mWalls.setTileProperties(244, FlxObject.NONE);
 		add(_mWalls);
 		
-		_grpCoins = new FlxTypedGroup<Coin>();
-		add(_grpCoins);
-		
-		_grpEnemies = new FlxTypedGroup<Enemy>();
-		add(_grpEnemies);
-		
 		_player = new Player();
 		add(_player);
 		
@@ -133,21 +128,18 @@ class PlayState extends FlxState
 		
 	}
 	
+	/**
+	 * Function that places the entities on their set locations
+	 * 
+	 * @param	entityName
+	 * @param	entityData
+	 */
 	private function placeEntities(entityName:String, entityData:Xml):Void
 	{
 		if (entityName == "player")
 		{
 			_player.x = Std.parseInt(entityData.get("x"));
 			_player.y = Std.parseInt(entityData.get("y"));
-		}
-		else if (entityName == "coin") 
-		{
-			_grpCoins.add(new Coin(Std.parseInt(entityData.get("x")) + 4, Std.parseInt(entityData.get("y")) + 4));
-			
-		}
-		else if (entityName == "enemy")
-		{
-			_grpEnemies.add(new Enemy(Std.parseInt(entityData.get("x"))+4, Std.parseInt(entityData.get("y")), Std.parseInt(entityData.get("etype"))));
 		}
 		else if (entityName == "mission1_Teacher")
 		{
@@ -173,26 +165,30 @@ class PlayState extends FlxState
 	{
 		super.update();
 		FlxG.collide(_player, _mWalls);
-		FlxG.overlap(_player, _grpCoins, playerTouchCoin);
-		FlxG.collide(_grpEnemies, _mWalls);
 		FlxG.overlap(_player, _teacher, loadMission1);
-		FlxG.collide(_teacher, _mWalls);
-		FlxG.collide(_player, _grpEnemies, playerEnemy);
 	}	
 	
+	/**
+	 * function that plays a sound file
+	 */
 	function introTalk()
 	{
 		_player.speed = 0;
 		FlxG.sound.play("assets/sounds/IntroMissie/Tut7.mp3", 1, false, true, play);
 	}
 	
+	/**
+	 * function that plays music and lets the player walk
+	 */
 	function play()
 	{
 		FlxG.sound.playMusic(AssetPaths.townMusic__wav, 1, true);
 		_player.speed = 300;
 	}
 	
-	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function loadMission1(p:Player, t:Teacher)
 	{
 		
@@ -217,6 +213,9 @@ class PlayState extends FlxState
 		
 	}
 	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function teacherText()
 	{
 		talkAdult2.destroy();
@@ -228,6 +227,9 @@ class PlayState extends FlxState
 		FlxG.sound.play("assets/sounds/Missie1/Teacher/Prof1-3.mp3", 1, false, true, teacherText1);
 	}
 	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function teacherText1()
 	{
 		talkAdult2.destroy();
@@ -239,6 +241,9 @@ class PlayState extends FlxState
 		FlxG.sound.play("assets/sounds/Missie1/Teacher/Teacher1-1.mp3", 1, false, true, teacherText2);
 	}
 	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function teacherText2()
 	{
 		talkAdult2.destroy();
@@ -250,6 +255,9 @@ class PlayState extends FlxState
 		FlxG.sound.play("assets/sounds/Missie1/Teacher/Teacher1-2.mp3", 1, false, true, teacherText3);
 	}
 	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function teacherText3()
 	{
 		talkAdult2.destroy();
@@ -261,6 +269,9 @@ class PlayState extends FlxState
 		FlxG.sound.play("assets/sounds/Missie1/Teacher/Teacher1-3.mp3", 1, false, true, teacherText4);
 	}
 	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function teacherText4()
 	{
 		talkAdult2.destroy();
@@ -272,6 +283,9 @@ class PlayState extends FlxState
 		FlxG.sound.play("assets/sounds/Missie1/Teacher/Teacher1-4.mp3", 1, false, true, teacherText5);
 	}
 	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function teacherText5()
 	{
 		talkAdult2.destroy();
@@ -283,40 +297,12 @@ class PlayState extends FlxState
 		FlxG.sound.play("assets/sounds/Missie1/Teacher/Prof2-3.mp3", 1, false, true, mission1Load);
 	}
 	
-	
+	/**
+	 * function that switches to the next state
+	 */
 	function mission1Load()
 	{
 		talkAdult2.destroy();
 		FlxG.switchState(new Mission1Find());
 	}
-	
-	function playerEnemy(p:Player, e:Enemy)
-	{
-		p.speed = 0;
-		e.speed = 0;
-		e.velocity.x = 0;
-		e.velocity.y = 0;
-	}
-	
-	
-	private function playerTouchCoin(P:Player, C:Coin):Void
-	{
-		if (P.alive && P.exists && C.alive && C.exists)
-		{
-			C.kill();
-			_money++;
-			//_hud.updateHUD(_health, _money);
-		}
-	}
-	
-	private function checkEnemyVision(e:Enemy):Void
-{
-    if (_mWalls.ray(e.getMidpoint(), _player.getMidpoint()))
-    {
-        e.seesPlayer = true;
-        e.playerPos.copyFrom(_player.getMidpoint());
-    }
-    else
-        e.seesPlayer = false;
-}
 }

@@ -22,7 +22,10 @@ import flixel.util.FlxTimer;
 import lime.audio.AudioManager;
 
 /**
- * A FlxState which can be used for the actual gameplay.
+ * A FlxState which creates mission2.
+ * 
+ * @author Roy Leinenga
+ * @author Luuk Huizing
  */
 class Mission2 extends FlxState
 {
@@ -58,8 +61,6 @@ class Mission2 extends FlxState
 		
 		FlxG.camera.follow(_player, FlxCamera.STYLE_TOPDOWN, null, 1);
 		
-		//_hud = new HUD();
-		//add(_hud);
 		FlxG.sound.playMusic(AssetPaths.Chase__mp3, 1, true);
 		
 		FlxG.camera.fade(FlxColor.BLACK, 2, true);
@@ -68,11 +69,12 @@ class Mission2 extends FlxState
 		
 	}
 	
-	function clickReset()
-	{
-		FlxG.switchState(new Mission2());
-	}
-	
+	/**
+	 * Function that places the entities on their set locations
+	 * 
+	 * @param	entityName
+	 * @param	entityData
+	 */
 	private function placeEntities(entityName:String, entityData:Xml):Void
 	{
 		if (entityName == "player")
@@ -109,14 +111,15 @@ class Mission2 extends FlxState
 	 */
 	override public function update():Void
 	{
-
 		super.update();
 		_player.speed = 300;
 		FlxG.collide(_player, _mWalls);
 		FlxG.overlap(_player, _angryDad, dadCollision);
-		//FlxG.collide(_kid, _mWalls);
 	}	
 	
+	/**
+	 * function that loads the next state
+	 */
 	function dadCollision(p:Player, a:AngryDad)
 	{
 		if (_player.CharacterNumber == 1 && _player.ability2 == true)

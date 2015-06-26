@@ -22,7 +22,10 @@ import flixel.util.FlxTimer;
 import lime.audio.AudioManager;
 
 /**
- * A FlxState which can be used for the actual gameplay.
+ * This class creates the angry dad for mission 3 finish
+ * 
+ * @author Roy Leinenga
+ * @author Luuk Huizing
  */
 class Mission3Finish extends FlxState
 {
@@ -113,8 +116,6 @@ class Mission3Finish extends FlxState
 		
 		FlxG.camera.follow(_player, FlxCamera.STYLE_TOPDOWN, null, 1);
 		
-		//_hud = new HUD();
-		//add(_hud);
 		mission1Music = FlxG.sound.load("assets/music/townMusic.wav");
 		mission1Music.play(true);
 		
@@ -125,6 +126,9 @@ class Mission3Finish extends FlxState
 		
 	}
 	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function judgeText(p:Player, t:Trigger)
 	{
 		if ( _player.CharacterNumber == 3 && _player.ability2 == true ) 
@@ -144,6 +148,9 @@ class Mission3Finish extends FlxState
 		}
 	}
 	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function judgeText1()
 	{
 		judgeTalk.destroy();
@@ -157,6 +164,9 @@ class Mission3Finish extends FlxState
 		FlxG.sound.play("assets/sounds/Missie3/judge1.mp3", 1, false, true, JudgeText2);
 	}
 
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function JudgeText2()
 	{
 		judgeTalk.destroy();
@@ -170,6 +180,9 @@ class Mission3Finish extends FlxState
 		FlxG.sound.play("assets/sounds/Missie3/judge2.mp3", 1, false, true, JudgeText3);
 	}
 	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function JudgeText3()
 	{
 		judgeTalk.destroy();
@@ -183,6 +196,9 @@ class Mission3Finish extends FlxState
 		FlxG.sound.play("assets/sounds/Missie3/Missie3-9.mp3", 1, false, true, JudgeText4);
 	}
 	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function JudgeText4()
 	{
 		judgeTalk.destroy();
@@ -196,6 +212,9 @@ class Mission3Finish extends FlxState
 		FlxG.sound.play("assets/sounds/Missie3/Missie3-10.mp3", 1, false, true, JudgeText5);
 	}
 	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function JudgeText5()
 	{
 		judgeTalk.destroy();
@@ -209,6 +228,9 @@ class Mission3Finish extends FlxState
 		FlxG.sound.play("assets/sounds/Missie3/missie3-11.mp3", 1, false, true, JudgeText6);
 	}
 	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function JudgeText6()
 	{
 		judgeTalk.destroy();
@@ -222,6 +244,9 @@ class Mission3Finish extends FlxState
 		FlxG.sound.play("assets/sounds/Missie3/Missie3-12.mp3", 1, false, true, JudgeText7);
 	}
 	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function JudgeText7()
 	{
 		judgeTalk.destroy();
@@ -235,6 +260,9 @@ class Mission3Finish extends FlxState
 		FlxG.sound.play("assets/sounds/Missie3/missie3-13.mp3", 1, false, true, JudgeText8);
 	}
 	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function JudgeText8()
 	{
 		judgeTalk.destroy();
@@ -248,8 +276,12 @@ class Mission3Finish extends FlxState
 		FlxG.sound.play("assets/sounds/Missie3/Missie3-14.mp3", 1, false, true, finishMission);
 	}
 	
-	
-
+	/**
+	 * Function that places the entities on their set locations
+	 * 
+	 * @param	entityName
+	 * @param	entityData
+	 */
     private function placeEntities(entityName:String, entityData:Xml):Void
 	{
 		if (entityName == "player")
@@ -278,16 +310,17 @@ class Mission3Finish extends FlxState
 	 */
 	override public function update():Void
 	{
-
 		super.update();
 		FlxG.collide(_player, _mWalls);
 		FlxG.overlap(_player, _trigger, judgeText);
 	
 	}	
 	
+	/**
+	 * function that loads the next state
+	 */
 	function finishMission()
 	{
-		
 		FlxG.switchState(new Mission3Puzzle());
 	}
 	

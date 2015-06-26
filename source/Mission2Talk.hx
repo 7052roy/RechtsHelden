@@ -22,19 +22,23 @@ import flixel.util.FlxTimer;
 import lime.audio.AudioManager;
 
 /**
- * ...
- * @author Luuk
+ * This class creates the angry dad for mission 2 talk
+ * 
+ * @author Roy Leinenga
+ * @author Luuk Huizing
  */
 class Mission2Talk extends FlxState
 {
 	private var _player:Player;
 	private var _map:FlxOgmoLoader;
 	private var _mWalls:FlxTilemap;
-	var mission1Music:FlxSound;
 	private var _trigger:FlxTypedGroup<Trigger>;
 	var conversation:FlxSprite;
 
 	
+	/**
+	 * Function that is called up when to state is created to set it up. 
+	 */
 	override public function create():Void
 	{
 		_map = new FlxOgmoLoader("assets/data/Final Maps/puzzle2-1.oel");
@@ -59,11 +63,12 @@ class Mission2Talk extends FlxState
 		
 	}
 	
-	function clickReset()
-	{
-		FlxG.switchState(new Mission2Talk());
-	}
-	
+	/**
+	 * Function that places the entities on their set locations
+	 * 
+	 * @param	entityName
+	 * @param	entityData
+	 */
 	private function placeEntities(entityName:String, entityData:Xml):Void
 	{
 		if (entityName == "player")
@@ -98,6 +103,9 @@ class Mission2Talk extends FlxState
 		FlxG.collide(_player, _mWalls);
 	}
 	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function talkKid(p:Player, t:Trigger)
 	{
 		if (conversation != null)
@@ -114,6 +122,9 @@ class Mission2Talk extends FlxState
 			FlxG.sound.play("assets/sounds/Missie2/Prof2.mp3", 1, false, true, talkKid2);
 	}
 	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function talkKid2()
 	{
 		conversation.destroy();
@@ -125,6 +136,9 @@ class Mission2Talk extends FlxState
 		FlxG.sound.play("assets/sounds/Missie2/Kid1.mp3", 1, false, true, talkKid3);
 	}
 	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function talkKid3()
 	{
 		conversation.destroy();
@@ -136,6 +150,9 @@ class Mission2Talk extends FlxState
 		FlxG.sound.play("assets/sounds/Missie2/Prof3.mp3", 1, false, true, talkKid4);
 	}
 	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function talkKid4()
 	{
 		conversation.destroy();
@@ -147,6 +164,9 @@ class Mission2Talk extends FlxState
 		FlxG.sound.play("assets/sounds/Missie2/Kid2.mp3", 1, false, true, talkKid5);
 	}
 	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function talkKid5()
 	{
 		conversation.destroy();
@@ -158,7 +178,9 @@ class Mission2Talk extends FlxState
 		FlxG.sound.play("assets/sounds/Missie2/Prof4.mp3", 1, false, true, newMap);
 	}
 	
-	
+	/**
+	 * function that creates a new map
+	 */
 	function newMap()
 	{
 		remove(_mWalls,true);
@@ -180,6 +202,9 @@ class Mission2Talk extends FlxState
 		talkKid6();
 	}
 	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function talkKid6()
 	{
 		
@@ -191,6 +216,9 @@ class Mission2Talk extends FlxState
 		FlxG.sound.play("assets/sounds/Missie2/Dad1.mp3", 1, false, true, talkKid7);
 	}
 	
+	/**
+	 * function that creates a textbox and play a sound file
+	 */
 	function talkKid7()
 	{
 		conversation.destroy();
@@ -202,9 +230,11 @@ class Mission2Talk extends FlxState
 		FlxG.sound.play("assets/sounds/Missie2/Prof5.mp3", 1, false, true, finishMissionBier);
 	}
 	
+	/**
+	 * function that loads the next state
+	 */
 	function finishMissionBier()
-	{
-		
+	{	
 		FlxG.switchState(new Mission2());
 	}
 
