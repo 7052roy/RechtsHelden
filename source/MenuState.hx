@@ -65,7 +65,7 @@ class MenuState extends FlxState
 	{
 		FlxG.sound.destroy(true);
 		FlxG.camera.fade(FlxColor.BLACK,.33, false, function() {
-			FlxG.switchState(new NightmareMode());
+			FlxG.switchState(new Intro());
 		});
 	}
 	
